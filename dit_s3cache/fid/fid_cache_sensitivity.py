@@ -37,6 +37,9 @@ from dit_s3cache.fid.cache_runner import (
     restore_cache_wrappers,
 )
 
+# 與 guided-diffusion ADM evaluator 相同 CLI：``ref_batch sample_batch``
+DEFAULT_ADM_EVALUATOR = Path(__file__).resolve().parent / "evaluator.py"
+
 
 def build_argparser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description=__doc__)
@@ -56,7 +59,12 @@ def build_argparser() -> argparse.ArgumentParser:
     parser.add_argument("--tf32", action=argparse.BooleanOptionalAction, default=True)
     parser.add_argument("--progress", action=argparse.BooleanOptionalAction, default=True)
 
-    parser.add_argument("--adm-evaluator", type=Path, required=True)
+    parser.add_argument(
+        "--adm-evaluator",
+        type=Path,
+        default=DEFAULT_ADM_EVALUATOR,
+        help=f"ADM-style evaluator script (default: {DEFAULT_ADM_EVALUATOR})",
+    )
     parser.add_argument("--ref-batch", type=Path, required=True)
     parser.add_argument("--adm-python", type=str, default=sys.executable)
 
@@ -72,6 +80,13 @@ def build_argparser() -> argparse.ArgumentParser:
 
 
 def main(args: argparse.Namespace) -> None:
+    args.adm_evaluator = args.adm_evaluator.resolve()
+    if not args.adm_evaluator.is_file():
+        raise FileNotFoundError(
+            f"ADM evaluator not found: {args.adm_evaluator}. "
+            "Place evaluator.py under dit_s3cache/fid/ or pass --adm-evaluator."
+        )
+
     if args.model != "DiT-XL/2" or args.image_size != 256:
         raise ValueError("c_FID is currently scoped to DiT-XL/2 256x256.")
     if args.cfg_scale < 1.0:
@@ -356,7 +371,15 @@ def compute_fid_adm(
         raise FileNotFoundError(f"Sample batch not found: {sample_batch}")
 
     command = [adm_python, str(adm_evaluator), str(ref_batch), str(sample_batch)]
-    completed = subprocess.run(command, check=False, text=True, capture_output=True)
+    # evaluator.py 會把 Inception graph 下載到目前工作目錄；固定在其所在目錄避免污染 repo 根目錄。
+    workdir = str(adm_evaluator.parent.resolve())
+    completed = subprocess.run(
+        command,
+        check=False,
+        text=True,
+        capture_output=True,
+        cwd=workdir,
+    )
     output = "\n".join(part for part in [completed.stdout, completed.stderr] if part)
     if completed.returncode != 0:
         raise RuntimeError(f"ADM evaluator failed with exit code {completed.returncode}:\n{output}")
