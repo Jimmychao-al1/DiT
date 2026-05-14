@@ -378,6 +378,12 @@ def compute_fid_adm(
     ref_batch: Path,
     sample_batch: Path,
 ) -> tuple[float, str]:
+    # 必須 resolve：subprocess 的 cwd 設在 evaluator 目錄，相對路徑會錯解成
+    # dit_s3cache/fid/dit_s3cache/fid/... 導致 FileNotFoundError。
+    adm_evaluator = adm_evaluator.resolve()
+    ref_batch = ref_batch.resolve()
+    sample_batch = sample_batch.resolve()
+
     if not adm_evaluator.is_file():
         raise FileNotFoundError(f"ADM evaluator not found: {adm_evaluator}")
     if not ref_batch.is_file():
