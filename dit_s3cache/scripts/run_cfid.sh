@@ -29,8 +29,8 @@ COMMON_ARGS=(
   --adm-evaluator "$ADM_EVALUATOR"
   --ref-batch "$REF_BATCH"
   --num-fid-samples 1000
-  --per-side-batch-size 8
-  --cfg-scale 4.0
+  --per-side-batch-size 32
+  --cfg-scale 1.5
 )
 
 if [[ -n "$PART" ]]; then
