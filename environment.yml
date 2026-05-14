@@ -1,13 +1,37 @@
-name: DiT
+# 在另一台 Linux + NVIDIA 主機上建立「與本機 ldm 相近、足以跑此 DiT repo」的 Conda 環境。
+#
+# 對齊重點（來自本機 ldm 快照）：Python 3.10、PyTorch 2.11 + CUDA 12.8 wheel、
+# diffusers 0.38、transformers 5.8、huggingface-hub 1.14、numpy 2.2.x。
+#
+# 刻意不包含：latent-diffusion、CLIP、taming-transformers 等需本機路徑或
+# 專案專用安裝的套件；若只做 sample.py / train.py / dit_s3cache，無需它們。
+#
+# 建立方式：
+#   conda env create -f environment.yml
+#   conda activate ldm
+#
+# 若新主機 GPU 架構較新，請確認驅動版本足以支援 CUDA 12.8 runtime。
+
+name: ldm
 channels:
   - pytorch
   - nvidia
+  - defaults
 dependencies:
-  - python >= 3.8
-  - pytorch >= 1.13
-  - torchvision
-  - pytorch-cuda=11.7
+  - python=3.10
+  - pip
+  - pytorch-mutex=1.0=cuda
+  - pytorch-cuda=12.4
   - pip:
-    - timm
-    - diffusers
-    - accelerate
+      - --extra-index-url https://download.pytorch.org/whl/cu128
+      - torch==2.11.0+cu128
+      - torchvision==0.26.0+cu128
+      - numpy==2.2.6
+      - timm>=1.0.0
+      - diffusers==0.38.0
+      - transformers==5.8.1
+      - huggingface-hub==1.14.0
+      - accelerate>=0.33.0
+      - safetensors>=0.4.0
+      - Pillow>=10.0.0
+      - tqdm>=4.65.0
