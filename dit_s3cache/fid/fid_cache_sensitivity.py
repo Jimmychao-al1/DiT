@@ -15,6 +15,7 @@ import re
 import shutil
 import subprocess
 import sys
+sys.path.append('.')
 from pathlib import Path
 from typing import Any
 

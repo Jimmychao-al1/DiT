@@ -3,3 +3,4 @@ pretrained_models
 pretrained_models/
 dit_s3cache/outputs/
 *.npz
+dit_s3cache/fid/gen_image/
