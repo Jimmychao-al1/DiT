@@ -85,29 +85,44 @@ class CachedDiTBlock:
 def create_dit_cache_config(
     target_block: int,
     k: int,
-    total_steps: int = 250,
+    sampling_timesteps: list[int],
     n_blocks: int = 28,
 ) -> dict[int, set[int]]:
     """Create a single-target-block recompute scheduler.
 
-    Scheduler timesteps use diffusion timestep values, not step indices.  For
-    250 steps this is ``249, 248, ..., 0``.  The first executed timestep is
-    always included to avoid a cold-cache miss.
+    Args:
+        target_block: Index of the block whose recompute cadence is reduced.
+        k: Recompute the target block every k-th denoising step (step_idx % k == 0).
+           The first step is always recomputed to avoid a cold-cache miss.
+        sampling_timesteps: The actual **model** timestep values seen by DiT in
+            denoising order, e.g. ``[999, 995, ..., 4, 0]`` for a 250-step
+            SpacedDiffusion over 1000 base steps.  Obtain via::
+
+                list(reversed(diffusion.timestep_map))
+
+        n_blocks: Number of DiTBlocks in the model.
+
+    Returns:
+        A mapping ``{block_idx: set_of_model_t_to_recompute}``.
+        Non-target blocks receive the full set (always recompute).
+        The target block receives every k-th model-t plus the first step.
     """
 
     if not 0 <= target_block < n_blocks:
         raise ValueError(f"target_block must be in [0, {n_blocks}), got {target_block}")
     if k <= 0:
         raise ValueError(f"k must be positive, got {k}")
+    if not sampling_timesteps:
+        raise ValueError("sampling_timesteps must not be empty")
 
-    indices = list(range(total_steps))[::-1]
-    recompute_steps = {
-        timestep for step_idx, timestep in enumerate(indices) if step_idx % k == 0
+    all_steps: set[int] = set(sampling_timesteps)
+    target_steps: set[int] = {
+        t for step_idx, t in enumerate(sampling_timesteps) if step_idx % k == 0
     }
-    recompute_steps.add(indices[0])
+    target_steps.add(sampling_timesteps[0])  # always recompute first step
 
     return {
-        block_idx: (set(range(total_steps)) if block_idx != target_block else recompute_steps)
+        block_idx: (all_steps if block_idx != target_block else target_steps)
         for block_idx in range(n_blocks)
     }
 
@@ -150,6 +165,10 @@ def make_cached_forward_with_cfg(
     original_forward_with_cfg = model.forward_with_cfg
 
     def wrapped(x: torch.Tensor, t: torch.Tensor, y: torch.Tensor, cfg_scale: float) -> torch.Tensor:
+        if not torch.all(t == t[0]):
+            raise ValueError(
+                f"Expected uniform timestep across batch, got: {t.tolist()}"
+            )
         current_timestep = int(t[0].item())
         for cached_block in cached_blocks:
             cached_block.current_timestep = current_timestep

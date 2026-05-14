@@ -37,7 +37,7 @@ def build_argparser() -> argparse.ArgumentParser:
     parser.add_argument("--num-sampling-steps", type=int, default=250)
     parser.add_argument("--per-side-batch-size", type=int, default=4)
     parser.add_argument("--n-batches", type=int, default=16)
-    parser.add_argument("--cfg-scale", type=float, default=4.0)
+    parser.add_argument("--cfg-scale", type=float, default=1.5)
     parser.add_argument("--k-svd", type=int, default=16)
     parser.add_argument("--svd-token-subsample", type=int, default=0)
     parser.add_argument("--base-seed", type=int, default=42)
@@ -94,7 +94,10 @@ def main(args: argparse.Namespace) -> None:
 
     diffusion = create_diffusion(str(args.num_sampling_steps))
     n_steps = diffusion.num_timesteps if args.max_steps is None else min(args.max_steps, diffusion.num_timesteps)
-    timestep_map = list(range(diffusion.num_timesteps))[::-1][:n_steps]
+    # Store the actual model timesteps (original 1000-step domain) in denoising order.
+    # SpacedDiffusion maps local index i → diffusion.timestep_map[i]; denoising runs
+    # from index num_timesteps-1 down to 0, so the model-t sequence is reversed map.
+    timestep_map = list(reversed(diffusion.timestep_map))[:n_steps]
     n_blocks = len(model.blocks)
 
     storage: dict[int, torch.Tensor] = {}

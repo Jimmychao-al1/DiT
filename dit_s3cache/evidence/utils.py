@@ -91,7 +91,7 @@ def compute_svd_drift(
     common_k = min(v_current.shape[0], v_prev.shape[0])
     cross = v_current[:common_k] @ v_prev[:common_k].T
     sigma = torch.linalg.svdvals(cross).clamp(0.0, 1.0)
-    angles = torch.acos(sigma.clamp(-1.0 + 1e-7, 1.0 - 1e-7))
+    angles = torch.acos(sigma.clamp(0.0, 1.0))
 
     return {
         "grassmann_dist": float(angles.norm().item()),

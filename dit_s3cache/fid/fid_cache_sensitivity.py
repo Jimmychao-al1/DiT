@@ -139,10 +139,11 @@ def main(args: argparse.Namespace) -> None:
             continue
 
         print(f"[{task_idx}/{len(tasks)}] evaluating k={k} block_{block_idx}")
+        sampling_timesteps = list(reversed(diffusion.timestep_map))
         scheduler = create_dit_cache_config(
             target_block=block_idx,
             k=k,
-            total_steps=args.num_sampling_steps,
+            sampling_timesteps=sampling_timesteps,
             n_blocks=len(model.blocks),
         )
         run_result = generate_and_compute_fid(
