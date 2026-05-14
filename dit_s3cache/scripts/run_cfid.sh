@@ -36,8 +36,9 @@ COMMON_ARGS=(
 if [[ -n "$PART" ]]; then
   if [[ "$PART" != "A" && "$PART" != "B" ]]; then
     echo "Usage: $0 [A|B]"
-    echo "  A = baseline + k=3 all + k=5 blocks 0~13"
-    echo "  B = baseline + k=5 blocks 14~27 + k=10 all"
+    echo "  A (較慢主機 ~46m/run): baseline + k=3 全部 + k=5 前綴 blocks（與 B 合計 84 cached）"
+    echo "  B (較快主機 ~27m/run): baseline + k=5 其餘 blocks + k=10 全部"
+    echo "  切分依 n_blocks 自動平衡兩台總耗時（見 fid_cache_sensitivity._cached_eval_count_part_a）"
     echo "  no arg = single-host full sweep"
     exit 1
   fi

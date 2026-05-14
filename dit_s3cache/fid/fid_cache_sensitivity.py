@@ -413,13 +413,35 @@ def parse_fid_from_adm_output(output: str) -> float:
     raise ValueError(f"Could not parse FID from ADM evaluator output:\n{output}")
 
 
+def _cached_eval_count_part_a(n_blocks: int) -> int:
+    """How many cached (non-baseline) evals to assign to Part A for time balance.
+
+    Assume host A runs ~46 min / eval and host B ~27 min / eval, each also runs one
+    baseline of the same per-host rate.  Total work: ``3 * n_blocks`` cached + 2 baseline.
+
+    Solve ``46 * (1 + c_a) ≈ 27 * (1 + 3 * n_blocks - c_a)`` for integer ``c_a``:
+    ``c_a = round((81 * n_blocks - 19) / 73)`` (clamped to ``[n_blocks, 2 * n_blocks]`` so Part A
+    holds all k=3 plus a prefix of k=5, Part B the rest of k=5 and all k=10).
+    """
+    raw = (81 * n_blocks - 19) / 73.0
+    c_a = int(round(raw))
+    # Need at least n_blocks tasks (all k=3); at most 2*n_blocks (k=3 + all k=5).
+    return max(n_blocks, min(2 * n_blocks, c_a))
+
+
 def get_task_list(part: str | None, k_values: list[int], n_blocks: int) -> list[tuple[int, int]]:
     if part == "A":
+        # Slow host: all k=3, then k=5 on blocks [0, n_k5_on_a).
+        c_a = _cached_eval_count_part_a(n_blocks)
+        n_k5_on_a = c_a - n_blocks
         return [(3, block_idx) for block_idx in range(n_blocks)] + [
-            (5, block_idx) for block_idx in range(n_blocks // 2)
+            (5, block_idx) for block_idx in range(n_k5_on_a)
         ]
     if part == "B":
-        return [(5, block_idx) for block_idx in range(n_blocks // 2, n_blocks)] + [
+        # Fast host: k=5 on remaining blocks, then all k=10.
+        c_a = _cached_eval_count_part_a(n_blocks)
+        n_k5_on_a = c_a - n_blocks
+        return [(5, block_idx) for block_idx in range(n_k5_on_a, n_blocks)] + [
             (10, block_idx) for block_idx in range(n_blocks)
         ]
     return [(k, block_idx) for k in k_values for block_idx in range(n_blocks)]
