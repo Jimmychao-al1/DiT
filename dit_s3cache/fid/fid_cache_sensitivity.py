@@ -39,6 +39,7 @@ from dit_s3cache.fid.cache_runner import (
 
 # 與 guided-diffusion ADM evaluator 相同 CLI：``ref_batch sample_batch``
 DEFAULT_ADM_EVALUATOR = Path(__file__).resolve().parent / "evaluator.py"
+DEFAULT_REF_BATCH = Path(__file__).resolve().parent / "VIRTUAL_imagenet256_labeled.npz"
 
 
 def build_argparser() -> argparse.ArgumentParser:
@@ -65,7 +66,12 @@ def build_argparser() -> argparse.ArgumentParser:
         default=DEFAULT_ADM_EVALUATOR,
         help=f"ADM-style evaluator script (default: {DEFAULT_ADM_EVALUATOR})",
     )
-    parser.add_argument("--ref-batch", type=Path, required=True)
+    parser.add_argument(
+        "--ref-batch",
+        type=Path,
+        default=DEFAULT_REF_BATCH,
+        help=f"ADM reference .npz (default: {DEFAULT_REF_BATCH})",
+    )
     parser.add_argument("--adm-python", type=str, default=sys.executable)
 
     parser.add_argument("--output-root", type=Path, default=Path("dit_s3cache/fid"))
@@ -85,6 +91,13 @@ def main(args: argparse.Namespace) -> None:
         raise FileNotFoundError(
             f"ADM evaluator not found: {args.adm_evaluator}. "
             "Place evaluator.py under dit_s3cache/fid/ or pass --adm-evaluator."
+        )
+
+    args.ref_batch = args.ref_batch.resolve()
+    if not args.ref_batch.is_file():
+        raise FileNotFoundError(
+            f"Reference batch not found: {args.ref_batch}. "
+            "Place VIRTUAL_imagenet256_labeled.npz under dit_s3cache/fid/ or pass --ref-batch."
         )
 
     if args.model != "DiT-XL/2" or args.image_size != 256:

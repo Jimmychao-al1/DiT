@@ -9,7 +9,8 @@ LOG_DIR="dit_s3cache/fid"
 
 # 預設使用本 repo 內的 ADM 風格 evaluator（需已安裝 TensorFlow 1.x compat，見 evaluator.py 開頭）
 ADM_EVALUATOR="${ADM_EVALUATOR:-$PWD/dit_s3cache/fid/evaluator.py}"
-REF_BATCH="${REF_BATCH:-}"
+# 與 fid_cache_sensitivity.py 預設一致：dit_s3cache/fid/VIRTUAL_imagenet256_labeled.npz
+REF_BATCH="${REF_BATCH:-$PWD/dit_s3cache/fid/VIRTUAL_imagenet256_labeled.npz}"
 
 if [[ ! -f "$ADM_EVALUATOR" ]]; then
   echo "ADM evaluator not found: $ADM_EVALUATOR"
@@ -17,13 +18,9 @@ if [[ ! -f "$ADM_EVALUATOR" ]]; then
   exit 1
 fi
 
-if [[ -z "$REF_BATCH" ]]; then
-  echo "Please set REF_BATCH to your ImageNet 256 reference .npz (ADM format)."
-  echo "Example:"
-  echo "  REF_BATCH=/path/to/VIRTUAL_imagenet256_labeled.npz \\"
-  echo "  bash dit_s3cache/scripts/run_cfid.sh [A|B]"
-  echo ""
-  echo "FID script defaults to: $ADM_EVALUATOR"
+if [[ ! -f "$REF_BATCH" ]]; then
+  echo "Reference batch not found: $REF_BATCH"
+  echo "Place VIRTUAL_imagenet256_labeled.npz under dit_s3cache/fid/, or set REF_BATCH to its path."
   echo "TensorFlow: evaluator 使用 tensorflow.compat.v1；若尚未安裝請在環境內安裝相容版 TensorFlow（例如 pip install tensorflow）。"
   exit 1
 fi
@@ -48,12 +45,14 @@ if [[ -n "$PART" ]]; then
   echo "=========================================="
   echo "DiT c_FID Sensitivity — Part ${PART}"
   echo "ADM evaluator: $ADM_EVALUATOR"
+  echo "REF batch:     $REF_BATCH"
   echo "=========================================="
   python "$SCRIPT" --part "$PART" "${COMMON_ARGS[@]}" 2>&1 | tee "${LOG_DIR}/cfid_part_${PART}.log"
 else
   echo "=========================================="
   echo "DiT c_FID Sensitivity — Full"
   echo "ADM evaluator: $ADM_EVALUATOR"
+  echo "REF batch:     $REF_BATCH"
   echo "=========================================="
   python "$SCRIPT" "${COMMON_ARGS[@]}" 2>&1 | tee "${LOG_DIR}/cfid_full.log"
 fi
