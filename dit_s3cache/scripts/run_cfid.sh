@@ -9,6 +9,7 @@ LOG_DIR="dit_s3cache/fid"
 
 ADM_EVALUATOR="${ADM_EVALUATOR:-$PWD/dit_s3cache/fid/evaluator.py}"
 REF_BATCH="${REF_BATCH:-$PWD/dit_s3cache/fid/VIRTUAL_imagenet256_labeled.npz}"
+RESULTS_JSON="${RESULTS_JSON:-$PWD/dit_s3cache/fid/fid_sensitivity_results.json}"
 
 # 收尾階段進度提示（實際待辦以共用 JSON 內有效 fid 為準）
 PART_A_COMPLETED="${PART_A_COMPLETED:-28}"
@@ -29,6 +30,7 @@ fi
 COMMON_ARGS=(
   --adm-evaluator "$ADM_EVALUATOR"
   --ref-batch "$REF_BATCH"
+  --results-json "$RESULTS_JSON"
   --num-fid-samples 1000
   --per-side-batch-size 32
   --cfg-scale 1.5
@@ -41,6 +43,7 @@ run_part() {
   echo "DiT c_FID — Part ${part}"
   echo "ADM evaluator: $ADM_EVALUATOR"
   echo "REF batch:     $REF_BATCH"
+  echo "Results JSON:  $RESULTS_JSON"
   echo "=========================================="
   PYTHONPATH="$PWD" python "$SCRIPT" --part "$part" "$@" "${COMMON_ARGS[@]}" \
     2>&1 | tee "${LOG_DIR}/cfid_part_${part}.log"
@@ -67,7 +70,7 @@ if [[ -n "$PART" ]]; then
       echo "  預設（你的進度）:"
       echo "    PART_A_COMPLETED=28  N_K5_ON_PART_A=3  → Part-A 共 31 項（若曾顯示 32 請設 N_K5_ON_PART_A=4）"
       echo "    PART_B_COMPLETED=32  → Part-B 共 53 項（需 N_K5_ON_PART_A=3）"
-      echo "  兩台必須共用同一份 results JSON"
+      echo "  兩台必須共用同一份 results JSON（可用 RESULTS_JSON 指定）"
       exit 1
       ;;
   esac

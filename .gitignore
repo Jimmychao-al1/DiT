@@ -5,3 +5,5 @@ pretrained_models/
 dit_s3cache/fid/gen_image/
 dit_s3cache/fid/classify_image_graph_def.pb
 dit_s3cache/fid/fid_sensitivity_results.json
+dit_s3cache/fid/fid_sensitivity_results_B.json
+dit_s3cache/fid/fid_sensitivity_results_A.json
