@@ -217,6 +217,7 @@ def main(args: argparse.Namespace) -> None:
             args=args,
             device=device,
             cache_scheduler=scheduler,
+            experiment_name=f"k={k} block_{block_idx}",
         )
         fid_value = float(run_result["fid"])
         delta = fid_value - baseline_fid
@@ -275,6 +276,7 @@ def ensure_baseline(
         args=args,
         device=device,
         cache_scheduler=None,
+        experiment_name="baseline",
     )
     results["results"]["baseline_fid"] = float(baseline_result["fid"])
     results["results"]["baseline_meta"] = baseline_result
@@ -291,6 +293,7 @@ def generate_and_compute_fid(
     args: argparse.Namespace,
     device: str,
     cache_scheduler: dict[int, set[int]] | None,
+    experiment_name: str,
 ) -> dict[str, Any]:
     clear_generated(args.gen_image_dir)
     args.sample_npz.parent.mkdir(parents=True, exist_ok=True)
@@ -312,12 +315,18 @@ def generate_and_compute_fid(
             args=args,
             device=device,
             cache_blocks=cache_blocks,
+            experiment_name=experiment_name,
         )
     finally:
         if cache_blocks:
             restore_cache_wrappers(cache_blocks)
 
-    create_npz_from_sample_folder(args.gen_image_dir, args.sample_npz, args.num_fid_samples)
+    create_npz_from_sample_folder(
+        args.gen_image_dir,
+        args.sample_npz,
+        args.num_fid_samples,
+        experiment_name=experiment_name,
+    )
     fid_value, evaluator_output = compute_fid_adm(
         adm_python=args.adm_python,
         adm_evaluator=args.adm_evaluator,
@@ -356,6 +365,7 @@ def generate_images(
     args: argparse.Namespace,
     device: str,
     cache_blocks: list[Any],
+    experiment_name: str,
 ) -> None:
     seed_all(args.seed)
     latent_size = args.image_size // 8
@@ -363,7 +373,7 @@ def generate_images(
     total_batches = math.ceil(args.num_fid_samples / args.per_side_batch_size)
     iterator = range(total_batches)
     if args.progress:
-        iterator = tqdm(iterator, desc="Generating")
+        iterator = tqdm(iterator, desc=f"Generating [{experiment_name}]")
 
     for _ in iterator:
         current_bs = min(args.per_side_batch_size, args.num_fid_samples - saved)
@@ -421,9 +431,15 @@ def make_cfg_inputs(
     return z, y
 
 
-def create_npz_from_sample_folder(sample_dir: Path, npz_path: Path, num: int) -> Path:
+def create_npz_from_sample_folder(
+    sample_dir: Path,
+    npz_path: Path,
+    num: int,
+    *,
+    experiment_name: str,
+) -> Path:
     samples = []
-    for idx in tqdm(range(num), desc="Building ADM sample npz"):
+    for idx in tqdm(range(num), desc=f"Building ADM sample npz [{experiment_name}]"):
         image_path = sample_dir / f"{idx:06d}.png"
         if not image_path.is_file():
             raise FileNotFoundError(f"Missing generated image: {image_path}")
