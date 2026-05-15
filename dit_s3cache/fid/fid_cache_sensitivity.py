@@ -54,7 +54,40 @@ def build_argparser() -> argparse.ArgumentParser:
     parser.add_argument("--cfg-scale", type=float, default=1.5)
     parser.add_argument("--k-values", type=int, nargs="+", default=[3, 5, 10])
     parser.add_argument("--seed", type=int, default=0)
-    parser.add_argument("--part", type=str, choices=["A", "B"], default=None)
+    parser.add_argument(
+        "--part",
+        type=str,
+        choices=["A", "B", "A2", "B2"],
+        default=None,
+        help="A/B: symmetric 42+42 sweep. A2/B2: finish legacy weighted sweep via shared JSON.",
+    )
+    parser.add_argument(
+        "--part-a-completed",
+        type=int,
+        default=None,
+        help=(
+            "For --part A2/B2: progress hint only (e.g. 28 if host A stopped at 28/32). "
+            "Actual work queue comes from legacy Part-A list minus valid JSON entries."
+        ),
+    )
+    parser.add_argument(
+        "--part-b-completed",
+        type=int,
+        default=None,
+        help=(
+            "For --part A2/B2: progress hint only (e.g. 32 if host B stopped at 32/53). "
+            "Actual work queue comes from legacy Part-B list minus valid JSON entries."
+        ),
+    )
+    parser.add_argument(
+        "--n-k5-on-part-a",
+        type=int,
+        default=None,
+        help=(
+            "Legacy weighted Part-A size = n_blocks + this value (k=3 all blocks, then k=5 "
+            "on blocks 0..N-1). Use 4 for a 32-task Part-A list (28+4); default formula gives 3 (31 tasks)."
+        ),
+    )
     parser.add_argument("--vae", type=str, choices=["ema", "mse"], default="mse")
     parser.add_argument("--ckpt", type=str, default=None)
     parser.add_argument("--device", type=str, default=None)
@@ -124,7 +157,16 @@ def main(args: argparse.Namespace) -> None:
     if args.baseline_only:
         return
 
-    tasks = get_task_list(args.part, args.k_values, n_blocks=len(model.blocks))
+    tasks = get_task_list(
+        args.part,
+        args.k_values,
+        n_blocks=len(model.blocks),
+        part_a_completed=args.part_a_completed,
+        part_b_completed=args.part_b_completed,
+        n_k5_on_part_a_override=args.n_k5_on_part_a,
+        results=results,
+        args=args,
+    )
     if args.block is not None:
         if args.k is None:
             raise ValueError("--block requires --k for a single experiment.")
@@ -132,10 +174,32 @@ def main(args: argparse.Namespace) -> None:
     elif args.k is not None:
         tasks = [(args.k, block_idx) for block_idx in range(len(model.blocks))]
 
+    if args.part in ("A2", "B2"):
+        n_k5_a = (
+            args.n_k5_on_part_a
+            if args.n_k5_on_part_a is not None
+            else _legacy_n_k5_on_weighted_part_a(len(model.blocks))
+        )
+        a_list, b_list, pending = _legacy_remainder_pending(
+            len(model.blocks), n_k5_a, results, args
+        )
+        _log_remainder_progress(
+            a_list,
+            b_list,
+            pending,
+            part_a_completed=args.part_a_completed,
+            part_b_completed=args.part_b_completed,
+        )
+        print(
+            f"Remainder phase {args.part}: {len(tasks)} tasks on this host "
+            f"({len(pending)} pending in combined legacy pool)"
+        )
     print(f"Part {args.part or 'FULL'}: {len(tasks)} cached evals + baseline")
     for task_idx, (k, block_idx) in enumerate(tasks, 1):
-        if should_skip(results, k, block_idx):
-            print(f"[{task_idx}/{len(tasks)}] skip existing: k={k} block_{block_idx}")
+        results = load_results(args)
+        baseline_fid = float(results["results"].get("baseline_fid", baseline_fid))
+        if should_skip(results, args, k, block_idx):
+            print(f"[{task_idx}/{len(tasks)}] skip existing (valid): k={k} block_{block_idx}")
             continue
 
         print(f"[{task_idx}/{len(tasks)}] evaluating k={k} block_{block_idx}")
@@ -420,37 +484,118 @@ def parse_fid_from_adm_output(output: str) -> float:
     raise ValueError(f"Could not parse FID from ADM evaluator output:\n{output}")
 
 
-def _cached_eval_count_part_a(n_blocks: int) -> int:
-    """How many cached (non-baseline) evals to assign to Part A for time balance.
-
-    Assume host A runs ~46 min / eval and host B ~27 min / eval, each also runs one
-    baseline of the same per-host rate.  Total work: ``3 * n_blocks`` cached + 2 baseline.
-
-    Solve ``46 * (1 + c_a) ≈ 27 * (1 + 3 * n_blocks - c_a)`` for integer ``c_a``:
-    ``c_a = round((81 * n_blocks - 19) / 73)`` (clamped to ``[n_blocks, 2 * n_blocks]`` so Part A
-    holds all k=3 plus a prefix of k=5, Part B the rest of k=5 and all k=10).
-    """
+def _legacy_n_k5_on_weighted_part_a(n_blocks: int) -> int:
+    """k=5 block count on old weighted Part A (after all k=3). Default ~3 for n_blocks=28."""
     raw = (81 * n_blocks - 19) / 73.0
     c_a = int(round(raw))
-    # Need at least n_blocks tasks (all k=3); at most 2*n_blocks (k=3 + all k=5).
-    return max(n_blocks, min(2 * n_blocks, c_a))
+    c_a = max(n_blocks, min(2 * n_blocks, c_a))
+    return c_a - n_blocks
 
 
-def get_task_list(part: str | None, k_values: list[int], n_blocks: int) -> list[tuple[int, int]]:
+def legacy_weighted_part_a_tasks(n_blocks: int, n_k5_on_part_a: int) -> list[tuple[int, int]]:
+    """Old Part-A order: all k=3, then k=5 on blocks ``0 .. n_k5_on_part_a - 1``."""
+    if not 0 <= n_k5_on_part_a <= n_blocks:
+        raise ValueError(f"n_k5_on_part_a must be in [0, {n_blocks}], got {n_k5_on_part_a}")
+    return [(3, block_idx) for block_idx in range(n_blocks)] + [
+        (5, block_idx) for block_idx in range(n_k5_on_part_a)
+    ]
+
+
+def legacy_weighted_part_b_tasks(n_blocks: int, n_k5_on_part_a: int) -> list[tuple[int, int]]:
+    """Old Part-B order: k=5 on blocks ``[n_k5_on_part_a .. n_blocks)``, then all k=10."""
+    if not 0 <= n_k5_on_part_a < n_blocks:
+        raise ValueError(f"n_k5_on_part_a must be in [0, {n_blocks}), got {n_k5_on_part_a}")
+    return [(5, block_idx) for block_idx in range(n_k5_on_part_a, n_blocks)] + [
+        (10, block_idx) for block_idx in range(n_blocks)
+    ]
+
+
+def _legacy_remainder_pending(
+    n_blocks: int,
+    n_k5_on_part_a: int,
+    results: dict[str, Any],
+    args: argparse.Namespace,
+) -> tuple[list[tuple[int, int]], list[tuple[int, int]], list[tuple[int, int]]]:
+    """All legacy A/B tasks that lack a valid ``fid`` entry in ``results``."""
+    a_list = legacy_weighted_part_a_tasks(n_blocks, n_k5_on_part_a)
+    b_list = legacy_weighted_part_b_tasks(n_blocks, n_k5_on_part_a)
+    pending_a = [t for t in a_list if not should_skip(results, args, t[0], t[1])]
+    pending_b = [t for t in b_list if not should_skip(results, args, t[0], t[1])]
+    return a_list, b_list, pending_a + pending_b
+
+
+def _log_remainder_progress(
+    a_list: list[tuple[int, int]],
+    b_list: list[tuple[int, int]],
+    pending: list[tuple[int, int]],
+    *,
+    part_a_completed: int | None,
+    part_b_completed: int | None,
+) -> None:
+    pending_a = [t for t in pending if t in a_list]
+    pending_b = [t for t in pending if t in b_list]
+    print(
+        f"Legacy Part-A list: {len(a_list)} tasks "
+        f"({len(pending_a)} pending in JSON); "
+        f"Part-B list: {len(b_list)} tasks ({len(pending_b)} pending)"
+    )
+    if part_a_completed is not None:
+        print(
+            f"  Host A reported progress: {part_a_completed}/{len(a_list)} "
+            f"(queue uses JSON, not only the tail {len(a_list) - part_a_completed} tasks)"
+        )
+    if part_b_completed is not None:
+        print(
+            f"  Host B reported progress: {part_b_completed}/{len(b_list)} "
+            f"(queue uses JSON, not only the tail {len(b_list) - part_b_completed} tasks)"
+        )
+    if pending:
+        preview = ", ".join(f"k{k}b{b}" for k, b in pending[:8])
+        if len(pending) > 8:
+            preview += ", ..."
+        print(f"  Combined pending (first items): {preview}")
+
+
+def get_task_list(
+    part: str | None,
+    k_values: list[int],
+    n_blocks: int,
+    *,
+    part_a_completed: int | None = None,
+    part_b_completed: int | None = None,
+    n_k5_on_part_a_override: int | None = None,
+    results: dict[str, Any] | None = None,
+    args: argparse.Namespace | None = None,
+) -> list[tuple[int, int]]:
     if part == "A":
-        # Slow host: all k=3, then k=5 on blocks [0, n_k5_on_a).
-        c_a = _cached_eval_count_part_a(n_blocks)
-        n_k5_on_a = c_a - n_blocks
+        # Symmetric split (equal host speed): 42 + 42 when n_blocks=28.
+        half = n_blocks // 2
         return [(3, block_idx) for block_idx in range(n_blocks)] + [
-            (5, block_idx) for block_idx in range(n_k5_on_a)
+            (5, block_idx) for block_idx in range(half)
         ]
+
     if part == "B":
-        # Fast host: k=5 on remaining blocks, then all k=10.
-        c_a = _cached_eval_count_part_a(n_blocks)
-        n_k5_on_a = c_a - n_blocks
-        return [(5, block_idx) for block_idx in range(n_k5_on_a, n_blocks)] + [
+        half = n_blocks // 2
+        return [(5, block_idx) for block_idx in range(half, n_blocks)] + [
             (10, block_idx) for block_idx in range(n_blocks)
         ]
+
+    if part in ("A2", "B2"):
+        if results is None or args is None:
+            raise ValueError("Internal: A2/B2 requires results and args")
+        n_k5_a = (
+            n_k5_on_part_a_override
+            if n_k5_on_part_a_override is not None
+            else _legacy_n_k5_on_weighted_part_a(n_blocks)
+        )
+        _a_list, _b_list, pending = _legacy_remainder_pending(n_blocks, n_k5_a, results, args)
+        if not pending:
+            return []
+        mid = (len(pending) + 1) // 2
+        if part == "A2":
+            return pending[:mid]
+        return pending[mid:]
+
     return [(k, block_idx) for k in k_values for block_idx in range(n_blocks)]
 
 
@@ -483,8 +628,29 @@ def save_results(results: dict[str, Any], path: Path) -> None:
         json.dump(results, handle, indent=2)
 
 
-def should_skip(results: dict[str, Any], k: int, block_idx: int) -> bool:
-    return f"block_{block_idx}" in results.get("results", {}).get(f"k{k}", {})
+def should_skip(
+    results: dict[str, Any],
+    args: argparse.Namespace,
+    k: int,
+    block_idx: int,
+) -> bool:
+    """Skip if JSON has a *complete* entry for this (k, block)."""
+    entry = results.get("results", {}).get(f"k{k}", {}).get(f"block_{block_idx}")
+    if entry is None:
+        return False
+    if not isinstance(entry, dict):
+        return False
+    if "fid" not in entry:
+        return False
+    try:
+        float(entry["fid"])
+    except (TypeError, ValueError):
+        return False
+    if entry.get("sample_count") is not None and int(entry["sample_count"]) != int(
+        args.num_fid_samples
+    ):
+        return False
+    return True
 
 
 def baseline_matches(meta: dict[str, Any], args: argparse.Namespace) -> bool:
