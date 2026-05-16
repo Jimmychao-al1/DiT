@@ -62,5 +62,11 @@ for K in "${K_LIST[@]}"; do
 done
 
 echo "================================================================"
+echo "▶ 匯出 CSV（與 LDM csv_exports 相同欄位）"
+python3 dit_s3cache/stage1/export_stage1_sweep_csv_dit.py \
+  --base_out "${BASE_OUT}"
+
+echo "================================================================"
 echo "✅ sweep 完成。結果：${BASE_OUT}/sweep_*"
+echo "   CSV：${BASE_OUT}/csv_exports/"
 echo "================================================================"

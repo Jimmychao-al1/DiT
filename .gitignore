@@ -8,3 +8,5 @@ dit_s3cache/fid/fid_sensitivity_results_merged_B.json
 dit_s3cache/fid/fid_sensitivity_results_merged_A.json
 dit_s3cache/stage0/stage0_output/
 dit_s3cache/stage0/stage0_figures/
+dit_s3cache/stage1/stage1_figures/
+dit_s3cache/stage1/stage1_output/sweep_*/
