@@ -1,0 +1,10 @@
+{
+  "stage": "stage2_runtime_refine_dit",
+  "scheduler_config_path": "/home/jimmy/DiT/dit_s3cache/stage1/stage1_output/baseline_p1_K20_sw5_lam1.0_kmax4/scheduler_config.json",
+  "T": 250,
+  "seed": 42,
+  "force_full_prefix_steps": 0,
+  "prefix_step_indices": [],
+  "force_full_runtime_blocks": [],
+  "note": "Overrides are unions on top of Stage1-expanded recompute sets; they do not replace Stage1 scheduler JSON."
+}

@@ -1,0 +1,294 @@
+{
+  "method": "blockwise_quantile_v1_dit",
+  "source": "ported_from_baseline_908030",
+  "block_identity_semantics": {
+    "block_id": "canonical runtime block index (0~27)",
+    "canonical_runtime_block_id": "same as block_id"
+  },
+  "source_diagnostics_path": "/home/jimmy/DiT/dit_s3cache/stage2/stage2_output/src_baseline_p1_K20_sw5_lam1.0/00_global_refine/stage2_runtime_diagnostics.json",
+  "q_zone": 0.9,
+  "q_peak": 0.8,
+  "peak_over_zone_ratio_min": 1.3,
+  "per_block": [
+    {
+      "block_id": 0,
+      "canonical_runtime_block_id": 0,
+      "canonical_name": "block_0",
+      "runtime_name": "block_0",
+      "num_zone_samples": 14,
+      "num_step_samples": 250,
+      "zone_l1_threshold": 0.024423406731387202,
+      "peak_l1_threshold": 0.03175042875080336
+    },
+    {
+      "block_id": 1,
+      "canonical_runtime_block_id": 1,
+      "canonical_name": "block_1",
+      "runtime_name": "block_1",
+      "num_zone_samples": 14,
+      "num_step_samples": 250,
+      "zone_l1_threshold": 0.15181934412685225,
+      "peak_l1_threshold": 0.19736514736490793
+    },
+    {
+      "block_id": 2,
+      "canonical_runtime_block_id": 2,
+      "canonical_name": "block_2",
+      "runtime_name": "block_2",
+      "num_zone_samples": 14,
+      "num_step_samples": 250,
+      "zone_l1_threshold": 0.27798080511391166,
+      "peak_l1_threshold": 0.3613750466480852
+    },
+    {
+      "block_id": 3,
+      "canonical_runtime_block_id": 3,
+      "canonical_name": "block_3",
+      "runtime_name": "block_3",
+      "num_zone_samples": 14,
+      "num_step_samples": 250,
+      "zone_l1_threshold": 0.1030449121016621,
+      "peak_l1_threshold": 0.13395838573216073
+    },
+    {
+      "block_id": 4,
+      "canonical_runtime_block_id": 4,
+      "canonical_name": "block_4",
+      "runtime_name": "block_4",
+      "num_zone_samples": 14,
+      "num_step_samples": 250,
+      "zone_l1_threshold": 0.09754958824667662,
+      "peak_l1_threshold": 0.12681446472067961
+    },
+    {
+      "block_id": 5,
+      "canonical_runtime_block_id": 5,
+      "canonical_name": "block_5",
+      "runtime_name": "block_5",
+      "num_zone_samples": 14,
+      "num_step_samples": 250,
+      "zone_l1_threshold": 0.15350048735827937,
+      "peak_l1_threshold": 0.1995506335657632
+    },
+    {
+      "block_id": 6,
+      "canonical_runtime_block_id": 6,
+      "canonical_name": "block_6",
+      "runtime_name": "block_6",
+      "num_zone_samples": 14,
+      "num_step_samples": 250,
+      "zone_l1_threshold": 0.2659493189060972,
+      "peak_l1_threshold": 0.34573411457792635
+    },
+    {
+      "block_id": 7,
+      "canonical_runtime_block_id": 7,
+      "canonical_name": "block_7",
+      "runtime_name": "block_7",
+      "num_zone_samples": 14,
+      "num_step_samples": 250,
+      "zone_l1_threshold": 0.1996735924088788,
+      "peak_l1_threshold": 0.2595756701315425
+    },
+    {
+      "block_id": 8,
+      "canonical_runtime_block_id": 8,
+      "canonical_name": "block_8",
+      "runtime_name": "block_8",
+      "num_zone_samples": 14,
+      "num_step_samples": 250,
+      "zone_l1_threshold": 0.27372428158072837,
+      "peak_l1_threshold": 0.3558415660549469
+    },
+    {
+      "block_id": 9,
+      "canonical_runtime_block_id": 9,
+      "canonical_name": "block_9",
+      "runtime_name": "block_9",
+      "num_zone_samples": 14,
+      "num_step_samples": 250,
+      "zone_l1_threshold": 0.3860570886123537,
+      "peak_l1_threshold": 0.5018742151960599
+    },
+    {
+      "block_id": 10,
+      "canonical_runtime_block_id": 10,
+      "canonical_name": "block_10",
+      "runtime_name": "block_10",
+      "num_zone_samples": 14,
+      "num_step_samples": 250,
+      "zone_l1_threshold": 0.4632174653645547,
+      "peak_l1_threshold": 0.6021827049739211
+    },
+    {
+      "block_id": 11,
+      "canonical_runtime_block_id": 11,
+      "canonical_name": "block_11",
+      "runtime_name": "block_11",
+      "num_zone_samples": 14,
+      "num_step_samples": 250,
+      "zone_l1_threshold": 0.6011299769805687,
+      "peak_l1_threshold": 0.7814689700747394
+    },
+    {
+      "block_id": 12,
+      "canonical_runtime_block_id": 12,
+      "canonical_name": "block_12",
+      "runtime_name": "block_12",
+      "num_zone_samples": 14,
+      "num_step_samples": 250,
+      "zone_l1_threshold": 0.739303370678888,
+      "peak_l1_threshold": 0.9610943818825544
+    },
+    {
+      "block_id": 13,
+      "canonical_runtime_block_id": 13,
+      "canonical_name": "block_13",
+      "runtime_name": "block_13",
+      "num_zone_samples": 14,
+      "num_step_samples": 250,
+      "zone_l1_threshold": 0.9242846679714546,
+      "peak_l1_threshold": 1.2228694796562194
+    },
+    {
+      "block_id": 14,
+      "canonical_runtime_block_id": 14,
+      "canonical_name": "block_14",
+      "runtime_name": "block_14",
+      "num_zone_samples": 14,
+      "num_step_samples": 250,
+      "zone_l1_threshold": 1.1165819905034364,
+      "peak_l1_threshold": 1.5196116089820866
+    },
+    {
+      "block_id": 15,
+      "canonical_runtime_block_id": 15,
+      "canonical_name": "block_15",
+      "runtime_name": "block_15",
+      "num_zone_samples": 14,
+      "num_step_samples": 250,
+      "zone_l1_threshold": 1.2578419211903418,
+      "peak_l1_threshold": 1.721695551276207
+    },
+    {
+      "block_id": 16,
+      "canonical_runtime_block_id": 16,
+      "canonical_name": "block_16",
+      "runtime_name": "block_16",
+      "num_zone_samples": 14,
+      "num_step_samples": 250,
+      "zone_l1_threshold": 1.3483558580621848,
+      "peak_l1_threshold": 1.845892941951752
+    },
+    {
+      "block_id": 17,
+      "canonical_runtime_block_id": 17,
+      "canonical_name": "block_17",
+      "runtime_name": "block_17",
+      "num_zone_samples": 14,
+      "num_step_samples": 250,
+      "zone_l1_threshold": 1.4059876403978646,
+      "peak_l1_threshold": 1.9382319808006288
+    },
+    {
+      "block_id": 18,
+      "canonical_runtime_block_id": 18,
+      "canonical_name": "block_18",
+      "runtime_name": "block_18",
+      "num_zone_samples": 14,
+      "num_step_samples": 250,
+      "zone_l1_threshold": 1.64749941967518,
+      "peak_l1_threshold": 2.2608097732067107
+    },
+    {
+      "block_id": 19,
+      "canonical_runtime_block_id": 19,
+      "canonical_name": "block_19",
+      "runtime_name": "block_19",
+      "num_zone_samples": 14,
+      "num_step_samples": 250,
+      "zone_l1_threshold": 2.162714680446494,
+      "peak_l1_threshold": 2.966450783610344
+    },
+    {
+      "block_id": 20,
+      "canonical_runtime_block_id": 20,
+      "canonical_name": "block_20",
+      "runtime_name": "block_20",
+      "num_zone_samples": 14,
+      "num_step_samples": 250,
+      "zone_l1_threshold": 1.9456258447783745,
+      "peak_l1_threshold": 2.6949214667081836
+    },
+    {
+      "block_id": 21,
+      "canonical_runtime_block_id": 21,
+      "canonical_name": "block_21",
+      "runtime_name": "block_21",
+      "num_zone_samples": 14,
+      "num_step_samples": 250,
+      "zone_l1_threshold": 1.996193837684491,
+      "peak_l1_threshold": 2.7503646999597553
+    },
+    {
+      "block_id": 22,
+      "canonical_runtime_block_id": 22,
+      "canonical_name": "block_22",
+      "runtime_name": "block_22",
+      "num_zone_samples": 14,
+      "num_step_samples": 250,
+      "zone_l1_threshold": 2.4336790545110523,
+      "peak_l1_threshold": 3.3138275027275093
+    },
+    {
+      "block_id": 23,
+      "canonical_runtime_block_id": 23,
+      "canonical_name": "block_23",
+      "runtime_name": "block_23",
+      "num_zone_samples": 14,
+      "num_step_samples": 250,
+      "zone_l1_threshold": 3.855749544448433,
+      "peak_l1_threshold": 5.174950045347215
+    },
+    {
+      "block_id": 24,
+      "canonical_runtime_block_id": 24,
+      "canonical_name": "block_24",
+      "runtime_name": "block_24",
+      "num_zone_samples": 14,
+      "num_step_samples": 250,
+      "zone_l1_threshold": 5.2373588346113165,
+      "peak_l1_threshold": 7.1844223737716675
+    },
+    {
+      "block_id": 25,
+      "canonical_runtime_block_id": 25,
+      "canonical_name": "block_25",
+      "runtime_name": "block_25",
+      "num_zone_samples": 14,
+      "num_step_samples": 250,
+      "zone_l1_threshold": 6.148560570742821,
+      "peak_l1_threshold": 8.673369944095612
+    },
+    {
+      "block_id": 26,
+      "canonical_runtime_block_id": 26,
+      "canonical_name": "block_26",
+      "runtime_name": "block_26",
+      "num_zone_samples": 14,
+      "num_step_samples": 250,
+      "zone_l1_threshold": 6.711887816163086,
+      "peak_l1_threshold": 9.267966103553773
+    },
+    {
+      "block_id": 27,
+      "canonical_runtime_block_id": 27,
+      "canonical_name": "block_27",
+      "runtime_name": "block_27",
+      "num_zone_samples": 14,
+      "num_step_samples": 250,
+      "zone_l1_threshold": 1.0311570039655902,
+      "peak_l1_threshold": 1.3405041051552673
+    }
+  ]
+}
