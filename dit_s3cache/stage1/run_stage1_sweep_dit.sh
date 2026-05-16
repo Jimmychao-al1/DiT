@@ -18,8 +18,8 @@ VERIFY="dit_s3cache/stage1/verify_scheduler_dit.py"
 
 # 掃描範圍（可自行縮小以縮短時間）
 K_LIST=(10 15 20 25 30 35)
-SW_LIST=(3 5 9)
-LAM_LIST=(0.25 0.5 1.0 2.0)
+SW_LIST=(2 3 5 9)
+LAM_LIST=(0.25 0.5 1.0)
 KMAX_LIST=(4)
 
 echo "================================================================"
