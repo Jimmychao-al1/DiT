@@ -29,6 +29,9 @@ import numpy as np
 SWEEP_DIR_RE = re.compile(
     r"^sweep_K(?P<K>\d+)_sw(?P<sw>\d+)_lam(?P<lam>[\d.]+)(?:_kmax(?P<kmax>\d+))?$"
 )
+BASELINE_DIR_RE = re.compile(
+    r"^baseline_p(?P<priority>\d+)_K(?P<K>\d+)_sw(?P<sw>\d+)_lam(?P<lam>[\d.]+)(?:_kmax(?P<kmax>\d+))?$"
+)
 
 SUMMARY_COLUMNS = [
     "run",
@@ -101,6 +104,16 @@ PER_ZONE_COLUMNS = [
 
 
 def parse_sweep_dir_name(name: str) -> Optional[Dict[str, Any]]:
+    m_base = BASELINE_DIR_RE.match(name)
+    if m_base:
+        return {
+            "run": name,
+            "priority": int(m_base.group("priority")),
+            "K": int(m_base.group("K")),
+            "sw": int(m_base.group("sw")),
+            "lambda": float(m_base.group("lam")),
+            "kmax": int(m_base.group("kmax")) if m_base.group("kmax") else None,
+        }
     m = SWEEP_DIR_RE.match(name)
     if not m:
         return None
@@ -276,8 +289,9 @@ def build_per_zone_rows(
 
 def discover_runs(base_out: Path) -> List[Tuple[Dict[str, Any], Path]]:
     runs: List[Tuple[Dict[str, Any], Path]] = []
+    skip_names = {"csv_exports"}
     for d in sorted(base_out.iterdir()):
-        if not d.is_dir():
+        if not d.is_dir() or d.name in skip_names:
             continue
         meta = parse_sweep_dir_name(d.name)
         if meta is None:
@@ -295,7 +309,7 @@ def discover_runs(base_out: Path) -> List[Tuple[Dict[str, Any], Path]]:
 
 
 def _sort_key(meta: Dict[str, Any]) -> Tuple[Any, ...]:
-    return (meta["K"], meta["sw"], meta["lambda"])
+    return (meta.get("priority", 99), meta["K"], meta["sw"], meta["lambda"])
 
 
 def write_csv(path: Path, columns: List[str], rows: List[Dict[str, Any]]) -> None:
@@ -403,24 +417,26 @@ def main() -> None:
     if not runs:
         raise SystemExit(f"找不到 sweep 目錄於 {base_out}")
 
-    print(f"發現 {len(runs)} 個 sweep runs @ {base_out}")
-    export_subset(runs, csv_root / "all", f"{len(runs)}runs")
+    print(f"發現 {len(runs)} 個 run 目錄 @ {base_out}")
+    export_subset(runs, csv_root, f"{len(runs)}runs")
 
-    ksw = [(m, d) for m, d in runs if abs(m["lambda"] - 1.0) < 1e-9]
-    if ksw:
-        export_subset(ksw, csv_root / "K_sw", f"{len(ksw)}runs")
-
-    lam_runs = filter_lambda_runs(
-        runs,
-        fixed_K=args.lambda_fixed_K,
-        fixed_sw=args.lambda_fixed_sw,
-    )
-    if lam_runs:
-        export_subset(
-            lam_runs,
-            csv_root / "lambda",
-            f"lambda_{len(lam_runs)}runs",
+    # 若仍有多組 sweep（非僅選定 baseline），額外輸出子集
+    if len(runs) > 3:
+        export_subset(runs, csv_root / "all", f"{len(runs)}runs")
+        ksw = [(m, d) for m, d in runs if abs(m["lambda"] - 1.0) < 1e-9]
+        if ksw:
+            export_subset(ksw, csv_root / "K_sw", f"{len(ksw)}runs")
+        lam_runs = filter_lambda_runs(
+            runs,
+            fixed_K=args.lambda_fixed_K,
+            fixed_sw=args.lambda_fixed_sw,
         )
+        if lam_runs:
+            export_subset(
+                lam_runs,
+                csv_root / "lambda",
+                f"lambda_{len(lam_runs)}runs",
+            )
 
     print(f"\n完成。CSV 根目錄: {csv_root.resolve()}")
 
