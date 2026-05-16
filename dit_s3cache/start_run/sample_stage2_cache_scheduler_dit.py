@@ -108,6 +108,45 @@ def _append_runs_index(index_path: Path, entry: Dict[str, Any]) -> None:
         f.write(json.dumps(entry, ensure_ascii=False) + "\n")
 
 
+def _record_run_failed(
+    *,
+    manifest: Dict[str, Any],
+    run_dir: Path,
+    start_dt: datetime,
+    scheduler_name: str,
+    runs_index_path: Optional[Path],
+    common: argparse.Namespace,
+) -> None:
+    """Setup 或 FID 失敗時寫入終態 manifest，並 append runs_index。"""
+    end_dt_failed = datetime.now()
+    manifest.update(
+        {
+            "status": "failed",
+            "end_time": end_dt_failed.isoformat(timespec="seconds"),
+            "duration_sec": round((end_dt_failed - start_dt).total_seconds(), 2),
+            "error_message": str(sys.exc_info()[1]),
+            "traceback": traceback.format_exc(),
+        }
+    )
+    _write_json(run_dir / "run_manifest.json", manifest)
+    if runs_index_path is not None:
+        fk = _fid_index_key(int(common.num_fid_samples))
+        _append_runs_index(
+            runs_index_path,
+            {
+                "rid": _compact_run_index_id(start_dt, scheduler_name),
+                fk: _round_fid_index(None),
+                "d": start_dt.strftime("%Y%m%d"),
+                "sch": scheduler_name,
+                "r": None,
+                "seed": int(common.seed),
+                "out": _repo_rel_path(run_dir),
+                "sum": None,
+                "st": "failed",
+            },
+        )
+
+
 def _compute_schedule_stats_from_cfg(cfg: Dict[str, Any]) -> Dict[str, Any]:
     """純 expanded_mask → full/reuse counts（不依賴 raw_t）；與 Diff-AE start_run 語意對齊。"""
     T = int(cfg["T"])
@@ -257,6 +296,7 @@ def default_jobs() -> List[tuple[str, str]]:
 
 
 def make_run_subdirectory(results_root: Path, scheduler_name: str) -> Path:
+    """``RESULTS_ROOT/YYYYMMDD/sch/MMdd_HH_sch/``；時間粒度到小時（單次 FID@5K 預期 >1h，避免同小時重名覆蓋）。"""
     start = datetime.now()
     date_str = start.strftime("%Y%m%d")
     time_str = start.strftime("%m%d_%H")
@@ -407,57 +447,26 @@ def run_one_job(
 
         score: Optional[float] = None
         run_result: Dict[str, Any] = {}
-        try:
-            run_result = generate_and_compute_fid(
-                model=model,
-                diffusion=diffusion,
-                vae=vae,
-                args=fid_args,
-                device=device,
-                cache_scheduler=cache_sched,
-                experiment_name=scheduler_name,
-            )
-            score = float(run_result["fid"])
+        run_result = generate_and_compute_fid(
+            model=model,
+            diffusion=diffusion,
+            vae=vae,
+            args=fid_args,
+            device=device,
+            cache_scheduler=cache_sched,
+            experiment_name=scheduler_name,
+        )
+        score = float(run_result["fid"])
 
-            npz_path = Path(str(run_result.get("sample_npz", fid_args.sample_npz)))
-            if npz_path.is_file():
-                npz_path.unlink()
-                log.info("Removed scratch NPZ: %s", npz_path)
+        npz_path = Path(str(run_result.get("sample_npz", fid_args.sample_npz)))
+        if npz_path.is_file():
+            npz_path.unlink()
+            log.info("Removed scratch NPZ: %s", npz_path)
 
-            scratch_gen = Path(str(run_result.get("gen_image_dir", fid_args.gen_image_dir)))
-            if scratch_gen.is_dir():
-                for p_item in scratch_gen.glob("*"):
-                    p_item.unlink(missing_ok=True)
-
-        except BaseException:
-            end_dt_failed = datetime.now()
-            manifest.update(
-                {
-                    "status": "failed",
-                    "end_time": end_dt_failed.isoformat(timespec="seconds"),
-                    "duration_sec": round((end_dt_failed - start_dt).total_seconds(), 2),
-                    "error_message": str(sys.exc_info()[1]),
-                    "traceback": traceback.format_exc(),
-                }
-            )
-            _write_json(run_dir / "run_manifest.json", manifest)
-            if runs_index_path is not None:
-                fk = _fid_index_key(int(common.num_fid_samples))
-                _append_runs_index(
-                    runs_index_path,
-                    {
-                        "rid": _compact_run_index_id(start_dt, scheduler_name),
-                        fk: _round_fid_index(None),
-                        "d": start_dt.strftime("%Y%m%d"),
-                        "sch": scheduler_name,
-                        "r": None,
-                        "seed": int(common.seed),
-                        "out": _repo_rel_path(run_dir),
-                        "sum": None,
-                        "st": "failed",
-                    },
-                )
-            raise
+        scratch_gen = Path(str(run_result.get("gen_image_dir", fid_args.gen_image_dir)))
+        if scratch_gen.is_dir():
+            for p_item in scratch_gen.glob("*"):
+                p_item.unlink(missing_ok=True)
 
         end_dt = datetime.now()
         duration_sec = round((end_dt - start_dt).total_seconds(), 2)
@@ -558,6 +567,18 @@ def run_one_job(
             score,
             run_dir,
         )
+
+    except BaseException:
+        if run_dir.is_dir() and (run_dir / "run_manifest.json").is_file():
+            _record_run_failed(
+                manifest=manifest,
+                run_dir=run_dir,
+                start_dt=start_dt,
+                scheduler_name=scheduler_name,
+                runs_index_path=runs_index_path,
+                common=common,
+            )
+        raise
 
     finally:
         root_logger.removeHandler(fh)
