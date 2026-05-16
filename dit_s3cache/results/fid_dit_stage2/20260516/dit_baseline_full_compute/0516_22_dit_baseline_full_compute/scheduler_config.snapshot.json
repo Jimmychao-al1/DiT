@@ -1,0 +1,6 @@
+{
+  "note": "dit_baseline_full_compute: no Stage2 JSON; every block recomputes every timestep",
+  "T": 250,
+  "time_order": "ddpm_249_to_0",
+  "num_blocks": 28
+}

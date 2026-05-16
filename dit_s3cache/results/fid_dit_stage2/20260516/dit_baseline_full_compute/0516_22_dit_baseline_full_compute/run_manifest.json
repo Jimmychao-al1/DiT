@@ -1,0 +1,20 @@
+{
+  "run_id": "20260516T222601__dit_baseline_full_compute",
+  "status": "success",
+  "start_time": "2026-05-16T22:26:01",
+  "end_time": "2026-05-17T01:05:19",
+  "duration_sec": 9557.5,
+  "scheduler_name": "dit_baseline_full_compute",
+  "scheduler_config_path": null,
+  "num_images": 5000,
+  "seed": 0,
+  "repo": "dit_s3cache/start_run/sample_stage2_cache_scheduler_dit.py",
+  "command_argv": [
+    "/home/jimmy/DiT/dit_s3cache/start_run/sample_stage2_cache_scheduler_dit.py",
+    "--base"
+  ],
+  "git_commit": "ff624a9753927dc944cd4d50f947ae49ab668d5f",
+  "hostname": "newslab-server133",
+  "output_dir": "/home/jimmy/DiT/dit_s3cache/results/fid_dit_stage2/20260516/dit_baseline_full_compute/0516_22_dit_baseline_full_compute",
+  "fid_score": 9.191657489936745
+}

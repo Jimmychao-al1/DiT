@@ -1,0 +1,20 @@
+{
+  "run_id": "20260517T010519__baseline_p2_K20_sw3_lam1.0_blockwise",
+  "status": "success",
+  "start_time": "2026-05-17T01:05:19",
+  "end_time": "2026-05-17T01:51:15",
+  "duration_sec": 2756.29,
+  "scheduler_name": "baseline_p2_K20_sw3_lam1.0_blockwise",
+  "scheduler_config_path": "/home/jimmy/DiT/dit_s3cache/stage2/stage2_output/src_baseline_p2_K20_sw3_lam1.0/02_refined_blockwise/stage2_refined_scheduler_config.json",
+  "num_images": 5000,
+  "seed": 0,
+  "repo": "dit_s3cache/start_run/sample_stage2_cache_scheduler_dit.py",
+  "command_argv": [
+    "/home/jimmy/DiT/dit_s3cache/start_run/sample_stage2_cache_scheduler_dit.py",
+    "--base"
+  ],
+  "git_commit": "ff624a9753927dc944cd4d50f947ae49ab668d5f",
+  "hostname": "newslab-server133",
+  "output_dir": "/home/jimmy/DiT/dit_s3cache/results/fid_dit_stage2/20260517/baseline_p2_K20_sw3_lam1.0_blockwise/0517_01_baseline_p2_K20_sw3_lam1.0_blockwise",
+  "fid_score": 11.358992469019483
+}

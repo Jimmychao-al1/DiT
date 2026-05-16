@@ -1,0 +1,11 @@
+2026-05-16 22:26:01,596 [INFO] No --job supplied; default P2 blockwise path: dit_s3cache/stage2/stage2_output/src_baseline_p2_K20_sw3_lam1.0/02_refined_blockwise/stage2_refined_scheduler_config.json
+2026-05-16 22:26:01,596 [INFO] results_root=/home/jimmy/DiT/dit_s3cache/results/fid_dit_stage2 runs_index=/home/jimmy/DiT/dit_s3cache/results/fid_dit_stage2/runs_index.jsonl jobs=2
+2026-05-16 22:26:15,744 [INFO] sampling_timesteps len=250 first=999 last=0
+2026-05-16 22:26:15,744 [INFO] Baseline path: full recompute all blocks (no cache reuse)
+2026-05-17 01:05:19,092 [INFO] Removed scratch NPZ: /home/jimmy/DiT/dit_s3cache/results/fid_dit_stage2/20260516/dit_baseline_full_compute/0516_22_dit_baseline_full_compute/_scratch_samples.npz
+2026-05-17 01:05:19,093 [INFO] [done] dit_baseline_full_compute | FID@5000=9.191657489936745 | out=/home/jimmy/DiT/dit_s3cache/results/fid_dit_stage2/20260516/dit_baseline_full_compute/0516_22_dit_baseline_full_compute
+2026-05-17 01:05:23,321 [INFO] sampling_timesteps len=250 first=999 last=0
+2026-05-17 01:05:23,326 [INFO] Stage2 cache enabled | full_compute_ratio(disk)=0.289857
+2026-05-17 01:51:15,381 [INFO] Removed scratch NPZ: /home/jimmy/DiT/dit_s3cache/results/fid_dit_stage2/20260517/baseline_p2_K20_sw3_lam1.0_blockwise/0517_01_baseline_p2_K20_sw3_lam1.0_blockwise/_scratch_samples.npz
+2026-05-17 01:51:15,385 [INFO] [done] baseline_p2_K20_sw3_lam1.0_blockwise | FID@5000=11.358992469019483 | out=/home/jimmy/DiT/dit_s3cache/results/fid_dit_stage2/20260517/baseline_p2_K20_sw3_lam1.0_blockwise/0517_01_baseline_p2_K20_sw3_lam1.0_blockwise
+2026-05-17 01:51:15,386 [INFO] All jobs complete. runs_index: /home/jimmy/DiT/dit_s3cache/results/fid_dit_stage2/runs_index.jsonl
