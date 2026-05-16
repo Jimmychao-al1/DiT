@@ -1,0 +1,7 @@
+source,pass,full_compute_ratio,zone_adj_count,peak_adj_count,threshold_spread_zone,threshold_spread_peak,threshold_min_block,threshold_max_block,mean_l1_max_step,mean_l1_min_step
+src_baseline_p1_K20_sw5_lam1.0,global,0.899714,377,3707,1.000000,1.000000,global,global,249,0
+src_baseline_p1_K20_sw5_lam1.0,blockwise,0.421143,56,773,274.813743,291.900502,block_0,block_26,249,0
+src_baseline_p2_K20_sw3_lam1.0,global,0.901571,406,3710,1.000000,1.000000,global,global,249,0
+src_baseline_p2_K20_sw3_lam1.0,blockwise,0.289857,56,42,534.989695,534.989695,block_0,block_26,249,0
+src_baseline_p3_K25_sw5_lam1.0,global,0.900143,460,3691,1.000000,1.000000,global,global,249,0
+src_baseline_p3_K25_sw5_lam1.0,blockwise,0.313000,56,201,410.230345,410.230345,block_0,block_26,249,0

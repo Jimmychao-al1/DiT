@@ -1,0 +1,132 @@
+DiT S3-Cache Stage 2 Scheduler Acceptance Report
+Generated from raw JSON under dit_s3cache/stage2/stage2_output
+Ground truth: 28 blocks, T=250, expanded_mask=(28,250), time_order=ddpm_249_to_0, eval_num_images=8
+
+Task 1 - File Integrity
+- P1 src_baseline_p1_K20_sw5_lam1.0: files/json=PASS; missing=none; parse_errors=none
+  - global: expanded_mask shape/bool=PASS; k_out_of_range=none; exact_k_rebuild_mismatch_blocks=27; superset_missing=none
+  - blockwise: expanded_mask shape/bool=PASS; k_out_of_range=none; exact_k_rebuild_mismatch_blocks=28; superset_missing=none
+  - thresholds: PASS; per_block=28
+- P2 src_baseline_p2_K20_sw3_lam1.0: files/json=PASS; missing=none; parse_errors=none
+  - global: expanded_mask shape/bool=PASS; k_out_of_range=none; exact_k_rebuild_mismatch_blocks=27; superset_missing=none
+  - blockwise: expanded_mask shape/bool=PASS; k_out_of_range=none; exact_k_rebuild_mismatch_blocks=3; superset_missing=none
+  - thresholds: PASS; per_block=28
+- P3 src_baseline_p3_K25_sw5_lam1.0: files/json=PASS; missing=none; parse_errors=none
+  - global: expanded_mask shape/bool=PASS; k_out_of_range=none; exact_k_rebuild_mismatch_blocks=27; superset_missing=none
+  - blockwise: expanded_mask shape/bool=PASS; k_out_of_range=none; exact_k_rebuild_mismatch_blocks=27; superset_missing=none
+  - thresholds: PASS; per_block=28
+Task 1 verdict: PASS
+
+Task 2 - Pass 1 Global vs Pass 2 Blockwise
+- P1 src_baseline_p1_K20_sw5_lam1.0:
+  - Global: zone_adj=377, peak_repair=3707 (mask_touch=5795), full_compute=0.8997, cache_reuse=0.1003
+  - Blockwise: zone_adj=56, peak_repair=773 (mask_touch=1193), full_compute=0.4211, cache_reuse=0.5789
+  - Delta: full_compute -0.4786, peak_repair -2934
+  - WARNING: global pass is far above 0.60 sanity band; it is much more conservative than the LDM reference.
+- P2 src_baseline_p2_K20_sw3_lam1.0:
+  - Global: zone_adj=406, peak_repair=3710 (mask_touch=5808), full_compute=0.9016, cache_reuse=0.0984
+  - Blockwise: zone_adj=56, peak_repair=42 (mask_touch=65), full_compute=0.2899, cache_reuse=0.7101
+  - Delta: full_compute -0.6117, peak_repair -3668
+  - WARNING: global pass is far above 0.60 sanity band; it is much more conservative than the LDM reference.
+- P3 src_baseline_p3_K25_sw5_lam1.0:
+  - Global: zone_adj=460, peak_repair=3691 (mask_touch=5794), full_compute=0.9001, cache_reuse=0.0999
+  - Blockwise: zone_adj=56, peak_repair=201 (mask_touch=316), full_compute=0.3130, cache_reuse=0.6870
+  - Delta: full_compute -0.5871, peak_repair -3490
+  - WARNING: global pass is far above 0.60 sanity band; it is much more conservative than the LDM reference.
+Task 2 verdict: WARNING
+
+Task 3 - Blockwise Threshold Spread
+- P1 src_baseline_p1_K20_sw5_lam1.0:
+  - zone: min=0.024423, max=6.711888, median=0.977721, mean=1.534316, spread=274.81x
+  - zone low3=[('block_0', 0.024423), ('block_4', 0.09755), ('block_3', 0.103045)]; high3=[('block_26', 6.711888), ('block_25', 6.148561), ('block_24', 5.237359)]
+  - peak: min=0.031750, max=9.267966, median=1.281687, mean=2.097660, spread=291.90x
+  - peak low3=[('block_0', 0.03175), ('block_4', 0.126814), ('block_3', 0.133958)]; high3=[('block_26', 9.267966), ('block_25', 8.67337), ('block_24', 7.184422)]
+- P2 src_baseline_p2_K20_sw3_lam1.0:
+  - zone: min=0.027204, max=14.553771, median=1.681960, mean=3.212827, spread=534.99x
+  - zone low3=[('block_0', 0.027204), ('block_3', 0.131079), ('block_1', 0.149019)]; high3=[('block_26', 14.553771), ('block_25', 13.525219), ('block_24', 11.258327)]
+  - peak: min=0.035365, max=18.919902, median=2.186548, mean=4.176675, spread=534.99x
+  - peak low3=[('block_0', 0.035365), ('block_3', 0.170402), ('block_1', 0.193724)]; high3=[('block_26', 18.919902), ('block_25', 17.582784), ('block_24', 14.635826)]
+- P3 src_baseline_p3_K25_sw5_lam1.0:
+  - zone: min=0.024749, max=10.152989, median=1.320591, mean=2.258752, spread=410.23x
+  - zone low3=[('block_0', 0.024749), ('block_3', 0.11157), ('block_4', 0.125376)]; high3=[('block_26', 10.152989), ('block_25', 9.430563), ('block_24', 7.899342)]
+  - peak: min=0.032174, max=13.198886, median=1.716768, mean=2.936378, spread=410.23x
+  - peak low3=[('block_0', 0.032174), ('block_3', 0.145041), ('block_4', 0.162989)]; high3=[('block_26', 13.198886), ('block_25', 12.259732), ('block_24', 10.269144)]
+  - NOTE: all three spreads are more than 5x away from the LDM 34x reference. The immediate numerical cause is depth scale separation: block_0 thresholds are around 0.025-0.027, while block_26 thresholds are 6.71-14.55. This may be a real DiT residual-scale property, but it is worth flagging because it contradicts the initial flat-architecture expectation.
+Task 3 verdict: WARNING
+
+Task 4 - Zone Adjustment Pattern (Pass 2 Blockwise)
+- P1 src_baseline_p1_K20_sw5_lam1.0: total=56, by_zone={1: 2, 4: 1, 11: 1, 12: 24, 13: 28}, directions={'down': 56}, no_op=0, blocks_without_adjustment=none
+  - top blocks=[(0, 2), (1, 2), (2, 2), (3, 2), (4, 2)]; depth_counts={'shallow_0_8': 18, 'middle_9_18': 20, 'deep_19_27': 18}
+- P2 src_baseline_p2_K20_sw3_lam1.0: total=56, by_zone={3: 1, 5: 1, 10: 1, 13: 25, 14: 28}, directions={'down': 56}, no_op=0, blocks_without_adjustment=none
+  - top blocks=[(0, 2), (1, 2), (2, 2), (3, 2), (4, 2)]; depth_counts={'shallow_0_8': 18, 'middle_9_18': 20, 'deep_19_27': 18}
+- P3 src_baseline_p3_K25_sw5_lam1.0: total=56, by_zone={1: 2, 12: 1, 15: 25, 16: 28}, directions={'down': 56}, no_op=0, blocks_without_adjustment=none
+  - top blocks=[(0, 2), (1, 2), (2, 2), (3, 2), (4, 2)]; depth_counts={'shallow_0_8': 18, 'middle_9_18': 20, 'deep_19_27': 18}
+Task 4 verdict: PASS
+
+Task 5 - Peak Repair Pattern (Pass 2 Blockwise)
+- P1 src_baseline_p1_K20_sw5_lam1.0: repair rows=1193, was_reuse_true=773, was_reuse_false=420, no_flag=0
+  - top steps=[(249, 28), (238, 25), (241, 25), (242, 25), (245, 25), (246, 25), (247, 25), (248, 25), (210, 24), (214, 24)]
+  - top blocks=[(13, 50), (14, 50), (15, 50), (16, 50), (17, 50), (18, 50), (19, 50), (20, 50), (21, 50), (22, 50)]
+  - step_index=249: total=28, was_reuse_true=0, was_reuse_false=28
+- P2 src_baseline_p2_K20_sw3_lam1.0: repair rows=65, was_reuse_true=42, was_reuse_false=23, no_flag=0
+  - top steps=[(249, 16), (5, 2), (9, 2), (13, 2), (16, 2), (20, 2), (23, 2), (24, 2), (37, 2), (44, 2)]
+  - top blocks=[(1, 25), (2, 19), (27, 4), (0, 3), (3, 3), (4, 1), (5, 1), (6, 1), (7, 1), (8, 1)]
+  - step_index=249: total=16, was_reuse_true=0, was_reuse_false=16
+- P3 src_baseline_p3_K25_sw5_lam1.0: repair rows=316, was_reuse_true=201, was_reuse_false=115, no_flag=0
+  - top steps=[(249, 28), (244, 24), (248, 21), (240, 19), (243, 19), (246, 19), (236, 17), (247, 17), (239, 16), (242, 16)]
+  - top blocks=[(1, 21), (2, 18), (23, 17), (3, 16), (6, 15), (7, 15), (8, 15), (19, 15), (20, 15), (21, 15)]
+  - step_index=249: total=28, was_reuse_true=0, was_reuse_false=28
+Task 5 verdict: PASS
+
+Task 6 - Cross-Candidate Comparison (Pass 2 Blockwise)
+- Summary table:
+  - P1 K20_sw5: full=0.4211, zone_adj=56, peak_repair=773, zone_spread=274.81x, peak_spread=291.90x
+  - P2 K20_sw3: full=0.2899, zone_adj=56, peak_repair=42, zone_spread=534.99x, peak_spread=534.99x
+  - P3 K25_sw5: full=0.3130, zone_adj=56, peak_repair=201, zone_spread=410.23x, peak_spread=410.23x
+- P1 vs P2 (same K=20, sw 5->3): full_compute drops 0.4211->0.2899; peak_repair drops 773->42. The narrower smoothing window yields a much less repair-heavy final mask here.
+- P1 vs P3 (same sw=5, K 20->25): full_compute drops 0.4211->0.3130; peak_repair drops 773->201. More zones appear to localize the high-error regions better than P1.
+- Lowest final full_compute_ratio: P2 src_baseline_p2_K20_sw3_lam1.0 (0.2899) with 42 true peak repairs.
+Task 6 verdict: PASS
+
+Task 7 - Per-Step L1 Error Profile (Pass 2 Blockwise)
+- P1 src_baseline_p1_K20_sw5_lam1.0: top mean_l1 steps=[(249, 10.439828, 77.555858), (246, 4.0433, 18.020103), (248, 4.002974, 17.184311), (245, 3.7317, 17.034068), (247, 3.633923, 16.314162), (242, 3.619871, 16.63632), (244, 3.471876, 15.951072), (241, 3.425983, 15.750249)]; lowest=[(0, 0.0, 0.0), (2, 0.01334, 0.066705), (6, 0.049525, 0.243487)]; max occurs in late/low-noise region.
+  - top-step block attribution=[(249, 10.439828, [('block_26', 77.555858), ('block_25', 70.30832), ('block_27', 59.915941)]), (246, 4.0433, [('block_26', 18.020103), ('block_25', 16.463145), ('block_24', 13.819487)]), (248, 4.002974, [('block_26', 17.184311), ('block_25', 15.750517), ('block_24', 13.148768)])]
+  - isolated_spikes=[(1, 0.181174, 0.01334), (249, 10.439828, 4.002974)]
+- P2 src_baseline_p2_K20_sw3_lam1.0: top mean_l1 steps=[(249, 9.848123, 77.338109), (247, 4.009254, 17.500531), (244, 3.768436, 17.126846), (248, 3.706559, 16.374508), (246, 3.597256, 16.42117), (243, 3.528817, 16.136416), (245, 3.422191, 15.426227), (238, 3.390571, 15.58081)]; lowest=[(0, 0.0, 0.0), (2, 0.01334, 0.066705), (6, 0.049525, 0.243487)]; max occurs in late/low-noise region.
+  - top-step block attribution=[(249, 9.848123, [('block_26', 77.338109), ('block_25', 70.019057), ('block_27', 46.121873)]), (247, 4.009254, [('block_26', 17.500531), ('block_25', 16.050622), ('block_24', 13.397098)]), (244, 3.768436, [('block_26', 17.126846), ('block_25', 15.79031), ('block_24', 13.267142)])]
+  - isolated_spikes=[(1, 0.181174, 0.01334), (26, 0.206086, 0.090518), (33, 0.202616, 0.083809), (249, 9.848123, 3.706559)]
+- P3 src_baseline_p3_K25_sw5_lam1.0: top mean_l1 steps=[(249, 10.353546, 77.479959), (248, 3.819074, 16.347726), (244, 3.623406, 16.60291), (246, 3.426919, 15.748854), (247, 3.40178, 15.330216), (243, 3.373181, 15.565555), (240, 3.347719, 15.492426), (245, 3.238047, 14.706018)]; lowest=[(0, 0.0, 0.0), (2, 0.01334, 0.066705), (6, 0.049525, 0.243487)]; max occurs in late/low-noise region.
+  - top-step block attribution=[(249, 10.353546, [('block_26', 77.479959), ('block_25', 70.300867), ('block_27', 60.251108)]), (248, 3.819074, [('block_26', 16.347726), ('block_25', 15.002309), ('block_27', 13.01794)]), (244, 3.623406, [('block_26', 16.60291), ('block_25', 15.225506), ('block_24', 12.81323)])]
+  - isolated_spikes=[(1, 0.181174, 0.01334), (249, 10.353546, 3.819074)]
+Task 7 verdict: PASS
+
+Task 8 - Numerical Sanity Check
+- P1 global: full_compute=0.8997 (OUT_OF_BAND), k_range=OK, exact_k_rebuild=MISMATCH, mask_superset=PASS, l1_nonfinite_or_negative=0
+  - exact rebuild note: 27 blocks differ from k-only rebuild; stored masks include extra peak/full-compute repairs. aggregate extra true cells vs k-only=3707.
+- P1 blockwise: full_compute=0.4211 (OK), k_range=OK, exact_k_rebuild=MISMATCH, mask_superset=PASS, l1_nonfinite_or_negative=0
+  - exact rebuild note: 28 blocks differ from k-only rebuild; stored masks include extra peak/full-compute repairs. aggregate extra true cells vs k-only=773.
+- P2 global: full_compute=0.9016 (OUT_OF_BAND), k_range=OK, exact_k_rebuild=MISMATCH, mask_superset=PASS, l1_nonfinite_or_negative=0
+  - exact rebuild note: 27 blocks differ from k-only rebuild; stored masks include extra peak/full-compute repairs. aggregate extra true cells vs k-only=3710.
+- P2 blockwise: full_compute=0.2899 (OK), k_range=OK, exact_k_rebuild=MISMATCH, mask_superset=PASS, l1_nonfinite_or_negative=0
+  - exact rebuild note: 3 blocks differ from k-only rebuild; stored masks include extra peak/full-compute repairs. aggregate extra true cells vs k-only=42.
+- P3 global: full_compute=0.9001 (OUT_OF_BAND), k_range=OK, exact_k_rebuild=MISMATCH, mask_superset=PASS, l1_nonfinite_or_negative=0
+  - exact rebuild note: 27 blocks differ from k-only rebuild; stored masks include extra peak/full-compute repairs. aggregate extra true cells vs k-only=3691.
+- P3 blockwise: full_compute=0.3130 (OK), k_range=OK, exact_k_rebuild=MISMATCH, mask_superset=PASS, l1_nonfinite_or_negative=0
+  - exact rebuild note: 27 blocks differ from k-only rebuild; stored masks include extra peak/full-compute repairs. aggregate extra true cells vs k-only=201.
+Task 8 verdict: WARNING
+
+Primary recommendation
+- Use P2 (src_baseline_p2_K20_sw3_lam1.0) as the main FID-evaluation scheduler: it has the lowest Pass 2 full_compute_ratio (0.2899), only 42 true peak repairs, all structural checks pass, and it stays inside the 0.15-0.60 sanity band. P3 is the fallback if a slightly more conservative K25/sw5 schedule is desired; P1 is valid but materially more expensive and repair-heavy.
+
+Key observations
+- DiT blockwise thresholds have much larger spread than the LDM 34x reference: zone spread is 274.81x (P1), 534.99x (P2), and 410.23x (P3). The spread is driven by very low thresholds in early blocks such as block_0 and very high thresholds in deep blocks block_24-block_26.
+- Pass 1 global thresholding is extremely conservative for all three candidates, driving full_compute_ratio to about 0.90 and thousands of peak repairs; blockwise thresholds are essential here.
+- Pass 2 zone adjustments are structurally uniform in count and direction: exactly 56 entries, every block gets two k reductions, and every adjustment lowers k by one. The adjusted zone ids are mostly late zones, with a few early/middle outliers depending on candidate.
+- Peak repair hotspots are dominated by late denoising steps near step_index 245-249, not early high-noise steps; step_index=249 has many was_reuse=false confirmations, especially P1/P3.
+- Narrowing smoothing from sw5 to sw3 at K=20 sharply reduces final repairs and compute, while increasing zones from K20 to K25 at sw5 also improves over P1 but not as much as P2.
+
+Anomalies
+- Pass 1 global full_compute_ratio is out of the requested 0.15-0.60 sanity band for all candidates (~0.90). This looks like global thresholds being badly mismatched to DiT per-block error scale, not a file integrity issue, because Pass 2 recovers and all masks/JSON parse correctly.
+- Blockwise threshold spread is very large (274.81x-534.99x), far above the LDM 34x reference and opposite the initial flat-architecture expectation. The high end is consistently block_24-block_26; the low end is block_0 and nearby shallow blocks.
+- Exact expanded_mask reconstruction from shared_zones+k_per_zone alone does not match refined configs, because Stage 2 applies peak repairs after rebuilding the zone mask. The stronger invariant, stored_mask >= k-only rebuilt mask, passes for every block/pass.
+- P1 Pass 2 remains relatively conservative: full_compute_ratio=0.4211 and 773 true peak repairs, well above P2/P3.
