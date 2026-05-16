@@ -6,3 +6,4 @@ dit_s3cache/fid/gen_image/
 dit_s3cache/fid/classify_image_graph_def.pb
 dit_s3cache/fid/fid_sensitivity_results_merged_B.json
 dit_s3cache/fid/fid_sensitivity_results_merged_A.json
+dit_s3cache/stage0/stage0_output/
