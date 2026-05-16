@@ -12,6 +12,13 @@ DiT S3-Cache Stage 0: Normalization + FID Weights
   - T=250 取代 T=100；k_values={3,5,10} 取代 {3,4,5}
   - FID block 命名 block_0..block_27 與 evidence 一致，無需 name mapping
   - 輸出 .npy 檔名與 stage0e_normalization.py 完全相同（Stage 1 依賴固定檔名）
+
+FID 權重預設（與 Diff-AE 的 eps_noise=0.5 分開調校）：
+  以 ``dit_s3cache/fid/fid_sensitivity_results.json``（DiT-XL/2、1k 樣本、k∈{3,5,10}）統計為準：
+  全部 84 筆 ``delta`` 約 median≈0.18、|delta| 的 p25≈0.09、p95≈1.13；每區塊 worst-case
+  ``S=max_k delta`` 後再扣雜訊。legacy ``eps_noise=0.5`` 會讓僅約 11/28 區塊的 ``w_clip`` 非零；
+  ``eps_noise=0.10`` 時約 27/28 非零（另有一區塊因各 k 的 delta 皆為負，``S`` 本來即為 0）。
+  Quantile 裁剪維持 ``0.95``（與 Diff-AE Stage 0E 一致）即可。
 """
 
 from __future__ import annotations
@@ -33,6 +40,9 @@ LOGGER = logging.getLogger("Stage0DiT")
 _DEFAULT_N_BLOCKS = 28
 _DEFAULT_N_STEPS = 250
 _K_VALUES_DIT = [3, 5, 10]
+# 見模組 docstring：依 fid_sensitivity_results.json 尺度校準（勿與 Diff-AE 0.5 混用）
+_DEFAULT_EPS_NOISE_DIT = 0.10
+_DEFAULT_QUANTILE_FID = 0.95
 
 
 # =============================================================================
@@ -257,8 +267,8 @@ def compute_fid_weights(
     block_names: list[str],
     delta_fid: dict[str, dict[int, float]],
     k_values: list[int] | None = None,
-    eps_noise: float = 0.5,
-    quantile: float = 0.95,
+    eps_noise: float = _DEFAULT_EPS_NOISE_DIT,
+    quantile: float = _DEFAULT_QUANTILE_FID,
 ) -> tuple[np.ndarray, np.ndarray]:
     """
     計算 FID-based block weights w_b。
@@ -352,8 +362,8 @@ def run_stage0_dit(
     evidence_npz: str,
     fid_json: str,
     output_dir: str,
-    eps_noise: float = 0.5,
-    quantile: float = 0.95,
+    eps_noise: float = _DEFAULT_EPS_NOISE_DIT,
+    quantile: float = _DEFAULT_QUANTILE_FID,
     k_values: list[int] | None = None,
 ) -> None:
     """
@@ -525,6 +535,21 @@ def run_stage0_dit(
         "fid_json": str(Path(fid_json).resolve()),
         "k_values_fid": k_values,
         "eps_noise": eps_noise,
+        "eps_noise_default_rationale": (
+            f"Default for DiT is {_DEFAULT_EPS_NOISE_DIT} (see module docstring); "
+            "Diff-AE used 0.5 on a different FID scale."
+        ),
+        "fid_weight_calibration": {
+            "default_eps_noise": _DEFAULT_EPS_NOISE_DIT,
+            "default_quantile": _DEFAULT_QUANTILE_FID,
+            "reference": str(Path(fid_json).resolve()),
+            "summary": (
+                "From merged fid_sensitivity_results.json (84 deltas): "
+                "median(delta)~0.18, p25(|delta|)~0.09, p95~1.13; "
+                "eps_noise=0.5 yields ~11/28 nonzero w_clip, "
+                "eps_noise=0.10 yields ~27/28 (one block has all negative deltas → S=0)."
+            ),
+        },
         "quantile": quantile,
         "baseline_fid": baseline_fid,
         "l1_denominator_mode": l1_denom_mode,
@@ -606,18 +631,21 @@ if __name__ == "__main__":
     parser.add_argument(
         "--eps-noise",
         type=float,
-        default=0.5,
+        default=_DEFAULT_EPS_NOISE_DIT,
         help=(
-            "Noise correction threshold for FID delta (default: 0.5). "
-            "DiT FID@1K numbers may differ in scale from Diff-AE FID@5K; "
-            "adjust if all weights collapse to 0."
+            f"Subtract from each k's delta before aggregating FID weights (default: {_DEFAULT_EPS_NOISE_DIT}). "
+            "Tuned on fid_sensitivity_results.json: 0.5 (Diff-AE legacy) leaves ~11/28 blocks nonzero; "
+            f"{_DEFAULT_EPS_NOISE_DIT} leaves ~27/28. Increase to sparsify, decrease to widen support."
         ),
     )
     parser.add_argument(
         "--quantile",
         type=float,
-        default=0.95,
-        help="Quantile for FID weight clipping (default: 0.95)",
+        default=_DEFAULT_QUANTILE_FID,
+        help=(
+            f"Clip S_b at this quantile before max-normalizing w_clip (default: {_DEFAULT_QUANTILE_FID}, "
+            "same as Diff-AE stage0e_normalization)."
+        ),
     )
     parser.add_argument(
         "--k-values",
