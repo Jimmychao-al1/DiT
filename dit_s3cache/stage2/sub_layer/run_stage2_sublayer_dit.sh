@@ -9,7 +9,6 @@
 #   bash dit_s3cache/stage2/sub_layer/run_stage2_sublayer_dit.sh sweep_K10_sw3_lam1
 #   bash dit_s3cache/stage2/sub_layer/run_stage2_sublayer_dit.sh all
 #
-# Conda: defaults to ldm; override with CONDA_ENV=...
 
 set -euo pipefail
 cd "$(git rev-parse --show-toplevel)"
