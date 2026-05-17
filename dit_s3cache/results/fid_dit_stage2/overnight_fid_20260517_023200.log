@@ -1,0 +1,19 @@
+Jobs queued: 5 (skip: dit_baseline_full_compute, baseline_p2 kmax4)
+  - baseline_p1_K20_sw5_lam1.0_kmax4_blockwise
+  - baseline_p3_K25_sw5_lam1.0_kmax4_blockwise
+  - baseline_p1_K20_sw5_lam1.0_kmax3_blockwise
+  - baseline_p2_K20_sw3_lam1.0_kmax3_blockwise
+  - baseline_p3_K25_sw5_lam1.0_kmax3_blockwise
+2026-05-17 02:32:02,936 [INFO] results_root=/home/jimmy/DiT/dit_s3cache/results/fid_dit_stage2 runs_index=/home/jimmy/DiT/dit_s3cache/results/fid_dit_stage2/runs_index.jsonl jobs=5
+Traceback (most recent call last):
+  File "/home/jimmy/DiT/dit_s3cache/start_run/sample_stage2_cache_scheduler_dit.py", line 698, in <module>
+    main()
+  File "/home/jimmy/DiT/dit_s3cache/start_run/sample_stage2_cache_scheduler_dit.py", line 685, in main
+    run_one_job(
+  File "/home/jimmy/DiT/dit_s3cache/start_run/sample_stage2_cache_scheduler_dit.py", line 367, in run_one_job
+    run_dir = make_run_subdirectory(results_root, scheduler_name)
+  File "/home/jimmy/DiT/dit_s3cache/start_run/sample_stage2_cache_scheduler_dit.py", line 305, in make_run_subdirectory
+    run_dir.mkdir(parents=True, exist_ok=False)
+  File "/home/jimmy/anaconda3/envs/ldm/lib/python3.10/pathlib.py", line 1175, in mkdir
+    self._accessor.mkdir(self, mode)
+FileExistsError: [Errno 17] File exists: '/home/jimmy/DiT/dit_s3cache/results/fid_dit_stage2/20260517/baseline_p1_K20_sw5_lam1.0_kmax4_blockwise/0517_02_baseline_p1_K20_sw5_lam1.0_kmax4_blockwise'

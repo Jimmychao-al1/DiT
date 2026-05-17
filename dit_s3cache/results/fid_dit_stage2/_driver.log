@@ -9,3 +9,32 @@
 2026-05-17 01:51:15,381 [INFO] Removed scratch NPZ: /home/jimmy/DiT/dit_s3cache/results/fid_dit_stage2/20260517/baseline_p2_K20_sw3_lam1.0_blockwise/0517_01_baseline_p2_K20_sw3_lam1.0_blockwise/_scratch_samples.npz
 2026-05-17 01:51:15,385 [INFO] [done] baseline_p2_K20_sw3_lam1.0_blockwise | FID@5000=11.358992469019483 | out=/home/jimmy/DiT/dit_s3cache/results/fid_dit_stage2/20260517/baseline_p2_K20_sw3_lam1.0_blockwise/0517_01_baseline_p2_K20_sw3_lam1.0_blockwise
 2026-05-17 01:51:15,386 [INFO] All jobs complete. runs_index: /home/jimmy/DiT/dit_s3cache/results/fid_dit_stage2/runs_index.jsonl
+2026-05-17 02:29:01,919 [INFO] results_root=/home/jimmy/DiT/dit_s3cache/results/fid_dit_stage2 runs_index=/home/jimmy/DiT/dit_s3cache/results/fid_dit_stage2/runs_index.jsonl jobs=5
+2026-05-17 02:29:06,437 [INFO] sampling_timesteps len=250 first=999 last=0
+2026-05-17 02:29:06,476 [INFO] Stage2 cache enabled | full_compute_ratio(disk)=0.421143
+2026-05-17 02:32:02,936 [INFO] results_root=/home/jimmy/DiT/dit_s3cache/results/fid_dit_stage2 runs_index=/home/jimmy/DiT/dit_s3cache/results/fid_dit_stage2/runs_index.jsonl jobs=5
+2026-05-17 02:32:31,748 [INFO] results_root=/home/jimmy/DiT/dit_s3cache/results/fid_dit_stage2 runs_index=/home/jimmy/DiT/dit_s3cache/results/fid_dit_stage2/runs_index.jsonl jobs=5
+2026-05-17 02:32:36,349 [INFO] sampling_timesteps len=250 first=999 last=0
+2026-05-17 02:32:36,362 [INFO] Stage2 cache enabled | full_compute_ratio(disk)=0.421143
+2026-05-17 03:36:22,578 [INFO] Removed scratch NPZ: /home/jimmy/DiT/dit_s3cache/results/fid_dit_stage2/20260517/baseline_p1_K20_sw5_lam1.0_kmax4_blockwise/0517_02_baseline_p1_K20_sw5_lam1.0_kmax4_blockwise/_scratch_samples.npz
+2026-05-17 03:36:22,582 [INFO] [done] baseline_p1_K20_sw5_lam1.0_kmax4_blockwise | FID@5000=12.142051147325162 | out=/home/jimmy/DiT/dit_s3cache/results/fid_dit_stage2/20260517/baseline_p1_K20_sw5_lam1.0_kmax4_blockwise/0517_02_baseline_p1_K20_sw5_lam1.0_kmax4_blockwise
+2026-05-17 03:36:26,471 [INFO] sampling_timesteps len=250 first=999 last=0
+2026-05-17 03:36:26,501 [INFO] Stage2 cache enabled | full_compute_ratio(disk)=0.313
+2026-05-17 04:25:19,689 [INFO] Removed scratch NPZ: /home/jimmy/DiT/dit_s3cache/results/fid_dit_stage2/20260517/baseline_p3_K25_sw5_lam1.0_kmax4_blockwise/0517_03_baseline_p3_K25_sw5_lam1.0_kmax4_blockwise/_scratch_samples.npz
+2026-05-17 04:25:19,692 [INFO] [done] baseline_p3_K25_sw5_lam1.0_kmax4_blockwise | FID@5000=11.538554898461825 | out=/home/jimmy/DiT/dit_s3cache/results/fid_dit_stage2/20260517/baseline_p3_K25_sw5_lam1.0_kmax4_blockwise/0517_03_baseline_p3_K25_sw5_lam1.0_kmax4_blockwise
+2026-05-17 04:25:23,193 [INFO] sampling_timesteps len=250 first=999 last=0
+2026-05-17 04:25:23,206 [INFO] Stage2 cache enabled | full_compute_ratio(disk)=0.517714
+2026-05-17 05:41:52,296 [INFO] Removed scratch NPZ: /home/jimmy/DiT/dit_s3cache/results/fid_dit_stage2/20260517/baseline_p1_K20_sw5_lam1.0_kmax3_blockwise/0517_04_baseline_p1_K20_sw5_lam1.0_kmax3_blockwise/_scratch_samples.npz
+2026-05-17 05:41:52,300 [INFO] [done] baseline_p1_K20_sw5_lam1.0_kmax3_blockwise | FID@5000=10.229980078863946 | out=/home/jimmy/DiT/dit_s3cache/results/fid_dit_stage2/20260517/baseline_p1_K20_sw5_lam1.0_kmax3_blockwise/0517_04_baseline_p1_K20_sw5_lam1.0_kmax3_blockwise
+2026-05-17 05:41:56,064 [INFO] sampling_timesteps len=250 first=999 last=0
+2026-05-17 05:41:56,069 [INFO] Stage2 cache enabled | full_compute_ratio(disk)=0.372857
+2026-05-17 06:38:52,951 [INFO] Removed scratch NPZ: /home/jimmy/DiT/dit_s3cache/results/fid_dit_stage2/20260517/baseline_p2_K20_sw3_lam1.0_kmax3_blockwise/0517_05_baseline_p2_K20_sw3_lam1.0_kmax3_blockwise/_scratch_samples.npz
+2026-05-17 06:38:52,955 [INFO] [done] baseline_p2_K20_sw3_lam1.0_kmax3_blockwise | FID@5000=10.03193904325974 | out=/home/jimmy/DiT/dit_s3cache/results/fid_dit_stage2/20260517/baseline_p2_K20_sw3_lam1.0_kmax3_blockwise/0517_05_baseline_p2_K20_sw3_lam1.0_kmax3_blockwise
+2026-05-17 06:38:56,723 [INFO] sampling_timesteps len=250 first=999 last=0
+2026-05-17 06:38:56,736 [INFO] Stage2 cache enabled | full_compute_ratio(disk)=0.401
+2026-05-17 07:39:41,181 [INFO] Removed scratch NPZ: /home/jimmy/DiT/dit_s3cache/results/fid_dit_stage2/20260517/baseline_p3_K25_sw5_lam1.0_kmax3_blockwise/0517_06_baseline_p3_K25_sw5_lam1.0_kmax3_blockwise/_scratch_samples.npz
+2026-05-17 07:39:41,185 [INFO] [done] baseline_p3_K25_sw5_lam1.0_kmax3_blockwise | FID@5000=10.264815473932629 | out=/home/jimmy/DiT/dit_s3cache/results/fid_dit_stage2/20260517/baseline_p3_K25_sw5_lam1.0_kmax3_blockwise/0517_06_baseline_p3_K25_sw5_lam1.0_kmax3_blockwise
+2026-05-17 07:39:41,185 [INFO] All jobs complete. runs_index: /home/jimmy/DiT/dit_s3cache/results/fid_dit_stage2/runs_index.jsonl
+2026-05-17 08:24:32,985 [INFO] results_root=/home/jimmy/DiT/dit_s3cache/results/fid_dit_stage2 runs_index=/home/jimmy/DiT/dit_s3cache/results/fid_dit_stage2/runs_index.jsonl jobs=1
+2026-05-17 08:24:37,423 [INFO] sampling_timesteps len=250 first=999 last=0
+2026-05-17 08:24:37,428 [INFO] Stage2 cache enabled | full_compute_ratio(disk)=0.372857
