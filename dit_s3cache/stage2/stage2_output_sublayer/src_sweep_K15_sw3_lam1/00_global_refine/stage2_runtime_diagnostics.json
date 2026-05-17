@@ -75226,8 +75226,8 @@
   },
   "refined_recompute_summary": {
     "original_full_compute_ratio": 0.35278571428571426,
-    "refined_full_compute_ratio": 0.9092142857142858,
-    "total_peak_repairs": 3492,
+    "refined_full_compute_ratio": 0.8731428571428571,
+    "total_peak_repairs": 5024,
     "total_zone_k_adjustments": 635
   }
 }

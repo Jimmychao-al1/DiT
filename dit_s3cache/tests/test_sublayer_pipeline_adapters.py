@@ -24,6 +24,9 @@ from dit_s3cache.start_run.stage2_to_dit_cache_sublayer import (  # noqa: E402
     load_cache_schedule,
     write_cache_schedule_json,
 )
+from dit_s3cache.start_run.sample_stage2_cache_scheduler_sublayer_dit import (  # noqa: E402
+    _raw_schedule_to_step_schedule,
+)
 
 
 def _make_fake_stage0(root: pathlib.Path, *, T: int = 8) -> pathlib.Path:
@@ -118,3 +121,14 @@ def test_sublayer_stage1_stage2_adapter_chain(tmp_path: pathlib.Path) -> None:
     with open(adapter_json, "r", encoding="utf-8") as f:
         saved = json.load(f)
     assert saved["format"] == "dit_s3cache_sublayer_recompute_v1"
+
+    raw_schedule = load_cache_schedule(adapter_json)
+    raw_t_to_step_idx = {
+        int(raw_t): step_idx
+        for step_idx, raw_t in enumerate(saved["sampling_timesteps"])
+    }
+    step_schedule = _raw_schedule_to_step_schedule(raw_schedule, raw_t_to_step_idx)
+    assert len(step_schedule) == 56
+    assert step_schedule[(0, "msa")] == {
+        raw_t_to_step_idx[t] for t in raw_schedule[(0, "msa")]
+    }

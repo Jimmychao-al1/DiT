@@ -60,3 +60,35 @@ python3 dit_s3cache/start_run/sample_stage2_cache_scheduler_dit.py \
 ```
 
 FID 運算沿用 `dit_s3cache/fid/`（需 CUDA、ADM evaluator 可依 `--adm-evaluator` / `--ref-batch` 調整）。
+
+## Sub-layer Start Run
+
+Sub-layer Stage2 的 start-run 入口讀取 `cache_schedule_sublayer.json`，不是 block-level 的
+`stage2_refined_scheduler_config.json`：
+
+```bash
+./dit_s3cache/start_run/run_fid_with_stage2_sublayer_scheduler_dit.sh
+```
+
+預設單跑：
+
+```
+dit_s3cache/stage2/stage2_output_sublayer/src_sweep_K20_sw3_lam1/cache_schedule_sublayer.json
+```
+
+一次排 K20/K15/K10：
+
+```bash
+./dit_s3cache/start_run/run_fid_with_stage2_sublayer_scheduler_dit.sh all
+```
+
+結果根目錄預設為：
+
+```
+dit_s3cache/results/fid_dit_stage2_sublayer/
+```
+
+Sub-layer adapter JSON 內列的是 DiT raw model timesteps；start-run 會在載入後轉成
+`DiTStage2SubLayerContext` 使用的 `step_idx` set。產物與 block-level start-run 對齊：
+`run_manifest.json`、`summary.json`、`detail_stats.json`、`cache_schedule_sublayer.snapshot.json`、
+`scheduler_config.snapshot.json`、`run.log`，以及根目錄下的 `runs_index.jsonl`。
