@@ -1,0 +1,492 @@
+2026-05-17 20:08:14,756 [INFO] [Stage2-Sub] Loading DiT model: DiT-XL/2
+2026-05-17 20:08:32,953 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:08:40,755 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:08:40,755 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:08:46,965 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:08:46,990 [INFO] [Stage2-Sub] Eval progress: 1/8 images done.
+2026-05-17 20:08:46,991 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:08:51,929 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:08:51,930 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:08:58,336 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:08:58,364 [INFO] [Stage2-Sub] Eval progress: 2/8 images done.
+2026-05-17 20:08:58,365 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:09:03,329 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:09:03,330 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:09:09,917 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:09:09,950 [INFO] [Stage2-Sub] Eval progress: 3/8 images done.
+2026-05-17 20:09:09,951 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:09:14,896 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:09:14,896 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:09:20,910 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:09:20,937 [INFO] [Stage2-Sub] Eval progress: 4/8 images done.
+2026-05-17 20:09:20,938 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:09:25,826 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:09:25,827 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:09:31,903 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:09:31,930 [INFO] [Stage2-Sub] Eval progress: 5/8 images done.
+2026-05-17 20:09:31,931 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:09:36,816 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:09:36,816 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:09:42,770 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:09:42,883 [INFO] [Stage2-Sub] Eval progress: 6/8 images done.
+2026-05-17 20:09:42,884 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:09:47,974 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:09:47,975 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:09:54,224 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:09:54,251 [INFO] [Stage2-Sub] Eval progress: 7/8 images done.
+2026-05-17 20:09:54,251 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:09:59,409 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:09:59,409 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:10:06,696 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:10:06,744 [INFO] [Stage2-Sub] Eval progress: 8/8 images done.
+2026-05-17 20:10:10,860 [INFO] [Stage2-Sub] Loading DiT model: DiT-XL/2
+2026-05-17 20:10:14,976 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:10:21,977 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:10:21,978 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:10:29,516 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:10:29,539 [INFO] [Stage2-Sub] Eval progress: 1/8 images done.
+2026-05-17 20:10:29,540 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:10:34,455 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:10:34,456 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:10:42,062 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:10:42,087 [INFO] [Stage2-Sub] Eval progress: 2/8 images done.
+2026-05-17 20:10:42,088 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:10:46,999 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:10:47,000 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:10:54,877 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:10:54,902 [INFO] [Stage2-Sub] Eval progress: 3/8 images done.
+2026-05-17 20:10:54,903 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:10:59,778 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:10:59,778 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:11:07,431 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:11:07,456 [INFO] [Stage2-Sub] Eval progress: 4/8 images done.
+2026-05-17 20:11:07,457 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:11:12,397 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:11:12,398 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:11:20,204 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:11:20,230 [INFO] [Stage2-Sub] Eval progress: 5/8 images done.
+2026-05-17 20:11:20,231 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:11:25,122 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:11:25,122 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:11:32,868 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:11:33,000 [INFO] [Stage2-Sub] Eval progress: 6/8 images done.
+2026-05-17 20:11:33,001 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:11:38,000 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:11:38,000 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:11:45,892 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:11:45,918 [INFO] [Stage2-Sub] Eval progress: 7/8 images done.
+2026-05-17 20:11:45,919 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:11:50,923 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:11:50,924 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:11:58,950 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:11:58,977 [INFO] [Stage2-Sub] Eval progress: 8/8 images done.
+2026-05-17 20:12:02,996 [INFO] [Stage2-Sub] Loading DiT model: DiT-XL/2
+2026-05-17 20:12:06,934 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:12:14,159 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:12:14,160 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:12:20,003 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:12:20,100 [INFO] [Stage2-Sub] Eval progress: 1/8 images done.
+2026-05-17 20:12:20,101 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:12:25,177 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:12:25,177 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:12:31,228 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:12:31,256 [INFO] [Stage2-Sub] Eval progress: 2/8 images done.
+2026-05-17 20:12:31,256 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:12:36,093 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:12:36,093 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:12:42,045 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:12:42,075 [INFO] [Stage2-Sub] Eval progress: 3/8 images done.
+2026-05-17 20:12:42,076 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:12:46,943 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:12:46,943 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:12:52,826 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:12:52,856 [INFO] [Stage2-Sub] Eval progress: 4/8 images done.
+2026-05-17 20:12:52,857 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:12:57,824 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:12:57,825 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:13:03,695 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:13:03,722 [INFO] [Stage2-Sub] Eval progress: 5/8 images done.
+2026-05-17 20:13:03,723 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:13:08,666 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:13:08,666 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:13:14,415 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:13:14,447 [INFO] [Stage2-Sub] Eval progress: 6/8 images done.
+2026-05-17 20:13:14,448 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:13:19,322 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:13:19,322 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:13:25,368 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:13:25,398 [INFO] [Stage2-Sub] Eval progress: 7/8 images done.
+2026-05-17 20:13:25,399 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:13:30,154 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:13:30,154 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:13:35,980 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:13:36,007 [INFO] [Stage2-Sub] Eval progress: 8/8 images done.
+2026-05-17 20:13:40,131 [INFO] [Stage2-Sub] Loading DiT model: DiT-XL/2
+2026-05-17 20:13:44,051 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:13:51,388 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:13:51,388 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:13:58,778 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:13:58,803 [INFO] [Stage2-Sub] Eval progress: 1/8 images done.
+2026-05-17 20:13:58,804 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:14:03,856 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:14:03,857 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:14:11,284 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:14:11,311 [INFO] [Stage2-Sub] Eval progress: 2/8 images done.
+2026-05-17 20:14:11,312 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:14:16,412 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:14:16,413 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:14:23,932 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:14:23,959 [INFO] [Stage2-Sub] Eval progress: 3/8 images done.
+2026-05-17 20:14:23,959 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:14:29,064 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:14:29,064 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:14:36,694 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:14:36,720 [INFO] [Stage2-Sub] Eval progress: 4/8 images done.
+2026-05-17 20:14:36,721 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:14:41,619 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:14:41,620 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:14:49,140 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:14:49,168 [INFO] [Stage2-Sub] Eval progress: 5/8 images done.
+2026-05-17 20:14:49,168 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:14:54,182 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:14:54,182 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:15:01,583 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:15:01,610 [INFO] [Stage2-Sub] Eval progress: 6/8 images done.
+2026-05-17 20:15:01,610 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:15:06,528 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:15:06,529 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:15:14,033 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:15:14,061 [INFO] [Stage2-Sub] Eval progress: 7/8 images done.
+2026-05-17 20:15:14,061 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:15:18,946 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:15:18,946 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:15:26,262 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:15:26,288 [INFO] [Stage2-Sub] Eval progress: 8/8 images done.
+2026-05-17 20:15:30,393 [INFO] [Stage2-Sub] Loading DiT model: DiT-XL/2
+2026-05-17 20:15:34,225 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:15:41,275 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:15:41,275 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:15:47,374 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:15:47,399 [INFO] [Stage2-Sub] Eval progress: 1/8 images done.
+2026-05-17 20:15:47,399 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:15:52,370 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:15:52,371 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:15:58,454 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:15:58,482 [INFO] [Stage2-Sub] Eval progress: 2/8 images done.
+2026-05-17 20:15:58,482 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:16:03,405 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:16:03,406 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:16:09,580 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:16:09,606 [INFO] [Stage2-Sub] Eval progress: 3/8 images done.
+2026-05-17 20:16:09,607 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:16:14,589 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:16:14,590 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:16:20,701 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:16:20,727 [INFO] [Stage2-Sub] Eval progress: 4/8 images done.
+2026-05-17 20:16:20,733 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:16:25,641 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:16:25,641 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:16:31,790 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:16:31,818 [INFO] [Stage2-Sub] Eval progress: 5/8 images done.
+2026-05-17 20:16:31,819 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:16:36,945 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:16:36,946 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:16:43,109 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:16:43,136 [INFO] [Stage2-Sub] Eval progress: 6/8 images done.
+2026-05-17 20:16:43,136 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:16:48,057 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:16:48,058 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:16:54,420 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:16:54,447 [INFO] [Stage2-Sub] Eval progress: 7/8 images done.
+2026-05-17 20:16:54,448 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:16:59,509 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:16:59,509 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:17:05,634 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:17:05,666 [INFO] [Stage2-Sub] Eval progress: 8/8 images done.
+2026-05-17 20:17:09,543 [INFO] [Stage2-Sub] Loading DiT model: DiT-XL/2
+2026-05-17 20:17:13,417 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:17:20,782 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:17:20,782 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:17:28,711 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:17:28,734 [INFO] [Stage2-Sub] Eval progress: 1/8 images done.
+2026-05-17 20:17:28,735 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:17:33,863 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:17:33,864 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:17:41,977 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:17:42,003 [INFO] [Stage2-Sub] Eval progress: 2/8 images done.
+2026-05-17 20:17:42,003 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:17:46,952 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:17:46,952 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:17:55,115 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:17:55,140 [INFO] [Stage2-Sub] Eval progress: 3/8 images done.
+2026-05-17 20:17:55,141 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:18:00,110 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:18:00,111 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:18:07,902 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:18:07,944 [INFO] [Stage2-Sub] Eval progress: 4/8 images done.
+2026-05-17 20:18:07,945 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:18:12,973 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:18:12,974 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:18:21,008 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:18:21,033 [INFO] [Stage2-Sub] Eval progress: 5/8 images done.
+2026-05-17 20:18:21,034 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:18:26,300 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:18:26,301 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:18:34,192 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:18:34,218 [INFO] [Stage2-Sub] Eval progress: 6/8 images done.
+2026-05-17 20:18:34,219 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:18:39,212 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:18:39,212 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:18:47,402 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:18:47,434 [INFO] [Stage2-Sub] Eval progress: 7/8 images done.
+2026-05-17 20:18:47,434 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:18:52,367 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:18:52,367 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:19:00,399 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:19:00,437 [INFO] [Stage2-Sub] Eval progress: 8/8 images done.
+2026-05-17 20:28:56,139 [INFO] [Stage2-Sub] Loading DiT model: DiT-XL/2
+2026-05-17 20:29:00,065 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:29:07,319 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:29:07,320 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:29:13,597 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:29:13,621 [INFO] [Stage2-Sub] Eval progress: 1/8 images done.
+2026-05-17 20:29:13,622 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:29:18,698 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:29:18,699 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:29:24,790 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:29:24,816 [INFO] [Stage2-Sub] Eval progress: 2/8 images done.
+2026-05-17 20:29:24,816 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:29:29,725 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:29:29,726 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:29:35,899 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:29:35,925 [INFO] [Stage2-Sub] Eval progress: 3/8 images done.
+2026-05-17 20:29:35,925 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:29:40,838 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:29:40,838 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:29:46,973 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:29:46,998 [INFO] [Stage2-Sub] Eval progress: 4/8 images done.
+2026-05-17 20:29:46,999 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:29:51,903 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:29:51,903 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:29:58,255 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:29:58,280 [INFO] [Stage2-Sub] Eval progress: 5/8 images done.
+2026-05-17 20:29:58,280 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:30:03,188 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:30:03,188 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:30:09,449 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:30:09,571 [INFO] [Stage2-Sub] Eval progress: 6/8 images done.
+2026-05-17 20:30:09,572 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:30:14,523 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:30:14,524 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:30:20,905 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:30:20,932 [INFO] [Stage2-Sub] Eval progress: 7/8 images done.
+2026-05-17 20:30:20,933 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:30:25,833 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:30:25,833 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:30:32,128 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:30:32,154 [INFO] [Stage2-Sub] Eval progress: 8/8 images done.
+2026-05-17 20:30:36,046 [INFO] [Stage2-Sub] Loading DiT model: DiT-XL/2
+2026-05-17 20:30:39,943 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:30:47,369 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:30:47,369 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:30:55,203 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:30:55,231 [INFO] [Stage2-Sub] Eval progress: 1/8 images done.
+2026-05-17 20:30:55,231 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:31:00,187 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:31:00,187 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:31:08,092 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:31:08,122 [INFO] [Stage2-Sub] Eval progress: 2/8 images done.
+2026-05-17 20:31:08,123 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:31:13,194 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:31:13,195 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:31:21,574 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:31:21,600 [INFO] [Stage2-Sub] Eval progress: 3/8 images done.
+2026-05-17 20:31:21,601 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:31:26,730 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:31:26,731 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:31:34,628 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:31:34,657 [INFO] [Stage2-Sub] Eval progress: 4/8 images done.
+2026-05-17 20:31:34,657 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:31:39,584 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:31:39,584 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:31:47,512 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:31:47,544 [INFO] [Stage2-Sub] Eval progress: 5/8 images done.
+2026-05-17 20:31:47,545 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:31:52,737 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:31:52,738 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:32:01,164 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:32:01,277 [INFO] [Stage2-Sub] Eval progress: 6/8 images done.
+2026-05-17 20:32:01,278 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:32:06,349 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:32:06,349 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:32:14,385 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:32:14,416 [INFO] [Stage2-Sub] Eval progress: 7/8 images done.
+2026-05-17 20:32:14,417 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:32:19,329 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:32:19,330 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:32:27,357 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:32:27,383 [INFO] [Stage2-Sub] Eval progress: 8/8 images done.
+2026-05-17 20:32:31,224 [INFO] [Stage2-Sub] Loading DiT model: DiT-XL/2
+2026-05-17 20:32:35,157 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:32:42,495 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:32:42,495 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:32:48,508 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:32:48,532 [INFO] [Stage2-Sub] Eval progress: 1/8 images done.
+2026-05-17 20:32:48,533 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:32:53,444 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:32:53,444 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:32:59,478 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:32:59,505 [INFO] [Stage2-Sub] Eval progress: 2/8 images done.
+2026-05-17 20:32:59,505 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:33:04,390 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:33:04,390 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:33:10,345 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:33:10,371 [INFO] [Stage2-Sub] Eval progress: 3/8 images done.
+2026-05-17 20:33:10,372 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:33:15,272 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:33:15,273 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:33:21,091 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:33:21,120 [INFO] [Stage2-Sub] Eval progress: 4/8 images done.
+2026-05-17 20:33:21,120 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:33:26,023 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:33:26,023 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:33:31,931 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:33:31,960 [INFO] [Stage2-Sub] Eval progress: 5/8 images done.
+2026-05-17 20:33:31,960 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:33:36,962 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:33:36,963 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:33:42,676 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:33:42,702 [INFO] [Stage2-Sub] Eval progress: 6/8 images done.
+2026-05-17 20:33:42,703 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:33:47,613 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:33:47,614 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:33:53,566 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:33:53,591 [INFO] [Stage2-Sub] Eval progress: 7/8 images done.
+2026-05-17 20:33:53,591 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:33:58,647 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:33:58,648 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:34:04,550 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:34:04,578 [INFO] [Stage2-Sub] Eval progress: 8/8 images done.
+2026-05-17 20:34:08,435 [INFO] [Stage2-Sub] Loading DiT model: DiT-XL/2
+2026-05-17 20:34:12,271 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:34:19,113 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:34:19,113 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:34:27,264 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:34:27,287 [INFO] [Stage2-Sub] Eval progress: 1/8 images done.
+2026-05-17 20:34:27,288 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:34:32,108 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:34:32,109 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:34:40,135 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:34:40,160 [INFO] [Stage2-Sub] Eval progress: 2/8 images done.
+2026-05-17 20:34:40,160 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:34:44,908 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:34:44,909 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:34:53,033 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:34:53,059 [INFO] [Stage2-Sub] Eval progress: 3/8 images done.
+2026-05-17 20:34:53,060 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:34:57,821 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:34:57,822 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:35:06,038 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:35:06,064 [INFO] [Stage2-Sub] Eval progress: 4/8 images done.
+2026-05-17 20:35:06,065 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:35:10,829 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:35:10,830 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:35:18,926 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:35:18,951 [INFO] [Stage2-Sub] Eval progress: 5/8 images done.
+2026-05-17 20:35:18,952 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:35:23,888 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:35:23,889 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:35:31,933 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:35:31,957 [INFO] [Stage2-Sub] Eval progress: 6/8 images done.
+2026-05-17 20:35:31,958 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:35:36,775 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:35:36,775 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:35:44,712 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:35:44,738 [INFO] [Stage2-Sub] Eval progress: 7/8 images done.
+2026-05-17 20:35:44,739 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:35:49,578 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:35:49,578 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:35:57,366 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:35:57,392 [INFO] [Stage2-Sub] Eval progress: 8/8 images done.
+2026-05-17 20:36:01,239 [INFO] [Stage2-Sub] Loading DiT model: DiT-XL/2
+2026-05-17 20:36:05,112 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:36:12,357 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:36:12,357 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:36:18,686 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:36:18,710 [INFO] [Stage2-Sub] Eval progress: 1/8 images done.
+2026-05-17 20:36:18,711 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:36:23,617 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:36:23,618 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:36:29,825 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:36:29,850 [INFO] [Stage2-Sub] Eval progress: 2/8 images done.
+2026-05-17 20:36:29,851 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:36:34,746 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:36:34,746 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:36:40,831 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:36:40,857 [INFO] [Stage2-Sub] Eval progress: 3/8 images done.
+2026-05-17 20:36:40,857 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:36:45,763 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:36:45,764 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:36:51,950 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:36:51,977 [INFO] [Stage2-Sub] Eval progress: 4/8 images done.
+2026-05-17 20:36:51,977 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:36:56,875 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:36:56,875 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:37:02,979 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:37:03,005 [INFO] [Stage2-Sub] Eval progress: 5/8 images done.
+2026-05-17 20:37:03,005 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:37:07,993 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:37:07,994 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:37:14,223 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:37:14,248 [INFO] [Stage2-Sub] Eval progress: 6/8 images done.
+2026-05-17 20:37:14,248 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:37:19,144 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:37:19,144 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:37:25,560 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:37:25,585 [INFO] [Stage2-Sub] Eval progress: 7/8 images done.
+2026-05-17 20:37:25,586 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:37:30,480 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:37:30,480 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:37:36,608 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:37:36,633 [INFO] [Stage2-Sub] Eval progress: 8/8 images done.
+2026-05-17 20:37:40,505 [INFO] [Stage2-Sub] Loading DiT model: DiT-XL/2
+2026-05-17 20:37:44,391 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:37:51,660 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:37:51,660 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:37:59,626 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:37:59,651 [INFO] [Stage2-Sub] Eval progress: 1/8 images done.
+2026-05-17 20:37:59,652 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:38:04,612 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:38:04,612 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:38:12,645 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:38:12,671 [INFO] [Stage2-Sub] Eval progress: 2/8 images done.
+2026-05-17 20:38:12,671 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:38:17,525 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:38:17,526 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:38:25,406 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:38:25,434 [INFO] [Stage2-Sub] Eval progress: 3/8 images done.
+2026-05-17 20:38:25,435 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:38:30,570 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:38:30,571 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:38:38,470 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:38:38,502 [INFO] [Stage2-Sub] Eval progress: 4/8 images done.
+2026-05-17 20:38:38,503 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:38:43,412 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:38:43,413 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:38:51,379 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:38:51,407 [INFO] [Stage2-Sub] Eval progress: 5/8 images done.
+2026-05-17 20:38:51,408 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:38:56,379 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:38:56,380 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:39:04,165 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:39:04,194 [INFO] [Stage2-Sub] Eval progress: 6/8 images done.
+2026-05-17 20:39:04,195 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:39:09,112 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:39:09,113 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:39:17,098 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:39:17,127 [INFO] [Stage2-Sub] Eval progress: 7/8 images done.
+2026-05-17 20:39:17,128 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=False
+2026-05-17 20:39:22,035 [INFO] [Stage2-Sub] [collector debug] phase=baseline baseline_writes=14000 cache_compares=0 baseline_pending=14000 | baseline_stats={'per_block': {}}
+2026-05-17 20:39:22,035 [INFO] [Stage2-Sub] DiTStage2SubLayerContext enabled | cache_enabled=True
+2026-05-17 20:39:30,088 [INFO] [Stage2-Sub] [collector debug] phase=cache baseline_writes=14000 cache_compares=14000 baseline_pending=0 | cache_stats={'per_block': {}}
+2026-05-17 20:39:30,113 [INFO] [Stage2-Sub] Eval progress: 8/8 images done.

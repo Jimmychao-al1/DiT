@@ -1,0 +1,473 @@
+{
+  "threshold_mode": "sublayerwise_quantile",
+  "source_scheduler": "00_global_refine",
+  "original_full_compute_ratio": 0.9103571428571429,
+  "refined_full_compute_ratio": 0.9107142857142857,
+  "total_peak_repairs": 4,
+  "total_zone_k_adjustments": 2,
+  "zone_k_adjustments": [
+    {
+      "sublayer": "block_00_msa",
+      "flat_idx": 0,
+      "zone_id": 18,
+      "k_before": 3,
+      "k_after": 2,
+      "mean_l1": 0.014091326869674958,
+      "zone_l1_threshold_used": 0.010856770712416619,
+      "threshold_mode": "sublayerwise_quantile"
+    },
+    {
+      "sublayer": "block_01_msa",
+      "flat_idx": 2,
+      "zone_id": 17,
+      "k_before": 2,
+      "k_after": 1,
+      "mean_l1": 0.023507229227107018,
+      "zone_l1_threshold_used": 0.012128569166860403,
+      "threshold_mode": "sublayerwise_quantile"
+    }
+  ],
+  "peak_mask_adjustments": [
+    {
+      "sublayer": "block_00_msa",
+      "flat_idx": 0,
+      "step_index": 101,
+      "ddpm_t": 148,
+      "was_reuse_before_peak_repair": true,
+      "l1_error": 0.014259476331062615,
+      "peak_l1_threshold_used": 0.014113801926141605,
+      "threshold_mode": "sublayerwise_quantile"
+    },
+    {
+      "sublayer": "block_00_msa",
+      "flat_idx": 0,
+      "step_index": 107,
+      "ddpm_t": 142,
+      "was_reuse_before_peak_repair": true,
+      "l1_error": 0.014903175411745906,
+      "peak_l1_threshold_used": 0.014113801926141605,
+      "threshold_mode": "sublayerwise_quantile"
+    },
+    {
+      "sublayer": "block_00_msa",
+      "flat_idx": 0,
+      "step_index": 249,
+      "ddpm_t": 0,
+      "was_reuse_before_peak_repair": true,
+      "l1_error": 0.02714129351079464,
+      "peak_l1_threshold_used": 0.014113801926141605,
+      "threshold_mode": "sublayerwise_quantile"
+    },
+    {
+      "sublayer": "block_00_mlp",
+      "flat_idx": 1,
+      "step_index": 249,
+      "ddpm_t": 0,
+      "was_reuse_before_peak_repair": true,
+      "l1_error": 0.043327851220965385,
+      "peak_l1_threshold_used": 0.02129344804864377,
+      "threshold_mode": "sublayerwise_quantile"
+    }
+  ],
+  "per_sublayer_summary": {
+    "block_00_msa": {
+      "peak_repairs": 3,
+      "zone_adjustments": 1,
+      "sublayer_recompute_ratio": 0.372,
+      "zone_l1_threshold_used": 0.010856770712416619,
+      "peak_l1_threshold_used": 0.014113801926141605
+    },
+    "block_00_mlp": {
+      "peak_repairs": 1,
+      "zone_adjustments": 0,
+      "sublayer_recompute_ratio": 0.356,
+      "zone_l1_threshold_used": 0.01637957542203367,
+      "peak_l1_threshold_used": 0.02129344804864377
+    },
+    "block_01_msa": {
+      "peak_repairs": 0,
+      "zone_adjustments": 1,
+      "sublayer_recompute_ratio": 0.36,
+      "zone_l1_threshold_used": 0.012128569166860403,
+      "peak_l1_threshold_used": 0.015767139916918523
+    },
+    "block_01_mlp": {
+      "peak_repairs": 0,
+      "zone_adjustments": 0,
+      "sublayer_recompute_ratio": 0.936,
+      "zone_l1_threshold_used": 0.11394258737408866,
+      "peak_l1_threshold_used": 0.14812536358631526
+    },
+    "block_02_msa": {
+      "peak_repairs": 0,
+      "zone_adjustments": 0,
+      "sublayer_recompute_ratio": 0.792,
+      "zone_l1_threshold_used": 0.14969331806614283,
+      "peak_l1_threshold_used": 0.1946013134859857
+    },
+    "block_02_mlp": {
+      "peak_repairs": 0,
+      "zone_adjustments": 0,
+      "sublayer_recompute_ratio": 0.972,
+      "zone_l1_threshold_used": 0.18579610753804443,
+      "peak_l1_threshold_used": 0.24153493979945775
+    },
+    "block_03_msa": {
+      "peak_repairs": 0,
+      "zone_adjustments": 0,
+      "sublayer_recompute_ratio": 0.668,
+      "zone_l1_threshold_used": 0.0367290903702287,
+      "peak_l1_threshold_used": 0.04774781748129731
+    },
+    "block_03_mlp": {
+      "peak_repairs": 0,
+      "zone_adjustments": 0,
+      "sublayer_recompute_ratio": 0.752,
+      "zone_l1_threshold_used": 0.07481428252494274,
+      "peak_l1_threshold_used": 0.09725856728242556
+    },
+    "block_04_msa": {
+      "peak_repairs": 0,
+      "zone_adjustments": 0,
+      "sublayer_recompute_ratio": 0.696,
+      "zone_l1_threshold_used": 0.05350728934108802,
+      "peak_l1_threshold_used": 0.06955947614341443
+    },
+    "block_04_mlp": {
+      "peak_repairs": 0,
+      "zone_adjustments": 0,
+      "sublayer_recompute_ratio": 0.72,
+      "zone_l1_threshold_used": 0.09093837487671758,
+      "peak_l1_threshold_used": 0.11821988733973285
+    },
+    "block_05_msa": {
+      "peak_repairs": 0,
+      "zone_adjustments": 0,
+      "sublayer_recompute_ratio": 0.712,
+      "zone_l1_threshold_used": 0.06446956963744015,
+      "peak_l1_threshold_used": 0.08381044052867219
+    },
+    "block_05_mlp": {
+      "peak_repairs": 0,
+      "zone_adjustments": 0,
+      "sublayer_recompute_ratio": 0.916,
+      "zone_l1_threshold_used": 0.25028742179274555,
+      "peak_l1_threshold_used": 0.3253736483305692
+    },
+    "block_06_msa": {
+      "peak_repairs": 0,
+      "zone_adjustments": 0,
+      "sublayer_recompute_ratio": 0.94,
+      "zone_l1_threshold_used": 0.44997168719768527,
+      "peak_l1_threshold_used": 0.5849631933569909
+    },
+    "block_06_mlp": {
+      "peak_repairs": 0,
+      "zone_adjustments": 0,
+      "sublayer_recompute_ratio": 0.888,
+      "zone_l1_threshold_used": 0.3056188226938704,
+      "peak_l1_threshold_used": 0.3973044695020316
+    },
+    "block_07_msa": {
+      "peak_repairs": 0,
+      "zone_adjustments": 0,
+      "sublayer_recompute_ratio": 0.88,
+      "zone_l1_threshold_used": 0.22145369008847682,
+      "peak_l1_threshold_used": 0.2878897971150199
+    },
+    "block_07_mlp": {
+      "peak_repairs": 0,
+      "zone_adjustments": 0,
+      "sublayer_recompute_ratio": 0.892,
+      "zone_l1_threshold_used": 0.24776192206120212,
+      "peak_l1_threshold_used": 0.32209049867956274
+    },
+    "block_08_msa": {
+      "peak_repairs": 0,
+      "zone_adjustments": 0,
+      "sublayer_recompute_ratio": 0.9,
+      "zone_l1_threshold_used": 0.23080438306316203,
+      "peak_l1_threshold_used": 0.30004569798211067
+    },
+    "block_08_mlp": {
+      "peak_repairs": 0,
+      "zone_adjustments": 0,
+      "sublayer_recompute_ratio": 0.94,
+      "zone_l1_threshold_used": 0.2791292093841999,
+      "peak_l1_threshold_used": 0.3628679721994599
+    },
+    "block_09_msa": {
+      "peak_repairs": 0,
+      "zone_adjustments": 0,
+      "sublayer_recompute_ratio": 0.924,
+      "zone_l1_threshold_used": 0.18155418267038154,
+      "peak_l1_threshold_used": 0.29386785775423063
+    },
+    "block_09_mlp": {
+      "peak_repairs": 0,
+      "zone_adjustments": 0,
+      "sublayer_recompute_ratio": 0.964,
+      "zone_l1_threshold_used": 0.5999282032889979,
+      "peak_l1_threshold_used": 0.7799066642756972
+    },
+    "block_10_msa": {
+      "peak_repairs": 0,
+      "zone_adjustments": 0,
+      "sublayer_recompute_ratio": 0.944,
+      "zone_l1_threshold_used": 0.41073033376768486,
+      "peak_l1_threshold_used": 0.5339494338979903
+    },
+    "block_10_mlp": {
+      "peak_repairs": 0,
+      "zone_adjustments": 0,
+      "sublayer_recompute_ratio": 0.968,
+      "zone_l1_threshold_used": 0.5876641477126537,
+      "peak_l1_threshold_used": 0.7639633920264499
+    },
+    "block_11_msa": {
+      "peak_repairs": 0,
+      "zone_adjustments": 0,
+      "sublayer_recompute_ratio": 0.948,
+      "zone_l1_threshold_used": 0.5678631149232388,
+      "peak_l1_threshold_used": 0.7382220494002105
+    },
+    "block_11_mlp": {
+      "peak_repairs": 0,
+      "zone_adjustments": 0,
+      "sublayer_recompute_ratio": 0.972,
+      "zone_l1_threshold_used": 0.7807043607036274,
+      "peak_l1_threshold_used": 1.0149156689147156
+    },
+    "block_12_msa": {
+      "peak_repairs": 0,
+      "zone_adjustments": 0,
+      "sublayer_recompute_ratio": 0.964,
+      "zone_l1_threshold_used": 0.6240344304027772,
+      "peak_l1_threshold_used": 0.8112447595236103
+    },
+    "block_12_mlp": {
+      "peak_repairs": 0,
+      "zone_adjustments": 0,
+      "sublayer_recompute_ratio": 0.968,
+      "zone_l1_threshold_used": 0.9155916499862304,
+      "peak_l1_threshold_used": 1.1902691449820997
+    },
+    "block_13_msa": {
+      "peak_repairs": 0,
+      "zone_adjustments": 0,
+      "sublayer_recompute_ratio": 0.968,
+      "zone_l1_threshold_used": 0.7645314734482143,
+      "peak_l1_threshold_used": 0.9938909154826786
+    },
+    "block_13_mlp": {
+      "peak_repairs": 0,
+      "zone_adjustments": 0,
+      "sublayer_recompute_ratio": 0.976,
+      "zone_l1_threshold_used": 0.8417009095859822,
+      "peak_l1_threshold_used": 1.120063775777817
+    },
+    "block_14_msa": {
+      "peak_repairs": 0,
+      "zone_adjustments": 0,
+      "sublayer_recompute_ratio": 0.968,
+      "zone_l1_threshold_used": 0.9123746459984354,
+      "peak_l1_threshold_used": 1.1860870397979661
+    },
+    "block_14_mlp": {
+      "peak_repairs": 0,
+      "zone_adjustments": 0,
+      "sublayer_recompute_ratio": 0.98,
+      "zone_l1_threshold_used": 1.5522263090342583,
+      "peak_l1_threshold_used": 2.017894201744536
+    },
+    "block_15_msa": {
+      "peak_repairs": 0,
+      "zone_adjustments": 0,
+      "sublayer_recompute_ratio": 0.972,
+      "zone_l1_threshold_used": 1.3475157695800761,
+      "peak_l1_threshold_used": 1.751770500454099
+    },
+    "block_15_mlp": {
+      "peak_repairs": 0,
+      "zone_adjustments": 0,
+      "sublayer_recompute_ratio": 0.98,
+      "zone_l1_threshold_used": 1.836691140557538,
+      "peak_l1_threshold_used": 2.3876984827247996
+    },
+    "block_16_msa": {
+      "peak_repairs": 0,
+      "zone_adjustments": 0,
+      "sublayer_recompute_ratio": 0.984,
+      "zone_l1_threshold_used": 1.4827096800700845,
+      "peak_l1_threshold_used": 1.9275225840911099
+    },
+    "block_16_mlp": {
+      "peak_repairs": 0,
+      "zone_adjustments": 0,
+      "sublayer_recompute_ratio": 0.988,
+      "zone_l1_threshold_used": 1.8281866846223305,
+      "peak_l1_threshold_used": 2.37664269000903
+    },
+    "block_17_msa": {
+      "peak_repairs": 0,
+      "zone_adjustments": 0,
+      "sublayer_recompute_ratio": 0.984,
+      "zone_l1_threshold_used": 1.8816283201177915,
+      "peak_l1_threshold_used": 2.446116816153129
+    },
+    "block_17_mlp": {
+      "peak_repairs": 0,
+      "zone_adjustments": 0,
+      "sublayer_recompute_ratio": 0.984,
+      "zone_l1_threshold_used": 1.5779262566887733,
+      "peak_l1_threshold_used": 2.0513041336954054
+    },
+    "block_18_msa": {
+      "peak_repairs": 0,
+      "zone_adjustments": 0,
+      "sublayer_recompute_ratio": 0.992,
+      "zone_l1_threshold_used": 1.9943070496831619,
+      "peak_l1_threshold_used": 2.5925991645881106
+    },
+    "block_18_mlp": {
+      "peak_repairs": 0,
+      "zone_adjustments": 0,
+      "sublayer_recompute_ratio": 1.0,
+      "zone_l1_threshold_used": 1.649804988609893,
+      "peak_l1_threshold_used": 2.3799513399600984
+    },
+    "block_19_msa": {
+      "peak_repairs": 0,
+      "zone_adjustments": 0,
+      "sublayer_recompute_ratio": 1.0,
+      "zone_l1_threshold_used": 2.2613285644875054,
+      "peak_l1_threshold_used": 3.3255023241043093
+    },
+    "block_19_mlp": {
+      "peak_repairs": 0,
+      "zone_adjustments": 0,
+      "sublayer_recompute_ratio": 1.0,
+      "zone_l1_threshold_used": 3.239092974838886,
+      "peak_l1_threshold_used": 4.210820867290552
+    },
+    "block_20_msa": {
+      "peak_repairs": 0,
+      "zone_adjustments": 0,
+      "sublayer_recompute_ratio": 0.996,
+      "zone_l1_threshold_used": 2.243753571320197,
+      "peak_l1_threshold_used": 2.916879642716256
+    },
+    "block_20_mlp": {
+      "peak_repairs": 0,
+      "zone_adjustments": 0,
+      "sublayer_recompute_ratio": 1.0,
+      "zone_l1_threshold_used": 2.4188521280884743,
+      "peak_l1_threshold_used": 3.1445077665150167
+    },
+    "block_21_msa": {
+      "peak_repairs": 0,
+      "zone_adjustments": 0,
+      "sublayer_recompute_ratio": 1.0,
+      "zone_l1_threshold_used": 2.1930177761958194,
+      "peak_l1_threshold_used": 2.8509231090545653
+    },
+    "block_21_mlp": {
+      "peak_repairs": 0,
+      "zone_adjustments": 0,
+      "sublayer_recompute_ratio": 1.0,
+      "zone_l1_threshold_used": 3.183366489131003,
+      "peak_l1_threshold_used": 4.138376435870304
+    },
+    "block_22_msa": {
+      "peak_repairs": 0,
+      "zone_adjustments": 0,
+      "sublayer_recompute_ratio": 1.0,
+      "zone_l1_threshold_used": 2.407239114465867,
+      "peak_l1_threshold_used": 3.1294108488056276
+    },
+    "block_22_mlp": {
+      "peak_repairs": 0,
+      "zone_adjustments": 0,
+      "sublayer_recompute_ratio": 1.0,
+      "zone_l1_threshold_used": 2.3785613521757556,
+      "peak_l1_threshold_used": 3.320980560779572
+    },
+    "block_23_msa": {
+      "peak_repairs": 0,
+      "zone_adjustments": 0,
+      "sublayer_recompute_ratio": 1.0,
+      "zone_l1_threshold_used": 4.175332160946061,
+      "peak_l1_threshold_used": 5.42793180922988
+    },
+    "block_23_mlp": {
+      "peak_repairs": 0,
+      "zone_adjustments": 0,
+      "sublayer_recompute_ratio": 1.0,
+      "zone_l1_threshold_used": 4.897865408405953,
+      "peak_l1_threshold_used": 6.367225030927739
+    },
+    "block_24_msa": {
+      "peak_repairs": 0,
+      "zone_adjustments": 0,
+      "sublayer_recompute_ratio": 1.0,
+      "zone_l1_threshold_used": 5.975739480471815,
+      "peak_l1_threshold_used": 7.76846132461336
+    },
+    "block_24_mlp": {
+      "peak_repairs": 0,
+      "zone_adjustments": 0,
+      "sublayer_recompute_ratio": 1.0,
+      "zone_l1_threshold_used": 8.413423493631887,
+      "peak_l1_threshold_used": 10.937450541721454
+    },
+    "block_25_msa": {
+      "peak_repairs": 0,
+      "zone_adjustments": 0,
+      "sublayer_recompute_ratio": 1.0,
+      "zone_l1_threshold_used": 7.064046138525011,
+      "peak_l1_threshold_used": 9.183259980082514
+    },
+    "block_25_mlp": {
+      "peak_repairs": 0,
+      "zone_adjustments": 0,
+      "sublayer_recompute_ratio": 1.0,
+      "zone_l1_threshold_used": 13.79863409380759,
+      "peak_l1_threshold_used": 17.938224321949868
+    },
+    "block_26_msa": {
+      "peak_repairs": 0,
+      "zone_adjustments": 0,
+      "sublayer_recompute_ratio": 1.0,
+      "zone_l1_threshold_used": 12.408671615375695,
+      "peak_l1_threshold_used": 16.131273099988405
+    },
+    "block_26_mlp": {
+      "peak_repairs": 0,
+      "zone_adjustments": 0,
+      "sublayer_recompute_ratio": 1.0,
+      "zone_l1_threshold_used": 5.878247368525953,
+      "peak_l1_threshold_used": 7.641721579083739
+    },
+    "block_27_msa": {
+      "peak_repairs": 0,
+      "zone_adjustments": 0,
+      "sublayer_recompute_ratio": 1.0,
+      "zone_l1_threshold_used": 2.382958734896448,
+      "peak_l1_threshold_used": 3.0978463553653826
+    },
+    "block_27_mlp": {
+      "peak_repairs": 0,
+      "zone_adjustments": 0,
+      "sublayer_recompute_ratio": 0.884,
+      "zone_l1_threshold_used": 2.235104225575924,
+      "peak_l1_threshold_used": 2.905635493248701
+    }
+  },
+  "eval_config": {
+    "eval_num_images": 8,
+    "eval_chunk_size": 1,
+    "seed": 42,
+    "cfg_scale": 1.5,
+    "model_name": "DiT-XL/2"
+  }
+}

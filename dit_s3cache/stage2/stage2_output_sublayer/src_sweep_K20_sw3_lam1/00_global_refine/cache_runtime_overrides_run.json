@@ -1,0 +1,6 @@
+{
+  "stage": "stage2_runtime_refine_sublayer_dit",
+  "scheduler_config_path": "/home/jimmy/DiT/dit_s3cache/stage1/stage1_output_sublayer/sweep_K20_sw3_lam1/scheduler_config.json",
+  "T": 250,
+  "seed": 42
+}

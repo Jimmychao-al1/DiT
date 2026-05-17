@@ -1,0 +1,6 @@
+{
+  "stage": "stage2_runtime_refine_sublayer_dit",
+  "scheduler_config_path": "/home/jimmy/DiT/dit_s3cache/stage2/stage2_output_sublayer/src_sweep_K15_sw3_lam1/00_global_refine/stage2_refined_scheduler_config.json",
+  "T": 250,
+  "seed": 42
+}

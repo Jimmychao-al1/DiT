@@ -16,7 +16,7 @@ if str(_REPO_ROOT) not in sys.path:
 from dit_s3cache.evidence.hooks_sublayer import BRANCHES, sublayer_name  # noqa: E402
 from dit_s3cache.stage0.stage0_dit import save_object_npy_numpy1_compat  # noqa: E402
 from dit_s3cache.stage1.stage1_dit_sublayer import run_stage1_sublayer  # noqa: E402
-from dit_s3cache.stage2.stage2_dit_sublayer import (  # noqa: E402
+from dit_s3cache.stage2.sub_layer.stage2_dit_sublayer import (  # noqa: E402
     build_sublayerwise_thresholds,
     run_stage2_refine_sublayer,
 )
@@ -93,6 +93,14 @@ def test_sublayer_stage1_stage2_adapter_chain(tmp_path: pathlib.Path) -> None:
         output_dir=str(refined_dir),
         pass_mode="sublayerwise",
         threshold_config_path=str(threshold_path),
+    )
+    with open(global_dir / "stage2_refinement_summary.json", "r", encoding="utf-8") as f:
+        global_summary = json.load(f)
+    with open(refined_dir / "stage2_refinement_summary.json", "r", encoding="utf-8") as f:
+        refined_summary = json.load(f)
+    assert (
+        refined_summary["refined_full_compute_ratio"]
+        >= global_summary["refined_full_compute_ratio"]
     )
 
     adapter_json = tmp_path / "cache_schedule_sublayer.json"

@@ -19,7 +19,7 @@ import numpy as np
 
 from diffusion import create_diffusion
 
-from dit_s3cache.stage2.stage2_dit_sublayer import (
+from dit_s3cache.stage2.sub_layer.stage2_dit_sublayer import (
     load_sublayer_scheduler_config,
     parse_sublayer_name,
 )
