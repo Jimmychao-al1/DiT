@@ -88,20 +88,21 @@ def test_sublayer_stage1_stage2_adapter_chain(tmp_path: pathlib.Path) -> None:
 
     refined_dir = tmp_path / "stage2" / "02_refined_sublayerwise"
     run_stage2_refine_sublayer(
-        scheduler_config_path=str(global_dir / "stage2_refined_scheduler_config.json"),
+        scheduler_config_path=str(stage1 / "scheduler_config.json"),
         stage0_dir=str(stage0),
         output_dir=str(refined_dir),
         pass_mode="sublayerwise",
         threshold_config_path=str(threshold_path),
     )
+    with open(stage1 / "scheduler_config.json", "r", encoding="utf-8") as f:
+        stage1_cfg = json.load(f)
     with open(global_dir / "stage2_refinement_summary.json", "r", encoding="utf-8") as f:
         global_summary = json.load(f)
     with open(refined_dir / "stage2_refinement_summary.json", "r", encoding="utf-8") as f:
         refined_summary = json.load(f)
-    assert (
-        refined_summary["refined_full_compute_ratio"]
-        >= global_summary["refined_full_compute_ratio"]
-    )
+    assert refined_summary["source_scheduler"] == "stage1"
+    assert refined_summary["original_full_compute_ratio"] == stage1_cfg["full_compute_ratio"]
+    assert refined_summary["original_full_compute_ratio"] != global_summary["refined_full_compute_ratio"]
 
     adapter_json = tmp_path / "cache_schedule_sublayer.json"
     payload = write_cache_schedule_json(

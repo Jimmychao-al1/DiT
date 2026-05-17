@@ -303,11 +303,10 @@ def run_stage2_refine_sublayer(
                         }
                     )
 
-        # Preserve COMPUTE cells already present in the input scheduler.  If
-        # Pass 2 starts from Pass 1 output, peak repairs are stored only in
-        # expanded_mask and would otherwise be lost when rebuilding from zones.
-        previous_row = np.asarray(entry["expanded_mask"], dtype=bool)
-        row = build_expanded_mask_for_sublayer(zones, int(refined["T"])) | previous_row
+        # Match the block-level Stage2 contract: rebuild from the current
+        # zones/k state, then apply peak repairs for this pass. Pass 1 is only
+        # used to derive diagnostics/thresholds; Pass 2 starts from Stage1.
+        row = build_expanded_mask_for_sublayer(zones, int(refined["T"]))
         local_peak_repairs = 0
         for step_idx, val in enumerate(error_step[sidx]):
             if step_idx == 0:

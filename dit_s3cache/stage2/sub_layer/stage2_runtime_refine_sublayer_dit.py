@@ -651,12 +651,10 @@ def run_stage2_runtime_refine_sublayer_dit(
                         }
                     )
 
-        # Rebuild the cadence mask after k updates, then preserve any COMPUTE
-        # cells already present in the input scheduler.  This matters when Pass
-        # 2 starts from Pass 1 output: global peak repairs live in
-        # expanded_mask, not in zones/k, and refinement must be monotonic.
-        previous_row = np.asarray(entry["expanded_mask"], dtype=bool)
-        row = build_expanded_mask_for_sublayer(zones, T) | previous_row
+        # Match the block-level Stage2 contract: rebuild from the current
+        # zones/k state, then apply peak repairs for this pass. Pass 1 is only
+        # used to derive diagnostics/thresholds; Pass 2 starts from Stage1.
+        row = build_expanded_mask_for_sublayer(zones, T)
         local_peak = 0
         for si_str, metric in diagnostics["per_sublayer_step_error"][name].items():
             si = int(si_str)

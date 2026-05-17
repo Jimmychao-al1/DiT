@@ -99,7 +99,7 @@ run_one() {
   echo ""
   echo "[Pass 2] Sub-layer-wise refine → ${OUT_DIR}/02_refined_sublayerwise"
   "${PY}" -m dit_s3cache.stage2.sub_layer.stage2_runtime_refine_sublayer_dit \
-    --scheduler-config "${OUT_DIR}/00_global_refine/stage2_refined_scheduler_config.json" \
+    --scheduler-config "${STAGE1_JSON}" \
     --threshold-mode sublayerwise \
     --threshold-config "${OUT_DIR}/01_sublayerwise_threshold/stage2_thresholds_sublayerwise.json" \
     --output-dir "${OUT_DIR}/02_refined_sublayerwise" \
