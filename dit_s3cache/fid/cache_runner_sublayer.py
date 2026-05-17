@@ -60,6 +60,7 @@ class CachedDiTBlockSubLayer:
                     block.adaLN_modulation(c).chunk(6, dim=1)
                 )
             else:
+                # Cached branch residuals already include adaLN-Zero gates.
                 shift_msa = scale_msa = gate_msa = None
                 shift_mlp = scale_mlp = gate_mlp = None
 

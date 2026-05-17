@@ -216,17 +216,14 @@ def run_stage0_dit_sublayer(
     _check_array(w_rank, "fid_w_rank")
 
     LOGGER.info(f"\n[Step 5] 存檔至 {out_path}...")
-    block_names_arr = np.array(sublayer_names, dtype=object)
-    save_object_npy_numpy1_compat(out_path / "block_names.npy", block_names_arr)
-    save_object_npy_numpy1_compat(out_path / "sub_layer_names.npy", block_names_arr)
+    sublayer_names_arr = np.array(sublayer_names, dtype=object)
+    save_object_npy_numpy1_compat(out_path / "sub_layer_names.npy", sublayer_names_arr)
     np.save(out_path / "l1_interval_norm.npy", l1_norm)
     np.save(out_path / "cosdist_interval_norm.npy", cosdist_norm)
     np.save(out_path / "svd_interval_norm.npy", svd_norm)
     np.save(out_path / "fid_w_clip.npy", w_clip)
     np.save(out_path / "fid_w_rank.npy", w_rank)
     np.save(out_path / "fid_weights.npy", w_clip)
-    np.save(out_path / "fid_w_qdiffae_clip.npy", w_clip)
-    np.save(out_path / "fid_w_qdiffae_rank.npy", w_rank)
     np.save(out_path / "t_curr_interval.npy", t_curr_interval)
     save_object_npy_numpy1_compat(
         out_path / "axis_interval_def.npy",
@@ -259,7 +256,6 @@ def run_stage0_dit_sublayer(
         "pair_count_step0_nonzero": int(np.sum(pair_count[:, 0] != 0)),
         "pre_norm_stats": pre_norm_stats,
         "output_files": [
-            "block_names.npy",
             "sub_layer_names.npy",
             "l1_interval_norm.npy",
             "cosdist_interval_norm.npy",
@@ -267,8 +263,6 @@ def run_stage0_dit_sublayer(
             "fid_w_clip.npy",
             "fid_w_rank.npy",
             "fid_weights.npy",
-            "fid_w_qdiffae_clip.npy",
-            "fid_w_qdiffae_rank.npy",
             "axis_interval_def.npy",
             "t_curr_interval.npy",
             "stage0_metadata.json",
