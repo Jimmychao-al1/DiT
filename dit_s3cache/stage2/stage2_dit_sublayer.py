@@ -7,6 +7,7 @@ This sub-layer path is CPU/data driven.  It does not run DiT sampling; it uses
 from __future__ import annotations
 
 import argparse
+import copy
 import csv
 import json
 import logging
@@ -82,10 +83,15 @@ def validate_sublayer_scheduler_config(cfg: dict[str, Any]) -> None:
 
 
 def error_by_step_from_stage0(stage0_dir: str | Path) -> tuple[list[str], np.ndarray]:
-    names, l1, _, _, _, _, _ = load_stage0_sublayer(stage0_dir)
+    names, l1, _, _, _, _, t_curr = load_stage0_sublayer(stage0_dir)
     S, Tm1 = l1.shape
     T = Tm1 + 1
+    expected_t_curr = np.arange(T - 2, -1, -1, dtype=np.int32)
+    if not np.array_equal(t_curr, expected_t_curr):
+        raise ValueError("Stage 0 sub-layer t_curr_interval must be descending T-2..0")
     err = np.zeros((S, T), dtype=np.float64)
+    # Stage 0 stores interval j for reused DDPM t=(T-2)-j.  Since step_idx=(T-1)-t,
+    # interval j maps to step_idx=j+1; step_idx=0 has no prior interval.
     err[:, 1:] = l1
     err[:, 0] = 0.0
     return names, err
@@ -249,7 +255,7 @@ def run_stage2_refine_sublayer(
         "peak_over_zone_ratio_min": threshold_doc.get("peak_over_zone_ratio_min") if threshold_doc else None,
     }
 
-    refined = json.loads(json.dumps(cfg))
+    refined = copy.deepcopy(cfg)
     refined["version"] = VERSION
     refined["stage2_meta"] = diagnostics["stage2_threshold_meta"]
     original_mask = _mask_from_config(cfg)
