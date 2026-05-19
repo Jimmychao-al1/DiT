@@ -1,0 +1,4 @@
+2026-05-18 21:17:44,090 [INFO] sampling_timesteps len=50 first=999 last=0
+2026-05-18 21:17:44,091 [INFO] Baseline path: full recompute all blocks (no cache reuse)
+2026-05-18 21:48:10,095 [INFO] Removed scratch NPZ: /home/jimmy/DiT/dit_s3cache/results/fid_dit_stage2_ddim50/20260518/dit_baseline_full_compute/0518_21_dit_baseline_full_compute/_scratch_samples.npz
+2026-05-18 21:48:10,096 [INFO] [done] dit_baseline_full_compute | FID@5000=9.085602107732768 | out=/home/jimmy/DiT/dit_s3cache/results/fid_dit_stage2_ddim50/20260518/dit_baseline_full_compute/0518_21_dit_baseline_full_compute

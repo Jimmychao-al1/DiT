@@ -1,0 +1,8 @@
+{
+  "note": "dit_baseline_full_compute: no Stage2 JSON; every block recomputes every timestep",
+  "T": 50,
+  "time_order": "ddim_49_to_0",
+  "sampler": "ddim",
+  "num_blocks": 28,
+  "eta": 0.0
+}
