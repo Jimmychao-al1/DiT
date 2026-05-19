@@ -29,10 +29,10 @@ from dit_s3cache.stage1.stage1_scheduler_dit import (
 )
 
 # --- DiT-specific constants ---
-DIT_T = 250                             # 總步數
-DIT_N_INTERVALS = 249                   # T - 1
+DIT_T = 250                             # legacy DDPM validation default
+DIT_N_INTERVALS = 249                   # legacy DDPM validation default: T - 1
 DIT_NUM_BLOCKS = 28                     # block_0 ~ block_27
-TIME_ORDER_EXPECTED = "ddpm_249_to_0"   # 對應 Stage1 JSON 的 time_order
+TIME_ORDER_EXPECTED = "ddpm_249_to_0"   # legacy default for existing DDPM-250 configs
 
 EXPECTED_NUM_BLOCKS = DIT_NUM_BLOCKS
 
@@ -42,6 +42,56 @@ assert len(RUNTIME_LAYER_NAMES) == EXPECTED_NUM_BLOCKS
 
 # Stage 2 error collection 從第一步必須 full compute（step_idx=0 → DDPM t=249）
 FIRST_STEP_IDX = 0
+
+TIME_ORDER_RE = re.compile(r"^(ddpm|ddim)_(\d+)_to_0$")
+
+
+def make_time_order(sampler: str, T: int) -> str:
+    """Build the scheduler time_order string for a sampler and step count."""
+    sampler = str(sampler).lower()
+    if sampler not in {"ddpm", "ddim"}:
+        raise ValueError(f"sampler must be 'ddpm' or 'ddim', got {sampler!r}")
+    T = int(T)
+    if T < 2:
+        raise ValueError(f"T must be >= 2, got {T}")
+    return f"{sampler}_{T - 1}_to_0"
+
+
+def parse_time_order(time_order: str) -> Tuple[str, int]:
+    """
+    Parse a scheduler time_order string.
+
+    Returns:
+        (sampler, T), where T is inferred from the ``{T-1}`` field.
+    """
+    m = TIME_ORDER_RE.match(str(time_order))
+    if not m:
+        raise ValueError(
+            "time_order must match 'ddpm_{T-1}_to_0' or 'ddim_{T-1}_to_0', "
+            f"got {time_order!r}"
+        )
+    sampler = m.group(1)
+    last_step = int(m.group(2))
+    T = last_step + 1
+    if T < 2:
+        raise ValueError(f"time_order implies invalid T={T}: {time_order!r}")
+    return sampler, T
+
+
+def validate_time_order(time_order: str, T: int) -> str:
+    """
+    Validate that time_order encodes a supported sampler and exactly matches T.
+
+    Returns:
+        The parsed sampler ("ddpm" or "ddim").
+    """
+    sampler, parsed_T = parse_time_order(time_order)
+    T = int(T)
+    if parsed_T != T:
+        raise ValueError(
+            f"time_order {time_order!r} implies T={parsed_T}, but config T={T}"
+        )
+    return sampler
 
 
 def load_stage1_scheduler_config(path: str | Path) -> Dict[str, Any]:
@@ -127,14 +177,10 @@ def validate_stage1_scheduler_config(
 
     require_k_per_zone=False 時，只檢查 expanded_mask 合法，不驗證 rebuild(k) 一致性。
     """
-    if cfg.get("time_order") != TIME_ORDER_EXPECTED:
-        raise ValueError(
-            f"time_order must be {TIME_ORDER_EXPECTED!r}, got {cfg.get('time_order')!r}"
-        )
-
     T = int(cfg["T"])
     if T < 2:
         raise ValueError(f"T must be >= 2, got {T}")
+    validate_time_order(str(cfg.get("time_order")), T)
 
     blocks = cfg.get("blocks")
     if not isinstance(blocks, list):

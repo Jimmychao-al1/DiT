@@ -52,6 +52,30 @@ VERSION = "stage1_baseline_v1"
 DEFAULT_LAMBDA_SWEEP = (0.25, 0.5, 1.0, 2.0)
 
 
+def make_time_order(sampler: str, T: int) -> str:
+    """Build Stage1/Stage2 scheduler time_order without importing Stage2 helpers."""
+    sampler = str(sampler).lower()
+    if sampler not in {"ddpm", "ddim"}:
+        raise ValueError(f"sampler must be 'ddpm' or 'ddim', got {sampler!r}")
+    T = int(T)
+    if T < 2:
+        raise ValueError(f"T must be >= 2, got {T}")
+    return f"{sampler}_{T - 1}_to_0"
+
+
+def load_stage0_metadata(input_dir: str) -> Dict[str, Any]:
+    """Load optional Stage0 metadata; legacy Stage0 dirs default to DDPM."""
+    p = Path(input_dir) / "stage0_metadata.json"
+    if not p.is_file():
+        return {"sampler": "ddpm"}
+    with open(p, "r", encoding="utf-8") as f:
+        data = json.load(f)
+    if not isinstance(data, dict):
+        raise TypeError(f"stage0 metadata root must be a JSON object: {p}")
+    data.setdefault("sampler", "ddpm")
+    return data
+
+
 def stage1_name_to_runtime_identity(stage1_name: str) -> Tuple[str, int]:
     """DiT block name -> (runtime_name, canonical runtime block id 0..27)."""
     s = stage1_name.strip()
@@ -452,8 +476,13 @@ def run_stage1_synthesis(
 ) -> Tuple[Dict[str, Any], Dict[str, Any], Dict[str, Any]]:
     """Public function run_stage1_synthesis."""
     block_names, l1, cos, svd, fid_w, axis_def_str, t_curr_arr = load_stage0_formal(stage0_dir)
+    stage0_meta = load_stage0_metadata(stage0_dir)
     B = l1.shape[0]
     T = l1.shape[1] + 1
+    sampler = str(stage0_meta.get("sampler", "ddpm")).lower()
+    if sampler not in {"ddpm", "ddim"}:
+        raise ValueError(f"Unsupported Stage0 sampler in metadata: {sampler!r}")
+    time_order = make_time_order(sampler, T)
 
     I_l1cos, I_cut = build_I_l1cos_I_cut_per_ddim_t(l1, cos, svd, T)
     G_ddim = global_cutting_signal_G(I_cut, fid_w)
@@ -600,17 +629,26 @@ def run_stage1_synthesis(
     config: Dict[str, Any] = {
         "version": VERSION,
         "T": T,
-        "time_order": "ddpm_249_to_0",
-        "expanded_mask_layout": "index i=0 is first DDPM step (t=249); i=249 is t=0",
+        "time_order": time_order,
+        "sampler": sampler,
+        "expanded_mask_layout": f"index i=0 is first {sampler.upper()} step (t={T - 1}); i={T - 1} is t=0",
         "block_identity_semantics": {
             "blocks[].id": "scheduler-local index (stable within this scheduler JSON)",
             "blocks[].scheduler_local_block_id": "same as blocks[].id",
             "blocks[].canonical_runtime_block_id": "canonical runtime index aligned with runtime layer order",
         },
         "stage1_baseline_params": stage1_baseline_params,
+        "source_stage0": {
+            "stage0_dir": str(Path(stage0_dir).resolve()),
+            "sampler": sampler,
+            "eta": stage0_meta.get("eta") if sampler == "ddim" else None,
+            "n_steps": int(stage0_meta.get("n_steps", T)),
+        },
         "shared_zones": shared_zones,
         "blocks": blocks_out,
     }
+    if sampler != "ddim":
+        config["source_stage0"].pop("eta", None)
 
     # --- lambda sweep：用分解項快速算 alternative selected k ---
     sweep_report: Dict[str, Any] = {}
@@ -633,12 +671,16 @@ def run_stage1_synthesis(
             sweep_report[key]["per_block_k"].append(k_z)
 
     diagnostics: Dict[str, Any] = {
+        "sampler": sampler,
+        "eta": stage0_meta.get("eta") if sampler == "ddim" else None,
+        "time_order": time_order,
         "stage0_axis_interval_def": axis_def_str,
         "t_curr_interval": t_curr_arr.tolist(),
-        "mapping_note": "interval j -> reused DDPM t = (T-2)-j; I_cut[:,T-1]=0; expanded_mask[i] step maps to t=(T-1)-i",
+        "mapping_note": f"interval j -> reused {sampler.upper()} local t = (T-2)-j; I_cut[:,T-1]=0; expanded_mask[i] step maps to t=(T-1)-i",
         "I_l1cos_stats": stats_dict(I_l1cos),
         "I_cut_stats": stats_dict(I_cut),
         "G_ddim": G_ddim.tolist(),
+        "G_processing_order_i0_is_tmax": G_proc.tolist(),
         "G_processing_order_i0_is_t249": G_proc.tolist(),
         "G_smooth_processing_order": G_smooth.tolist(),
         "Delta_processing_order": Delta.tolist(),
@@ -654,6 +696,8 @@ def run_stage1_synthesis(
         "lambda_sweep": [float(x) for x in lambda_sweep],
         "lambda_sweep_selected_k": sweep_report,
     }
+    if sampler != "ddim":
+        diagnostics.pop("eta", None)
 
     # verification_summary
     zone_boundary_list = [{"t_start": z["t_start"], "t_end": z["t_end"]} for z in shared_zones]
@@ -799,7 +843,7 @@ def self_test() -> Any:
     stacked = np.array([cfg["blocks"][b]["expanded_mask"] for b in range(B)], dtype=bool)
     assert np.array_equal(recon, stacked)
     assert cfg["blocks"][0]["expanded_mask"][0] is True
-    assert cfg["time_order"] == "ddpm_249_to_0", f"unexpected time_order: {cfg['time_order']}"
+    assert cfg["time_order"] == make_time_order("ddpm", T), f"unexpected time_order: {cfg['time_order']}"
     assert cfg["T"] == T, f"unexpected T: {cfg['T']}"
     print("self_test OK")
 

@@ -29,10 +29,10 @@ from dit_s3cache.stage1.stage1_scheduler_dit import validate_shared_zones_ddim
 from dit_s3cache.stage2.stage2_scheduler_adapter_dit import (
     EXPECTED_NUM_BLOCKS,
     RUNTIME_LAYER_NAMES,
-    TIME_ORDER_EXPECTED,
     rebuild_expanded_mask_from_shared_zones_and_k_per_zone,
     runtime_block_to_stage1_name,
     stage1_block_to_runtime_block,
+    validate_time_order,
 )
 
 
@@ -48,14 +48,10 @@ def verify_refined_scheduler_config(
     額外檢查（DiT 版新增）：
     - full_compute_ratio 在合理範圍 full_compute_ratio_range
     """
-    if cfg.get("time_order") != TIME_ORDER_EXPECTED:
-        raise ValueError(
-            f"time_order must be {TIME_ORDER_EXPECTED!r}, got {cfg.get('time_order')!r}"
-        )
-
     T = int(cfg["T"])
     if T < 2:
         raise ValueError(f"T must be >= 2, got {T}")
+    validate_time_order(str(cfg.get("time_order")), T)
 
     shared = cfg.get("shared_zones")
     if not isinstance(shared, list):

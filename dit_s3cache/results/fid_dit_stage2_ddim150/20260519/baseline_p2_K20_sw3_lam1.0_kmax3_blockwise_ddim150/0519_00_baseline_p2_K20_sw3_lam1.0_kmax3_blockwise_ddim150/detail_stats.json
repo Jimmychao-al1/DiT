@@ -1,0 +1,525 @@
+{
+  "run_id": "20260519T005602__baseline_p2_K20_sw3_lam1.0_kmax3_blockwise_ddim150",
+  "scheduler_name": "baseline_p2_K20_sw3_lam1.0_kmax3_blockwise_ddim150",
+  "sampler": "ddim",
+  "num_sampling_steps": 150,
+  "per_block_recompute_count": {
+    "block_0": 69,
+    "block_1": 58,
+    "block_2": 58,
+    "block_3": 58,
+    "block_4": 58,
+    "block_5": 58,
+    "block_6": 58,
+    "block_7": 58,
+    "block_8": 57,
+    "block_9": 58,
+    "block_10": 58,
+    "block_11": 58,
+    "block_12": 56,
+    "block_13": 57,
+    "block_14": 58,
+    "block_15": 58,
+    "block_16": 58,
+    "block_17": 58,
+    "block_18": 57,
+    "block_19": 57,
+    "block_20": 57,
+    "block_21": 57,
+    "block_22": 57,
+    "block_23": 57,
+    "block_24": 57,
+    "block_25": 57,
+    "block_26": 57,
+    "block_27": 58
+  },
+  "per_block_reuse_count": {
+    "block_0": 81,
+    "block_1": 92,
+    "block_2": 92,
+    "block_3": 92,
+    "block_4": 92,
+    "block_5": 92,
+    "block_6": 92,
+    "block_7": 92,
+    "block_8": 93,
+    "block_9": 92,
+    "block_10": 92,
+    "block_11": 92,
+    "block_12": 94,
+    "block_13": 93,
+    "block_14": 92,
+    "block_15": 92,
+    "block_16": 92,
+    "block_17": 92,
+    "block_18": 93,
+    "block_19": 93,
+    "block_20": 93,
+    "block_21": 93,
+    "block_22": 93,
+    "block_23": 93,
+    "block_24": 93,
+    "block_25": 93,
+    "block_26": 93,
+    "block_27": 92
+  },
+  "per_zone_recompute_stats": {
+    "0": {
+      "full_count": 28,
+      "reuse_count": 28,
+      "num_timesteps_in_zone": 2
+    },
+    "1": {
+      "full_count": 140,
+      "reuse_count": 252,
+      "num_timesteps_in_zone": 14
+    },
+    "2": {
+      "full_count": 56,
+      "reuse_count": 84,
+      "num_timesteps_in_zone": 5
+    },
+    "3": {
+      "full_count": 56,
+      "reuse_count": 56,
+      "num_timesteps_in_zone": 4
+    },
+    "4": {
+      "full_count": 28,
+      "reuse_count": 28,
+      "num_timesteps_in_zone": 2
+    },
+    "5": {
+      "full_count": 84,
+      "reuse_count": 168,
+      "num_timesteps_in_zone": 9
+    },
+    "6": {
+      "full_count": 28,
+      "reuse_count": 28,
+      "num_timesteps_in_zone": 2
+    },
+    "7": {
+      "full_count": 113,
+      "reuse_count": 167,
+      "num_timesteps_in_zone": 10
+    },
+    "8": {
+      "full_count": 681,
+      "reuse_count": 1335,
+      "num_timesteps_in_zone": 72
+    },
+    "9": {
+      "full_count": 168,
+      "reuse_count": 280,
+      "num_timesteps_in_zone": 16
+    },
+    "10": {
+      "full_count": 57,
+      "reuse_count": 83,
+      "num_timesteps_in_zone": 5
+    },
+    "11": {
+      "full_count": 70,
+      "reuse_count": 42,
+      "num_timesteps_in_zone": 4
+    },
+    "12": {
+      "full_count": 48,
+      "reuse_count": 8,
+      "num_timesteps_in_zone": 2
+    },
+    "13": {
+      "full_count": 65,
+      "reuse_count": 19,
+      "num_timesteps_in_zone": 3
+    }
+  },
+  "per_zone_adjustment_stats": {
+    "12": 20,
+    "13": 28,
+    "11": 8
+  },
+  "raw_estimation_stats": {
+    "full_compute_ratio": 0.38619,
+    "total_full_compute_count": 1622,
+    "total_cache_reuse_count": 2578,
+    "full_compute_blocks_count": 0,
+    "T": 150,
+    "num_blocks": 28,
+    "per_block_recompute_ratio": {
+      "block_0": 0.46,
+      "block_1": 0.386667,
+      "block_2": 0.386667,
+      "block_3": 0.386667,
+      "block_4": 0.386667,
+      "block_5": 0.386667,
+      "block_6": 0.386667,
+      "block_7": 0.386667,
+      "block_8": 0.38,
+      "block_9": 0.386667,
+      "block_10": 0.386667,
+      "block_11": 0.386667,
+      "block_12": 0.373333,
+      "block_13": 0.38,
+      "block_14": 0.386667,
+      "block_15": 0.386667,
+      "block_16": 0.386667,
+      "block_17": 0.386667,
+      "block_18": 0.38,
+      "block_19": 0.38,
+      "block_20": 0.38,
+      "block_21": 0.38,
+      "block_22": 0.38,
+      "block_23": 0.38,
+      "block_24": 0.38,
+      "block_25": 0.38,
+      "block_26": 0.38,
+      "block_27": 0.386667
+    }
+  },
+  "fid_run_meta": {
+    "cache_stats": {
+      "cache_hits": 404746,
+      "recompute_hits": 254654,
+      "total_hook_calls": 659400,
+      "per_block": {
+        "block_0": {
+          "cache_hits": 12717,
+          "recompute_hits": 10833,
+          "total_hook_calls": 23550
+        },
+        "block_1": {
+          "cache_hits": 14444,
+          "recompute_hits": 9106,
+          "total_hook_calls": 23550
+        },
+        "block_2": {
+          "cache_hits": 14444,
+          "recompute_hits": 9106,
+          "total_hook_calls": 23550
+        },
+        "block_3": {
+          "cache_hits": 14444,
+          "recompute_hits": 9106,
+          "total_hook_calls": 23550
+        },
+        "block_4": {
+          "cache_hits": 14444,
+          "recompute_hits": 9106,
+          "total_hook_calls": 23550
+        },
+        "block_5": {
+          "cache_hits": 14444,
+          "recompute_hits": 9106,
+          "total_hook_calls": 23550
+        },
+        "block_6": {
+          "cache_hits": 14444,
+          "recompute_hits": 9106,
+          "total_hook_calls": 23550
+        },
+        "block_7": {
+          "cache_hits": 14444,
+          "recompute_hits": 9106,
+          "total_hook_calls": 23550
+        },
+        "block_8": {
+          "cache_hits": 14601,
+          "recompute_hits": 8949,
+          "total_hook_calls": 23550
+        },
+        "block_9": {
+          "cache_hits": 14444,
+          "recompute_hits": 9106,
+          "total_hook_calls": 23550
+        },
+        "block_10": {
+          "cache_hits": 14444,
+          "recompute_hits": 9106,
+          "total_hook_calls": 23550
+        },
+        "block_11": {
+          "cache_hits": 14444,
+          "recompute_hits": 9106,
+          "total_hook_calls": 23550
+        },
+        "block_12": {
+          "cache_hits": 14758,
+          "recompute_hits": 8792,
+          "total_hook_calls": 23550
+        },
+        "block_13": {
+          "cache_hits": 14601,
+          "recompute_hits": 8949,
+          "total_hook_calls": 23550
+        },
+        "block_14": {
+          "cache_hits": 14444,
+          "recompute_hits": 9106,
+          "total_hook_calls": 23550
+        },
+        "block_15": {
+          "cache_hits": 14444,
+          "recompute_hits": 9106,
+          "total_hook_calls": 23550
+        },
+        "block_16": {
+          "cache_hits": 14444,
+          "recompute_hits": 9106,
+          "total_hook_calls": 23550
+        },
+        "block_17": {
+          "cache_hits": 14444,
+          "recompute_hits": 9106,
+          "total_hook_calls": 23550
+        },
+        "block_18": {
+          "cache_hits": 14601,
+          "recompute_hits": 8949,
+          "total_hook_calls": 23550
+        },
+        "block_19": {
+          "cache_hits": 14601,
+          "recompute_hits": 8949,
+          "total_hook_calls": 23550
+        },
+        "block_20": {
+          "cache_hits": 14601,
+          "recompute_hits": 8949,
+          "total_hook_calls": 23550
+        },
+        "block_21": {
+          "cache_hits": 14601,
+          "recompute_hits": 8949,
+          "total_hook_calls": 23550
+        },
+        "block_22": {
+          "cache_hits": 14601,
+          "recompute_hits": 8949,
+          "total_hook_calls": 23550
+        },
+        "block_23": {
+          "cache_hits": 14601,
+          "recompute_hits": 8949,
+          "total_hook_calls": 23550
+        },
+        "block_24": {
+          "cache_hits": 14601,
+          "recompute_hits": 8949,
+          "total_hook_calls": 23550
+        },
+        "block_25": {
+          "cache_hits": 14601,
+          "recompute_hits": 8949,
+          "total_hook_calls": 23550
+        },
+        "block_26": {
+          "cache_hits": 14601,
+          "recompute_hits": 8949,
+          "total_hook_calls": 23550
+        },
+        "block_27": {
+          "cache_hits": 14444,
+          "recompute_hits": 9106,
+          "total_hook_calls": 23550
+        }
+      }
+    },
+    "adm_output": "warming up TensorFlow...\ncomputing reference batch activations...\ncomputing/reading reference batch statistics...\ncomputing sample batch activations...\ncomputing/reading sample batch statistics...\nComputing evaluations...\nInception Score: 231.8358612060547\nFID: 9.318733140015581\nsFID: 35.04417590590219\nPrecision: 0.7936\nRecall: 0.7486\n\nWARNING: All log messages before absl::InitializeLog() is called are written to STDERR\nI0000 00:00:1779125531.476115 4139978 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.\nI0000 00:00:1779125531.502900 4139978 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.\nTo enable the following instructions: AVX2 AVX512F AVX512_VNNI AVX512_BF16 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.\nWARNING: All log messages before absl::InitializeLog() is called are written to STDERR\nI0000 00:00:1779125532.047549 4139978 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.\nW0000 00:00:1779125532.494395 4139978 gpu_device.cc:2459] TensorFlow was not built with CUDA kernel binaries compatible with compute capability 12.0a. CUDA kernels will be jit-compiled from PTX, which could take 30 minutes or longer.\nI0000 00:00:1779125532.553978 4139978 gpu_device.cc:2043] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 25338 MB memory:  -> device: 0, name: NVIDIA GeForce RTX 5090, pci bus id: 0000:01:00.0, compute capability: 12.0a\nW0000 00:00:1779125532.564672 4139978 gpu_device.cc:2459] TensorFlow was not built with CUDA kernel binaries compatible with compute capability 12.0a. CUDA kernels will be jit-compiled from PTX, which could take 30 minutes or longer.\nW0000 00:00:1779125532.566889 4139978 gpu_device.cc:2459] TensorFlow was not built with CUDA kernel binaries compatible with compute capability 12.0a. CUDA kernels will be jit-compiled from PTX, which could take 30 minutes or longer.\nI0000 00:00:1779125532.568239 4139978 gpu_device.cc:2043] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 25338 MB memory:  -> device: 0, name: NVIDIA GeForce RTX 5090, pci bus id: 0000:01:00.0, compute capability: 12.0a\nW0000 00:00:1779125532.749247 4139978 op_def_util.cc:371] Op BatchNormWithGlobalNormalization is deprecated. It will cease to work in GraphDef version 9. Use tf.nn.batch_normalization().\n\n  0%|          | 0/1 [00:00<?, ?it/s]I0000 00:00:1779125533.094959 4139978 mlir_graph_optimization_pass.cc:437] MLIR V1 optimization pass is not enabled\nI0000 00:00:1779125533.662541 4140114 cuda_dnn.cc:461] Loaded cuDNN version 91900\nW0000 00:00:1779125533.770081 4140114 subprocess_compilation.cc:241] Falling back to the CUDA driver for PTX compilation; ptxas does not support CC 12.0\nW0000 00:00:1779125533.770100 4140114 subprocess_compilation.cc:244] Used ptxas at /usr/local/cuda/bin/ptxas\nW0000 00:00:1779125533.770156 4140114 gpu_kernel_to_blob_pass.cc:190] Failed to compile generated PTX with ptxas. Falling back to compilation by driver.\n\n100%|██████████| 1/1 [00:01<00:00,  1.09s/it]\n100%|██████████| 1/1 [00:01<00:00,  1.09s/it]\n\n  0%|          | 0/157 [00:00<?, ?it/s]\n  1%|          | 1/157 [00:00<01:20,  1.94it/s]\n  3%|▎         | 4/157 [00:00<00:19,  7.71it/s]\n  4%|▍         | 7/157 [00:00<00:12, 12.27it/s]\n  6%|▋         | 10/157 [00:00<00:09, 15.77it/s]\n  8%|▊         | 13/157 [00:00<00:07, 18.35it/s]\n 10%|█         | 16/157 [00:01<00:06, 20.27it/s]\n 12%|█▏        | 19/157 [00:01<00:06, 21.64it/s]\n 14%|█▍        | 22/157 [00:01<00:05, 22.55it/s]\n 16%|█▌        | 25/157 [00:01<00:05, 23.26it/s]\n 18%|█▊        | 28/157 [00:01<00:05, 23.78it/s]\n 20%|█▉        | 31/157 [00:01<00:05, 24.16it/s]\n 22%|██▏       | 34/157 [00:01<00:05, 24.45it/s]\n 24%|██▎       | 37/157 [00:01<00:04, 24.43it/s]\n 25%|██▌       | 40/157 [00:02<00:04, 24.57it/s]\n 27%|██▋       | 43/157 [00:02<00:04, 24.73it/s]\n 29%|██▉       | 46/157 [00:02<00:04, 24.93it/s]\n 31%|███       | 49/157 [00:02<00:04, 25.00it/s]\n 33%|███▎      | 52/157 [00:02<00:04, 25.02it/s]\n 35%|███▌      | 55/157 [00:02<00:04, 25.03it/s]\n 37%|███▋      | 58/157 [00:02<00:03, 25.05it/s]\n 39%|███▉      | 61/157 [00:02<00:03, 25.02it/s]\n 41%|████      | 64/157 [00:03<00:03, 24.98it/s]\n 43%|████▎     | 67/157 [00:03<00:03, 25.02it/s]\n 45%|████▍     | 70/157 [00:03<00:03, 24.43it/s]\n 46%|████▋     | 73/157 [00:03<00:03, 24.60it/s]\n 48%|████▊     | 76/157 [00:03<00:03, 24.72it/s]\n 50%|█████     | 79/157 [00:03<00:03, 24.81it/s]\n 52%|█████▏    | 82/157 [00:03<00:03, 24.93it/s]\n 54%|█████▍    | 85/157 [00:03<00:02, 24.93it/s]\n 56%|█████▌    | 88/157 [00:04<00:02, 25.00it/s]\n 58%|█████▊    | 91/157 [00:04<00:02, 25.04it/s]\n 60%|█████▉    | 94/157 [00:04<00:02, 25.06it/s]\n 62%|██████▏   | 97/157 [00:04<00:02, 24.88it/s]\n 64%|██████▎   | 100/157 [00:04<00:02, 24.76it/s]\n 66%|██████▌   | 103/157 [00:04<00:02, 24.71it/s]\n 68%|██████▊   | 106/157 [00:04<00:02, 24.69it/s]\n 69%|██████▉   | 109/157 [00:04<00:01, 24.76it/s]\n 71%|███████▏  | 112/157 [00:04<00:01, 25.04it/s]\n 73%|███████▎  | 115/157 [00:05<00:01, 25.25it/s]\n 75%|███████▌  | 118/157 [00:05<00:01, 25.38it/s]\n 77%|███████▋  | 121/157 [00:05<00:01, 25.51it/s]\n 79%|███████▉  | 124/157 [00:05<00:01, 25.53it/s]\n 81%|████████  | 127/157 [00:05<00:01, 25.61it/s]\n 83%|████████▎ | 130/157 [00:05<00:01, 25.57it/s]\n 85%|████████▍ | 133/157 [00:05<00:00, 24.56it/s]\n 87%|████████▋ | 136/157 [00:05<00:00, 24.83it/s]\n 89%|████████▊ | 139/157 [00:06<00:00, 25.01it/s]\n 90%|█████████ | 142/157 [00:06<00:00, 25.30it/s]\n 92%|█████████▏| 145/157 [00:06<00:00, 25.48it/s]\n 94%|█████████▍| 148/157 [00:06<00:00, 25.63it/s]\n 96%|█████████▌| 151/157 [00:06<00:00, 25.68it/s]\n 98%|█████████▊| 154/157 [00:06<00:00, 25.76it/s]\n100%|██████████| 157/157 [00:06<00:00, 17.04it/s]\n100%|██████████| 157/157 [00:06<00:00, 22.65it/s]\n\n  0%|          | 0/79 [00:00<?, ?it/s]\n  4%|▍         | 3/79 [00:00<00:03, 25.20it/s]\n  8%|▊         | 6/79 [00:00<00:02, 25.07it/s]\n 11%|█▏        | 9/79 [00:00<00:02, 24.97it/s]\n 15%|█▌        | 12/79 [00:00<00:02, 25.03it/s]\n 19%|█▉        | 15/79 [00:00<00:02, 25.07it/s]\n 23%|██▎       | 18/79 [00:00<00:02, 25.09it/s]\n 27%|██▋       | 21/79 [00:00<00:02, 25.00it/s]\n 30%|███       | 24/79 [00:00<00:02, 24.93it/s]\n 34%|███▍      | 27/79 [00:01<00:02, 25.09it/s]\n 38%|███▊      | 30/79 [00:01<00:01, 25.24it/s]\n 42%|████▏     | 33/79 [00:01<00:01, 25.48it/s]\n 46%|████▌     | 36/79 [00:01<00:01, 25.47it/s]\n 49%|████▉     | 39/79 [00:01<00:01, 25.55it/s]\n 53%|█████▎    | 42/79 [00:01<00:01, 25.63it/s]\n 57%|█████▋    | 45/79 [00:01<00:01, 25.67it/s]\n 61%|██████    | 48/79 [00:01<00:01, 25.75it/s]\n 65%|██████▍   | 51/79 [00:02<00:01, 25.74it/s]\n 68%|██████▊   | 54/79 [00:02<00:00, 25.69it/s]\n 72%|███████▏  | 57/79 [00:02<00:00, 25.69it/s]\n 76%|███████▌  | 60/79 [00:02<00:00, 25.68it/s]\n 80%|███████▉  | 63/79 [00:02<00:00, 25.59it/s]\n 84%|████████▎ | 66/79 [00:02<00:00, 25.49it/s]\n 87%|████████▋ | 69/79 [00:02<00:00, 25.32it/s]\n 91%|█████████ | 72/79 [00:02<00:00, 25.16it/s]\n 95%|█████████▍| 75/79 [00:02<00:00, 24.98it/s]\n 99%|█████████▊| 78/79 [00:03<00:00, 24.83it/s]\n100%|██████████| 79/79 [00:03<00:00, 25.52it/s]\nE0000 00:00:1779125547.128194 4139978 util.cc:131] oneDNN supports DT_HALF only on platforms with AVX-512. Falling back to the default Eigen-based implementation if present.\nW0000 00:00:1779125547.156879 4140109 gpu_kernel_to_blob_pass.cc:190] Failed to compile generated PTX with ptxas. Falling back to compilation by driver.\nW0000 00:00:1779125547.158114 4140113 gpu_kernel_to_blob_pass.cc:190] Failed to compile generated PTX with ptxas. Falling back to compilation by driver.\nW0000 00:00:1779125547.283237 4140191 gpu_kernel_to_blob_pass.cc:190] Failed to compile generated PTX with ptxas. Falling back to compilation by driver.\nW0000 00:00:1779125547.284036 4140195 gpu_kernel_to_blob_pass.cc:190] Failed to compile generated PTX with ptxas. Falling back to compilation by driver.\nW0000 00:00:1779125547.284872 4140197 gpu_kernel_to_blob_pass.cc:190] Failed to compile generated PTX with ptxas. Falling back to compilation by driver.\nW0000 00:00:1779125547.285770 4140198 gpu_kernel_to_blob_pass.cc:190] Failed to compile generated PTX with ptxas. Falling back to compilation by driver.\nW0000 00:00:1779125547.287108 4140193 gpu_kernel_to_blob_pass.cc:190] Failed to compile generated PTX with ptxas. Falling back to compilation by driver.\nW0000 00:00:1779125547.287678 4140199 gpu_kernel_to_blob_pass.cc:190] Failed to compile generated PTX with ptxas. Falling back to compilation by driver.\nW0000 00:00:1779125547.289035 4140196 gpu_kernel_to_blob_pass.cc:190] Failed to compile generated PTX with ptxas. Falling back to compilation by driver.\nW0000 00:00:1779125547.289935 4140192 gpu_kernel_to_blob_pass.cc:190] Failed to compile generated PTX with ptxas. Falling back to compilation by driver.\n",
+    "ref_batch": "/home/jimmy/DiT/dit_s3cache/fid/VIRTUAL_imagenet256_labeled.npz"
+  },
+  "eta": 0.0,
+  "effective_scheduler_fr_grid": {
+    "meta": {
+      "source": "dit_cache_scheduler_raw_timesteps_after_stage2_conversion",
+      "columns_left_to_right": "denoising order: sampling_timesteps[0]=first_step",
+      "sampling_timesteps_left_to_right": [
+        999,
+        992,
+        986,
+        979,
+        972,
+        965,
+        959,
+        952,
+        945,
+        939,
+        932,
+        925,
+        919,
+        912,
+        905,
+        898,
+        892,
+        885,
+        878,
+        872,
+        865,
+        858,
+        851,
+        845,
+        838,
+        831,
+        825,
+        818,
+        811,
+        805,
+        798,
+        791,
+        784,
+        778,
+        771,
+        764,
+        758,
+        751,
+        744,
+        738,
+        731,
+        724,
+        717,
+        711,
+        704,
+        697,
+        691,
+        684,
+        677,
+        670,
+        664,
+        657,
+        650,
+        644,
+        637,
+        630,
+        624,
+        617,
+        610,
+        603,
+        597,
+        590,
+        583,
+        577,
+        570,
+        563,
+        556,
+        550,
+        543,
+        536,
+        530,
+        523,
+        516,
+        510,
+        503,
+        496,
+        489,
+        483,
+        476,
+        469,
+        463,
+        456,
+        449,
+        443,
+        436,
+        429,
+        422,
+        416,
+        409,
+        402,
+        396,
+        389,
+        382,
+        375,
+        369,
+        362,
+        355,
+        349,
+        342,
+        335,
+        329,
+        322,
+        315,
+        308,
+        302,
+        295,
+        288,
+        282,
+        275,
+        268,
+        261,
+        255,
+        248,
+        241,
+        235,
+        228,
+        221,
+        215,
+        208,
+        201,
+        194,
+        188,
+        181,
+        174,
+        168,
+        161,
+        154,
+        148,
+        141,
+        134,
+        127,
+        121,
+        114,
+        107,
+        101,
+        94,
+        87,
+        80,
+        74,
+        67,
+        60,
+        54,
+        47,
+        40,
+        34,
+        27,
+        20,
+        13,
+        7,
+        0
+      ],
+      "T": 150,
+      "num_blocks": 28,
+      "cell_token": "F=full_compute(recompute) R=cache_reuse"
+    },
+    "by_layer": {
+      "block_0": "F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  F  R  F  R  F  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  F  F  F  R  F  F  R  R  F  R  F  F  R  F  F  R  F  F  R  F  F  R  F  F  R  F  F  R  F  F  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  F  F  R  F  R  F  R  F  F  F  F  F ",
+      "block_1": "F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  F  R  R  F  F  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  F  R  R  F  F  F  F  F  F ",
+      "block_2": "F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  F  R  R  F  F  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  F  R  F  R  F  F  F  F  F ",
+      "block_3": "F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  F  R  R  F  F  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  F  R  F  R  F  F  F  F  F ",
+      "block_4": "F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  F  R  F  R  F  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  F  R  F  R  F  F  F  F  F ",
+      "block_5": "F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  F  R  F  R  F  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  F  R  F  R  F  F  F  F  F ",
+      "block_6": "F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  F  R  R  F  F  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  F  R  R  F  F  F  F  F  F ",
+      "block_7": "F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  F  R  F  R  F  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  F  R  R  F  F  F  F  F  F ",
+      "block_8": "F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  F  R  R  F  F  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  F  R  R  F  F  F  F  R  F ",
+      "block_9": "F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  F  R  F  R  F  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  F  F  F  F  F  R  F  R  F ",
+      "block_10": "F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  F  R  R  F  F  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  F  F  F  F  F  R  F  R  F ",
+      "block_11": "F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  F  R  F  R  F  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  F  F  F  F  F  R  F  R  F ",
+      "block_12": "F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  F  R  F  R  F  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  F  R  F  R  F  R  F  R  F ",
+      "block_13": "F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  F  R  F  R  F  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  F  R  R  F  F  F  F  R  F ",
+      "block_14": "F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  F  R  F  R  F  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  F  F  F  F  F  R  F  R  F ",
+      "block_15": "F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  F  R  R  F  F  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  F  F  F  F  F  R  F  R  F ",
+      "block_16": "F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  F  R  F  R  F  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  F  F  F  F  F  R  F  R  F ",
+      "block_17": "F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  F  R  F  R  F  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  F  F  F  F  F  R  F  R  F ",
+      "block_18": "F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  F  R  R  F  F  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  F  R  F  R  F  F  F  R  F ",
+      "block_19": "F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  F  R  R  F  F  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  F  R  R  F  F  F  F  R  F ",
+      "block_20": "F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  F  R  F  R  F  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  F  R  F  R  F  F  F  R  F ",
+      "block_21": "F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  F  R  F  R  F  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  F  R  F  R  F  F  F  R  F ",
+      "block_22": "F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  F  R  F  R  F  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  F  R  F  R  F  F  F  R  F ",
+      "block_23": "F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  F  R  F  R  F  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  F  R  F  R  F  F  F  R  F ",
+      "block_24": "F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  F  R  R  F  F  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  F  R  R  F  F  F  F  R  F ",
+      "block_25": "F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  F  R  R  F  F  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  F  R  F  R  F  F  F  R  F ",
+      "block_26": "F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  F  R  F  R  F  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  F  R  F  R  F  F  F  R  F ",
+      "block_27": "F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  F  R  F  R  F  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  F  R  R  F  F  F  F  F  F "
+    },
+    "aligned_text_block": "block_0  : F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  F  R  F  R  F  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  F  F  F  R  F  F  R  R  F  R  F  F  R  F  F  R  F  F  R  F  F  R  F  F  R  F  F  R  F  F  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  F  F  R  F  R  F  R  F  F  F  F  F \nblock_1  : F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  F  R  R  F  F  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  F  R  R  F  F  F  F  F  F \nblock_2  : F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  F  R  R  F  F  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  F  R  F  R  F  F  F  F  F \nblock_3  : F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  F  R  R  F  F  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  F  R  F  R  F  F  F  F  F \nblock_4  : F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  F  R  F  R  F  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  F  R  F  R  F  F  F  F  F \nblock_5  : F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  F  R  F  R  F  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  F  R  F  R  F  F  F  F  F \nblock_6  : F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  F  R  R  F  F  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  F  R  R  F  F  F  F  F  F \nblock_7  : F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  F  R  F  R  F  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  F  R  R  F  F  F  F  F  F \nblock_8  : F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  F  R  R  F  F  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  F  R  R  F  F  F  F  R  F \nblock_9  : F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  F  R  F  R  F  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  F  F  F  F  F  R  F  R  F \nblock_10 : F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  F  R  R  F  F  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  F  F  F  F  F  R  F  R  F \nblock_11 : F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  F  R  F  R  F  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  F  F  F  F  F  R  F  R  F \nblock_12 : F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  F  R  F  R  F  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  F  R  F  R  F  R  F  R  F \nblock_13 : F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  F  R  F  R  F  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  F  R  R  F  F  F  F  R  F \nblock_14 : F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  F  R  F  R  F  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  F  F  F  F  F  R  F  R  F \nblock_15 : F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  F  R  R  F  F  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  F  F  F  F  F  R  F  R  F \nblock_16 : F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  F  R  F  R  F  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  F  F  F  F  F  R  F  R  F \nblock_17 : F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  F  R  F  R  F  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  F  F  F  F  F  R  F  R  F \nblock_18 : F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  F  R  R  F  F  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  F  R  F  R  F  F  F  R  F \nblock_19 : F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  F  R  R  F  F  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  F  R  R  F  F  F  F  R  F \nblock_20 : F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  F  R  F  R  F  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  F  R  F  R  F  F  F  R  F \nblock_21 : F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  F  R  F  R  F  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  F  R  F  R  F  F  F  R  F \nblock_22 : F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  F  R  F  R  F  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  F  R  F  R  F  F  F  R  F \nblock_23 : F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  F  R  F  R  F  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  F  R  F  R  F  F  F  R  F \nblock_24 : F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  F  R  R  F  F  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  F  R  R  F  F  F  F  R  F \nblock_25 : F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  F  R  R  F  F  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  F  R  F  R  F  F  F  R  F \nblock_26 : F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  F  R  F  R  F  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  F  R  F  R  F  F  F  R  F \nblock_27 : F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  F  R  F  R  F  R  F  R  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  F  R  R  F  F  F  F  F  F "
+  }
+}

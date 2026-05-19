@@ -538,3 +538,453 @@
 2026-05-17 02:18:10,026 [INFO] [Stage2-DiT] [collector debug] phase=after_cache_chunk_7 id=137145860583008 writes=14000 baseline_blocks=28 block0_steps=250 cache_blocks=28 block0_steps=250 | cache_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
 2026-05-17 02:18:11,233 [INFO] [Stage2-DiT] Eval progress: 8/8 images done.
 2026-05-17 02:18:11,287 [INFO] [Stage2-DiT] Stage2 refine done → dit_s3cache/stage2/stage2_output/src_baseline_p3_K25_sw5_lam1.0_kmax3/02_refined_blockwise | zone_adj=56 peak_repair=234 full_ratio=0.4010
+2026-05-18 20:33:04,136 [INFO] [Stage2-DiT] ----- Stage2-DiT run start | scheduler_config=dit_s3cache/stage1/stage1_output_ddim50/baseline_p2_K20_sw3_lam1.0_kmax3/scheduler_config.json | output_dir=dit_s3cache/stage2/stage2_output_ddim50/src_baseline_p2_K20_sw3_lam1.0_kmax3/00_global_refine | seed=42 | threshold_mode=global -----
+2026-05-18 20:33:04,209 [INFO] [Stage2-DiT] Loading DiT model: DiT-XL/2 (image_size=256)
+2026-05-18 20:33:07,825 [INFO] [Stage2-DiT] Model loaded.
+2026-05-18 20:33:07,825 [INFO] [Stage2-DiT] Eval config: total_images=8 chunk_size=1 (actual GPU batch=2*chunk_size=2 for CFG)
+2026-05-18 20:33:07,828 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=False | blocks=28
+2026-05-18 20:33:08,952 [INFO] [Stage2-DiT] [collector debug] phase=after_baseline_chunk_0 id=127240539731952 writes=1400 baseline_blocks=28 block0_steps=50 cache_blocks=0 block0_steps=0 | baseline_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:33:08,952 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=True | blocks=28
+2026-05-18 20:33:09,564 [INFO] [Stage2-DiT] [collector debug] phase=after_cache_chunk_0 id=127240539731952 writes=2800 baseline_blocks=28 block0_steps=50 cache_blocks=28 block0_steps=50 | cache_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:33:09,977 [INFO] [Stage2-DiT] Eval progress: 1/8 images done.
+2026-05-18 20:33:09,977 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=False | blocks=28
+2026-05-18 20:33:10,703 [INFO] [Stage2-DiT] [collector debug] phase=after_baseline_chunk_1 id=127240489450416 writes=1400 baseline_blocks=28 block0_steps=50 cache_blocks=0 block0_steps=0 | baseline_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:33:10,704 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=True | blocks=28
+2026-05-18 20:33:11,094 [INFO] [Stage2-DiT] [collector debug] phase=after_cache_chunk_1 id=127240489450416 writes=2800 baseline_blocks=28 block0_steps=50 cache_blocks=28 block0_steps=50 | cache_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:33:11,366 [INFO] [Stage2-DiT] Eval progress: 2/8 images done.
+2026-05-18 20:33:11,366 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=False | blocks=28
+2026-05-18 20:33:12,098 [INFO] [Stage2-DiT] [collector debug] phase=after_baseline_chunk_2 id=127240539731952 writes=1400 baseline_blocks=28 block0_steps=50 cache_blocks=0 block0_steps=0 | baseline_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:33:12,098 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=True | blocks=28
+2026-05-18 20:33:12,490 [INFO] [Stage2-DiT] [collector debug] phase=after_cache_chunk_2 id=127240539731952 writes=2800 baseline_blocks=28 block0_steps=50 cache_blocks=28 block0_steps=50 | cache_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:33:12,730 [INFO] [Stage2-DiT] Eval progress: 3/8 images done.
+2026-05-18 20:33:12,730 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=False | blocks=28
+2026-05-18 20:33:13,460 [INFO] [Stage2-DiT] [collector debug] phase=after_baseline_chunk_3 id=127240489448880 writes=1400 baseline_blocks=28 block0_steps=50 cache_blocks=0 block0_steps=0 | baseline_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:33:13,468 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=True | blocks=28
+2026-05-18 20:33:13,858 [INFO] [Stage2-DiT] [collector debug] phase=after_cache_chunk_3 id=127240489448880 writes=2800 baseline_blocks=28 block0_steps=50 cache_blocks=28 block0_steps=50 | cache_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:33:14,109 [INFO] [Stage2-DiT] Eval progress: 4/8 images done.
+2026-05-18 20:33:14,110 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=False | blocks=28
+2026-05-18 20:33:14,837 [INFO] [Stage2-DiT] [collector debug] phase=after_baseline_chunk_4 id=127240539731952 writes=1400 baseline_blocks=28 block0_steps=50 cache_blocks=0 block0_steps=0 | baseline_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:33:14,837 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=True | blocks=28
+2026-05-18 20:33:15,228 [INFO] [Stage2-DiT] [collector debug] phase=after_cache_chunk_4 id=127240539731952 writes=2800 baseline_blocks=28 block0_steps=50 cache_blocks=28 block0_steps=50 | cache_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:33:15,481 [INFO] [Stage2-DiT] Eval progress: 5/8 images done.
+2026-05-18 20:33:15,482 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=False | blocks=28
+2026-05-18 20:33:16,212 [INFO] [Stage2-DiT] [collector debug] phase=after_baseline_chunk_5 id=127240539731904 writes=1400 baseline_blocks=28 block0_steps=50 cache_blocks=0 block0_steps=0 | baseline_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:33:16,212 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=True | blocks=28
+2026-05-18 20:33:16,602 [INFO] [Stage2-DiT] [collector debug] phase=after_cache_chunk_5 id=127240539731904 writes=2800 baseline_blocks=28 block0_steps=50 cache_blocks=28 block0_steps=50 | cache_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:33:16,858 [INFO] [Stage2-DiT] Eval progress: 6/8 images done.
+2026-05-18 20:33:16,859 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=False | blocks=28
+2026-05-18 20:33:17,588 [INFO] [Stage2-DiT] [collector debug] phase=after_baseline_chunk_6 id=127240539731952 writes=1400 baseline_blocks=28 block0_steps=50 cache_blocks=0 block0_steps=0 | baseline_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:33:17,589 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=True | blocks=28
+2026-05-18 20:33:17,979 [INFO] [Stage2-DiT] [collector debug] phase=after_cache_chunk_6 id=127240539731952 writes=2800 baseline_blocks=28 block0_steps=50 cache_blocks=28 block0_steps=50 | cache_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:33:18,233 [INFO] [Stage2-DiT] Eval progress: 7/8 images done.
+2026-05-18 20:33:18,233 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=False | blocks=28
+2026-05-18 20:33:18,964 [INFO] [Stage2-DiT] [collector debug] phase=after_baseline_chunk_7 id=127240539731904 writes=1400 baseline_blocks=28 block0_steps=50 cache_blocks=0 block0_steps=0 | baseline_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:33:18,964 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=True | blocks=28
+2026-05-18 20:33:19,353 [INFO] [Stage2-DiT] [collector debug] phase=after_cache_chunk_7 id=127240539731904 writes=2800 baseline_blocks=28 block0_steps=50 cache_blocks=28 block0_steps=50 | cache_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:33:19,607 [INFO] [Stage2-DiT] Eval progress: 8/8 images done.
+2026-05-18 20:33:19,630 [INFO] [Stage2-DiT] Stage2 refine done → dit_s3cache/stage2/stage2_output_ddim50/src_baseline_p2_K20_sw3_lam1.0_kmax3/00_global_refine | zone_adj=253 peak_repair=331 full_ratio=0.8750
+2026-05-18 20:33:21,502 [INFO] [Stage2-DiT] ----- Stage2-DiT run start | scheduler_config=dit_s3cache/stage1/stage1_output_ddim50/baseline_p2_K20_sw3_lam1.0_kmax3/scheduler_config.json | output_dir=dit_s3cache/stage2/stage2_output_ddim50/src_baseline_p2_K20_sw3_lam1.0_kmax3/02_refined_blockwise | seed=42 | threshold_mode=blockwise -----
+2026-05-18 20:33:21,551 [INFO] [Stage2-DiT] Loading DiT model: DiT-XL/2 (image_size=256)
+2026-05-18 20:33:25,164 [INFO] [Stage2-DiT] Model loaded.
+2026-05-18 20:33:25,165 [INFO] [Stage2-DiT] Eval config: total_images=8 chunk_size=1 (actual GPU batch=2*chunk_size=2 for CFG)
+2026-05-18 20:33:25,167 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=False | blocks=28
+2026-05-18 20:33:26,002 [INFO] [Stage2-DiT] [collector debug] phase=after_baseline_chunk_0 id=138760517105600 writes=1400 baseline_blocks=28 block0_steps=50 cache_blocks=0 block0_steps=0 | baseline_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:33:26,002 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=True | blocks=28
+2026-05-18 20:33:26,556 [INFO] [Stage2-DiT] [collector debug] phase=after_cache_chunk_0 id=138760517105600 writes=2800 baseline_blocks=28 block0_steps=50 cache_blocks=28 block0_steps=50 | cache_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:33:26,813 [INFO] [Stage2-DiT] Eval progress: 1/8 images done.
+2026-05-18 20:33:26,814 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=False | blocks=28
+2026-05-18 20:33:27,543 [INFO] [Stage2-DiT] [collector debug] phase=after_baseline_chunk_1 id=138760484240160 writes=1400 baseline_blocks=28 block0_steps=50 cache_blocks=0 block0_steps=0 | baseline_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:33:27,544 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=True | blocks=28
+2026-05-18 20:33:27,943 [INFO] [Stage2-DiT] [collector debug] phase=after_cache_chunk_1 id=138760484240160 writes=2800 baseline_blocks=28 block0_steps=50 cache_blocks=28 block0_steps=50 | cache_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:33:28,190 [INFO] [Stage2-DiT] Eval progress: 2/8 images done.
+2026-05-18 20:33:28,191 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=False | blocks=28
+2026-05-18 20:33:28,917 [INFO] [Stage2-DiT] [collector debug] phase=after_baseline_chunk_2 id=138760517105600 writes=1400 baseline_blocks=28 block0_steps=50 cache_blocks=0 block0_steps=0 | baseline_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:33:28,917 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=True | blocks=28
+2026-05-18 20:33:29,306 [INFO] [Stage2-DiT] [collector debug] phase=after_cache_chunk_2 id=138760517105600 writes=2800 baseline_blocks=28 block0_steps=50 cache_blocks=28 block0_steps=50 | cache_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:33:29,550 [INFO] [Stage2-DiT] Eval progress: 3/8 images done.
+2026-05-18 20:33:29,550 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=False | blocks=28
+2026-05-18 20:33:30,275 [INFO] [Stage2-DiT] [collector debug] phase=after_baseline_chunk_3 id=138760484238768 writes=1400 baseline_blocks=28 block0_steps=50 cache_blocks=0 block0_steps=0 | baseline_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:33:30,276 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=True | blocks=28
+2026-05-18 20:33:30,665 [INFO] [Stage2-DiT] [collector debug] phase=after_cache_chunk_3 id=138760484238768 writes=2800 baseline_blocks=28 block0_steps=50 cache_blocks=28 block0_steps=50 | cache_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:33:30,926 [INFO] [Stage2-DiT] Eval progress: 4/8 images done.
+2026-05-18 20:33:30,927 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=False | blocks=28
+2026-05-18 20:33:31,657 [INFO] [Stage2-DiT] [collector debug] phase=after_baseline_chunk_4 id=138760517105600 writes=1400 baseline_blocks=28 block0_steps=50 cache_blocks=0 block0_steps=0 | baseline_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:33:31,657 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=True | blocks=28
+2026-05-18 20:33:32,047 [INFO] [Stage2-DiT] [collector debug] phase=after_cache_chunk_4 id=138760517105600 writes=2800 baseline_blocks=28 block0_steps=50 cache_blocks=28 block0_steps=50 | cache_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:33:32,290 [INFO] [Stage2-DiT] Eval progress: 5/8 images done.
+2026-05-18 20:33:32,291 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=False | blocks=28
+2026-05-18 20:33:33,019 [INFO] [Stage2-DiT] [collector debug] phase=after_baseline_chunk_5 id=138760517105552 writes=1400 baseline_blocks=28 block0_steps=50 cache_blocks=0 block0_steps=0 | baseline_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:33:33,020 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=True | blocks=28
+2026-05-18 20:33:33,408 [INFO] [Stage2-DiT] [collector debug] phase=after_cache_chunk_5 id=138760517105552 writes=2800 baseline_blocks=28 block0_steps=50 cache_blocks=28 block0_steps=50 | cache_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:33:33,655 [INFO] [Stage2-DiT] Eval progress: 6/8 images done.
+2026-05-18 20:33:33,655 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=False | blocks=28
+2026-05-18 20:33:34,380 [INFO] [Stage2-DiT] [collector debug] phase=after_baseline_chunk_6 id=138760517105600 writes=1400 baseline_blocks=28 block0_steps=50 cache_blocks=0 block0_steps=0 | baseline_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:33:34,381 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=True | blocks=28
+2026-05-18 20:33:34,767 [INFO] [Stage2-DiT] [collector debug] phase=after_cache_chunk_6 id=138760517105600 writes=2800 baseline_blocks=28 block0_steps=50 cache_blocks=28 block0_steps=50 | cache_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:33:35,015 [INFO] [Stage2-DiT] Eval progress: 7/8 images done.
+2026-05-18 20:33:35,016 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=False | blocks=28
+2026-05-18 20:33:35,742 [INFO] [Stage2-DiT] [collector debug] phase=after_baseline_chunk_7 id=138760517105552 writes=1400 baseline_blocks=28 block0_steps=50 cache_blocks=0 block0_steps=0 | baseline_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:33:35,743 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=True | blocks=28
+2026-05-18 20:33:36,130 [INFO] [Stage2-DiT] [collector debug] phase=after_cache_chunk_7 id=138760517105552 writes=2800 baseline_blocks=28 block0_steps=50 cache_blocks=28 block0_steps=50 | cache_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:33:36,375 [INFO] [Stage2-DiT] Eval progress: 8/8 images done.
+2026-05-18 20:33:36,390 [INFO] [Stage2-DiT] Stage2 refine done → dit_s3cache/stage2/stage2_output_ddim50/src_baseline_p2_K20_sw3_lam1.0_kmax3/02_refined_blockwise | zone_adj=28 peak_repair=31 full_ratio=0.4421
+2026-05-18 20:35:45,778 [INFO] [Stage2-DiT] ----- Stage2-DiT run start | scheduler_config=dit_s3cache/stage1/stage1_output_ddim100/baseline_p2_K20_sw3_lam1.0_kmax3/scheduler_config.json | output_dir=dit_s3cache/stage2/stage2_output_ddim100/src_baseline_p2_K20_sw3_lam1.0_kmax3/00_global_refine | seed=42 | threshold_mode=global -----
+2026-05-18 20:35:45,826 [INFO] [Stage2-DiT] Loading DiT model: DiT-XL/2 (image_size=256)
+2026-05-18 20:35:49,474 [INFO] [Stage2-DiT] Model loaded.
+2026-05-18 20:35:49,474 [INFO] [Stage2-DiT] Eval config: total_images=8 chunk_size=1 (actual GPU batch=2*chunk_size=2 for CFG)
+2026-05-18 20:35:49,477 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=False | blocks=28
+2026-05-18 20:35:51,570 [INFO] [Stage2-DiT] [collector debug] phase=after_baseline_chunk_0 id=139541506422912 writes=2800 baseline_blocks=28 block0_steps=100 cache_blocks=0 block0_steps=0 | baseline_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:35:51,571 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=True | blocks=28
+2026-05-18 20:35:52,797 [INFO] [Stage2-DiT] [collector debug] phase=after_cache_chunk_0 id=139541506422912 writes=5600 baseline_blocks=28 block0_steps=100 cache_blocks=28 block0_steps=100 | cache_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:35:53,321 [INFO] [Stage2-DiT] Eval progress: 1/8 images done.
+2026-05-18 20:35:53,321 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=False | blocks=28
+2026-05-18 20:35:54,799 [INFO] [Stage2-DiT] [collector debug] phase=after_baseline_chunk_1 id=139532550274064 writes=2800 baseline_blocks=28 block0_steps=100 cache_blocks=0 block0_steps=0 | baseline_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:35:54,799 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=True | blocks=28
+2026-05-18 20:35:55,575 [INFO] [Stage2-DiT] [collector debug] phase=after_cache_chunk_1 id=139532550274064 writes=5600 baseline_blocks=28 block0_steps=100 cache_blocks=28 block0_steps=100 | cache_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:35:56,085 [INFO] [Stage2-DiT] Eval progress: 2/8 images done.
+2026-05-18 20:35:56,086 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=False | blocks=28
+2026-05-18 20:35:57,562 [INFO] [Stage2-DiT] [collector debug] phase=after_baseline_chunk_2 id=139541506422912 writes=2800 baseline_blocks=28 block0_steps=100 cache_blocks=0 block0_steps=0 | baseline_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:35:57,562 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=True | blocks=28
+2026-05-18 20:35:58,337 [INFO] [Stage2-DiT] [collector debug] phase=after_cache_chunk_2 id=139541506422912 writes=5600 baseline_blocks=28 block0_steps=100 cache_blocks=28 block0_steps=100 | cache_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:35:58,815 [INFO] [Stage2-DiT] Eval progress: 3/8 images done.
+2026-05-18 20:35:58,816 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=False | blocks=28
+2026-05-18 20:36:00,294 [INFO] [Stage2-DiT] [collector debug] phase=after_baseline_chunk_3 id=139532550272240 writes=2800 baseline_blocks=28 block0_steps=100 cache_blocks=0 block0_steps=0 | baseline_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:36:00,294 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=True | blocks=28
+2026-05-18 20:36:01,070 [INFO] [Stage2-DiT] [collector debug] phase=after_cache_chunk_3 id=139532550272240 writes=5600 baseline_blocks=28 block0_steps=100 cache_blocks=28 block0_steps=100 | cache_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:36:01,558 [INFO] [Stage2-DiT] Eval progress: 4/8 images done.
+2026-05-18 20:36:01,559 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=False | blocks=28
+2026-05-18 20:36:03,040 [INFO] [Stage2-DiT] [collector debug] phase=after_baseline_chunk_4 id=139541506422912 writes=2800 baseline_blocks=28 block0_steps=100 cache_blocks=0 block0_steps=0 | baseline_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:36:03,041 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=True | blocks=28
+2026-05-18 20:36:03,816 [INFO] [Stage2-DiT] [collector debug] phase=after_cache_chunk_4 id=139541506422912 writes=5600 baseline_blocks=28 block0_steps=100 cache_blocks=28 block0_steps=100 | cache_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:36:04,301 [INFO] [Stage2-DiT] Eval progress: 5/8 images done.
+2026-05-18 20:36:04,302 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=False | blocks=28
+2026-05-18 20:36:05,780 [INFO] [Stage2-DiT] [collector debug] phase=after_baseline_chunk_5 id=139541506422864 writes=2800 baseline_blocks=28 block0_steps=100 cache_blocks=0 block0_steps=0 | baseline_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:36:05,781 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=True | blocks=28
+2026-05-18 20:36:06,555 [INFO] [Stage2-DiT] [collector debug] phase=after_cache_chunk_5 id=139541506422864 writes=5600 baseline_blocks=28 block0_steps=100 cache_blocks=28 block0_steps=100 | cache_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:36:07,078 [INFO] [Stage2-DiT] Eval progress: 6/8 images done.
+2026-05-18 20:36:07,078 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=False | blocks=28
+2026-05-18 20:36:08,553 [INFO] [Stage2-DiT] [collector debug] phase=after_baseline_chunk_6 id=139541506422912 writes=2800 baseline_blocks=28 block0_steps=100 cache_blocks=0 block0_steps=0 | baseline_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:36:08,553 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=True | blocks=28
+2026-05-18 20:36:09,324 [INFO] [Stage2-DiT] [collector debug] phase=after_cache_chunk_6 id=139541506422912 writes=5600 baseline_blocks=28 block0_steps=100 cache_blocks=28 block0_steps=100 | cache_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:36:09,792 [INFO] [Stage2-DiT] Eval progress: 7/8 images done.
+2026-05-18 20:36:09,792 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=False | blocks=28
+2026-05-18 20:36:11,264 [INFO] [Stage2-DiT] [collector debug] phase=after_baseline_chunk_7 id=139541506422864 writes=2800 baseline_blocks=28 block0_steps=100 cache_blocks=0 block0_steps=0 | baseline_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:36:11,264 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=True | blocks=28
+2026-05-18 20:36:12,039 [INFO] [Stage2-DiT] [collector debug] phase=after_cache_chunk_7 id=139541506422864 writes=5600 baseline_blocks=28 block0_steps=100 cache_blocks=28 block0_steps=100 | cache_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:36:12,554 [INFO] [Stage2-DiT] Eval progress: 8/8 images done.
+2026-05-18 20:36:12,592 [INFO] [Stage2-DiT] Stage2 refine done → dit_s3cache/stage2/stage2_output_ddim100/src_baseline_p2_K20_sw3_lam1.0_kmax3/00_global_refine | zone_adj=286 peak_repair=671 full_ratio=0.7854
+2026-05-18 20:36:14,543 [INFO] [Stage2-DiT] ----- Stage2-DiT run start | scheduler_config=dit_s3cache/stage1/stage1_output_ddim100/baseline_p2_K20_sw3_lam1.0_kmax3/scheduler_config.json | output_dir=dit_s3cache/stage2/stage2_output_ddim100/src_baseline_p2_K20_sw3_lam1.0_kmax3/02_refined_blockwise | seed=42 | threshold_mode=blockwise -----
+2026-05-18 20:36:14,594 [INFO] [Stage2-DiT] Loading DiT model: DiT-XL/2 (image_size=256)
+2026-05-18 20:36:18,236 [INFO] [Stage2-DiT] Model loaded.
+2026-05-18 20:36:18,237 [INFO] [Stage2-DiT] Eval config: total_images=8 chunk_size=1 (actual GPU batch=2*chunk_size=2 for CFG)
+2026-05-18 20:36:18,240 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=False | blocks=28
+2026-05-18 20:36:20,347 [INFO] [Stage2-DiT] [collector debug] phase=after_baseline_chunk_0 id=127366865876880 writes=2800 baseline_blocks=28 block0_steps=100 cache_blocks=0 block0_steps=0 | baseline_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:36:20,348 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=True | blocks=28
+2026-05-18 20:36:21,578 [INFO] [Stage2-DiT] [collector debug] phase=after_cache_chunk_0 id=127366865876880 writes=5600 baseline_blocks=28 block0_steps=100 cache_blocks=28 block0_steps=100 | cache_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:36:22,051 [INFO] [Stage2-DiT] Eval progress: 1/8 images done.
+2026-05-18 20:36:22,052 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=False | blocks=28
+2026-05-18 20:36:23,530 [INFO] [Stage2-DiT] [collector debug] phase=after_baseline_chunk_1 id=127357930683216 writes=2800 baseline_blocks=28 block0_steps=100 cache_blocks=0 block0_steps=0 | baseline_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:36:23,531 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=True | blocks=28
+2026-05-18 20:36:24,309 [INFO] [Stage2-DiT] [collector debug] phase=after_cache_chunk_1 id=127357930683216 writes=5600 baseline_blocks=28 block0_steps=100 cache_blocks=28 block0_steps=100 | cache_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:36:24,798 [INFO] [Stage2-DiT] Eval progress: 2/8 images done.
+2026-05-18 20:36:24,798 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=False | blocks=28
+2026-05-18 20:36:26,281 [INFO] [Stage2-DiT] [collector debug] phase=after_baseline_chunk_2 id=127366865876880 writes=2800 baseline_blocks=28 block0_steps=100 cache_blocks=0 block0_steps=0 | baseline_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:36:26,281 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=True | blocks=28
+2026-05-18 20:36:27,076 [INFO] [Stage2-DiT] [collector debug] phase=after_cache_chunk_2 id=127366865876880 writes=5600 baseline_blocks=28 block0_steps=100 cache_blocks=28 block0_steps=100 | cache_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:36:27,553 [INFO] [Stage2-DiT] Eval progress: 3/8 images done.
+2026-05-18 20:36:27,554 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=False | blocks=28
+2026-05-18 20:36:29,065 [INFO] [Stage2-DiT] [collector debug] phase=after_baseline_chunk_3 id=127357930681680 writes=2800 baseline_blocks=28 block0_steps=100 cache_blocks=0 block0_steps=0 | baseline_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:36:29,065 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=True | blocks=28
+2026-05-18 20:36:29,846 [INFO] [Stage2-DiT] [collector debug] phase=after_cache_chunk_3 id=127357930681680 writes=5600 baseline_blocks=28 block0_steps=100 cache_blocks=28 block0_steps=100 | cache_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:36:30,300 [INFO] [Stage2-DiT] Eval progress: 4/8 images done.
+2026-05-18 20:36:30,301 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=False | blocks=28
+2026-05-18 20:36:31,779 [INFO] [Stage2-DiT] [collector debug] phase=after_baseline_chunk_4 id=127366865876880 writes=2800 baseline_blocks=28 block0_steps=100 cache_blocks=0 block0_steps=0 | baseline_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:36:31,779 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=True | blocks=28
+2026-05-18 20:36:32,556 [INFO] [Stage2-DiT] [collector debug] phase=after_cache_chunk_4 id=127366865876880 writes=5600 baseline_blocks=28 block0_steps=100 cache_blocks=28 block0_steps=100 | cache_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:36:33,002 [INFO] [Stage2-DiT] Eval progress: 5/8 images done.
+2026-05-18 20:36:33,003 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=False | blocks=28
+2026-05-18 20:36:34,484 [INFO] [Stage2-DiT] [collector debug] phase=after_baseline_chunk_5 id=127366865876832 writes=2800 baseline_blocks=28 block0_steps=100 cache_blocks=0 block0_steps=0 | baseline_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:36:34,484 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=True | blocks=28
+2026-05-18 20:36:35,263 [INFO] [Stage2-DiT] [collector debug] phase=after_cache_chunk_5 id=127366865876832 writes=5600 baseline_blocks=28 block0_steps=100 cache_blocks=28 block0_steps=100 | cache_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:36:35,714 [INFO] [Stage2-DiT] Eval progress: 6/8 images done.
+2026-05-18 20:36:35,715 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=False | blocks=28
+2026-05-18 20:36:37,193 [INFO] [Stage2-DiT] [collector debug] phase=after_baseline_chunk_6 id=127366865876880 writes=2800 baseline_blocks=28 block0_steps=100 cache_blocks=0 block0_steps=0 | baseline_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:36:37,194 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=True | blocks=28
+2026-05-18 20:36:37,974 [INFO] [Stage2-DiT] [collector debug] phase=after_cache_chunk_6 id=127366865876880 writes=5600 baseline_blocks=28 block0_steps=100 cache_blocks=28 block0_steps=100 | cache_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:36:38,439 [INFO] [Stage2-DiT] Eval progress: 7/8 images done.
+2026-05-18 20:36:38,440 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=False | blocks=28
+2026-05-18 20:36:39,917 [INFO] [Stage2-DiT] [collector debug] phase=after_baseline_chunk_7 id=127366865876832 writes=2800 baseline_blocks=28 block0_steps=100 cache_blocks=0 block0_steps=0 | baseline_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:36:39,918 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=True | blocks=28
+2026-05-18 20:36:40,698 [INFO] [Stage2-DiT] [collector debug] phase=after_cache_chunk_7 id=127366865876832 writes=5600 baseline_blocks=28 block0_steps=100 cache_blocks=28 block0_steps=100 | cache_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:36:41,164 [INFO] [Stage2-DiT] Eval progress: 8/8 images done.
+2026-05-18 20:36:41,188 [INFO] [Stage2-DiT] Stage2 refine done → dit_s3cache/stage2/stage2_output_ddim100/src_baseline_p2_K20_sw3_lam1.0_kmax3/02_refined_blockwise | zone_adj=56 peak_repair=19 full_ratio=0.3968
+2026-05-18 20:39:51,165 [INFO] [Stage2-DiT] ----- Stage2-DiT run start | scheduler_config=dit_s3cache/stage1/stage1_output_ddim150/baseline_p2_K20_sw3_lam1.0_kmax3/scheduler_config.json | output_dir=dit_s3cache/stage2/stage2_output_ddim150/src_baseline_p2_K20_sw3_lam1.0_kmax3/00_global_refine | seed=42 | threshold_mode=global -----
+2026-05-18 20:39:51,238 [INFO] [Stage2-DiT] Loading DiT model: DiT-XL/2 (image_size=256)
+2026-05-18 20:39:54,869 [INFO] [Stage2-DiT] Model loaded.
+2026-05-18 20:39:54,870 [INFO] [Stage2-DiT] Eval config: total_images=8 chunk_size=1 (actual GPU batch=2*chunk_size=2 for CFG)
+2026-05-18 20:39:54,873 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=False | blocks=28
+2026-05-18 20:39:57,913 [INFO] [Stage2-DiT] [collector debug] phase=after_baseline_chunk_0 id=132464604067920 writes=4200 baseline_blocks=28 block0_steps=150 cache_blocks=0 block0_steps=0 | baseline_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:39:57,913 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=True | blocks=28
+2026-05-18 20:39:59,734 [INFO] [Stage2-DiT] [collector debug] phase=after_cache_chunk_0 id=132464604067920 writes=8400 baseline_blocks=28 block0_steps=150 cache_blocks=28 block0_steps=150 | cache_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:40:00,523 [INFO] [Stage2-DiT] Eval progress: 1/8 images done.
+2026-05-18 20:40:00,523 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=False | blocks=28
+2026-05-18 20:40:02,744 [INFO] [Stage2-DiT] [collector debug] phase=after_baseline_chunk_1 id=132455653637760 writes=4200 baseline_blocks=28 block0_steps=150 cache_blocks=0 block0_steps=0 | baseline_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:40:02,745 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=True | blocks=28
+2026-05-18 20:40:03,909 [INFO] [Stage2-DiT] [collector debug] phase=after_cache_chunk_1 id=132455653637760 writes=8400 baseline_blocks=28 block0_steps=150 cache_blocks=28 block0_steps=150 | cache_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:40:04,629 [INFO] [Stage2-DiT] Eval progress: 2/8 images done.
+2026-05-18 20:40:04,629 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=False | blocks=28
+2026-05-18 20:40:06,852 [INFO] [Stage2-DiT] [collector debug] phase=after_baseline_chunk_2 id=132464604067920 writes=4200 baseline_blocks=28 block0_steps=150 cache_blocks=0 block0_steps=0 | baseline_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:40:06,853 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=True | blocks=28
+2026-05-18 20:40:08,025 [INFO] [Stage2-DiT] [collector debug] phase=after_cache_chunk_2 id=132464604067920 writes=8400 baseline_blocks=28 block0_steps=150 cache_blocks=28 block0_steps=150 | cache_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:40:08,732 [INFO] [Stage2-DiT] Eval progress: 3/8 images done.
+2026-05-18 20:40:08,733 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=False | blocks=28
+2026-05-18 20:40:10,952 [INFO] [Stage2-DiT] [collector debug] phase=after_baseline_chunk_3 id=132455653636176 writes=4200 baseline_blocks=28 block0_steps=150 cache_blocks=0 block0_steps=0 | baseline_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:40:10,952 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=True | blocks=28
+2026-05-18 20:40:12,114 [INFO] [Stage2-DiT] [collector debug] phase=after_cache_chunk_3 id=132455653636176 writes=8400 baseline_blocks=28 block0_steps=150 cache_blocks=28 block0_steps=150 | cache_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:40:12,834 [INFO] [Stage2-DiT] Eval progress: 4/8 images done.
+2026-05-18 20:40:12,835 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=False | blocks=28
+2026-05-18 20:40:15,057 [INFO] [Stage2-DiT] [collector debug] phase=after_baseline_chunk_4 id=132464604067920 writes=4200 baseline_blocks=28 block0_steps=150 cache_blocks=0 block0_steps=0 | baseline_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:40:15,058 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=True | blocks=28
+2026-05-18 20:40:16,218 [INFO] [Stage2-DiT] [collector debug] phase=after_cache_chunk_4 id=132464604067920 writes=8400 baseline_blocks=28 block0_steps=150 cache_blocks=28 block0_steps=150 | cache_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:40:16,965 [INFO] [Stage2-DiT] Eval progress: 5/8 images done.
+2026-05-18 20:40:16,965 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=False | blocks=28
+2026-05-18 20:40:19,186 [INFO] [Stage2-DiT] [collector debug] phase=after_baseline_chunk_5 id=132464604067776 writes=4200 baseline_blocks=28 block0_steps=150 cache_blocks=0 block0_steps=0 | baseline_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:40:19,187 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=True | blocks=28
+2026-05-18 20:40:20,350 [INFO] [Stage2-DiT] [collector debug] phase=after_cache_chunk_5 id=132464604067776 writes=8400 baseline_blocks=28 block0_steps=150 cache_blocks=28 block0_steps=150 | cache_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:40:21,022 [INFO] [Stage2-DiT] Eval progress: 6/8 images done.
+2026-05-18 20:40:21,023 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=False | blocks=28
+2026-05-18 20:40:23,244 [INFO] [Stage2-DiT] [collector debug] phase=after_baseline_chunk_6 id=132464604067920 writes=4200 baseline_blocks=28 block0_steps=150 cache_blocks=0 block0_steps=0 | baseline_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:40:23,245 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=True | blocks=28
+2026-05-18 20:40:24,406 [INFO] [Stage2-DiT] [collector debug] phase=after_cache_chunk_6 id=132464604067920 writes=8400 baseline_blocks=28 block0_steps=150 cache_blocks=28 block0_steps=150 | cache_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:40:25,082 [INFO] [Stage2-DiT] Eval progress: 7/8 images done.
+2026-05-18 20:40:25,083 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=False | blocks=28
+2026-05-18 20:40:27,304 [INFO] [Stage2-DiT] [collector debug] phase=after_baseline_chunk_7 id=132464604067776 writes=4200 baseline_blocks=28 block0_steps=150 cache_blocks=0 block0_steps=0 | baseline_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:40:27,305 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=True | blocks=28
+2026-05-18 20:40:28,467 [INFO] [Stage2-DiT] [collector debug] phase=after_cache_chunk_7 id=132464604067776 writes=8400 baseline_blocks=28 block0_steps=150 cache_blocks=28 block0_steps=150 | cache_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:40:29,137 [INFO] [Stage2-DiT] Eval progress: 8/8 images done.
+2026-05-18 20:40:29,189 [INFO] [Stage2-DiT] Stage2 refine done → dit_s3cache/stage2/stage2_output_ddim150/src_baseline_p2_K20_sw3_lam1.0_kmax3/00_global_refine | zone_adj=290 peak_repair=978 full_ratio=0.7476
+2026-05-18 20:40:31,137 [INFO] [Stage2-DiT] ----- Stage2-DiT run start | scheduler_config=dit_s3cache/stage1/stage1_output_ddim150/baseline_p2_K20_sw3_lam1.0_kmax3/scheduler_config.json | output_dir=dit_s3cache/stage2/stage2_output_ddim150/src_baseline_p2_K20_sw3_lam1.0_kmax3/02_refined_blockwise | seed=42 | threshold_mode=blockwise -----
+2026-05-18 20:40:31,217 [INFO] [Stage2-DiT] Loading DiT model: DiT-XL/2 (image_size=256)
+2026-05-18 20:40:34,865 [INFO] [Stage2-DiT] Model loaded.
+2026-05-18 20:40:34,865 [INFO] [Stage2-DiT] Eval config: total_images=8 chunk_size=1 (actual GPU batch=2*chunk_size=2 for CFG)
+2026-05-18 20:40:34,868 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=False | blocks=28
+2026-05-18 20:40:37,934 [INFO] [Stage2-DiT] [collector debug] phase=after_baseline_chunk_0 id=137007339403104 writes=4200 baseline_blocks=28 block0_steps=150 cache_blocks=0 block0_steps=0 | baseline_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:40:37,934 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=True | blocks=28
+2026-05-18 20:40:39,755 [INFO] [Stage2-DiT] [collector debug] phase=after_cache_chunk_0 id=137007339403104 writes=8400 baseline_blocks=28 block0_steps=150 cache_blocks=28 block0_steps=150 | cache_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:40:40,489 [INFO] [Stage2-DiT] Eval progress: 1/8 images done.
+2026-05-18 20:40:40,490 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=False | blocks=28
+2026-05-18 20:40:42,708 [INFO] [Stage2-DiT] [collector debug] phase=after_baseline_chunk_1 id=137007311306416 writes=4200 baseline_blocks=28 block0_steps=150 cache_blocks=0 block0_steps=0 | baseline_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:40:42,708 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=True | blocks=28
+2026-05-18 20:40:43,871 [INFO] [Stage2-DiT] [collector debug] phase=after_cache_chunk_1 id=137007311306416 writes=8400 baseline_blocks=28 block0_steps=150 cache_blocks=28 block0_steps=150 | cache_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:40:44,597 [INFO] [Stage2-DiT] Eval progress: 2/8 images done.
+2026-05-18 20:40:44,597 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=False | blocks=28
+2026-05-18 20:40:46,818 [INFO] [Stage2-DiT] [collector debug] phase=after_baseline_chunk_2 id=137007339403104 writes=4200 baseline_blocks=28 block0_steps=150 cache_blocks=0 block0_steps=0 | baseline_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:40:46,818 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=True | blocks=28
+2026-05-18 20:40:47,982 [INFO] [Stage2-DiT] [collector debug] phase=after_cache_chunk_2 id=137007339403104 writes=8400 baseline_blocks=28 block0_steps=150 cache_blocks=28 block0_steps=150 | cache_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:40:48,692 [INFO] [Stage2-DiT] Eval progress: 3/8 images done.
+2026-05-18 20:40:48,692 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=False | blocks=28
+2026-05-18 20:40:50,914 [INFO] [Stage2-DiT] [collector debug] phase=after_baseline_chunk_3 id=137007311304832 writes=4200 baseline_blocks=28 block0_steps=150 cache_blocks=0 block0_steps=0 | baseline_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:40:50,914 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=True | blocks=28
+2026-05-18 20:40:52,078 [INFO] [Stage2-DiT] [collector debug] phase=after_cache_chunk_3 id=137007311304832 writes=8400 baseline_blocks=28 block0_steps=150 cache_blocks=28 block0_steps=150 | cache_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:40:52,805 [INFO] [Stage2-DiT] Eval progress: 4/8 images done.
+2026-05-18 20:40:52,805 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=False | blocks=28
+2026-05-18 20:40:55,021 [INFO] [Stage2-DiT] [collector debug] phase=after_baseline_chunk_4 id=137007339403104 writes=4200 baseline_blocks=28 block0_steps=150 cache_blocks=0 block0_steps=0 | baseline_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:40:55,021 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=True | blocks=28
+2026-05-18 20:40:56,184 [INFO] [Stage2-DiT] [collector debug] phase=after_cache_chunk_4 id=137007339403104 writes=8400 baseline_blocks=28 block0_steps=150 cache_blocks=28 block0_steps=150 | cache_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:40:56,909 [INFO] [Stage2-DiT] Eval progress: 5/8 images done.
+2026-05-18 20:40:56,910 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=False | blocks=28
+2026-05-18 20:40:59,135 [INFO] [Stage2-DiT] [collector debug] phase=after_baseline_chunk_5 id=137007339402960 writes=4200 baseline_blocks=28 block0_steps=150 cache_blocks=0 block0_steps=0 | baseline_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:40:59,135 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=True | blocks=28
+2026-05-18 20:41:00,299 [INFO] [Stage2-DiT] [collector debug] phase=after_cache_chunk_5 id=137007339402960 writes=8400 baseline_blocks=28 block0_steps=150 cache_blocks=28 block0_steps=150 | cache_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:41:01,021 [INFO] [Stage2-DiT] Eval progress: 6/8 images done.
+2026-05-18 20:41:01,021 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=False | blocks=28
+2026-05-18 20:41:03,240 [INFO] [Stage2-DiT] [collector debug] phase=after_baseline_chunk_6 id=137007339403104 writes=4200 baseline_blocks=28 block0_steps=150 cache_blocks=0 block0_steps=0 | baseline_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:41:03,240 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=True | blocks=28
+2026-05-18 20:41:04,403 [INFO] [Stage2-DiT] [collector debug] phase=after_cache_chunk_6 id=137007339403104 writes=8400 baseline_blocks=28 block0_steps=150 cache_blocks=28 block0_steps=150 | cache_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:41:05,091 [INFO] [Stage2-DiT] Eval progress: 7/8 images done.
+2026-05-18 20:41:05,091 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=False | blocks=28
+2026-05-18 20:41:07,313 [INFO] [Stage2-DiT] [collector debug] phase=after_baseline_chunk_7 id=137007339402960 writes=4200 baseline_blocks=28 block0_steps=150 cache_blocks=0 block0_steps=0 | baseline_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:41:07,313 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=True | blocks=28
+2026-05-18 20:41:08,476 [INFO] [Stage2-DiT] [collector debug] phase=after_cache_chunk_7 id=137007339402960 writes=8400 baseline_blocks=28 block0_steps=150 cache_blocks=28 block0_steps=150 | cache_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:41:09,190 [INFO] [Stage2-DiT] Eval progress: 8/8 images done.
+2026-05-18 20:41:09,221 [INFO] [Stage2-DiT] Stage2 refine done → dit_s3cache/stage2/stage2_output_ddim150/src_baseline_p2_K20_sw3_lam1.0_kmax3/02_refined_blockwise | zone_adj=56 peak_repair=20 full_ratio=0.3862
+2026-05-18 20:45:19,680 [INFO] [Stage2-DiT] ----- Stage2-DiT run start | scheduler_config=dit_s3cache/stage1/stage1_output_ddim200/baseline_p2_K20_sw3_lam1.0_kmax3/scheduler_config.json | output_dir=dit_s3cache/stage2/stage2_output_ddim200/src_baseline_p2_K20_sw3_lam1.0_kmax3/00_global_refine | seed=42 | threshold_mode=global -----
+2026-05-18 20:45:19,755 [INFO] [Stage2-DiT] Loading DiT model: DiT-XL/2 (image_size=256)
+2026-05-18 20:45:23,396 [INFO] [Stage2-DiT] Model loaded.
+2026-05-18 20:45:23,397 [INFO] [Stage2-DiT] Eval config: total_images=8 chunk_size=1 (actual GPU batch=2*chunk_size=2 for CFG)
+2026-05-18 20:45:23,400 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=False | blocks=28
+2026-05-18 20:45:27,431 [INFO] [Stage2-DiT] [collector debug] phase=after_baseline_chunk_0 id=136644121065504 writes=5600 baseline_blocks=28 block0_steps=200 cache_blocks=0 block0_steps=0 | baseline_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:45:27,432 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=True | blocks=28
+2026-05-18 20:45:29,864 [INFO] [Stage2-DiT] [collector debug] phase=after_cache_chunk_0 id=136644121065504 writes=11200 baseline_blocks=28 block0_steps=200 cache_blocks=28 block0_steps=200 | cache_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:45:30,832 [INFO] [Stage2-DiT] Eval progress: 1/8 images done.
+2026-05-18 20:45:30,833 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=False | blocks=28
+2026-05-18 20:45:33,792 [INFO] [Stage2-DiT] [collector debug] phase=after_baseline_chunk_1 id=136635192032704 writes=5600 baseline_blocks=28 block0_steps=200 cache_blocks=0 block0_steps=0 | baseline_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:45:33,793 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=True | blocks=28
+2026-05-18 20:45:35,329 [INFO] [Stage2-DiT] [collector debug] phase=after_cache_chunk_1 id=136635192032704 writes=11200 baseline_blocks=28 block0_steps=200 cache_blocks=28 block0_steps=200 | cache_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:45:36,305 [INFO] [Stage2-DiT] Eval progress: 2/8 images done.
+2026-05-18 20:45:36,306 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=False | blocks=28
+2026-05-18 20:45:39,271 [INFO] [Stage2-DiT] [collector debug] phase=after_baseline_chunk_2 id=136644121065504 writes=5600 baseline_blocks=28 block0_steps=200 cache_blocks=0 block0_steps=0 | baseline_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:45:39,271 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=True | blocks=28
+2026-05-18 20:45:40,808 [INFO] [Stage2-DiT] [collector debug] phase=after_cache_chunk_2 id=136644121065504 writes=11200 baseline_blocks=28 block0_steps=200 cache_blocks=28 block0_steps=200 | cache_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:45:41,916 [INFO] [Stage2-DiT] Eval progress: 3/8 images done.
+2026-05-18 20:45:41,917 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=False | blocks=28
+2026-05-18 20:45:44,877 [INFO] [Stage2-DiT] [collector debug] phase=after_baseline_chunk_3 id=136635192031600 writes=5600 baseline_blocks=28 block0_steps=200 cache_blocks=0 block0_steps=0 | baseline_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:45:44,878 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=True | blocks=28
+2026-05-18 20:45:46,420 [INFO] [Stage2-DiT] [collector debug] phase=after_cache_chunk_3 id=136635192031600 writes=11200 baseline_blocks=28 block0_steps=200 cache_blocks=28 block0_steps=200 | cache_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:45:47,431 [INFO] [Stage2-DiT] Eval progress: 4/8 images done.
+2026-05-18 20:45:47,431 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=False | blocks=28
+2026-05-18 20:45:50,398 [INFO] [Stage2-DiT] [collector debug] phase=after_baseline_chunk_4 id=136644121065504 writes=5600 baseline_blocks=28 block0_steps=200 cache_blocks=0 block0_steps=0 | baseline_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:45:50,398 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=True | blocks=28
+2026-05-18 20:45:51,935 [INFO] [Stage2-DiT] [collector debug] phase=after_cache_chunk_4 id=136644121065504 writes=11200 baseline_blocks=28 block0_steps=200 cache_blocks=28 block0_steps=200 | cache_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:45:52,944 [INFO] [Stage2-DiT] Eval progress: 5/8 images done.
+2026-05-18 20:45:52,945 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=False | blocks=28
+2026-05-18 20:45:55,905 [INFO] [Stage2-DiT] [collector debug] phase=after_baseline_chunk_5 id=136644121065360 writes=5600 baseline_blocks=28 block0_steps=200 cache_blocks=0 block0_steps=0 | baseline_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:45:55,906 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=True | blocks=28
+2026-05-18 20:45:57,448 [INFO] [Stage2-DiT] [collector debug] phase=after_cache_chunk_5 id=136644121065360 writes=11200 baseline_blocks=28 block0_steps=200 cache_blocks=28 block0_steps=200 | cache_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:45:58,545 [INFO] [Stage2-DiT] Eval progress: 6/8 images done.
+2026-05-18 20:45:58,546 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=False | blocks=28
+2026-05-18 20:46:01,513 [INFO] [Stage2-DiT] [collector debug] phase=after_baseline_chunk_6 id=136644121062240 writes=5600 baseline_blocks=28 block0_steps=200 cache_blocks=0 block0_steps=0 | baseline_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:46:01,514 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=True | blocks=28
+2026-05-18 20:46:03,047 [INFO] [Stage2-DiT] [collector debug] phase=after_cache_chunk_6 id=136644121062240 writes=11200 baseline_blocks=28 block0_steps=200 cache_blocks=28 block0_steps=200 | cache_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:46:04,048 [INFO] [Stage2-DiT] Eval progress: 7/8 images done.
+2026-05-18 20:46:04,049 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=False | blocks=28
+2026-05-18 20:46:07,018 [INFO] [Stage2-DiT] [collector debug] phase=after_baseline_chunk_7 id=136644121065360 writes=5600 baseline_blocks=28 block0_steps=200 cache_blocks=0 block0_steps=0 | baseline_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:46:07,018 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=True | blocks=28
+2026-05-18 20:46:08,562 [INFO] [Stage2-DiT] [collector debug] phase=after_cache_chunk_7 id=136644121065360 writes=11200 baseline_blocks=28 block0_steps=200 cache_blocks=28 block0_steps=200 | cache_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:46:09,558 [INFO] [Stage2-DiT] Eval progress: 8/8 images done.
+2026-05-18 20:46:09,621 [INFO] [Stage2-DiT] Stage2 refine done → dit_s3cache/stage2/stage2_output_ddim200/src_baseline_p2_K20_sw3_lam1.0_kmax3/00_global_refine | zone_adj=314 peak_repair=1186 full_ratio=0.7145
+2026-05-18 20:46:11,686 [INFO] [Stage2-DiT] ----- Stage2-DiT run start | scheduler_config=dit_s3cache/stage1/stage1_output_ddim200/baseline_p2_K20_sw3_lam1.0_kmax3/scheduler_config.json | output_dir=dit_s3cache/stage2/stage2_output_ddim200/src_baseline_p2_K20_sw3_lam1.0_kmax3/02_refined_blockwise | seed=42 | threshold_mode=blockwise -----
+2026-05-18 20:46:11,736 [INFO] [Stage2-DiT] Loading DiT model: DiT-XL/2 (image_size=256)
+2026-05-18 20:46:15,396 [INFO] [Stage2-DiT] Model loaded.
+2026-05-18 20:46:15,397 [INFO] [Stage2-DiT] Eval config: total_images=8 chunk_size=1 (actual GPU batch=2*chunk_size=2 for CFG)
+2026-05-18 20:46:15,400 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=False | blocks=28
+2026-05-18 20:46:19,384 [INFO] [Stage2-DiT] [collector debug] phase=after_baseline_chunk_0 id=129823427786736 writes=5600 baseline_blocks=28 block0_steps=200 cache_blocks=0 block0_steps=0 | baseline_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:46:19,384 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=True | blocks=28
+2026-05-18 20:46:21,712 [INFO] [Stage2-DiT] [collector debug] phase=after_cache_chunk_0 id=129823427786736 writes=11200 baseline_blocks=28 block0_steps=200 cache_blocks=28 block0_steps=200 | cache_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:46:22,768 [INFO] [Stage2-DiT] Eval progress: 1/8 images done.
+2026-05-18 20:46:22,768 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=False | blocks=28
+2026-05-18 20:46:25,683 [INFO] [Stage2-DiT] [collector debug] phase=after_baseline_chunk_1 id=129814382919008 writes=5600 baseline_blocks=28 block0_steps=200 cache_blocks=0 block0_steps=0 | baseline_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:46:25,684 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=True | blocks=28
+2026-05-18 20:46:27,160 [INFO] [Stage2-DiT] [collector debug] phase=after_cache_chunk_1 id=129814382919008 writes=11200 baseline_blocks=28 block0_steps=200 cache_blocks=28 block0_steps=200 | cache_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:46:28,224 [INFO] [Stage2-DiT] Eval progress: 2/8 images done.
+2026-05-18 20:46:28,225 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=False | blocks=28
+2026-05-18 20:46:31,133 [INFO] [Stage2-DiT] [collector debug] phase=after_baseline_chunk_2 id=129823427786736 writes=5600 baseline_blocks=28 block0_steps=200 cache_blocks=0 block0_steps=0 | baseline_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:46:31,133 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=True | blocks=28
+2026-05-18 20:46:32,603 [INFO] [Stage2-DiT] [collector debug] phase=after_cache_chunk_2 id=129823427786736 writes=11200 baseline_blocks=28 block0_steps=200 cache_blocks=28 block0_steps=200 | cache_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:46:33,651 [INFO] [Stage2-DiT] Eval progress: 3/8 images done.
+2026-05-18 20:46:33,651 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=False | blocks=28
+2026-05-18 20:46:36,560 [INFO] [Stage2-DiT] [collector debug] phase=after_baseline_chunk_3 id=129814382918096 writes=5600 baseline_blocks=28 block0_steps=200 cache_blocks=0 block0_steps=0 | baseline_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:46:36,560 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=True | blocks=28
+2026-05-18 20:46:38,031 [INFO] [Stage2-DiT] [collector debug] phase=after_cache_chunk_3 id=129814382918096 writes=11200 baseline_blocks=28 block0_steps=200 cache_blocks=28 block0_steps=200 | cache_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:46:39,085 [INFO] [Stage2-DiT] Eval progress: 4/8 images done.
+2026-05-18 20:46:39,085 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=False | blocks=28
+2026-05-18 20:46:41,993 [INFO] [Stage2-DiT] [collector debug] phase=after_baseline_chunk_4 id=129823427786736 writes=5600 baseline_blocks=28 block0_steps=200 cache_blocks=0 block0_steps=0 | baseline_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:46:41,993 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=True | blocks=28
+2026-05-18 20:46:43,462 [INFO] [Stage2-DiT] [collector debug] phase=after_cache_chunk_4 id=129823427786736 writes=11200 baseline_blocks=28 block0_steps=200 cache_blocks=28 block0_steps=200 | cache_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:46:44,504 [INFO] [Stage2-DiT] Eval progress: 5/8 images done.
+2026-05-18 20:46:44,505 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=False | blocks=28
+2026-05-18 20:46:47,414 [INFO] [Stage2-DiT] [collector debug] phase=after_baseline_chunk_5 id=129823427786592 writes=5600 baseline_blocks=28 block0_steps=200 cache_blocks=0 block0_steps=0 | baseline_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:46:47,415 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=True | blocks=28
+2026-05-18 20:46:48,883 [INFO] [Stage2-DiT] [collector debug] phase=after_cache_chunk_5 id=129823427786592 writes=11200 baseline_blocks=28 block0_steps=200 cache_blocks=28 block0_steps=200 | cache_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:46:50,030 [INFO] [Stage2-DiT] Eval progress: 6/8 images done.
+2026-05-18 20:46:50,031 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=False | blocks=28
+2026-05-18 20:46:52,936 [INFO] [Stage2-DiT] [collector debug] phase=after_baseline_chunk_6 id=129823427783472 writes=5600 baseline_blocks=28 block0_steps=200 cache_blocks=0 block0_steps=0 | baseline_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:46:52,937 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=True | blocks=28
+2026-05-18 20:46:54,404 [INFO] [Stage2-DiT] [collector debug] phase=after_cache_chunk_6 id=129823427783472 writes=11200 baseline_blocks=28 block0_steps=200 cache_blocks=28 block0_steps=200 | cache_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:46:55,454 [INFO] [Stage2-DiT] Eval progress: 7/8 images done.
+2026-05-18 20:46:55,454 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=False | blocks=28
+2026-05-18 20:46:58,365 [INFO] [Stage2-DiT] [collector debug] phase=after_baseline_chunk_7 id=129823427786592 writes=5600 baseline_blocks=28 block0_steps=200 cache_blocks=0 block0_steps=0 | baseline_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:46:58,365 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=True | blocks=28
+2026-05-18 20:46:59,839 [INFO] [Stage2-DiT] [collector debug] phase=after_cache_chunk_7 id=129823427786592 writes=11200 baseline_blocks=28 block0_steps=200 cache_blocks=28 block0_steps=200 | cache_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:47:00,854 [INFO] [Stage2-DiT] Eval progress: 8/8 images done.
+2026-05-18 20:47:00,894 [INFO] [Stage2-DiT] Stage2 refine done → dit_s3cache/stage2/stage2_output_ddim200/src_baseline_p2_K20_sw3_lam1.0_kmax3/02_refined_blockwise | zone_adj=56 peak_repair=12 full_ratio=0.3721
+2026-05-18 20:52:12,260 [INFO] [Stage2-DiT] ----- Stage2-DiT run start | scheduler_config=dit_s3cache/stage1/stage1_output_ddim250/baseline_p2_K20_sw3_lam1.0_kmax3/scheduler_config.json | output_dir=dit_s3cache/stage2/stage2_output_ddim250/src_baseline_p2_K20_sw3_lam1.0_kmax3/00_global_refine | seed=42 | threshold_mode=global -----
+2026-05-18 20:52:12,335 [INFO] [Stage2-DiT] Loading DiT model: DiT-XL/2 (image_size=256)
+2026-05-18 20:52:15,956 [INFO] [Stage2-DiT] Model loaded.
+2026-05-18 20:52:15,956 [INFO] [Stage2-DiT] Eval config: total_images=8 chunk_size=1 (actual GPU batch=2*chunk_size=2 for CFG)
+2026-05-18 20:52:15,958 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=False | blocks=28
+2026-05-18 20:52:20,531 [INFO] [Stage2-DiT] [collector debug] phase=after_baseline_chunk_0 id=133297479612448 writes=7000 baseline_blocks=28 block0_steps=250 cache_blocks=0 block0_steps=0 | baseline_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:52:20,531 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=True | blocks=28
+2026-05-18 20:52:23,390 [INFO] [Stage2-DiT] [collector debug] phase=after_cache_chunk_0 id=133297479612448 writes=14000 baseline_blocks=28 block0_steps=250 cache_blocks=28 block0_steps=250 | cache_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:52:24,727 [INFO] [Stage2-DiT] Eval progress: 1/8 images done.
+2026-05-18 20:52:24,728 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=False | blocks=28
+2026-05-18 20:52:28,371 [INFO] [Stage2-DiT] [collector debug] phase=after_baseline_chunk_1 id=133297466752448 writes=7000 baseline_blocks=28 block0_steps=250 cache_blocks=0 block0_steps=0 | baseline_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:52:28,371 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=True | blocks=28
+2026-05-18 20:52:30,170 [INFO] [Stage2-DiT] [collector debug] phase=after_cache_chunk_1 id=133297466752448 writes=14000 baseline_blocks=28 block0_steps=250 cache_blocks=28 block0_steps=250 | cache_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:52:31,456 [INFO] [Stage2-DiT] Eval progress: 2/8 images done.
+2026-05-18 20:52:31,456 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=False | blocks=28
+2026-05-18 20:52:35,088 [INFO] [Stage2-DiT] [collector debug] phase=after_baseline_chunk_2 id=133297479612448 writes=7000 baseline_blocks=28 block0_steps=250 cache_blocks=0 block0_steps=0 | baseline_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:52:35,089 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=True | blocks=28
+2026-05-18 20:52:36,880 [INFO] [Stage2-DiT] [collector debug] phase=after_cache_chunk_2 id=133297479612448 writes=14000 baseline_blocks=28 block0_steps=250 cache_blocks=28 block0_steps=250 | cache_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:52:38,169 [INFO] [Stage2-DiT] Eval progress: 3/8 images done.
+2026-05-18 20:52:38,169 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=False | blocks=28
+2026-05-18 20:52:41,795 [INFO] [Stage2-DiT] [collector debug] phase=after_baseline_chunk_3 id=133297466751344 writes=7000 baseline_blocks=28 block0_steps=250 cache_blocks=0 block0_steps=0 | baseline_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:52:41,795 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=True | blocks=28
+2026-05-18 20:52:43,581 [INFO] [Stage2-DiT] [collector debug] phase=after_cache_chunk_3 id=133297466751344 writes=14000 baseline_blocks=28 block0_steps=250 cache_blocks=28 block0_steps=250 | cache_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:52:44,802 [INFO] [Stage2-DiT] Eval progress: 4/8 images done.
+2026-05-18 20:52:44,803 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=False | blocks=28
+2026-05-18 20:52:48,431 [INFO] [Stage2-DiT] [collector debug] phase=after_baseline_chunk_4 id=133297479612448 writes=7000 baseline_blocks=28 block0_steps=250 cache_blocks=0 block0_steps=0 | baseline_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:52:48,431 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=True | blocks=28
+2026-05-18 20:52:50,322 [INFO] [Stage2-DiT] [collector debug] phase=after_cache_chunk_4 id=133297479612448 writes=14000 baseline_blocks=28 block0_steps=250 cache_blocks=28 block0_steps=250 | cache_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:52:51,575 [INFO] [Stage2-DiT] Eval progress: 5/8 images done.
+2026-05-18 20:52:51,576 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=False | blocks=28
+2026-05-18 20:52:55,221 [INFO] [Stage2-DiT] [collector debug] phase=after_baseline_chunk_5 id=133297479612304 writes=7000 baseline_blocks=28 block0_steps=250 cache_blocks=0 block0_steps=0 | baseline_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:52:55,221 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=True | blocks=28
+2026-05-18 20:52:57,013 [INFO] [Stage2-DiT] [collector debug] phase=after_cache_chunk_5 id=133297479612304 writes=14000 baseline_blocks=28 block0_steps=250 cache_blocks=28 block0_steps=250 | cache_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:52:58,201 [INFO] [Stage2-DiT] Eval progress: 6/8 images done.
+2026-05-18 20:52:58,202 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=False | blocks=28
+2026-05-18 20:53:01,843 [INFO] [Stage2-DiT] [collector debug] phase=after_baseline_chunk_6 id=133297479612448 writes=7000 baseline_blocks=28 block0_steps=250 cache_blocks=0 block0_steps=0 | baseline_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:53:01,843 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=True | blocks=28
+2026-05-18 20:53:03,628 [INFO] [Stage2-DiT] [collector debug] phase=after_cache_chunk_6 id=133297479612448 writes=14000 baseline_blocks=28 block0_steps=250 cache_blocks=28 block0_steps=250 | cache_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:53:04,903 [INFO] [Stage2-DiT] Eval progress: 7/8 images done.
+2026-05-18 20:53:04,904 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=False | blocks=28
+2026-05-18 20:53:08,539 [INFO] [Stage2-DiT] [collector debug] phase=after_baseline_chunk_7 id=133297479612304 writes=7000 baseline_blocks=28 block0_steps=250 cache_blocks=0 block0_steps=0 | baseline_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:53:08,539 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=True | blocks=28
+2026-05-18 20:53:10,328 [INFO] [Stage2-DiT] [collector debug] phase=after_cache_chunk_7 id=133297479612304 writes=14000 baseline_blocks=28 block0_steps=250 cache_blocks=28 block0_steps=250 | cache_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:53:11,582 [INFO] [Stage2-DiT] Eval progress: 8/8 images done.
+2026-05-18 20:53:11,655 [INFO] [Stage2-DiT] Stage2 refine done → dit_s3cache/stage2/stage2_output_ddim250/src_baseline_p2_K20_sw3_lam1.0_kmax3/00_global_refine | zone_adj=250 peak_repair=1494 full_ratio=0.6940
+2026-05-18 20:53:13,744 [INFO] [Stage2-DiT] ----- Stage2-DiT run start | scheduler_config=dit_s3cache/stage1/stage1_output_ddim250/baseline_p2_K20_sw3_lam1.0_kmax3/scheduler_config.json | output_dir=dit_s3cache/stage2/stage2_output_ddim250/src_baseline_p2_K20_sw3_lam1.0_kmax3/02_refined_blockwise | seed=42 | threshold_mode=blockwise -----
+2026-05-18 20:53:13,794 [INFO] [Stage2-DiT] Loading DiT model: DiT-XL/2 (image_size=256)
+2026-05-18 20:53:17,465 [INFO] [Stage2-DiT] Model loaded.
+2026-05-18 20:53:17,465 [INFO] [Stage2-DiT] Eval config: total_images=8 chunk_size=1 (actual GPU batch=2*chunk_size=2 for CFG)
+2026-05-18 20:53:17,468 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=False | blocks=28
+2026-05-18 20:53:22,463 [INFO] [Stage2-DiT] [collector debug] phase=after_baseline_chunk_0 id=136820070021008 writes=7000 baseline_blocks=28 block0_steps=250 cache_blocks=0 block0_steps=0 | baseline_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:53:22,463 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=True | blocks=28
+2026-05-18 20:53:25,447 [INFO] [Stage2-DiT] [collector debug] phase=after_cache_chunk_0 id=136820070021008 writes=14000 baseline_blocks=28 block0_steps=250 cache_blocks=28 block0_steps=250 | cache_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:53:26,799 [INFO] [Stage2-DiT] Eval progress: 1/8 images done.
+2026-05-18 20:53:26,800 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=False | blocks=28
+2026-05-18 20:53:30,498 [INFO] [Stage2-DiT] [collector debug] phase=after_baseline_chunk_1 id=136820011335104 writes=7000 baseline_blocks=28 block0_steps=250 cache_blocks=0 block0_steps=0 | baseline_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:53:30,499 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=True | blocks=28
+2026-05-18 20:53:32,371 [INFO] [Stage2-DiT] [collector debug] phase=after_cache_chunk_1 id=136820011335104 writes=14000 baseline_blocks=28 block0_steps=250 cache_blocks=28 block0_steps=250 | cache_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:53:33,681 [INFO] [Stage2-DiT] Eval progress: 2/8 images done.
+2026-05-18 20:53:33,682 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=False | blocks=28
+2026-05-18 20:53:37,380 [INFO] [Stage2-DiT] [collector debug] phase=after_baseline_chunk_2 id=136820070021008 writes=7000 baseline_blocks=28 block0_steps=250 cache_blocks=0 block0_steps=0 | baseline_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:53:37,380 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=True | blocks=28
+2026-05-18 20:53:39,258 [INFO] [Stage2-DiT] [collector debug] phase=after_cache_chunk_2 id=136820070021008 writes=14000 baseline_blocks=28 block0_steps=250 cache_blocks=28 block0_steps=250 | cache_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:53:40,460 [INFO] [Stage2-DiT] Eval progress: 3/8 images done.
+2026-05-18 20:53:40,461 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=False | blocks=28
+2026-05-18 20:53:44,156 [INFO] [Stage2-DiT] [collector debug] phase=after_baseline_chunk_3 id=136820011334000 writes=7000 baseline_blocks=28 block0_steps=250 cache_blocks=0 block0_steps=0 | baseline_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:53:44,157 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=True | blocks=28
+2026-05-18 20:53:46,026 [INFO] [Stage2-DiT] [collector debug] phase=after_cache_chunk_3 id=136820011334000 writes=14000 baseline_blocks=28 block0_steps=250 cache_blocks=28 block0_steps=250 | cache_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:53:47,279 [INFO] [Stage2-DiT] Eval progress: 4/8 images done.
+2026-05-18 20:53:47,280 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=False | blocks=28
+2026-05-18 20:53:50,972 [INFO] [Stage2-DiT] [collector debug] phase=after_baseline_chunk_4 id=136820070021008 writes=7000 baseline_blocks=28 block0_steps=250 cache_blocks=0 block0_steps=0 | baseline_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:53:50,973 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=True | blocks=28
+2026-05-18 20:53:52,944 [INFO] [Stage2-DiT] [collector debug] phase=after_cache_chunk_4 id=136820070021008 writes=14000 baseline_blocks=28 block0_steps=250 cache_blocks=28 block0_steps=250 | cache_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:53:54,202 [INFO] [Stage2-DiT] Eval progress: 5/8 images done.
+2026-05-18 20:53:54,202 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=False | blocks=28
+2026-05-18 20:53:57,896 [INFO] [Stage2-DiT] [collector debug] phase=after_baseline_chunk_5 id=136820070020864 writes=7000 baseline_blocks=28 block0_steps=250 cache_blocks=0 block0_steps=0 | baseline_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:53:57,897 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=True | blocks=28
+2026-05-18 20:53:59,775 [INFO] [Stage2-DiT] [collector debug] phase=after_cache_chunk_5 id=136820070020864 writes=14000 baseline_blocks=28 block0_steps=250 cache_blocks=28 block0_steps=250 | cache_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:54:00,976 [INFO] [Stage2-DiT] Eval progress: 6/8 images done.
+2026-05-18 20:54:00,977 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=False | blocks=28
+2026-05-18 20:54:04,674 [INFO] [Stage2-DiT] [collector debug] phase=after_baseline_chunk_6 id=136820070021008 writes=7000 baseline_blocks=28 block0_steps=250 cache_blocks=0 block0_steps=0 | baseline_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:54:04,674 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=True | blocks=28
+2026-05-18 20:54:06,545 [INFO] [Stage2-DiT] [collector debug] phase=after_cache_chunk_6 id=136820070021008 writes=14000 baseline_blocks=28 block0_steps=250 cache_blocks=28 block0_steps=250 | cache_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:54:07,727 [INFO] [Stage2-DiT] Eval progress: 7/8 images done.
+2026-05-18 20:54:07,728 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=False | blocks=28
+2026-05-18 20:54:11,421 [INFO] [Stage2-DiT] [collector debug] phase=after_baseline_chunk_7 id=136820070020864 writes=7000 baseline_blocks=28 block0_steps=250 cache_blocks=0 block0_steps=0 | baseline_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:54:11,422 [INFO] [Stage2-DiT] DiTStage2Context enabled | cache_enabled=True | blocks=28
+2026-05-18 20:54:13,294 [INFO] [Stage2-DiT] [collector debug] phase=after_cache_chunk_7 id=136820070020864 writes=14000 baseline_blocks=28 block0_steps=250 cache_blocks=28 block0_steps=250 | cache_stats={'recompute_hits': 0, 'cache_hits': 0, 'total_hook_calls': 0, 'per_block': {}}
+2026-05-18 20:54:14,477 [INFO] [Stage2-DiT] Eval progress: 8/8 images done.
+2026-05-18 20:54:14,524 [INFO] [Stage2-DiT] Stage2 refine done → dit_s3cache/stage2/stage2_output_ddim250/src_baseline_p2_K20_sw3_lam1.0_kmax3/02_refined_blockwise | zone_adj=56 peak_repair=18 full_ratio=0.3546

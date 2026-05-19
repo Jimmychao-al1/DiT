@@ -52,6 +52,8 @@ def build_argparser() -> argparse.ArgumentParser:
     parser.add_argument("--num-fid-samples", type=int, default=1000)
     parser.add_argument("--per-side-batch-size", type=int, default=32)
     parser.add_argument("--cfg-scale", type=float, default=1.5)
+    parser.add_argument("--sampler", choices=["ddpm", "ddim"], default="ddpm")
+    parser.add_argument("--eta", type=float, default=0.0, help="DDIM eta; only used with --sampler ddim.")
     parser.add_argument("--k-values", type=int, nargs="+", default=[3, 5, 10])
     parser.add_argument("--seed", type=int, default=0)
     parser.add_argument(
@@ -218,6 +220,8 @@ def main(args: argparse.Namespace) -> None:
             device=device,
             cache_scheduler=scheduler,
             experiment_name=f"k={k} block_{block_idx}",
+            sampler=args.sampler,
+            eta=args.eta,
         )
         fid_value = float(run_result["fid"])
         delta = fid_value - baseline_fid
@@ -277,6 +281,8 @@ def ensure_baseline(
         device=device,
         cache_scheduler=None,
         experiment_name="baseline",
+        sampler=args.sampler,
+        eta=args.eta,
     )
     results["results"]["baseline_fid"] = float(baseline_result["fid"])
     results["results"]["baseline_meta"] = baseline_result
@@ -294,6 +300,8 @@ def generate_and_compute_fid(
     device: str,
     cache_scheduler: dict[int, set[int]] | None,
     experiment_name: str,
+    sampler: str = "ddpm",
+    eta: float = 0.0,
 ) -> dict[str, Any]:
     clear_generated(args.gen_image_dir)
     args.sample_npz.parent.mkdir(parents=True, exist_ok=True)
@@ -316,6 +324,8 @@ def generate_and_compute_fid(
             device=device,
             cache_blocks=cache_blocks,
             experiment_name=experiment_name,
+            sampler=sampler,
+            eta=eta,
         )
     finally:
         if cache_blocks:
@@ -338,12 +348,13 @@ def generate_and_compute_fid(
     if not args.keep_generated:
         clear_generated(args.gen_image_dir)
 
-    return {
+    result = {
         "fid": fid_value,
         "num_fid_samples": int(args.num_fid_samples),
         "model": str(args.model),
         "image_size": int(args.image_size),
         "num_sampling_steps": int(args.num_sampling_steps),
+        "sampler": str(sampler),
         "cfg_scale": float(args.cfg_scale),
         "seed": int(args.seed),
         "vae": str(args.vae),
@@ -354,6 +365,9 @@ def generate_and_compute_fid(
         "adm_output": evaluator_output,
         "cache_stats": stats,
     }
+    if sampler == "ddim":
+        result["eta"] = float(eta)
+    return result
 
 
 def generate_images(
@@ -366,7 +380,12 @@ def generate_images(
     device: str,
     cache_blocks: list[Any],
     experiment_name: str,
+    sampler: str = "ddpm",
+    eta: float = 0.0,
 ) -> None:
+    sampler = str(sampler).lower()
+    if sampler not in {"ddpm", "ddim"}:
+        raise ValueError(f"sampler must be 'ddpm' or 'ddim', got {sampler!r}")
     seed_all(args.seed)
     latent_size = args.image_size // 8
     saved = 0
@@ -389,15 +408,19 @@ def generate_images(
             num_classes=args.num_classes,
             device=device,
         )
-        samples = diffusion.p_sample_loop(
-            sample_fn,
-            z.shape,
-            z,
+        loop_fn = diffusion.ddim_sample_loop if sampler == "ddim" else diffusion.p_sample_loop
+        sample_kwargs = dict(
+            model=sample_fn,
+            shape=z.shape,
+            noise=z,
             clip_denoised=False,
             model_kwargs={"y": y, "cfg_scale": args.cfg_scale},
             progress=False,
             device=device,
         )
+        if sampler == "ddim":
+            sample_kwargs["eta"] = float(eta)
+        samples = loop_fn(**sample_kwargs)
         samples, _ = samples.chunk(2, dim=0)
         decoded = vae.decode(samples / 0.18215).sample
         decoded = (
@@ -620,6 +643,7 @@ def load_results(args: argparse.Namespace) -> dict[str, Any]:
         "model": args.model,
         "image_size": int(args.image_size),
         "num_sampling_steps": int(args.num_sampling_steps),
+        "sampler": str(args.sampler),
         "cfg_scale": float(args.cfg_scale),
         "eval_samples": int(args.num_fid_samples),
         "fid_method": "ADM evaluator",
@@ -628,6 +652,8 @@ def load_results(args: argparse.Namespace) -> dict[str, Any]:
         "seed": int(args.seed),
         "k_values": list(args.k_values),
     }
+    if args.sampler == "ddim":
+        default_config["eta"] = float(args.eta)
     if args.results_json.exists():
         with open(args.results_json, "r", encoding="utf-8") as handle:
             payload = json.load(handle)
@@ -675,6 +701,11 @@ def baseline_matches(meta: dict[str, Any], args: argparse.Namespace) -> bool:
     return (
         int(meta.get("num_fid_samples", -1)) == int(args.num_fid_samples)
         and int(meta.get("num_sampling_steps", -1)) == int(args.num_sampling_steps)
+        and str(meta.get("sampler", "ddpm")) == str(args.sampler)
+        and (
+            str(args.sampler) != "ddim"
+            or float(meta.get("eta", float("nan"))) == float(args.eta)
+        )
         and int(meta.get("seed", -1)) == int(args.seed)
         and str(meta.get("model", "")) == str(args.model)
         and int(meta.get("image_size", -1)) == int(args.image_size)

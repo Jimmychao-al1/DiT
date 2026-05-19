@@ -398,6 +398,7 @@ def run_stage0_dit(
     eps_noise: float = _DEFAULT_EPS_NOISE_DIT,
     quantile: float = _DEFAULT_QUANTILE_FID,
     k_values: list[int] | None = None,
+    expected_n_steps: int = _DEFAULT_N_STEPS,
 ) -> None:
     """
     DiT Stage 0 主流程：
@@ -421,7 +422,10 @@ def run_stage0_dit(
     # 步驟 1：載入 Evidence NPZ
     # ------------------------------------------------------------------
     LOGGER.info("\n[Step 1] 載入 Evidence NPZ...")
-    l1_int, cosdist_int, svd_int, evidence_meta, B, T = load_dit_evidence(evidence_npz)
+    l1_int, cosdist_int, svd_int, evidence_meta, B, T = load_dit_evidence(
+        evidence_npz,
+        expected_n_steps=expected_n_steps,
+    )
 
     interval_len = T - 1  # = 249 when T=250
 
@@ -563,6 +567,7 @@ def run_stage0_dit(
         "image_size": evidence_meta.get("image_size", 256),
         "n_blocks": B,
         "n_steps": T,
+        "sampler": evidence_meta.get("sampler", "ddpm"),
         "interval_len": interval_len,
         "evidence_npz": str(Path(evidence_npz).resolve()),
         "fid_json": str(Path(fid_json).resolve()),
@@ -610,6 +615,8 @@ def run_stage0_dit(
             "stage0_metadata.json",
         ],
     }
+    if metadata["sampler"] == "ddim":
+        metadata["eta"] = evidence_meta.get("eta", 0.0)
     with open(out_path / "stage0_metadata.json", "w", encoding="utf-8") as f:
         json.dump(metadata, f, ensure_ascii=False, indent=2)
 
@@ -662,6 +669,15 @@ if __name__ == "__main__":
         help="Output directory (default: dit_s3cache/stage0/stage0_output)",
     )
     parser.add_argument(
+        "--n-steps",
+        type=int,
+        default=_DEFAULT_N_STEPS,
+        help=(
+            f"Expected evidence step count for validation warnings (default: {_DEFAULT_N_STEPS}). "
+            "Set this to the DDIM step count when normalizing DDIM evidence."
+        ),
+    )
+    parser.add_argument(
         "--eps-noise",
         type=float,
         default=_DEFAULT_EPS_NOISE_DIT,
@@ -696,4 +712,5 @@ if __name__ == "__main__":
         eps_noise=args.eps_noise,
         quantile=args.quantile,
         k_values=args.k_values,
+        expected_n_steps=args.n_steps,
     )

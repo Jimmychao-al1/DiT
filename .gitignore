@@ -13,3 +13,9 @@ dit_s3cache/stage1/stage1_output/sweep_*/
 dit_s3cache/results/fid_dit_stage2/2026*/
 dit_s3cache/stage0/stage0_output_sublayer/
 dit_s3cache/stage1/stage1_output_sublayer/
+dit_s3cache/results/fid_dit_stage2_sublayer
+dit_s3cache/stage0/stage0_output_ddim50
+dit_s3cache/stage0/stage0_output_ddim100
+dit_s3cache/stage0/stage0_output_ddim150
+dit_s3cache/stage0/stage0_output_ddim200
+dit_s3cache/stage0/stage0_output_ddim250

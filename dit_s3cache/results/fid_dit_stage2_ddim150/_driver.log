@@ -1,0 +1,15 @@
+2026-05-18 22:49:16,807 [INFO] results_root=/home/jimmy/DiT/dit_s3cache/results/fid_dit_stage2_ddim150 runs_index=/home/jimmy/DiT/dit_s3cache/results/fid_dit_stage2_ddim150/runs_index.jsonl jobs=1
+2026-05-18 22:49:44,462 [INFO] sampling_timesteps len=150 first=999 last=0
+2026-05-18 22:49:44,463 [INFO] Baseline path: full recompute all blocks (no cache reuse)
+2026-05-19 00:14:42,511 [INFO] Removed scratch NPZ: /home/jimmy/DiT/dit_s3cache/results/fid_dit_stage2_ddim150/20260518/dit_baseline_full_compute/0518_22_dit_baseline_full_compute/_scratch_samples.npz
+2026-05-19 00:14:42,527 [INFO] [done] dit_baseline_full_compute | FID@5000=9.147548417169503 | out=/home/jimmy/DiT/dit_s3cache/results/fid_dit_stage2_ddim150/20260518/dit_baseline_full_compute/0518_22_dit_baseline_full_compute
+2026-05-19 00:14:42,528 [INFO] All jobs complete. runs_index: /home/jimmy/DiT/dit_s3cache/results/fid_dit_stage2_ddim150/runs_index.jsonl
+2026-05-19 00:56:02,976 [INFO] results_root=/home/jimmy/DiT/dit_s3cache/results/fid_dit_stage2_ddim150 runs_index=/home/jimmy/DiT/dit_s3cache/results/fid_dit_stage2_ddim150/runs_index.jsonl jobs=1
+2026-05-19 00:56:07,466 [INFO] sampling_timesteps len=150 first=999 last=0
+2026-05-19 00:56:07,497 [INFO] Stage2 cache enabled | full_compute_ratio(disk)=0.38619
+2026-05-19 01:32:28,387 [INFO] Removed scratch NPZ: /home/jimmy/DiT/dit_s3cache/results/fid_dit_stage2_ddim150/20260519/baseline_p2_K20_sw3_lam1.0_kmax3_blockwise_ddim150/0519_00_baseline_p2_K20_sw3_lam1.0_kmax3_blockwise_ddim150/_scratch_samples.npz
+2026-05-19 01:32:28,389 [INFO] [done] baseline_p2_K20_sw3_lam1.0_kmax3_blockwise_ddim150 | FID@5000=9.318733140015581 | out=/home/jimmy/DiT/dit_s3cache/results/fid_dit_stage2_ddim150/20260519/baseline_p2_K20_sw3_lam1.0_kmax3_blockwise_ddim150/0519_00_baseline_p2_K20_sw3_lam1.0_kmax3_blockwise_ddim150
+2026-05-19 01:32:28,390 [INFO] All jobs complete. runs_index: /home/jimmy/DiT/dit_s3cache/results/fid_dit_stage2_ddim150/runs_index.jsonl
+2026-05-19 10:56:37,343 [INFO] results_root=/home/jimmy/DiT/dit_s3cache/results/fid_dit_stage2_ddim150 runs_index=/home/jimmy/DiT/dit_s3cache/results/fid_dit_stage2_ddim150/runs_index.jsonl jobs=1
+2026-05-19 10:57:31,743 [INFO] sampling_timesteps len=150 first=999 last=0
+2026-05-19 10:57:31,870 [INFO] Stage2 cache enabled | full_compute_ratio(disk)=0.38619

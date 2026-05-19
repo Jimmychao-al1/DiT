@@ -1,0 +1,2 @@
+2026-05-19 06:35:08,942 [INFO] sampling_timesteps len=100 first=999 last=0
+2026-05-19 06:35:08,942 [INFO] Baseline path: full recompute all blocks (no cache reuse)

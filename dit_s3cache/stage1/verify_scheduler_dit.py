@@ -15,6 +15,8 @@ from typing import Any, Dict, List, Set
 
 import numpy as np
 
+from dit_s3cache.stage2.stage2_scheduler_adapter_dit import validate_time_order
+
 
 def load_config(path: str) -> Dict[str, Any]:
     """Public function load_config."""
@@ -66,10 +68,12 @@ def check_shared_zones_cover_ddim(shared_zones: List[Dict[str, Any]], T: int) ->
 def check_time_order(cfg: Dict[str, Any]) -> bool:
     """Public function check_time_order."""
     order = cfg.get("time_order")
-    if order != "ddpm_249_to_0":
-        print(f"❌ time_order 必須為 'ddpm_249_to_0'，收到: {order!r}")
+    try:
+        sampler = validate_time_order(str(order), int(cfg.get("T")))
+    except Exception as exc:
+        print(f"❌ time_order 無效: {exc}")
         return False
-    print("✅ time_order 正確（ddpm_249_to_0）")
+    print(f"✅ time_order 正確（{sampler}, T={cfg.get('T')}）")
     return True
 
 
@@ -188,10 +192,10 @@ def main() -> int:
         all_ok = False
 
     if not exp_all[:, 0].all():
-        print("❌ 所有 block 在步序 i=0（DDPM t=249）必須為 F（True）")
+        print(f"❌ 所有 block 在步序 i=0（t={T - 1}）必須為 F（True）")
         all_ok = False
     else:
-        print("✅ 所有 block：步序 i=0（t=249）為 F")
+        print(f"✅ 所有 block：步序 i=0（t={T - 1}）為 F")
 
     zone_start_ok = True
     for z in shared_zones:

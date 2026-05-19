@@ -38,6 +38,8 @@ def build_argparser() -> argparse.ArgumentParser:
     parser.add_argument("--per-side-batch-size", type=int, default=4)
     parser.add_argument("--n-batches", type=int, default=16)
     parser.add_argument("--cfg-scale", type=float, default=1.5)
+    parser.add_argument("--sampler", type=str, choices=["ddpm", "ddim"], default="ddpm")
+    parser.add_argument("--eta", type=float, default=0.0, help="DDIM eta; only used with --sampler ddim.")
     parser.add_argument("--k-svd", type=int, default=16)
     parser.add_argument("--svd-token-subsample", type=int, default=0)
     parser.add_argument("--base-seed", type=int, default=42)
@@ -47,7 +49,12 @@ def build_argparser() -> argparse.ArgumentParser:
         default="current",
         choices=["current", "previous", "max", "symmetric"],
     )
-    parser.add_argument("--output", type=Path, default=Path("dit_s3cache/outputs/evidence_dit_xl2_256.npz"))
+    parser.add_argument(
+        "--output",
+        type=Path,
+        default=None,
+        help="Output NPZ path. Defaults to the legacy DDPM path, or a _ddimN path for DDIM.",
+    )
     parser.add_argument("--ckpt", type=str, default=None)
     parser.add_argument("--device", type=str, default=None)
     parser.add_argument("--tf32", action=argparse.BooleanOptionalAction, default=True)
@@ -76,6 +83,8 @@ def main(args: argparse.Namespace) -> None:
         raise ValueError("Stage 0 evidence collection is currently scoped to DiT-XL/2.")
     if args.image_size != 256:
         raise ValueError("Stage 0 evidence collection is currently scoped to 256x256 only.")
+    if args.output is None:
+        args.output = default_evidence_output(args)
 
     torch.backends.cuda.matmul.allow_tf32 = args.tf32
     torch.backends.cudnn.allow_tf32 = args.tf32
@@ -126,15 +135,23 @@ def main(args: argparse.Namespace) -> None:
             v_prevs: list[torch.Tensor | None] = [None] * n_blocks
             final_latent: torch.Tensor | None = None
 
-            sample_iter = diffusion.p_sample_loop_progressive(
-                model.forward_with_cfg,
-                z.shape,
+            sample_fn = (
+                diffusion.ddim_sample_loop_progressive
+                if args.sampler == "ddim"
+                else diffusion.p_sample_loop_progressive
+            )
+            sample_kwargs = dict(
+                model=model.forward_with_cfg,
+                shape=z.shape,
                 noise=z,
                 clip_denoised=False,
                 model_kwargs=model_kwargs,
                 device=device,
                 progress=args.progress,
             )
+            if args.sampler == "ddim":
+                sample_kwargs["eta"] = float(args.eta)
+            sample_iter = sample_fn(**sample_kwargs)
 
             for step_idx, out in enumerate(sample_iter):
                 if step_idx >= n_steps:
@@ -218,6 +235,12 @@ def make_cfg_inputs(
     return z, y
 
 
+def default_evidence_output(args: argparse.Namespace) -> Path:
+    if args.sampler == "ddim":
+        return Path(f"dit_s3cache/outputs/evidence_dit_xl2_256_ddim{int(args.num_sampling_steps)}.npz")
+    return Path("dit_s3cache/outputs/evidence_dit_xl2_256.npz")
+
+
 def ensure_complete_storage(storage: dict[int, torch.Tensor], n_blocks: int, step_idx: int) -> None:
     missing = [idx for idx in range(n_blocks) if idx not in storage]
     if missing:
@@ -243,7 +266,7 @@ def build_metadata(
     n_batches_run: int,
     seeds: list[int],
 ) -> dict[str, Any]:
-    return {
+    meta = {
         "stage": "S3-Cache Stage 0 Evidence Collection",
         "format": "dit_s3cache_v1",
         "model": args.model,
@@ -254,6 +277,7 @@ def build_metadata(
         "n_blocks": n_blocks,
         "n_steps_recorded": n_steps,
         "num_sampling_steps": args.num_sampling_steps,
+        "sampler": args.sampler,
         "timestep_indexing": "array step_idx follows sampling order; timestep_map[step_idx] gives diffusion timestep",
         "per_side_batch_size": args.per_side_batch_size,
         "effective_model_batch_size": 2 * args.per_side_batch_size,
@@ -279,10 +303,15 @@ def build_metadata(
         "seeds": seeds,
         "script_args": json.loads(json.dumps(_jsonable_args(args))),
     }
+    if args.sampler == "ddim":
+        meta["eta"] = float(args.eta)
+    return meta
 
 
 def _jsonable_args(args: argparse.Namespace) -> dict[str, Any]:
     result = vars(args).copy()
+    if result.get("sampler") != "ddim":
+        result.pop("eta", None)
     for key, value in result.items():
         if isinstance(value, Path):
             result[key] = str(value)

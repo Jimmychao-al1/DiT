@@ -37,8 +37,9 @@ from dit_s3cache.fid.fid_cache_sensitivity import (
 )
 from dit_s3cache.stage2.stage2_scheduler_adapter_dit import (
     EXPECTED_NUM_BLOCKS,
-    TIME_ORDER_EXPECTED,
     load_stage1_scheduler_config,
+    make_time_order,
+    validate_time_order,
 )
 from dit_s3cache.start_run.stage2_to_dit_cache import (
     load_scheduler_and_build_cache_scheduler,
@@ -72,6 +73,12 @@ def _round_fid_index(x: Optional[float]) -> Optional[float]:
     if x is None:
         return None
     return round(float(x), 3)
+
+
+def _json_with_optional_eta(obj: Dict[str, Any], common: argparse.Namespace) -> Dict[str, Any]:
+    if str(getattr(common, "sampler", "ddpm")) == "ddim":
+        obj["eta"] = float(getattr(common, "eta", 0.0))
+    return obj
 
 
 def _repo_rel_path(p: Path) -> str:
@@ -133,17 +140,21 @@ def _record_run_failed(
         fk = _fid_index_key(int(common.num_fid_samples))
         _append_runs_index(
             runs_index_path,
-            {
-                "rid": _compact_run_index_id(start_dt, scheduler_name),
-                fk: _round_fid_index(None),
-                "d": start_dt.strftime("%Y%m%d"),
-                "sch": scheduler_name,
-                "r": None,
-                "seed": int(common.seed),
-                "out": _repo_rel_path(run_dir),
-                "sum": None,
-                "st": "failed",
-            },
+            _json_with_optional_eta(
+                {
+                    "rid": _compact_run_index_id(start_dt, scheduler_name),
+                    fk: _round_fid_index(None),
+                    "d": start_dt.strftime("%Y%m%d"),
+                    "sch": scheduler_name,
+                    "sampler": str(common.sampler),
+                    "r": None,
+                    "seed": int(common.seed),
+                    "out": _repo_rel_path(run_dir),
+                    "sum": None,
+                    "st": "failed",
+                },
+                common,
+            ),
         )
 
 
@@ -287,6 +298,12 @@ def default_results_root() -> Path:
     return _REPO_ROOT / "dit_s3cache/results/fid_dit_stage2"
 
 
+def default_results_root_for_sampler(sampler: str, num_sampling_steps: int) -> Path:
+    if str(sampler) == "ddim":
+        return _REPO_ROOT / f"dit_s3cache/results/fid_dit_stage2_ddim{int(num_sampling_steps)}"
+    return default_results_root()
+
+
 def default_jobs() -> List[tuple[str, str]]:
     rel = (
         "dit_s3cache/stage2/stage2_output/src_baseline_p2_K20_sw3_lam1.0/"
@@ -324,6 +341,8 @@ def build_fid_args_for_run(run_dir: Path, common: argparse.Namespace) -> argpars
         image_size=int(common.image_size),
         num_classes=int(common.num_classes),
         num_sampling_steps=int(common.num_sampling_steps),
+        sampler=str(common.sampler),
+        eta=float(common.eta),
         per_side_batch_size=int(common.per_side_batch_size),
         cfg_scale=float(common.cfg_scale),
         seed=int(common.seed),
@@ -387,6 +406,8 @@ def run_one_job(
             "scheduler_name": scheduler_name,
             "scheduler_config_path": str(sched_path_resolved) if use_cache else None,
             "num_images": int(common.num_fid_samples),
+            "num_sampling_steps": int(common.num_sampling_steps),
+            "sampler": str(common.sampler),
             "seed": int(common.seed),
             "repo": "dit_s3cache/start_run/sample_stage2_cache_scheduler_dit.py",
             "command_argv": sys.argv[:],
@@ -394,6 +415,8 @@ def run_one_job(
             "hostname": socket.gethostname(),
             "output_dir": str(run_dir.resolve()),
         }
+        if str(common.sampler) == "ddim":
+            manifest["eta"] = float(common.eta)
         _write_json(run_dir / "run_manifest.json", manifest)
 
         device = common.device or ("cuda" if __import__("torch").cuda.is_available() else "cpu")
@@ -425,8 +448,11 @@ def run_one_job(
                 raise ValueError(
                     f"Scheduler T={cfg['T']} != diffusion steps T={T} (check --num-sampling-steps)"
                 )
-            if cfg.get("time_order") != TIME_ORDER_EXPECTED:
-                raise ValueError(f"Expected time_order {TIME_ORDER_EXPECTED!r}, got {cfg.get('time_order')!r}")
+            cfg_sampler = validate_time_order(str(cfg.get("time_order")), T)
+            if cfg_sampler != str(common.sampler):
+                raise ValueError(
+                    f"Scheduler sampler {cfg_sampler!r} does not match --sampler {common.sampler!r}"
+                )
             cache_sched = load_scheduler_and_build_cache_scheduler(
                 sched_path_resolved,
                 sampling_timesteps,
@@ -440,9 +466,12 @@ def run_one_job(
             cfg_snapshot = {
                 "note": "dit_baseline_full_compute: no Stage2 JSON; every block recomputes every timestep",
                 "T": T,
-                "time_order": TIME_ORDER_EXPECTED,
+                "time_order": make_time_order(str(common.sampler), T),
+                "sampler": str(common.sampler),
                 "num_blocks": EXPECTED_NUM_BLOCKS,
             }
+            if str(common.sampler) == "ddim":
+                cfg_snapshot["eta"] = float(common.eta)
             log.info("Baseline path: full recompute all blocks (no cache reuse)")
 
         score: Optional[float] = None
@@ -455,6 +484,8 @@ def run_one_job(
             device=device,
             cache_scheduler=cache_sched,
             experiment_name=scheduler_name,
+            sampler=str(common.sampler),
+            eta=float(common.eta),
         )
         score = float(run_result["fid"])
 
@@ -476,8 +507,11 @@ def run_one_job(
                 "end_time": end_dt.isoformat(timespec="seconds"),
                 "duration_sec": duration_sec,
                 "fid_score": score,
+                "sampler": str(common.sampler),
             }
         )
+        if str(common.sampler) == "ddim":
+            manifest["eta"] = float(common.eta)
         _write_json(run_dir / "run_manifest.json", manifest)
 
         if use_cache and cfg_snapshot is not None:
@@ -494,6 +528,8 @@ def run_one_job(
             "force-prefix": "F",
             "force-full-prefix-steps": 0,
             "num_images": int(common.num_fid_samples),
+            "num_sampling_steps": int(common.num_sampling_steps),
+            "sampler": str(common.sampler),
             "seed": int(common.seed),
             "fid_5k": float(score) if score is not None else None,
             "full_compute_ratio": sched_stats.get("full_compute_ratio"),
@@ -507,11 +543,15 @@ def run_one_job(
             "duration_sec": duration_sec,
             "detail_stats_path": str((run_dir / "detail_stats.json").resolve()),
         }
+        if str(common.sampler) == "ddim":
+            summary_obj["eta"] = float(common.eta)
         _write_json(run_dir / "summary.json", summary_obj)
 
         detail_stats: Dict[str, Any] = {
             "run_id": run_id,
             "scheduler_name": scheduler_name,
+            "sampler": str(common.sampler),
+            "num_sampling_steps": int(common.num_sampling_steps),
             "per_block_recompute_count": sched_stats.get("per_block_recompute_count", {}),
             "per_block_reuse_count": sched_stats.get("per_block_reuse_count", {}),
             "per_zone_recompute_stats": sched_stats.get("per_zone_recompute_stats", {}),
@@ -531,6 +571,8 @@ def run_one_job(
                 if k in run_result
             },
         }
+        if str(common.sampler) == "ddim":
+            detail_stats["eta"] = float(common.eta)
         if cache_sched is not None:
             try:
                 detail_stats["effective_scheduler_fr_grid"] = _format_fr_grid_dit(
@@ -547,17 +589,21 @@ def run_one_job(
             fk = _fid_index_key(int(common.num_fid_samples))
             _append_runs_index(
                 runs_index_path,
-                {
-                    "rid": _compact_run_index_id(start_dt, scheduler_name),
-                    fk: _round_fid_index(float(score) if score is not None else None),
-                    "d": start_dt.strftime("%Y%m%d"),
-                    "sch": scheduler_name,
-                    "r": sched_stats.get("full_compute_ratio"),
-                    "seed": int(common.seed),
-                    "out": _repo_rel_path(run_dir),
-                    "sum": _repo_rel_path(run_dir / "summary.json"),
-                    "st": "success",
-                },
+                _json_with_optional_eta(
+                    {
+                        "rid": _compact_run_index_id(start_dt, scheduler_name),
+                        fk: _round_fid_index(float(score) if score is not None else None),
+                        "d": start_dt.strftime("%Y%m%d"),
+                        "sch": scheduler_name,
+                        "sampler": str(common.sampler),
+                        "r": sched_stats.get("full_compute_ratio"),
+                        "seed": int(common.seed),
+                        "out": _repo_rel_path(run_dir),
+                        "sum": _repo_rel_path(run_dir / "summary.json"),
+                        "st": "success",
+                    },
+                    common,
+                ),
             )
 
         log.info(
@@ -616,6 +662,11 @@ def main() -> None:
         help="If true, run dit_baseline_full_compute once before cache jobs (default: false).",
     )
     p.add_argument(
+        "--baseline-only",
+        action="store_true",
+        help="Run only dit_baseline_full_compute; do not add default or explicit cache jobs.",
+    )
+    p.add_argument(
         "--job",
         action="append",
         nargs=2,
@@ -625,8 +676,8 @@ def main() -> None:
     p.add_argument(
         "--results-root",
         type=str,
-        default=str(default_results_root()),
-        help="e.g. dit_s3cache/results/fid_dit_stage2/",
+        default=None,
+        help="e.g. dit_s3cache/results/fid_dit_stage2/ (default adds _ddimN for DDIM)",
     )
     p.add_argument(
         "--runs-index-path",
@@ -639,6 +690,8 @@ def main() -> None:
     p.add_argument("--image-size", type=int, default=256)
     p.add_argument("--num-classes", type=int, default=1000)
     p.add_argument("--num-sampling-steps", type=int, default=250)
+    p.add_argument("--sampler", choices=["ddpm", "ddim"], default="ddpm")
+    p.add_argument("--eta", type=float, default=0.0, help="DDIM eta; only used with --sampler ddim.")
     p.add_argument("--num-fid-samples", type=int, default=5000)
     p.add_argument("--per-side-batch-size", type=int, default=32)
     p.add_argument("--cfg-scale", type=float, default=1.5)
@@ -662,7 +715,11 @@ def main() -> None:
     p.add_argument("--adm-python", type=str, default=sys.executable)
 
     args = p.parse_args()
-    results_root = _resolve_repo_path(args.results_root)
+    results_root = (
+        _resolve_repo_path(args.results_root)
+        if args.results_root
+        else default_results_root_for_sampler(args.sampler, args.num_sampling_steps)
+    )
     results_root.mkdir(parents=True, exist_ok=True)
     runs_index = (
         Path(args.runs_index_path).resolve()
@@ -675,9 +732,12 @@ def main() -> None:
     setattr(common_ns, "num_fid_samples", args.num_fid_samples)
 
     jobs_to_run: List[tuple[Optional[str], Optional[str]]] = []
-    if args.base:
+    if args.baseline_only:
         jobs_to_run.append(("dit_baseline_full_compute", None))
-    jobs_to_run.extend(parse_jobs(args.job, slog))
+    elif args.base:
+        jobs_to_run.append(("dit_baseline_full_compute", None))
+    if not args.baseline_only:
+        jobs_to_run.extend(parse_jobs(args.job, slog))
 
     slog.info("results_root=%s runs_index=%s jobs=%d", results_root, runs_index, len(jobs_to_run))
 

@@ -50,11 +50,11 @@ from dit_s3cache.stage2.stage2_error_collector_dit import (
 from dit_s3cache.stage2.stage2_scheduler_adapter_dit import (
     EXPECTED_NUM_BLOCKS,
     RUNTIME_LAYER_NAMES,
-    TIME_ORDER_EXPECTED,
     apply_cache_scheduler_runtime_overrides,
     cache_scheduler_to_jsonable,
     ddpm_t_to_step_index,
     load_stage1_scheduler_config,
+    parse_time_order,
     rebuild_expanded_mask_from_shared_zones_and_k_per_zone,
     runtime_name_to_block_id,
     stage1_block_to_runtime_block,
@@ -283,12 +283,14 @@ class DiTStage2Context:
         raw_t_to_step_idx: Dict[int, int],
         callback: Optional[Callable],
         cache_enabled: bool,
+        T: Optional[int] = None,
     ) -> None:
         self.model = model
         self.recompute_by_block = {k: set(v) for k, v in recompute_step_indices_by_block.items()}
         self.raw_t_to_step_idx = dict(raw_t_to_step_idx)
         self.callback = callback
         self.cache_enabled = bool(cache_enabled)
+        self.T = int(T if T is not None else len(raw_t_to_step_idx))
 
         self._stage2_blocks: List[DiTStage2Block] = []
         self._original_forward_with_cfg: Optional[Callable] = None
@@ -299,7 +301,7 @@ class DiTStage2Context:
             rt = f"block_{block_idx}"
             if rt not in RUNTIME_LAYER_NAMES:
                 raise ValueError(f"unexpected block index {block_idx} (max={EXPECTED_NUM_BLOCKS - 1})")
-            recompute_steps = self.recompute_by_block.get(rt, set(range(250)))
+            recompute_steps = self.recompute_by_block.get(rt, set(range(self.T)))
             stage2_block = DiTStage2Block(
                 block=block,
                 block_idx=block_idx,
@@ -373,18 +375,28 @@ def _run_single_sampling_pass(
     y: torch.Tensor,
     cfg_scale: float,
     device: torch.device,
+    sampler: str = "ddpm",
+    eta: float = 0.0,
 ) -> None:
-    """執行一次完整的 DDPM sampling loop（使用 p_sample_loop_progressive）。"""
+    """執行一次完整 sampling loop（progressive，用於 hook side-effects）。"""
     model_kwargs = {"y": y, "cfg_scale": cfg_scale}
-    sample_iter = diffusion.p_sample_loop_progressive(
-        model.forward_with_cfg,
-        z_T.shape,
+    sample_fn = (
+        diffusion.ddim_sample_loop_progressive
+        if sampler == "ddim"
+        else diffusion.p_sample_loop_progressive
+    )
+    sample_kwargs = dict(
+        model=model.forward_with_cfg,
+        shape=z_T.shape,
         noise=z_T,
         clip_denoised=False,
         model_kwargs=model_kwargs,
         device=device,
         progress=False,
     )
+    if sampler == "ddim":
+        sample_kwargs["eta"] = float(eta)
+    sample_iter = sample_fn(**sample_kwargs)
     for _out in sample_iter:
         pass  # 只需要 hook side-effects（殘差收集），不需要輸出
 
@@ -572,6 +584,8 @@ def run_stage2_refine_dit(
     num_classes: int = DEFAULT_NUM_CLASSES,
     cfg_scale: float = DEFAULT_CFG_SCALE,
     num_sampling_steps: int = DEFAULT_NUM_SAMPLING_STEPS,
+    sampler: str = "ddpm",
+    eta: float = 0.0,
     ckpt: Optional[str] = None,
     device: Optional[torch.device] = None,
     eval_num_images: int = DEFAULT_EVAL_NUM_IMAGES,
@@ -600,6 +614,14 @@ def run_stage2_refine_dit(
     cfg = load_stage1_scheduler_config(scheduler_config_path)
     validate_stage1_scheduler_config(cfg)
     T = int(cfg["T"])
+    cfg_sampler, _ = parse_time_order(str(cfg.get("time_order")))
+    sampler = str(sampler).lower()
+    if sampler not in {"ddpm", "ddim"}:
+        raise ValueError(f"sampler must be 'ddpm' or 'ddim', got {sampler!r}")
+    if sampler != cfg_sampler:
+        raise ValueError(
+            f"--sampler {sampler!r} does not match scheduler time_order sampler {cfg_sampler!r}"
+        )
     shared_zones: List[Dict[str, Any]] = cfg["shared_zones"]
 
     # --- Build runtime cache scheduler (step_index space) ---
@@ -716,6 +738,7 @@ def run_stage2_refine_dit(
                 raw_t_to_step_idx=raw_t_to_step_idx,
                 callback=cb,
                 cache_enabled=False,
+                T=T,
             ) as baseline_ctx:
                 _run_single_sampling_pass(
                     model=model,
@@ -724,6 +747,8 @@ def run_stage2_refine_dit(
                     y=y,
                     cfg_scale=cfg_scale,
                     device=device,
+                    sampler=sampler,
+                    eta=eta,
                 )
             LOGGER.info(
                 "%s | baseline_stats=%s",
@@ -740,6 +765,7 @@ def run_stage2_refine_dit(
                 raw_t_to_step_idx=raw_t_to_step_idx,
                 callback=cb,
                 cache_enabled=True,
+                T=T,
             ) as cache_ctx:
                 _run_single_sampling_pass(
                     model=model,
@@ -748,6 +774,8 @@ def run_stage2_refine_dit(
                     y=y,
                     cfg_scale=cfg_scale,
                     device=device,
+                    sampler=sampler,
+                    eta=eta,
                 )
             LOGGER.info(
                 "%s | cache_stats=%s",
@@ -784,15 +812,21 @@ def run_stage2_refine_dit(
     )
     diagnostics["cache_scheduler_runtime_overrides"] = dict(override_meta)
     diagnostics["scheduler_config_path"] = str(Path(scheduler_config_path).resolve())
+    diagnostics["sampler"] = sampler
+    if sampler == "ddim":
+        diagnostics["eta"] = float(eta)
     diagnostics["stage2_threshold_meta"] = threshold_meta_diag
     diagnostics["eval_config"] = {
         "eval_num_images": int(total_eval_images),
         "eval_chunk_size": int(chunk_size),
         "seed": int(seed),
         "cfg_scale": float(cfg_scale),
+        "sampler": sampler,
         "fixed_class_labels": [FIXED_EVAL_CLASSES[i % num_classes] for i in range(total_eval_images)],
         "model_name": str(model_name),
     }
+    if sampler == "ddim":
+        diagnostics["eval_config"]["eta"] = float(eta)
 
     per_block_step = diagnostics["per_block_step_error"]
     per_block_zone = diagnostics["per_block_zone_error"]
@@ -805,6 +839,7 @@ def run_stage2_refine_dit(
         "zone_l1_threshold": float(zone_l1_threshold),
         "peak_l1_threshold": float(peak_l1_threshold),
         "seed": int(seed),
+        "sampler": sampler,
         "threshold_mode": threshold_mode,
         "threshold_config_path": str(Path(threshold_config_path).resolve())
         if threshold_config_path
@@ -814,6 +849,8 @@ def run_stage2_refine_dit(
             "force_full_runtime_blocks_effective": list(blocks_eff),
         },
     }
+    if sampler == "ddim":
+        refined["stage2_meta"]["eta"] = float(eta)
 
     k_touch: List[Dict[str, Any]] = []
     blocks = sorted(refined["blocks"], key=lambda b: int(b["id"]))
@@ -1060,6 +1097,8 @@ def main() -> None:
     g_model.add_argument("--num-classes", type=int, default=DEFAULT_NUM_CLASSES)
     g_model.add_argument("--cfg-scale", type=float, default=DEFAULT_CFG_SCALE)
     g_model.add_argument("--num-sampling-steps", type=int, default=DEFAULT_NUM_SAMPLING_STEPS)
+    g_model.add_argument("--sampler", choices=["ddpm", "ddim"], default="ddpm")
+    g_model.add_argument("--eta", type=float, default=0.0, help="DDIM eta; only used with --sampler ddim.")
     g_model.add_argument("--ckpt", type=str, default=None)
 
     g_eval = p.add_argument_group("Diagnostics eval")
@@ -1109,6 +1148,8 @@ def main() -> None:
         num_classes=int(args.num_classes),
         cfg_scale=float(args.cfg_scale),
         num_sampling_steps=int(args.num_sampling_steps),
+        sampler=str(args.sampler),
+        eta=float(args.eta),
         ckpt=args.ckpt,
         eval_num_images=int(args.eval_num_images),
         eval_chunk_size=int(args.eval_chunk_size),

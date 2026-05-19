@@ -22,10 +22,10 @@ import numpy as np
 from dit_s3cache.stage2.stage2_scheduler_adapter_dit import (
     DIT_NUM_BLOCKS,
     EXPECTED_NUM_BLOCKS,
-    TIME_ORDER_EXPECTED,
     load_stage1_scheduler_config,
     stage1_block_to_runtime_block,
     validate_stage1_scheduler_config,
+    validate_time_order,
 )
 
 
@@ -61,14 +61,10 @@ def stage2_json_to_dit_cache_scheduler(
     """
     if not isinstance(cfg, dict):
         raise TypeError("cfg must be a dict")
-    if cfg.get("time_order") != TIME_ORDER_EXPECTED:
-        raise ValueError(
-            f"time_order must be {TIME_ORDER_EXPECTED!r}, got {cfg.get('time_order')!r}"
-        )
-
     T = int(cfg["T"])
     if T < 1:
         raise ValueError(f"T must be >= 1, got {T}")
+    validate_time_order(str(cfg.get("time_order")), T)
 
     if len(sampling_timesteps) != T:
         raise ValueError(
