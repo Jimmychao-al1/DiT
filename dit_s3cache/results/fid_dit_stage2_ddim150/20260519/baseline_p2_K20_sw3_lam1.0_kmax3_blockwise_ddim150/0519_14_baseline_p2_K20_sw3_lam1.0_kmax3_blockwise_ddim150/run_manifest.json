@@ -1,9 +1,9 @@
 {
-  "run_id": "20260519T105637__baseline_p2_K20_sw3_lam1.0_kmax3_blockwise_ddim150",
-  "status": "running",
-  "start_time": "2026-05-19T10:56:37",
-  "end_time": null,
-  "duration_sec": null,
+  "run_id": "20260519T141524__baseline_p2_K20_sw3_lam1.0_kmax3_blockwise_ddim150",
+  "status": "success",
+  "start_time": "2026-05-19T14:15:24",
+  "end_time": "2026-05-19T20:43:10",
+  "duration_sec": 23266.62,
   "scheduler_name": "baseline_p2_K20_sw3_lam1.0_kmax3_blockwise_ddim150",
   "scheduler_config_path": "/home/jimmy/DiT/dit_s3cache/stage2/stage2_output_ddim150/src_baseline_p2_K20_sw3_lam1.0_kmax3/02_refined_blockwise/stage2_refined_scheduler_config.json",
   "num_images": 50000,
@@ -35,8 +35,9 @@
     "baseline_p2_K20_sw3_lam1.0_kmax3_blockwise_ddim150",
     "dit_s3cache/stage2/stage2_output_ddim150/src_baseline_p2_K20_sw3_lam1.0_kmax3/02_refined_blockwise/stage2_refined_scheduler_config.json"
   ],
-  "git_commit": "b1b932b04907da693c4ad8a20be818ce42dd53b8",
+  "git_commit": "93f3fd29405c946aa0662713c8d89629b938de80",
   "hostname": "newslab-server133",
-  "output_dir": "/home/jimmy/DiT/dit_s3cache/results/fid_dit_stage2_ddim150/20260519/baseline_p2_K20_sw3_lam1.0_kmax3_blockwise_ddim150/0519_10_baseline_p2_K20_sw3_lam1.0_kmax3_blockwise_ddim150",
-  "eta": 0.0
+  "output_dir": "/home/jimmy/DiT/dit_s3cache/results/fid_dit_stage2_ddim150/20260519/baseline_p2_K20_sw3_lam1.0_kmax3_blockwise_ddim150/0519_14_baseline_p2_K20_sw3_lam1.0_kmax3_blockwise_ddim150",
+  "eta": 0.0,
+  "fid_score": 2.381054732942971
 }
