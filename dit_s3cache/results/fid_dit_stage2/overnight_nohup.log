@@ -1,27 +1,0 @@
-nohup: ignoring input
-================================================================
-DiT start_run OVERNIGHT | conda=ldm | log=/home/jimmy/DiT/dit_s3cache/results/fid_dit_stage2/overnight_fid_20260517_022859.log
-Started: 2026-05-17T02:28:59+08:00
-================================================================
-Jobs queued: 5 (skip: dit_baseline_full_compute, baseline_p2 kmax4)
-  - baseline_p1_K20_sw5_lam1.0_kmax4_blockwise
-  - baseline_p3_K25_sw5_lam1.0_kmax4_blockwise
-  - baseline_p1_K20_sw5_lam1.0_kmax3_blockwise
-  - baseline_p2_K20_sw3_lam1.0_kmax3_blockwise
-  - baseline_p3_K25_sw5_lam1.0_kmax3_blockwise
-2026-05-17 02:29:01,919 [INFO] results_root=/home/jimmy/DiT/dit_s3cache/results/fid_dit_stage2 runs_index=/home/jimmy/DiT/dit_s3cache/results/fid_dit_stage2/runs_index.jsonl jobs=5
-Cannot initialize model with low cpu memory usage because `accelerate` was not found in the environment. Defaulting to `low_cpu_mem_usage=False`. It is strongly recommended to install `accelerate` for faster and less memory-intense model loading. You can do so with: 
-```
-pip install accelerate
-```
-.
-/home/jimmy/anaconda3/envs/ldm/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py:205: UserWarning: The `local_dir_use_symlinks` argument is deprecated and ignored in `hf_hub_download`. Downloading to a local directory does not use symlinks anymore.
-  warnings.warn(
-2026-05-17 02:29:06,187 [INFO] [Stage1] HTTP Request: HEAD https://huggingface.co/stabilityai/sd-vae-ft-mse/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
-Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
-2026-05-17 02:29:06,188 [WARNING] [Stage1] Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
-2026-05-17 02:29:06,192 [INFO] [Stage1] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/stabilityai/sd-vae-ft-mse/31f26fdeee1355a5c34592e401dd41e45d25a493/config.json "HTTP/1.1 200 OK"
-2026-05-17 02:29:06,389 [INFO] [Stage1] HTTP Request: HEAD https://huggingface.co/stabilityai/sd-vae-ft-mse/resolve/31f26fdeee1355a5c34592e401dd41e45d25a493/diffusion_pytorch_model.safetensors.index.json "HTTP/1.1 404 Not Found"
-2026-05-17 02:29:06,437 [INFO] sampling_timesteps len=250 first=999 last=0
-2026-05-17 02:29:06,476 [INFO] Stage2 cache enabled | full_compute_ratio(disk)=0.421143
-Generating [baseline_p1_K20_sw5_lam1.0_kmax4_blockwise]:   0%|          | 0/157 [00:00<?, ?it/s]Generating [baseline_p1_K20_sw5_lam1.0_kmax4_blockwise]:   1%|          | 1/157 [00:23<1:02:04, 23.87s/it]Generating [baseline_p1_K20_sw5_lam1.0_kmax4_blockwise]:   1%|▏         | 2/157 [00:47<1:01:41, 23.88s/it]Generating [baseline_p1_K20_sw5_lam1.0_kmax4_blockwise]:   2%|▏         | 3/157 [01:11<1:01:25, 23.93s/it]Terminated

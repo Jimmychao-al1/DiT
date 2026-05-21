@@ -1,4 +1,0 @@
-2026-05-17 01:05:23,321 [INFO] sampling_timesteps len=250 first=999 last=0
-2026-05-17 01:05:23,326 [INFO] Stage2 cache enabled | full_compute_ratio(disk)=0.289857
-2026-05-17 01:51:15,381 [INFO] Removed scratch NPZ: /home/jimmy/DiT/dit_s3cache/results/fid_dit_stage2/20260517/baseline_p2_K20_sw3_lam1.0_blockwise/0517_01_baseline_p2_K20_sw3_lam1.0_blockwise/_scratch_samples.npz
-2026-05-17 01:51:15,385 [INFO] [done] baseline_p2_K20_sw3_lam1.0_blockwise | FID@5000=11.358992469019483 | out=/home/jimmy/DiT/dit_s3cache/results/fid_dit_stage2/20260517/baseline_p2_K20_sw3_lam1.0_blockwise/0517_01_baseline_p2_K20_sw3_lam1.0_blockwise
