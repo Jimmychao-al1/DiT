@@ -32,6 +32,7 @@ SCHEDULER_PATH = (
 
 T_EXPECTED = 150
 BYTES_PER_ELEMENT = 4
+CACHE_OUTPUT_BYTES_PER_ELEMENT = 4
 NUM_BLOCKS = 28
 NUM_TOKENS = 256
 HIDDEN_DIM = 1152
@@ -77,6 +78,7 @@ class BlockRecord:
     dm_cached: int
     cim_block_max_dim: int
     cim_block_max_array_size: int
+    s3_cache_output_bytes: int
 
 
 def format_bytes(n: int | float) -> str:
@@ -97,6 +99,15 @@ def byte_summary_fields(prefix: str, n: int | float) -> dict[str, Any]:
         f"{prefix}_KB": n / (1 << 10),
         f"{prefix}_MB": n / (1 << 20),
         f"{prefix}_GB": n / (1 << 30),
+    }
+
+
+def count_summary_fields(prefix: str, n: int | float, unit: str) -> dict[str, Any]:
+    n = float(n)
+    return {
+        f"{prefix}_readable": f"{n:,.0f} {unit}",
+        f"{prefix}_K": n / 1_000,
+        f"{prefix}_M": n / 1_000_000,
     }
 
 
@@ -249,6 +260,12 @@ def analyze() -> tuple[list[BlockRecord], list[LayerRecord], dict[str, Any]]:
                 dm_cached=dm_exec * exec_cached,
                 cim_block_max_dim=max(r.cim_max_dim for r in recs),
                 cim_block_max_array_size=max(r.cim_array_size for r in recs),
+                s3_cache_output_bytes=(
+                    BATCH_SIZE
+                    * NUM_TOKENS
+                    * HIDDEN_DIM
+                    * CACHE_OUTPUT_BYTES_PER_ELEMENT
+                ),
             )
         )
 
@@ -297,6 +314,9 @@ def make_summary(t: int, blocks: list[BlockRecord], layers: list[LayerRecord]) -
         "num_layers": len(layers),
         "num_quantized_layers": 0,
         "bytes_per_element": BYTES_PER_ELEMENT,
+        "weight_bytes_per_element": BYTES_PER_ELEMENT,
+        "activation_bytes_per_element": BYTES_PER_ELEMENT,
+        "cache_output_bytes_per_element": CACHE_OUTPUT_BYTES_PER_ELEMENT,
         "baseline_bytes": baseline,
         "cached_bytes": cached,
         "reduction_ratio": (baseline - cached) / baseline,
@@ -304,11 +324,20 @@ def make_summary(t: int, blocks: list[BlockRecord], layers: list[LayerRecord]) -
         "cached_bytes_per_step": cached_per_step,
         "global_cim_max_dim": max(r.cim_max_dim for r in layers),
         "global_cim_max_array_size": max(r.cim_array_size for r in layers),
+        "s3_cache_storage_bytes": sum(b.s3_cache_output_bytes for b in blocks),
     }
     summary.update(byte_summary_fields("baseline", baseline))
     summary.update(byte_summary_fields("cached", cached))
     summary.update(byte_summary_fields("baseline_per_step", baseline_per_step))
     summary.update(byte_summary_fields("cached_per_step", cached_per_step))
+    summary.update(
+        count_summary_fields(
+            "global_cim_max_array_size",
+            summary["global_cim_max_array_size"],
+            "cells",
+        )
+    )
+    summary.update(byte_summary_fields("s3_cache_storage", summary["s3_cache_storage_bytes"]))
     return summary
 
 
@@ -331,6 +360,7 @@ def save_outputs(output_dir: Path, blocks: list[BlockRecord], layers: list[Layer
                 "spatial_w": b.spatial_w,
                 "input_channels": b.input_channels,
                 "output_channels": b.output_channels,
+                "s3_cache_output_bytes": b.s3_cache_output_bytes,
             }
             for b in blocks
         ],
