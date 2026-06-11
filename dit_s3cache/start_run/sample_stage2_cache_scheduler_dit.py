@@ -15,6 +15,8 @@ from __future__ import annotations
 
 import argparse
 import copy
+from collections import defaultdict
+import importlib
 import json
 import logging
 import math
@@ -25,6 +27,7 @@ import sys
 import traceback
 from datetime import datetime
 from pathlib import Path
+from types import SimpleNamespace
 from typing import Any, Dict, List, Optional, Set
 
 _REPO_ROOT = Path(__file__).resolve().parents[2]
@@ -35,6 +38,8 @@ from dit_s3cache.fid.fid_cache_sensitivity import (
     generate_and_compute_fid,
     load_everything,
 )
+import torch
+from diffusers.models import AutoencoderKL
 from dit_s3cache.stage2.stage2_scheduler_adapter_dit import (
     EXPECTED_NUM_BLOCKS,
     load_stage1_scheduler_config,
@@ -51,6 +56,93 @@ def _resolve_repo_path(path_str: str) -> Path:
     if p.is_absolute():
         return p
     return (_REPO_ROOT / p).resolve()
+
+
+def _prepend_qdit_root(qdit_root: Path) -> None:
+    root = str(qdit_root.resolve())
+    if root in sys.path:
+        sys.path.remove(root)
+    sys.path.insert(0, root)
+
+
+def _import_qdit_modules(qdit_root: Path) -> tuple[Any, Any, Any]:
+    """Import Q-DiT modules safely even if FP `models` is already imported."""
+    _prepend_qdit_root(qdit_root)
+    saved_models = sys.modules.pop("models", None)
+    saved_models_models = sys.modules.pop("models.models", None)
+    try:
+        diffusion_mod = importlib.import_module("diffusion")
+        models_mod = importlib.import_module("models.models")
+        modelutils_mod = importlib.import_module("qdit.modelutils")
+        return diffusion_mod, models_mod, modelutils_mod
+    finally:
+        sys.modules.pop("models", None)
+        sys.modules.pop("models.models", None)
+        if saved_models is not None:
+            sys.modules["models"] = saved_models
+        if saved_models_models is not None:
+            sys.modules["models.models"] = saved_models_models
+
+
+def _build_qdit_args(common: argparse.Namespace, n_blocks: int) -> SimpleNamespace:
+    quant_args = SimpleNamespace(
+        wbits=common.wbits,
+        abits=common.abits,
+        exponential=False,
+        quantize_bmm_input=False,
+        a_sym=False,
+        w_sym=False,
+        static=False,
+        weight_group_size=common.weight_group_size,
+        weight_channel_group=1,
+        act_group_size=common.act_group_size,
+        tiling=0,
+        quant_method="max",
+        a_clip_ratio=1.0,
+        w_clip_ratio=1.0,
+        kv_clip_ratio=1.0,
+        quant_type="int",
+    )
+    quant_args.weight_group_size = [quant_args.weight_group_size] * n_blocks
+    quant_args.act_group_size = [quant_args.act_group_size] * n_blocks
+    return quant_args
+
+
+def load_everything_qdit_for_run(
+    args: argparse.Namespace,
+    device: str,
+    common: argparse.Namespace,
+) -> tuple[torch.nn.Module, Any, AutoencoderKL]:
+    qdit_ckpt = Path(str(common.qdit_ckpt)).expanduser().resolve()
+    if not qdit_ckpt.is_file():
+        raise FileNotFoundError(f"Q-DiT checkpoint not found: {qdit_ckpt}")
+
+    diffusion_mod, models_mod, modelutils_mod = _import_qdit_modules(Path(str(common.qdit_root)))
+    create_diffusion = diffusion_mod.create_diffusion
+    qdit_models = models_mod.DiT_models
+    add_act_quant_wrapper = modelutils_mod.add_act_quant_wrapper
+
+    latent_size = args.image_size // 8
+    model = qdit_models[args.model](
+        input_size=latent_size,
+        num_classes=args.num_classes,
+    ).to(device)
+    qargs = _build_qdit_args(common, n_blocks=len(model.blocks))
+    model = add_act_quant_wrapper(
+        model,
+        device=device,
+        args=qargs,
+        scales=defaultdict(lambda: None),
+    )
+    state_dict = torch.load(qdit_ckpt, map_location=device)
+    model.load_state_dict(state_dict, strict=True)
+    model = model.to(device)
+    model.eval()
+
+    diffusion = create_diffusion(str(args.num_sampling_steps))
+    vae = AutoencoderKL.from_pretrained(f"stabilityai/sd-vae-ft-{args.vae}").to(device)
+    vae.eval()
+    return model, diffusion, vae
 
 
 def _sanitize_name(s: str) -> str:
@@ -429,7 +521,11 @@ def run_one_job(
         torch_mod.set_grad_enabled(False)
 
         fid_args = build_fid_args_for_run(run_dir, common)
-        model, diffusion, vae = load_everything(fid_args, device)
+        if common.qdit_ckpt:
+            log.info("Loading Q-DiT quantized model for FID cache run: %s", common.qdit_ckpt)
+            model, diffusion, vae = load_everything_qdit_for_run(fid_args, device, common)
+        else:
+            model, diffusion, vae = load_everything(fid_args, device)
 
         sampling_timesteps = list(reversed(diffusion.timestep_map))[
             : int(common.num_sampling_steps)
@@ -698,6 +794,22 @@ def main() -> None:
     p.add_argument("--seed", type=int, default=0)
     p.add_argument("--vae", type=str, choices=["ema", "mse"], default="mse")
     p.add_argument("--ckpt", type=str, default=None)
+    p.add_argument(
+        "--qdit-ckpt",
+        type=str,
+        default=None,
+        help="Optional Q-DiT W8A8 state_dict path. If set, load quantized Q-DiT instead of FP DiT ckpt.",
+    )
+    p.add_argument(
+        "--qdit-root",
+        type=str,
+        default="/home/jimmy/Q-DiT",
+        help="Q-DiT repository root for imports.",
+    )
+    p.add_argument("--wbits", type=int, default=8)
+    p.add_argument("--abits", type=int, default=8)
+    p.add_argument("--weight-group-size", type=int, default=128)
+    p.add_argument("--act-group-size", type=int, default=128)
     p.add_argument("--device", type=str, default=None)
     p.add_argument("--tf32", action=argparse.BooleanOptionalAction, default=True)
     p.add_argument("--progress", action=argparse.BooleanOptionalAction, default=True)

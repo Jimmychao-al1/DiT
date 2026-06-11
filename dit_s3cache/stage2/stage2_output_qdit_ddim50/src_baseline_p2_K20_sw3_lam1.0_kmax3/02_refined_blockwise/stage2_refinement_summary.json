@@ -1,0 +1,1286 @@
+{
+  "threshold_mode": "blockwise_quantile",
+  "global_thresholds": {
+    "zone_l1": 0.02,
+    "peak_l1": 0.08
+  },
+  "per_block_thresholds": [
+    {
+      "block_id": 0,
+      "canonical_runtime_block_id": 0,
+      "canonical_name": "block_0",
+      "runtime_name": "block_0",
+      "zone_l1_threshold": 0.020496721437666565,
+      "peak_l1_threshold": 0.026645737868966537
+    },
+    {
+      "block_id": 1,
+      "canonical_runtime_block_id": 1,
+      "canonical_name": "block_1",
+      "runtime_name": "block_1",
+      "zone_l1_threshold": 0.052283549681305885,
+      "peak_l1_threshold": 0.06796861458569765
+    },
+    {
+      "block_id": 2,
+      "canonical_runtime_block_id": 2,
+      "canonical_name": "block_2",
+      "runtime_name": "block_2",
+      "zone_l1_threshold": 0.10579245211556554,
+      "peak_l1_threshold": 0.1375301877502352
+    },
+    {
+      "block_id": 3,
+      "canonical_runtime_block_id": 3,
+      "canonical_name": "block_3",
+      "runtime_name": "block_3",
+      "zone_l1_threshold": 0.09394431905820966,
+      "peak_l1_threshold": 0.12212761477567256
+    },
+    {
+      "block_id": 4,
+      "canonical_runtime_block_id": 4,
+      "canonical_name": "block_4",
+      "runtime_name": "block_4",
+      "zone_l1_threshold": 0.09479414392262697,
+      "peak_l1_threshold": 0.12323238709941507
+    },
+    {
+      "block_id": 5,
+      "canonical_runtime_block_id": 5,
+      "canonical_name": "block_5",
+      "runtime_name": "block_5",
+      "zone_l1_threshold": 0.17587290843948722,
+      "peak_l1_threshold": 0.22863478097133338
+    },
+    {
+      "block_id": 6,
+      "canonical_runtime_block_id": 6,
+      "canonical_name": "block_6",
+      "runtime_name": "block_6",
+      "zone_l1_threshold": 0.26382654812186956,
+      "peak_l1_threshold": 0.3429745125584304
+    },
+    {
+      "block_id": 7,
+      "canonical_runtime_block_id": 7,
+      "canonical_name": "block_7",
+      "runtime_name": "block_7",
+      "zone_l1_threshold": 0.21251705940812826,
+      "peak_l1_threshold": 0.27627217723056674
+    },
+    {
+      "block_id": 8,
+      "canonical_runtime_block_id": 8,
+      "canonical_name": "block_8",
+      "runtime_name": "block_8",
+      "zone_l1_threshold": 0.2771450160071254,
+      "peak_l1_threshold": 0.360288520809263
+    },
+    {
+      "block_id": 9,
+      "canonical_runtime_block_id": 9,
+      "canonical_name": "block_9",
+      "runtime_name": "block_9",
+      "zone_l1_threshold": 0.3460215162485838,
+      "peak_l1_threshold": 0.4498279711231589
+    },
+    {
+      "block_id": 10,
+      "canonical_runtime_block_id": 10,
+      "canonical_name": "block_10",
+      "runtime_name": "block_10",
+      "zone_l1_threshold": 0.3768674684688449,
+      "peak_l1_threshold": 0.4899277090094984
+    },
+    {
+      "block_id": 11,
+      "canonical_runtime_block_id": 11,
+      "canonical_name": "block_11",
+      "runtime_name": "block_11",
+      "zone_l1_threshold": 0.48310128413140774,
+      "peak_l1_threshold": 0.6280316693708301
+    },
+    {
+      "block_id": 12,
+      "canonical_runtime_block_id": 12,
+      "canonical_name": "block_12",
+      "runtime_name": "block_12",
+      "zone_l1_threshold": 0.6116920821368694,
+      "peak_l1_threshold": 0.7951997067779303
+    },
+    {
+      "block_id": 13,
+      "canonical_runtime_block_id": 13,
+      "canonical_name": "block_13",
+      "runtime_name": "block_13",
+      "zone_l1_threshold": 0.7999105174094439,
+      "peak_l1_threshold": 1.039883672632277
+    },
+    {
+      "block_id": 14,
+      "canonical_runtime_block_id": 14,
+      "canonical_name": "block_14",
+      "runtime_name": "block_14",
+      "zone_l1_threshold": 0.9859513901174068,
+      "peak_l1_threshold": 1.281736807152629
+    },
+    {
+      "block_id": 15,
+      "canonical_runtime_block_id": 15,
+      "canonical_name": "block_15",
+      "runtime_name": "block_15",
+      "zone_l1_threshold": 1.1627486757934093,
+      "peak_l1_threshold": 1.5115732785314322
+    },
+    {
+      "block_id": 16,
+      "canonical_runtime_block_id": 16,
+      "canonical_name": "block_16",
+      "runtime_name": "block_16",
+      "zone_l1_threshold": 1.2694314159452915,
+      "peak_l1_threshold": 1.650260840728879
+    },
+    {
+      "block_id": 17,
+      "canonical_runtime_block_id": 17,
+      "canonical_name": "block_17",
+      "runtime_name": "block_17",
+      "zone_l1_threshold": 1.3881180547177792,
+      "peak_l1_threshold": 1.804553471133113
+    },
+    {
+      "block_id": 18,
+      "canonical_runtime_block_id": 18,
+      "canonical_name": "block_18",
+      "runtime_name": "block_18",
+      "zone_l1_threshold": 1.7343201786279678,
+      "peak_l1_threshold": 2.254616232216358
+    },
+    {
+      "block_id": 19,
+      "canonical_runtime_block_id": 19,
+      "canonical_name": "block_19",
+      "runtime_name": "block_19",
+      "zone_l1_threshold": 2.3010748773813248,
+      "peak_l1_threshold": 2.9913973405957224
+    },
+    {
+      "block_id": 20,
+      "canonical_runtime_block_id": 20,
+      "canonical_name": "block_20",
+      "runtime_name": "block_20",
+      "zone_l1_threshold": 2.1385249495506287,
+      "peak_l1_threshold": 2.7800824344158173
+    },
+    {
+      "block_id": 21,
+      "canonical_runtime_block_id": 21,
+      "canonical_name": "block_21",
+      "runtime_name": "block_21",
+      "zone_l1_threshold": 2.3322230502963066,
+      "peak_l1_threshold": 3.0318899653851985
+    },
+    {
+      "block_id": 22,
+      "canonical_runtime_block_id": 22,
+      "canonical_name": "block_22",
+      "runtime_name": "block_22",
+      "zone_l1_threshold": 2.766784645617008,
+      "peak_l1_threshold": 3.5968200393021106
+    },
+    {
+      "block_id": 23,
+      "canonical_runtime_block_id": 23,
+      "canonical_name": "block_23",
+      "runtime_name": "block_23",
+      "zone_l1_threshold": 4.5022614896297455,
+      "peak_l1_threshold": 5.852939936518669
+    },
+    {
+      "block_id": 24,
+      "canonical_runtime_block_id": 24,
+      "canonical_name": "block_24",
+      "runtime_name": "block_24",
+      "zone_l1_threshold": 5.968842536211014,
+      "peak_l1_threshold": 7.759495297074318
+    },
+    {
+      "block_id": 25,
+      "canonical_runtime_block_id": 25,
+      "canonical_name": "block_25",
+      "runtime_name": "block_25",
+      "zone_l1_threshold": 7.121550887823105,
+      "peak_l1_threshold": 9.258016154170036
+    },
+    {
+      "block_id": 26,
+      "canonical_runtime_block_id": 26,
+      "canonical_name": "block_26",
+      "runtime_name": "block_26",
+      "zone_l1_threshold": 7.6201814115047455,
+      "peak_l1_threshold": 9.906235834956169
+    },
+    {
+      "block_id": 27,
+      "canonical_runtime_block_id": 27,
+      "canonical_name": "block_27",
+      "runtime_name": "block_27",
+      "zone_l1_threshold": 1.9486172273755074,
+      "peak_l1_threshold": 2.5332023955881597
+    }
+  ],
+  "zone_k_adjustments": [
+    {
+      "block_id": 0,
+      "scheduler_local_block_id": 0,
+      "runtime_name": "block_0",
+      "canonical_runtime_block_id": 0,
+      "zone_id": 10,
+      "k_before": 2,
+      "k_after": 1,
+      "mean_l1": 0.041851387242786586,
+      "threshold_mode": "blockwise_quantile",
+      "zone_l1_threshold_used": 0.020496721437666565
+    },
+    {
+      "block_id": 1,
+      "scheduler_local_block_id": 1,
+      "runtime_name": "block_1",
+      "canonical_runtime_block_id": 1,
+      "zone_id": 10,
+      "k_before": 2,
+      "k_after": 1,
+      "mean_l1": 0.1292263090144843,
+      "threshold_mode": "blockwise_quantile",
+      "zone_l1_threshold_used": 0.052283549681305885
+    },
+    {
+      "block_id": 2,
+      "scheduler_local_block_id": 2,
+      "runtime_name": "block_2",
+      "canonical_runtime_block_id": 2,
+      "zone_id": 10,
+      "k_before": 2,
+      "k_after": 1,
+      "mean_l1": 0.33566715009510517,
+      "threshold_mode": "blockwise_quantile",
+      "zone_l1_threshold_used": 0.10579245211556554
+    },
+    {
+      "block_id": 3,
+      "scheduler_local_block_id": 3,
+      "runtime_name": "block_3",
+      "canonical_runtime_block_id": 3,
+      "zone_id": 10,
+      "k_before": 2,
+      "k_after": 1,
+      "mean_l1": 0.26684682024642825,
+      "threshold_mode": "blockwise_quantile",
+      "zone_l1_threshold_used": 0.09394431905820966
+    },
+    {
+      "block_id": 4,
+      "scheduler_local_block_id": 4,
+      "runtime_name": "block_4",
+      "canonical_runtime_block_id": 4,
+      "zone_id": 10,
+      "k_before": 2,
+      "k_after": 1,
+      "mean_l1": 0.21393516240641475,
+      "threshold_mode": "blockwise_quantile",
+      "zone_l1_threshold_used": 0.09479414392262697
+    },
+    {
+      "block_id": 5,
+      "scheduler_local_block_id": 5,
+      "runtime_name": "block_5",
+      "canonical_runtime_block_id": 5,
+      "zone_id": 10,
+      "k_before": 2,
+      "k_after": 1,
+      "mean_l1": 0.3859502272680402,
+      "threshold_mode": "blockwise_quantile",
+      "zone_l1_threshold_used": 0.17587290843948722
+    },
+    {
+      "block_id": 6,
+      "scheduler_local_block_id": 6,
+      "runtime_name": "block_6",
+      "canonical_runtime_block_id": 6,
+      "zone_id": 10,
+      "k_before": 2,
+      "k_after": 1,
+      "mean_l1": 0.5643045753240585,
+      "threshold_mode": "blockwise_quantile",
+      "zone_l1_threshold_used": 0.26382654812186956
+    },
+    {
+      "block_id": 7,
+      "scheduler_local_block_id": 7,
+      "runtime_name": "block_7",
+      "canonical_runtime_block_id": 7,
+      "zone_id": 10,
+      "k_before": 2,
+      "k_after": 1,
+      "mean_l1": 0.43082452565431595,
+      "threshold_mode": "blockwise_quantile",
+      "zone_l1_threshold_used": 0.21251705940812826
+    },
+    {
+      "block_id": 8,
+      "scheduler_local_block_id": 8,
+      "runtime_name": "block_8",
+      "canonical_runtime_block_id": 8,
+      "zone_id": 10,
+      "k_before": 2,
+      "k_after": 1,
+      "mean_l1": 0.5108665218576789,
+      "threshold_mode": "blockwise_quantile",
+      "zone_l1_threshold_used": 0.2771450160071254
+    },
+    {
+      "block_id": 9,
+      "scheduler_local_block_id": 9,
+      "runtime_name": "block_9",
+      "canonical_runtime_block_id": 9,
+      "zone_id": 10,
+      "k_before": 2,
+      "k_after": 1,
+      "mean_l1": 0.5738587882369757,
+      "threshold_mode": "blockwise_quantile",
+      "zone_l1_threshold_used": 0.3460215162485838
+    },
+    {
+      "block_id": 10,
+      "scheduler_local_block_id": 10,
+      "runtime_name": "block_10",
+      "canonical_runtime_block_id": 10,
+      "zone_id": 10,
+      "k_before": 2,
+      "k_after": 1,
+      "mean_l1": 0.5919088069349527,
+      "threshold_mode": "blockwise_quantile",
+      "zone_l1_threshold_used": 0.3768674684688449
+    },
+    {
+      "block_id": 11,
+      "scheduler_local_block_id": 11,
+      "runtime_name": "block_11",
+      "canonical_runtime_block_id": 11,
+      "zone_id": 10,
+      "k_before": 2,
+      "k_after": 1,
+      "mean_l1": 0.7139335870742798,
+      "threshold_mode": "blockwise_quantile",
+      "zone_l1_threshold_used": 0.48310128413140774
+    },
+    {
+      "block_id": 12,
+      "scheduler_local_block_id": 12,
+      "runtime_name": "block_12",
+      "canonical_runtime_block_id": 12,
+      "zone_id": 10,
+      "k_before": 2,
+      "k_after": 1,
+      "mean_l1": 0.9114800319075584,
+      "threshold_mode": "blockwise_quantile",
+      "zone_l1_threshold_used": 0.6116920821368694
+    },
+    {
+      "block_id": 13,
+      "scheduler_local_block_id": 13,
+      "runtime_name": "block_13",
+      "canonical_runtime_block_id": 13,
+      "zone_id": 10,
+      "k_before": 2,
+      "k_after": 1,
+      "mean_l1": 1.1421114094555378,
+      "threshold_mode": "blockwise_quantile",
+      "zone_l1_threshold_used": 0.7999105174094439
+    },
+    {
+      "block_id": 14,
+      "scheduler_local_block_id": 14,
+      "runtime_name": "block_14",
+      "canonical_runtime_block_id": 14,
+      "zone_id": 10,
+      "k_before": 2,
+      "k_after": 1,
+      "mean_l1": 1.2891264781355858,
+      "threshold_mode": "blockwise_quantile",
+      "zone_l1_threshold_used": 0.9859513901174068
+    },
+    {
+      "block_id": 15,
+      "scheduler_local_block_id": 15,
+      "runtime_name": "block_15",
+      "canonical_runtime_block_id": 15,
+      "zone_id": 10,
+      "k_before": 2,
+      "k_after": 1,
+      "mean_l1": 1.5728707313537598,
+      "threshold_mode": "blockwise_quantile",
+      "zone_l1_threshold_used": 1.1627486757934093
+    },
+    {
+      "block_id": 16,
+      "scheduler_local_block_id": 16,
+      "runtime_name": "block_16",
+      "canonical_runtime_block_id": 16,
+      "zone_id": 10,
+      "k_before": 2,
+      "k_after": 1,
+      "mean_l1": 1.7453670389950275,
+      "threshold_mode": "blockwise_quantile",
+      "zone_l1_threshold_used": 1.2694314159452915
+    },
+    {
+      "block_id": 17,
+      "scheduler_local_block_id": 17,
+      "runtime_name": "block_17",
+      "canonical_runtime_block_id": 17,
+      "zone_id": 10,
+      "k_before": 2,
+      "k_after": 1,
+      "mean_l1": 1.9009931795299053,
+      "threshold_mode": "blockwise_quantile",
+      "zone_l1_threshold_used": 1.3881180547177792
+    },
+    {
+      "block_id": 18,
+      "scheduler_local_block_id": 18,
+      "runtime_name": "block_18",
+      "canonical_runtime_block_id": 18,
+      "zone_id": 10,
+      "k_before": 2,
+      "k_after": 1,
+      "mean_l1": 2.579438455402851,
+      "threshold_mode": "blockwise_quantile",
+      "zone_l1_threshold_used": 1.7343201786279678
+    },
+    {
+      "block_id": 19,
+      "scheduler_local_block_id": 19,
+      "runtime_name": "block_19",
+      "canonical_runtime_block_id": 19,
+      "zone_id": 10,
+      "k_before": 2,
+      "k_after": 1,
+      "mean_l1": 3.487703323364258,
+      "threshold_mode": "blockwise_quantile",
+      "zone_l1_threshold_used": 2.3010748773813248
+    },
+    {
+      "block_id": 20,
+      "scheduler_local_block_id": 20,
+      "runtime_name": "block_20",
+      "canonical_runtime_block_id": 20,
+      "zone_id": 10,
+      "k_before": 2,
+      "k_after": 1,
+      "mean_l1": 3.1925851330161095,
+      "threshold_mode": "blockwise_quantile",
+      "zone_l1_threshold_used": 2.1385249495506287
+    },
+    {
+      "block_id": 21,
+      "scheduler_local_block_id": 21,
+      "runtime_name": "block_21",
+      "canonical_runtime_block_id": 21,
+      "zone_id": 10,
+      "k_before": 2,
+      "k_after": 1,
+      "mean_l1": 3.574031874537468,
+      "threshold_mode": "blockwise_quantile",
+      "zone_l1_threshold_used": 2.3322230502963066
+    },
+    {
+      "block_id": 22,
+      "scheduler_local_block_id": 22,
+      "runtime_name": "block_22",
+      "canonical_runtime_block_id": 22,
+      "zone_id": 10,
+      "k_before": 2,
+      "k_after": 1,
+      "mean_l1": 4.550342991948128,
+      "threshold_mode": "blockwise_quantile",
+      "zone_l1_threshold_used": 2.766784645617008
+    },
+    {
+      "block_id": 23,
+      "scheduler_local_block_id": 23,
+      "runtime_name": "block_23",
+      "canonical_runtime_block_id": 23,
+      "zone_id": 10,
+      "k_before": 2,
+      "k_after": 1,
+      "mean_l1": 7.256317615509033,
+      "threshold_mode": "blockwise_quantile",
+      "zone_l1_threshold_used": 4.5022614896297455
+    },
+    {
+      "block_id": 24,
+      "scheduler_local_block_id": 24,
+      "runtime_name": "block_24",
+      "canonical_runtime_block_id": 24,
+      "zone_id": 10,
+      "k_before": 2,
+      "k_after": 1,
+      "mean_l1": 12.846336334943771,
+      "threshold_mode": "blockwise_quantile",
+      "zone_l1_threshold_used": 5.968842536211014
+    },
+    {
+      "block_id": 25,
+      "scheduler_local_block_id": 25,
+      "runtime_name": "block_25",
+      "canonical_runtime_block_id": 25,
+      "zone_id": 10,
+      "k_before": 2,
+      "k_after": 1,
+      "mean_l1": 37.40139067173004,
+      "threshold_mode": "blockwise_quantile",
+      "zone_l1_threshold_used": 7.121550887823105
+    },
+    {
+      "block_id": 26,
+      "scheduler_local_block_id": 26,
+      "runtime_name": "block_26",
+      "canonical_runtime_block_id": 26,
+      "zone_id": 10,
+      "k_before": 2,
+      "k_after": 1,
+      "mean_l1": 40.36802342534065,
+      "threshold_mode": "blockwise_quantile",
+      "zone_l1_threshold_used": 7.6201814115047455
+    },
+    {
+      "block_id": 27,
+      "scheduler_local_block_id": 27,
+      "runtime_name": "block_27",
+      "canonical_runtime_block_id": 27,
+      "zone_id": 10,
+      "k_before": 2,
+      "k_after": 1,
+      "mean_l1": 35.07032211124897,
+      "threshold_mode": "blockwise_quantile",
+      "zone_l1_threshold_used": 1.9486172273755074
+    }
+  ],
+  "peak_mask_adjustments": [
+    {
+      "block_id": 0,
+      "scheduler_local_block_id": 0,
+      "runtime_name": "block_0",
+      "canonical_runtime_block_id": 0,
+      "step_index": 15,
+      "ddpm_t": 34,
+      "was_reuse_before_peak_repair": true,
+      "expanded_mask_after": true,
+      "l1_error": 0.03106137039139867,
+      "threshold_mode": "blockwise_quantile",
+      "peak_l1_threshold_used": 0.026645737868966537
+    },
+    {
+      "block_id": 0,
+      "scheduler_local_block_id": 0,
+      "runtime_name": "block_0",
+      "canonical_runtime_block_id": 0,
+      "step_index": 21,
+      "ddpm_t": 28,
+      "was_reuse_before_peak_repair": true,
+      "expanded_mask_after": true,
+      "l1_error": 0.037968983640894294,
+      "threshold_mode": "blockwise_quantile",
+      "peak_l1_threshold_used": 0.026645737868966537
+    },
+    {
+      "block_id": 0,
+      "scheduler_local_block_id": 0,
+      "runtime_name": "block_0",
+      "canonical_runtime_block_id": 0,
+      "step_index": 24,
+      "ddpm_t": 25,
+      "was_reuse_before_peak_repair": true,
+      "expanded_mask_after": true,
+      "l1_error": 0.035439953207969666,
+      "threshold_mode": "blockwise_quantile",
+      "peak_l1_threshold_used": 0.026645737868966537
+    },
+    {
+      "block_id": 0,
+      "scheduler_local_block_id": 0,
+      "runtime_name": "block_0",
+      "canonical_runtime_block_id": 0,
+      "step_index": 27,
+      "ddpm_t": 22,
+      "was_reuse_before_peak_repair": true,
+      "expanded_mask_after": true,
+      "l1_error": 0.02971535990945995,
+      "threshold_mode": "blockwise_quantile",
+      "peak_l1_threshold_used": 0.026645737868966537
+    },
+    {
+      "block_id": 0,
+      "scheduler_local_block_id": 0,
+      "runtime_name": "block_0",
+      "canonical_runtime_block_id": 0,
+      "step_index": 30,
+      "ddpm_t": 19,
+      "was_reuse_before_peak_repair": true,
+      "expanded_mask_after": true,
+      "l1_error": 0.027269040932878852,
+      "threshold_mode": "blockwise_quantile",
+      "peak_l1_threshold_used": 0.026645737868966537
+    },
+    {
+      "block_id": 0,
+      "scheduler_local_block_id": 0,
+      "runtime_name": "block_0",
+      "canonical_runtime_block_id": 0,
+      "step_index": 39,
+      "ddpm_t": 10,
+      "was_reuse_before_peak_repair": true,
+      "expanded_mask_after": true,
+      "l1_error": 0.027822180883958936,
+      "threshold_mode": "blockwise_quantile",
+      "peak_l1_threshold_used": 0.026645737868966537
+    },
+    {
+      "block_id": 0,
+      "scheduler_local_block_id": 0,
+      "runtime_name": "block_0",
+      "canonical_runtime_block_id": 0,
+      "step_index": 42,
+      "ddpm_t": 7,
+      "was_reuse_before_peak_repair": true,
+      "expanded_mask_after": true,
+      "l1_error": 0.029668470844626427,
+      "threshold_mode": "blockwise_quantile",
+      "peak_l1_threshold_used": 0.026645737868966537
+    },
+    {
+      "block_id": 0,
+      "scheduler_local_block_id": 0,
+      "runtime_name": "block_0",
+      "canonical_runtime_block_id": 0,
+      "step_index": 49,
+      "ddpm_t": 0,
+      "was_reuse_before_peak_repair": false,
+      "expanded_mask_after": true,
+      "l1_error": 0.06944465078413486,
+      "threshold_mode": "blockwise_quantile",
+      "peak_l1_threshold_used": 0.026645737868966537
+    },
+    {
+      "block_id": 1,
+      "scheduler_local_block_id": 1,
+      "runtime_name": "block_1",
+      "canonical_runtime_block_id": 1,
+      "step_index": 49,
+      "ddpm_t": 0,
+      "was_reuse_before_peak_repair": false,
+      "expanded_mask_after": true,
+      "l1_error": 0.20268595404922962,
+      "threshold_mode": "blockwise_quantile",
+      "peak_l1_threshold_used": 0.06796861458569765
+    },
+    {
+      "block_id": 2,
+      "scheduler_local_block_id": 2,
+      "runtime_name": "block_2",
+      "canonical_runtime_block_id": 2,
+      "step_index": 49,
+      "ddpm_t": 0,
+      "was_reuse_before_peak_repair": false,
+      "expanded_mask_after": true,
+      "l1_error": 0.5646561458706856,
+      "threshold_mode": "blockwise_quantile",
+      "peak_l1_threshold_used": 0.1375301877502352
+    },
+    {
+      "block_id": 3,
+      "scheduler_local_block_id": 3,
+      "runtime_name": "block_3",
+      "canonical_runtime_block_id": 3,
+      "step_index": 47,
+      "ddpm_t": 2,
+      "was_reuse_before_peak_repair": true,
+      "expanded_mask_after": true,
+      "l1_error": 0.1291385032236576,
+      "threshold_mode": "blockwise_quantile",
+      "peak_l1_threshold_used": 0.12212761477567256
+    },
+    {
+      "block_id": 3,
+      "scheduler_local_block_id": 3,
+      "runtime_name": "block_3",
+      "canonical_runtime_block_id": 3,
+      "step_index": 49,
+      "ddpm_t": 0,
+      "was_reuse_before_peak_repair": false,
+      "expanded_mask_after": true,
+      "l1_error": 0.4601501189172268,
+      "threshold_mode": "blockwise_quantile",
+      "peak_l1_threshold_used": 0.12212761477567256
+    },
+    {
+      "block_id": 4,
+      "scheduler_local_block_id": 4,
+      "runtime_name": "block_4",
+      "canonical_runtime_block_id": 4,
+      "step_index": 49,
+      "ddpm_t": 0,
+      "was_reuse_before_peak_repair": false,
+      "expanded_mask_after": true,
+      "l1_error": 0.3330531604588032,
+      "threshold_mode": "blockwise_quantile",
+      "peak_l1_threshold_used": 0.12323238709941507
+    },
+    {
+      "block_id": 5,
+      "scheduler_local_block_id": 5,
+      "runtime_name": "block_5",
+      "canonical_runtime_block_id": 5,
+      "step_index": 49,
+      "ddpm_t": 0,
+      "was_reuse_before_peak_repair": false,
+      "expanded_mask_after": true,
+      "l1_error": 0.5983414724469185,
+      "threshold_mode": "blockwise_quantile",
+      "peak_l1_threshold_used": 0.22863478097133338
+    },
+    {
+      "block_id": 6,
+      "scheduler_local_block_id": 6,
+      "runtime_name": "block_6",
+      "canonical_runtime_block_id": 6,
+      "step_index": 49,
+      "ddpm_t": 0,
+      "was_reuse_before_peak_repair": false,
+      "expanded_mask_after": true,
+      "l1_error": 0.8403722420334816,
+      "threshold_mode": "blockwise_quantile",
+      "peak_l1_threshold_used": 0.3429745125584304
+    },
+    {
+      "block_id": 7,
+      "scheduler_local_block_id": 7,
+      "runtime_name": "block_7",
+      "canonical_runtime_block_id": 7,
+      "step_index": 49,
+      "ddpm_t": 0,
+      "was_reuse_before_peak_repair": false,
+      "expanded_mask_after": true,
+      "l1_error": 0.628341443836689,
+      "threshold_mode": "blockwise_quantile",
+      "peak_l1_threshold_used": 0.27627217723056674
+    },
+    {
+      "block_id": 8,
+      "scheduler_local_block_id": 8,
+      "runtime_name": "block_8",
+      "canonical_runtime_block_id": 8,
+      "step_index": 49,
+      "ddpm_t": 0,
+      "was_reuse_before_peak_repair": false,
+      "expanded_mask_after": true,
+      "l1_error": 0.7175376489758492,
+      "threshold_mode": "blockwise_quantile",
+      "peak_l1_threshold_used": 0.360288520809263
+    },
+    {
+      "block_id": 9,
+      "scheduler_local_block_id": 9,
+      "runtime_name": "block_9",
+      "canonical_runtime_block_id": 9,
+      "step_index": 49,
+      "ddpm_t": 0,
+      "was_reuse_before_peak_repair": false,
+      "expanded_mask_after": true,
+      "l1_error": 0.7751401513814926,
+      "threshold_mode": "blockwise_quantile",
+      "peak_l1_threshold_used": 0.4498279711231589
+    },
+    {
+      "block_id": 10,
+      "scheduler_local_block_id": 10,
+      "runtime_name": "block_10",
+      "canonical_runtime_block_id": 10,
+      "step_index": 49,
+      "ddpm_t": 0,
+      "was_reuse_before_peak_repair": false,
+      "expanded_mask_after": true,
+      "l1_error": 0.7899273186922073,
+      "threshold_mode": "blockwise_quantile",
+      "peak_l1_threshold_used": 0.4899277090094984
+    },
+    {
+      "block_id": 11,
+      "scheduler_local_block_id": 11,
+      "runtime_name": "block_11",
+      "canonical_runtime_block_id": 11,
+      "step_index": 49,
+      "ddpm_t": 0,
+      "was_reuse_before_peak_repair": false,
+      "expanded_mask_after": true,
+      "l1_error": 0.9304684996604919,
+      "threshold_mode": "blockwise_quantile",
+      "peak_l1_threshold_used": 0.6280316693708301
+    },
+    {
+      "block_id": 12,
+      "scheduler_local_block_id": 12,
+      "runtime_name": "block_12",
+      "canonical_runtime_block_id": 12,
+      "step_index": 49,
+      "ddpm_t": 0,
+      "was_reuse_before_peak_repair": false,
+      "expanded_mask_after": true,
+      "l1_error": 1.1950543522834778,
+      "threshold_mode": "blockwise_quantile",
+      "peak_l1_threshold_used": 0.7951997067779303
+    },
+    {
+      "block_id": 13,
+      "scheduler_local_block_id": 13,
+      "runtime_name": "block_13",
+      "canonical_runtime_block_id": 13,
+      "step_index": 49,
+      "ddpm_t": 0,
+      "was_reuse_before_peak_repair": false,
+      "expanded_mask_after": true,
+      "l1_error": 1.4483927488327026,
+      "threshold_mode": "blockwise_quantile",
+      "peak_l1_threshold_used": 1.039883672632277
+    },
+    {
+      "block_id": 14,
+      "scheduler_local_block_id": 14,
+      "runtime_name": "block_14",
+      "canonical_runtime_block_id": 14,
+      "step_index": 49,
+      "ddpm_t": 0,
+      "was_reuse_before_peak_repair": false,
+      "expanded_mask_after": true,
+      "l1_error": 1.5533147156238556,
+      "threshold_mode": "blockwise_quantile",
+      "peak_l1_threshold_used": 1.281736807152629
+    },
+    {
+      "block_id": 15,
+      "scheduler_local_block_id": 15,
+      "runtime_name": "block_15",
+      "canonical_runtime_block_id": 15,
+      "step_index": 49,
+      "ddpm_t": 0,
+      "was_reuse_before_peak_repair": false,
+      "expanded_mask_after": true,
+      "l1_error": 1.9513381570577621,
+      "threshold_mode": "blockwise_quantile",
+      "peak_l1_threshold_used": 1.5115732785314322
+    },
+    {
+      "block_id": 16,
+      "scheduler_local_block_id": 16,
+      "runtime_name": "block_16",
+      "canonical_runtime_block_id": 16,
+      "step_index": 49,
+      "ddpm_t": 0,
+      "was_reuse_before_peak_repair": false,
+      "expanded_mask_after": true,
+      "l1_error": 2.1780906468629837,
+      "threshold_mode": "blockwise_quantile",
+      "peak_l1_threshold_used": 1.650260840728879
+    },
+    {
+      "block_id": 17,
+      "scheduler_local_block_id": 17,
+      "runtime_name": "block_17",
+      "canonical_runtime_block_id": 17,
+      "step_index": 49,
+      "ddpm_t": 0,
+      "was_reuse_before_peak_repair": false,
+      "expanded_mask_after": true,
+      "l1_error": 2.3706589937210083,
+      "threshold_mode": "blockwise_quantile",
+      "peak_l1_threshold_used": 1.804553471133113
+    },
+    {
+      "block_id": 18,
+      "scheduler_local_block_id": 18,
+      "runtime_name": "block_18",
+      "canonical_runtime_block_id": 18,
+      "step_index": 49,
+      "ddpm_t": 0,
+      "was_reuse_before_peak_repair": false,
+      "expanded_mask_after": true,
+      "l1_error": 3.436099112033844,
+      "threshold_mode": "blockwise_quantile",
+      "peak_l1_threshold_used": 2.254616232216358
+    },
+    {
+      "block_id": 19,
+      "scheduler_local_block_id": 19,
+      "runtime_name": "block_19",
+      "canonical_runtime_block_id": 19,
+      "step_index": 49,
+      "ddpm_t": 0,
+      "was_reuse_before_peak_repair": false,
+      "expanded_mask_after": true,
+      "l1_error": 4.5612874031066895,
+      "threshold_mode": "blockwise_quantile",
+      "peak_l1_threshold_used": 2.9913973405957224
+    },
+    {
+      "block_id": 20,
+      "scheduler_local_block_id": 20,
+      "runtime_name": "block_20",
+      "canonical_runtime_block_id": 20,
+      "step_index": 49,
+      "ddpm_t": 0,
+      "was_reuse_before_peak_repair": false,
+      "expanded_mask_after": true,
+      "l1_error": 4.133951276540756,
+      "threshold_mode": "blockwise_quantile",
+      "peak_l1_threshold_used": 2.7800824344158173
+    },
+    {
+      "block_id": 21,
+      "scheduler_local_block_id": 21,
+      "runtime_name": "block_21",
+      "canonical_runtime_block_id": 21,
+      "step_index": 49,
+      "ddpm_t": 0,
+      "was_reuse_before_peak_repair": false,
+      "expanded_mask_after": true,
+      "l1_error": 4.68462872505188,
+      "threshold_mode": "blockwise_quantile",
+      "peak_l1_threshold_used": 3.0318899653851985
+    },
+    {
+      "block_id": 22,
+      "scheduler_local_block_id": 22,
+      "runtime_name": "block_22",
+      "canonical_runtime_block_id": 22,
+      "step_index": 49,
+      "ddpm_t": 0,
+      "was_reuse_before_peak_repair": false,
+      "expanded_mask_after": true,
+      "l1_error": 6.203934490680695,
+      "threshold_mode": "blockwise_quantile",
+      "peak_l1_threshold_used": 3.5968200393021106
+    },
+    {
+      "block_id": 23,
+      "scheduler_local_block_id": 23,
+      "runtime_name": "block_23",
+      "canonical_runtime_block_id": 23,
+      "step_index": 49,
+      "ddpm_t": 0,
+      "was_reuse_before_peak_repair": false,
+      "expanded_mask_after": true,
+      "l1_error": 9.75605571269989,
+      "threshold_mode": "blockwise_quantile",
+      "peak_l1_threshold_used": 5.852939936518669
+    },
+    {
+      "block_id": 24,
+      "scheduler_local_block_id": 24,
+      "runtime_name": "block_24",
+      "canonical_runtime_block_id": 24,
+      "step_index": 49,
+      "ddpm_t": 0,
+      "was_reuse_before_peak_repair": false,
+      "expanded_mask_after": true,
+      "l1_error": 19.42490839958191,
+      "threshold_mode": "blockwise_quantile",
+      "peak_l1_threshold_used": 7.759495297074318
+    },
+    {
+      "block_id": 25,
+      "scheduler_local_block_id": 25,
+      "runtime_name": "block_25",
+      "canonical_runtime_block_id": 25,
+      "step_index": 49,
+      "ddpm_t": 0,
+      "was_reuse_before_peak_repair": false,
+      "expanded_mask_after": true,
+      "l1_error": 67.41671466827393,
+      "threshold_mode": "blockwise_quantile",
+      "peak_l1_threshold_used": 9.258016154170036
+    },
+    {
+      "block_id": 26,
+      "scheduler_local_block_id": 26,
+      "runtime_name": "block_26",
+      "canonical_runtime_block_id": 26,
+      "step_index": 49,
+      "ddpm_t": 0,
+      "was_reuse_before_peak_repair": false,
+      "expanded_mask_after": true,
+      "l1_error": 72.73407745361328,
+      "threshold_mode": "blockwise_quantile",
+      "peak_l1_threshold_used": 9.906235834956169
+    },
+    {
+      "block_id": 27,
+      "scheduler_local_block_id": 27,
+      "runtime_name": "block_27",
+      "canonical_runtime_block_id": 27,
+      "step_index": 47,
+      "ddpm_t": 2,
+      "was_reuse_before_peak_repair": true,
+      "expanded_mask_after": true,
+      "l1_error": 2.842296466231346,
+      "threshold_mode": "blockwise_quantile",
+      "peak_l1_threshold_used": 2.5332023955881597
+    },
+    {
+      "block_id": 27,
+      "scheduler_local_block_id": 27,
+      "runtime_name": "block_27",
+      "canonical_runtime_block_id": 27,
+      "step_index": 49,
+      "ddpm_t": 0,
+      "was_reuse_before_peak_repair": false,
+      "expanded_mask_after": true,
+      "l1_error": 68.46462821960449,
+      "threshold_mode": "blockwise_quantile",
+      "peak_l1_threshold_used": 2.5332023955881597
+    }
+  ],
+  "full_compute_ratio": 0.44642857142857145,
+  "total_full_compute_cells": 625,
+  "total_cells": 1400,
+  "zone_adj_count": 28,
+  "peak_repair_count": 9,
+  "aggregate_per_step_index_l1": {
+    "0": {
+      "mean_l1": 0.0,
+      "max_l1": 0.0
+    },
+    "1": {
+      "mean_l1": 0.052541433118416796,
+      "max_l1": 0.2138537783175707
+    },
+    "2": {
+      "mean_l1": 0.0013457018718392127,
+      "max_l1": 0.007589907880173996
+    },
+    "3": {
+      "mean_l1": 0.08836087932078433,
+      "max_l1": 0.37973586842417717
+    },
+    "4": {
+      "mean_l1": 0.002124806907691631,
+      "max_l1": 0.0123705193400383
+    },
+    "5": {
+      "mean_l1": 0.1075555017294911,
+      "max_l1": 0.4597204476594925
+    },
+    "6": {
+      "mean_l1": 0.00290520406419351,
+      "max_l1": 0.01601308153476566
+    },
+    "7": {
+      "mean_l1": 0.1545651303230053,
+      "max_l1": 0.6995197534561157
+    },
+    "8": {
+      "mean_l1": 0.005117920201233314,
+      "max_l1": 0.02630731521639973
+    },
+    "9": {
+      "mean_l1": 0.1937193444713817,
+      "max_l1": 0.9946598634123802
+    },
+    "10": {
+      "mean_l1": 0.009599001463487054,
+      "max_l1": 0.04756957944482565
+    },
+    "11": {
+      "mean_l1": 0.22030381521160183,
+      "max_l1": 1.1101169064640999
+    },
+    "12": {
+      "mean_l1": 0.4579845999999504,
+      "max_l1": 2.318054497241974
+    },
+    "13": {
+      "mean_l1": 0.028098906203272885,
+      "max_l1": 0.13268412230536342
+    },
+    "14": {
+      "mean_l1": 0.26816711013920475,
+      "max_l1": 1.242828331887722
+    },
+    "15": {
+      "mean_l1": 0.5169183928020564,
+      "max_l1": 2.3575054556131363
+    },
+    "16": {
+      "mean_l1": 0.07118306012385542,
+      "max_l1": 0.3240880649536848
+    },
+    "17": {
+      "mean_l1": 0.08130768310781734,
+      "max_l1": 0.3608216717839241
+    },
+    "18": {
+      "mean_l1": 0.3319851247568814,
+      "max_l1": 1.3700225800275803
+    },
+    "19": {
+      "mean_l1": 0.11330518928350232,
+      "max_l1": 0.4820326790213585
+    },
+    "20": {
+      "mean_l1": 0.3918687283460583,
+      "max_l1": 1.5263433903455734
+    },
+    "21": {
+      "mean_l1": 0.6645225446305371,
+      "max_l1": 2.580665200948715
+    },
+    "22": {
+      "mean_l1": 0.21283700163205918,
+      "max_l1": 0.8716377392411232
+    },
+    "23": {
+      "mean_l1": 0.45891545189494665,
+      "max_l1": 1.837827891111374
+    },
+    "24": {
+      "mean_l1": 0.7582848611387557,
+      "max_l1": 3.088998258113861
+    },
+    "25": {
+      "mean_l1": 0.3702027137956715,
+      "max_l1": 1.6347921937704086
+    },
+    "26": {
+      "mean_l1": 0.6051939561023444,
+      "max_l1": 2.608616903424263
+    },
+    "27": {
+      "mean_l1": 0.8870745064674078,
+      "max_l1": 3.745475709438324
+    },
+    "28": {
+      "mean_l1": 0.47205633548894965,
+      "max_l1": 2.0280804336071014
+    },
+    "29": {
+      "mean_l1": 0.6570276258072616,
+      "max_l1": 2.75555956363678
+    },
+    "30": {
+      "mean_l1": 0.925909074264512,
+      "max_l1": 3.8852786123752594
+    },
+    "31": {
+      "mean_l1": 0.5984246049359042,
+      "max_l1": 2.6085072457790375
+    },
+    "32": {
+      "mean_l1": 0.7785616255756135,
+      "max_l1": 3.3861384987831116
+    },
+    "33": {
+      "mean_l1": 1.0438857455488428,
+      "max_l1": 4.536742180585861
+    },
+    "34": {
+      "mean_l1": 0.7631406016548031,
+      "max_l1": 3.4263655990362167
+    },
+    "35": {
+      "mean_l1": 0.9415882652642072,
+      "max_l1": 4.184498429298401
+    },
+    "36": {
+      "mean_l1": 1.1961061842406966,
+      "max_l1": 5.31369885802269
+    },
+    "37": {
+      "mean_l1": 0.9106638344570196,
+      "max_l1": 4.2656755447387695
+    },
+    "38": {
+      "mean_l1": 1.0741501451869095,
+      "max_l1": 4.949706196784973
+    },
+    "39": {
+      "mean_l1": 1.3155400040476317,
+      "max_l1": 5.981450587511063
+    },
+    "40": {
+      "mean_l1": 1.076977247796354,
+      "max_l1": 5.140404641628265
+    },
+    "41": {
+      "mean_l1": 1.2331054865499027,
+      "max_l1": 5.720179438591003
+    },
+    "42": {
+      "mean_l1": 1.50471663045963,
+      "max_l1": 6.831664502620697
+    },
+    "43": {
+      "mean_l1": 1.2492809616045892,
+      "max_l1": 5.895106345415115
+    },
+    "44": {
+      "mean_l1": 1.3159783430330987,
+      "max_l1": 6.163446605205536
+    },
+    "45": {
+      "mean_l1": 1.5496518770814873,
+      "max_l1": 7.048332571983337
+    },
+    "46": {
+      "mean_l1": 1.489030411213337,
+      "max_l1": 6.864123463630676
+    },
+    "47": {
+      "mean_l1": 1.8791764728708327,
+      "max_l1": 8.376239359378815
+    },
+    "48": {
+      "mean_l1": 1.7454276947454284,
+      "max_l1": 8.001969397068024
+    },
+    "49": {
+      "mean_l1": 9.943687638667013,
+      "max_l1": 72.73407745361328
+    }
+  },
+  "eval_config": {
+    "eval_num_images": 8,
+    "eval_chunk_size": 1,
+    "seed": 42,
+    "cfg_scale": 1.5,
+    "sampler": "ddim",
+    "fixed_class_labels": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "model_name": "DiT-XL/2",
+    "eta": 0.0
+  },
+  "cache_runtime_overrides": {
+    "force_full_prefix_steps": 0,
+    "prefix_step_indices": [],
+    "force_full_runtime_blocks": [],
+    "note": "Overrides are unions on top of Stage1-expanded recompute sets; they do not replace Stage1 scheduler JSON."
+  }
+}

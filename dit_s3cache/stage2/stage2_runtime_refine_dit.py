@@ -21,6 +21,8 @@ from __future__ import annotations
 
 import argparse
 import copy
+from collections import defaultdict
+import importlib
 import json
 import logging
 import math
@@ -29,6 +31,7 @@ import random
 import sys
 from contextlib import contextmanager
 from pathlib import Path
+from types import SimpleNamespace
 from typing import Any, Callable, Dict, Iterator, List, Optional, Set, Tuple
 
 import numpy as np
@@ -123,6 +126,63 @@ def _seed_all(seed: int) -> None:
     torch.manual_seed(seed)
     if torch.cuda.is_available():
         torch.cuda.manual_seed_all(seed)
+
+
+def _prepend_qdit_root(qdit_root: Path) -> None:
+    root = str(qdit_root.resolve())
+    if root in sys.path:
+        sys.path.remove(root)
+    sys.path.insert(0, root)
+
+
+def _import_qdit_modules(qdit_root: Path) -> Tuple[Any, Any, Any]:
+    """Import Q-DiT modules safely even when FP DiT modules were imported."""
+    _prepend_qdit_root(qdit_root)
+    saved_models = sys.modules.pop("models", None)
+    saved_models_models = sys.modules.pop("models.models", None)
+    try:
+        diffusion_mod = importlib.import_module("diffusion")
+        models_mod = importlib.import_module("models.models")
+        modelutils_mod = importlib.import_module("qdit.modelutils")
+        return diffusion_mod, models_mod, modelutils_mod
+    finally:
+        sys.modules.pop("models", None)
+        sys.modules.pop("models.models", None)
+        if saved_models is not None:
+            sys.modules["models"] = saved_models
+        if saved_models_models is not None:
+            sys.modules["models.models"] = saved_models_models
+
+
+def _build_qdit_args(
+    *,
+    n_blocks: int,
+    wbits: int,
+    abits: int,
+    weight_group_size: int,
+    act_group_size: int,
+) -> SimpleNamespace:
+    quant_args = SimpleNamespace(
+        wbits=wbits,
+        abits=abits,
+        exponential=False,
+        quantize_bmm_input=False,
+        a_sym=False,
+        w_sym=False,
+        static=False,
+        weight_group_size=weight_group_size,
+        weight_channel_group=1,
+        act_group_size=act_group_size,
+        tiling=0,
+        quant_method="max",
+        a_clip_ratio=1.0,
+        w_clip_ratio=1.0,
+        kv_clip_ratio=1.0,
+        quant_type="int",
+    )
+    quant_args.weight_group_size = [quant_args.weight_group_size] * n_blocks
+    quant_args.act_group_size = [quant_args.act_group_size] * n_blocks
+    return quant_args
 
 
 # ---------------------------------------------------------------------------
@@ -587,6 +647,12 @@ def run_stage2_refine_dit(
     sampler: str = "ddpm",
     eta: float = 0.0,
     ckpt: Optional[str] = None,
+    qdit_ckpt: Optional[str] = None,
+    qdit_root: str = "/home/jimmy/Q-DiT",
+    wbits: int = 8,
+    abits: int = 8,
+    weight_group_size: int = 128,
+    act_group_size: int = 128,
     device: Optional[torch.device] = None,
     eval_num_images: int = DEFAULT_EVAL_NUM_IMAGES,
     eval_chunk_size: int = DEFAULT_EVAL_CHUNK_SIZE,
@@ -635,24 +701,59 @@ def run_stage2_refine_dit(
         force_full_runtime_blocks=blocks_eff,
     )
 
-    # --- Load DiT model ---
-    LOGGER.info("Loading DiT model: %s (image_size=%d)", model_name, image_size)
+    # --- Load DiT / Q-DiT model ---
+    LOGGER.info("Loading model: %s (image_size=%d)", model_name, image_size)
     latent_size = image_size // 8
     torch.backends.cuda.matmul.allow_tf32 = True
     torch.backends.cudnn.allow_tf32 = True
     torch.set_grad_enabled(False)
-
-    model = DiT_models[model_name](
-        input_size=latent_size,
-        num_classes=num_classes,
-    ).to(device)
-    ckpt_path = ckpt or f"DiT-XL-2-{image_size}x{image_size}.pt"
-    model.load_state_dict(find_model(ckpt_path))
+    diffusion_fn = create_diffusion
+    if qdit_ckpt:
+        qdit_ckpt_path = Path(qdit_ckpt).expanduser().resolve()
+        if not qdit_ckpt_path.is_file():
+            raise FileNotFoundError(f"Q-DiT checkpoint not found: {qdit_ckpt_path}")
+        diffusion_mod, models_mod, modelutils_mod = _import_qdit_modules(Path(qdit_root))
+        qdit_models = models_mod.DiT_models
+        add_act_quant_wrapper = modelutils_mod.add_act_quant_wrapper
+        diffusion_fn = diffusion_mod.create_diffusion
+        model = qdit_models[model_name](
+            input_size=latent_size,
+            num_classes=num_classes,
+        ).to(device)
+        qargs = _build_qdit_args(
+            n_blocks=len(model.blocks),
+            wbits=wbits,
+            abits=abits,
+            weight_group_size=weight_group_size,
+            act_group_size=act_group_size,
+        )
+        model = add_act_quant_wrapper(
+            model,
+            device=device,
+            args=qargs,
+            scales=defaultdict(lambda: None),
+        )
+        state_dict = torch.load(qdit_ckpt_path, map_location=device)
+        model.load_state_dict(state_dict, strict=True)
+        # Ensure hook math uses the same modulate implementation as loaded model.
+        if hasattr(models_mod, "modulate"):
+            global modulate
+            modulate = models_mod.modulate
+        LOGGER.info("Q-DiT quantized checkpoint loaded: %s", qdit_ckpt_path)
+    else:
+        model = DiT_models[model_name](
+            input_size=latent_size,
+            num_classes=num_classes,
+        ).to(device)
+        ckpt_path = ckpt or f"DiT-XL-2-{image_size}x{image_size}.pt"
+        model.load_state_dict(find_model(ckpt_path))
+        LOGGER.info("FP DiT checkpoint loaded: %s", ckpt_path)
+    model = model.to(device)
     model.eval()
     LOGGER.info("Model loaded.")
 
     # --- Build diffusion + timestep map ---
-    diffusion = create_diffusion(str(num_sampling_steps))
+    diffusion = diffusion_fn(str(num_sampling_steps))
     # timestep_map[step_idx] = raw_t（model 實際看到的 noise schedule timestep）
     timestep_map_reversed = list(reversed(diffusion.timestep_map))[:T]
     if len(timestep_map_reversed) != T:
@@ -1100,6 +1201,22 @@ def main() -> None:
     g_model.add_argument("--sampler", choices=["ddpm", "ddim"], default="ddpm")
     g_model.add_argument("--eta", type=float, default=0.0, help="DDIM eta; only used with --sampler ddim.")
     g_model.add_argument("--ckpt", type=str, default=None)
+    g_model.add_argument(
+        "--qdit-ckpt",
+        type=str,
+        default=None,
+        help="Optional Q-DiT W8A8 state_dict path. If set, loads quantized Q-DiT instead of FP DiT ckpt.",
+    )
+    g_model.add_argument(
+        "--qdit-root",
+        type=str,
+        default="/home/jimmy/Q-DiT",
+        help="Q-DiT repository root for module imports.",
+    )
+    g_model.add_argument("--wbits", type=int, default=8)
+    g_model.add_argument("--abits", type=int, default=8)
+    g_model.add_argument("--weight-group-size", type=int, default=128)
+    g_model.add_argument("--act-group-size", type=int, default=128)
 
     g_eval = p.add_argument_group("Diagnostics eval")
     g_eval.add_argument("--eval-num-images", type=_nonnegative_int, default=DEFAULT_EVAL_NUM_IMAGES)
@@ -1151,6 +1268,12 @@ def main() -> None:
         sampler=str(args.sampler),
         eta=float(args.eta),
         ckpt=args.ckpt,
+        qdit_ckpt=args.qdit_ckpt,
+        qdit_root=str(args.qdit_root),
+        wbits=int(args.wbits),
+        abits=int(args.abits),
+        weight_group_size=int(args.weight_group_size),
+        act_group_size=int(args.act_group_size),
         eval_num_images=int(args.eval_num_images),
         eval_chunk_size=int(args.eval_chunk_size),
         force_full_prefix_steps=int(args.force_full_prefix_steps),
