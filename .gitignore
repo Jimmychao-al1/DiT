@@ -24,3 +24,7 @@ dit_s3cache/results/fid_dit_stage2_ddim150/20260519/baseline_p2_K20_sw3_lam1.0_k
 **/*.log
 dit_s3cache/results/**/run.log
 dit_s3cache/results/**/_driver.log
+dit_s3cache/stage0/stage0_output_qdit
+dit_s3cache/stage0/stage0_output_qdit_ddim150
+dit_s3cache/stage0/stage0_output_qdit_ddim50
+dit_s3cache/stage0/stage0_output_qdit_ddim100

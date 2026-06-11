@@ -38,6 +38,9 @@ NUM_TOKENS = 256
 HIDDEN_DIM = 1152
 IMAGE_SIZE = 256
 BATCH_SIZE = 1
+CIM_WEIGHT_BITS = 8
+CIM_ARRAY_256_CELLS = 256 * 256
+CIM_ARRAY_32_CELLS = 32 * 32
 
 
 @dataclass
@@ -55,6 +58,11 @@ class LayerRecord:
     cim_cols: int
     cim_max_dim: int
     cim_array_size: int
+    num_params: int
+    cim_weight_bits: int
+    cim_cell_count_w8: int
+    cim_arrays_256x256: int
+    cim_arrays_32x32: int
     is_quantized: bool
     seq_len: int
 
@@ -71,6 +79,8 @@ class BlockRecord:
     output_channels: int
     weight_bytes_per_exec: int
     act_bytes_per_exec: int
+    output_write_bytes: int
+    total_dm_bytes: int
     dm_per_exec: int
     exec_count_baseline: int
     exec_count_cached: int
@@ -108,6 +118,21 @@ def count_summary_fields(prefix: str, n: int | float, unit: str) -> dict[str, An
         f"{prefix}_readable": f"{n:,.0f} {unit}",
         f"{prefix}_K": n / 1_000,
         f"{prefix}_M": n / 1_000_000,
+    }
+
+
+def ceil_div(n: int, d: int) -> int:
+    return (n + d - 1) // d
+
+
+def cim_storage_fields(num_params: int) -> dict[str, int]:
+    cells = num_params * CIM_WEIGHT_BITS
+    return {
+        "num_params": num_params,
+        "cim_weight_bits": CIM_WEIGHT_BITS,
+        "cim_cell_count_w8": cells,
+        "cim_arrays_256x256": ceil_div(cells, CIM_ARRAY_256_CELLS),
+        "cim_arrays_32x32": ceil_div(cells, CIM_ARRAY_32_CELLS),
     }
 
 
@@ -176,7 +201,8 @@ def load_model() -> Any:
 
 def linear_record(*, block_id: int, block_name: str, layer_name: str, module: Any, seq_len: int) -> LayerRecord:
     out_f, in_f = [int(x) for x in module.weight.shape]
-    weight_bytes = out_f * in_f * BYTES_PER_ELEMENT
+    num_params = out_f * in_f
+    weight_bytes = num_params * BYTES_PER_ELEMENT
     act_bytes = BATCH_SIZE * seq_len * in_f * BYTES_PER_ELEMENT
     return LayerRecord(
         model=MODEL_KEY,
@@ -191,7 +217,8 @@ def linear_record(*, block_id: int, block_name: str, layer_name: str, module: An
         cim_rows=in_f,
         cim_cols=out_f,
         cim_max_dim=max(in_f, out_f),
-        cim_array_size=in_f * out_f,
+        cim_array_size=num_params,
+        **cim_storage_fields(num_params),
         is_quantized=False,
         seq_len=seq_len,
     )
@@ -240,7 +267,9 @@ def analyze() -> tuple[list[BlockRecord], list[LayerRecord], dict[str, Any]]:
         weight_sum = sum(r.weight_bytes for r in recs)
         act_sum = sum(r.act_bytes for r in recs)
         exec_cached = sum(bool(x) for x in b["expanded_mask"])
+        output_write_bytes = BATCH_SIZE * NUM_TOKENS * HIDDEN_DIM * BYTES_PER_ELEMENT
         dm_exec = weight_sum + act_sum
+        total_dm = dm_exec + output_write_bytes
         block_records.append(
             BlockRecord(
                 model=MODEL_KEY,
@@ -253,11 +282,13 @@ def analyze() -> tuple[list[BlockRecord], list[LayerRecord], dict[str, Any]]:
                 output_channels=HIDDEN_DIM,
                 weight_bytes_per_exec=weight_sum,
                 act_bytes_per_exec=act_sum,
+                output_write_bytes=output_write_bytes,
+                total_dm_bytes=total_dm,
                 dm_per_exec=dm_exec,
                 exec_count_baseline=t,
                 exec_count_cached=exec_cached,
-                dm_baseline=dm_exec * t,
-                dm_cached=dm_exec * exec_cached,
+                dm_baseline=total_dm * t,
+                dm_cached=total_dm * exec_cached,
                 cim_block_max_dim=max(r.cim_max_dim for r in recs),
                 cim_block_max_array_size=max(r.cim_array_size for r in recs),
                 s3_cache_output_bytes=(
@@ -296,9 +327,15 @@ def validate_records(t: int, blocks: list[BlockRecord], layers: list[LayerRecord
             raise ValueError(f"Weight sum mismatch for {b.block_name}")
         if b.act_bytes_per_exec != sum(r.act_bytes for r in child):
             raise ValueError(f"Activation sum mismatch for {b.block_name}")
-        if b.dm_baseline != b.dm_per_exec * t:
+        if b.output_write_bytes != BATCH_SIZE * NUM_TOKENS * HIDDEN_DIM * BYTES_PER_ELEMENT:
+            raise ValueError(f"Invalid output write bytes for {b.block_name}")
+        if b.dm_per_exec != b.weight_bytes_per_exec + b.act_bytes_per_exec:
+            raise ValueError(f"Read-only DM mismatch for {b.block_name}")
+        if b.total_dm_bytes != b.weight_bytes_per_exec + b.act_bytes_per_exec + b.output_write_bytes:
+            raise ValueError(f"Total DM mismatch for {b.block_name}")
+        if b.dm_baseline != b.total_dm_bytes * t:
             raise ValueError(f"Baseline mismatch for {b.block_name}")
-        if b.dm_cached != b.dm_per_exec * b.exec_count_cached:
+        if b.dm_cached != b.total_dm_bytes * b.exec_count_cached:
             raise ValueError(f"Cached mismatch for {b.block_name}")
 
 
@@ -378,13 +415,16 @@ def print_report(blocks: list[BlockRecord], layers: list[LayerRecord], summary: 
     print(f"CIM max array size: {summary['global_cim_max_array_size']:,}")
     print_table(
         "Block-Level Data Movement",
-        ["id", "block", "tokens", "DM/exec", "exec", "cached DM", "CIM"],
+        ["id", "block", "tokens", "weight", "act", "output_write", "total/exec", "exec", "cached DM", "CIM"],
         [
             [
                 b.block_id,
                 b.block_name,
                 b.spatial_w,
-                format_bytes(b.dm_per_exec),
+                format_bytes(b.weight_bytes_per_exec),
+                format_bytes(b.act_bytes_per_exec),
+                format_bytes(b.output_write_bytes),
+                format_bytes(b.total_dm_bytes),
                 b.exec_count_cached,
                 format_bytes(b.dm_cached),
                 b.cim_block_max_dim,
