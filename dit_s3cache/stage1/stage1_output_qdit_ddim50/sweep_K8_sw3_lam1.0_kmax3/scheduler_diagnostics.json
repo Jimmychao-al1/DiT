@@ -1,0 +1,5859 @@
+{
+  "sampler": "ddim",
+  "eta": 0.0,
+  "time_order": "ddim_49_to_0",
+  "stage0_axis_interval_def": "interval-wise: analysis interval index j (0..T-2) keeps internal order; display label is t_curr=(T-2)-j",
+  "t_curr_interval": [
+    48,
+    47,
+    46,
+    45,
+    44,
+    43,
+    42,
+    41,
+    40,
+    39,
+    38,
+    37,
+    36,
+    35,
+    34,
+    33,
+    32,
+    31,
+    30,
+    29,
+    28,
+    27,
+    26,
+    25,
+    24,
+    23,
+    22,
+    21,
+    20,
+    19,
+    18,
+    17,
+    16,
+    15,
+    14,
+    13,
+    12,
+    11,
+    10,
+    9,
+    8,
+    7,
+    6,
+    5,
+    4,
+    3,
+    2,
+    1,
+    0
+  ],
+  "mapping_note": "interval j -> reused DDIM local t = (T-2)-j; I_cut[:,T-1]=0; expanded_mask[i] step maps to t=(T-1)-i",
+  "I_l1cos_stats": {
+    "min": 0.0,
+    "max": 0.9860175788402556,
+    "mean": 0.06357008793888673,
+    "std": 0.05479571474645485
+  },
+  "I_cut_stats": {
+    "min": 0.0,
+    "max": 0.9937855905956692,
+    "mean": 0.19778662274572462,
+    "std": 0.08329445552282641
+  },
+  "G_ddim": [
+    0.45183407999778125,
+    0.2571327220419446,
+    0.2381215557017857,
+    0.2308885604441685,
+    0.22460422303896338,
+    0.22042076647413397,
+    0.21837616392230758,
+    0.21242360874622268,
+    0.21143645665524297,
+    0.21371459481223853,
+    0.20953162441162118,
+    0.21157398328768695,
+    0.20790241877182036,
+    0.20886410197382035,
+    0.20851420036904386,
+    0.21041846636232925,
+    0.20783138189106404,
+    0.21065809007365996,
+    0.20931019105381424,
+    0.21026388924732092,
+    0.21156895095253006,
+    0.21315365250459545,
+    0.20921106329959605,
+    0.2077224310487174,
+    0.20560870523847388,
+    0.2009788298501211,
+    0.2009450273958981,
+    0.20057283611961152,
+    0.19657219037930995,
+    0.195577532475738,
+    0.1914457580630463,
+    0.19007536028949593,
+    0.18485485958005687,
+    0.18057170970265338,
+    0.17745267857137073,
+    0.17551798097323296,
+    0.17516172959954182,
+    0.1737988897284224,
+    0.16981803521388616,
+    0.17008153120183458,
+    0.1643852809977546,
+    0.15330398891967786,
+    0.14664755761089202,
+    0.14412406456176208,
+    0.13591281031002783,
+    0.12936911471887455,
+    0.12470767798983798,
+    0.12298204842032538,
+    0.11653158621452638,
+    0.0
+  ],
+  "G_processing_order_i0_is_tmax": [
+    0.0,
+    0.11653158621452638,
+    0.12298204842032538,
+    0.12470767798983798,
+    0.12936911471887455,
+    0.13591281031002783,
+    0.14412406456176208,
+    0.14664755761089202,
+    0.15330398891967786,
+    0.1643852809977546,
+    0.17008153120183458,
+    0.16981803521388616,
+    0.1737988897284224,
+    0.17516172959954182,
+    0.17551798097323296,
+    0.17745267857137073,
+    0.18057170970265338,
+    0.18485485958005687,
+    0.19007536028949593,
+    0.1914457580630463,
+    0.195577532475738,
+    0.19657219037930995,
+    0.20057283611961152,
+    0.2009450273958981,
+    0.2009788298501211,
+    0.20560870523847388,
+    0.2077224310487174,
+    0.20921106329959605,
+    0.21315365250459545,
+    0.21156895095253006,
+    0.21026388924732092,
+    0.20931019105381424,
+    0.21065809007365996,
+    0.20783138189106404,
+    0.21041846636232925,
+    0.20851420036904386,
+    0.20886410197382035,
+    0.20790241877182036,
+    0.21157398328768695,
+    0.20953162441162118,
+    0.21371459481223853,
+    0.21143645665524297,
+    0.21242360874622268,
+    0.21837616392230758,
+    0.22042076647413397,
+    0.22460422303896338,
+    0.2308885604441685,
+    0.2381215557017857,
+    0.2571327220419446,
+    0.45183407999778125
+  ],
+  "G_processing_order_i0_is_t249": [
+    0.0,
+    0.11653158621452638,
+    0.12298204842032538,
+    0.12470767798983798,
+    0.12936911471887455,
+    0.13591281031002783,
+    0.14412406456176208,
+    0.14664755761089202,
+    0.15330398891967786,
+    0.1643852809977546,
+    0.17008153120183458,
+    0.16981803521388616,
+    0.1737988897284224,
+    0.17516172959954182,
+    0.17551798097323296,
+    0.17745267857137073,
+    0.18057170970265338,
+    0.18485485958005687,
+    0.19007536028949593,
+    0.1914457580630463,
+    0.195577532475738,
+    0.19657219037930995,
+    0.20057283611961152,
+    0.2009450273958981,
+    0.2009788298501211,
+    0.20560870523847388,
+    0.2077224310487174,
+    0.20921106329959605,
+    0.21315365250459545,
+    0.21156895095253006,
+    0.21026388924732092,
+    0.20931019105381424,
+    0.21065809007365996,
+    0.20783138189106404,
+    0.21041846636232925,
+    0.20851420036904386,
+    0.20886410197382035,
+    0.20790241877182036,
+    0.21157398328768695,
+    0.20953162441162118,
+    0.21371459481223853,
+    0.21143645665524297,
+    0.21242360874622268,
+    0.21837616392230758,
+    0.22042076647413397,
+    0.22460422303896338,
+    0.2308885604441685,
+    0.2381215557017857,
+    0.2571327220419446,
+    0.45183407999778125
+  ],
+  "G_smooth_processing_order": [
+    0.03884386207150879,
+    0.07983787821161725,
+    0.12140710420822991,
+    0.12568628037634597,
+    0.1299965343395801,
+    0.13646866319688816,
+    0.14222814416089397,
+    0.14802520369744399,
+    0.1547789425094415,
+    0.16259026703975565,
+    0.1680949491378251,
+    0.17123281871471435,
+    0.17292621818061676,
+    0.17482620010039904,
+    0.17604412971471517,
+    0.17784745641575234,
+    0.18095974928469366,
+    0.18516730985740204,
+    0.18879199264419969,
+    0.19236621694276004,
+    0.19453182697269805,
+    0.1975741863248865,
+    0.19936335129827315,
+    0.20083223112187687,
+    0.20251085416149767,
+    0.20476998871243746,
+    0.20751406652892912,
+    0.21002904895096963,
+    0.21131122225224053,
+    0.2116621642348155,
+    0.21038101041788843,
+    0.2100773901249317,
+    0.20926655433951274,
+    0.20963597944235107,
+    0.20892134954081237,
+    0.2092655895683978,
+    0.20842690703822817,
+    0.20944683467777586,
+    0.2096693421570428,
+    0.21160673417051554,
+    0.21156089195970088,
+    0.21252488673790138,
+    0.21407874310792438,
+    0.21707351304755473,
+    0.2211337178118016,
+    0.2253045166524219,
+    0.23120477972830586,
+    0.2420476127292996,
+    0.3156961192471705,
+    0.23632226734657527
+  ],
+  "Delta_processing_order": [
+    0.0,
+    0.04099401614010846,
+    0.041569225996612655,
+    0.004279176168116058,
+    0.004310253963234145,
+    0.0064721288573080515,
+    0.005759480964005803,
+    0.00579705953655002,
+    0.006753738811997506,
+    0.007811324530314162,
+    0.005504682098069452,
+    0.003137869576889246,
+    0.001693399465902412,
+    0.0018999819197822732,
+    0.0012179296143161322,
+    0.0018033267010371667,
+    0.0031122928689413243,
+    0.00420756057270838,
+    0.003624682786797645,
+    0.003574224298560358,
+    0.0021656100299380088,
+    0.0030423593521884396,
+    0.0017891649733866588,
+    0.0014688798236037193,
+    0.0016786230396207968,
+    0.0022591345509397898,
+    0.0027440778164916635,
+    0.0025149824220405126,
+    0.0012821733012708947,
+    0.00035094198257495934,
+    0.0012811538169270609,
+    0.0003036202929567189,
+    0.0008108357854189618,
+    0.00036942510283832775,
+    0.0007146299015386992,
+    0.0003442400275854296,
+    0.0008386825301696377,
+    0.0010199276395476964,
+    0.00022250747926694237,
+    0.001937392013472733,
+    4.5842210814661666e-05,
+    0.0009639947782004998,
+    0.0015538563700230046,
+    0.002994769939630354,
+    0.004060204764246872,
+    0.004170798840620299,
+    0.005900263075883955,
+    0.010842833000993729,
+    0.07364850651787092,
+    0.07937385190059523
+  ],
+  "change_points_step_index": [
+    1,
+    2,
+    5,
+    8,
+    9,
+    47,
+    48,
+    49
+  ],
+  "step_zones_before_merge": [
+    {
+      "s0": 0,
+      "s1": 0
+    },
+    {
+      "s0": 1,
+      "s1": 1
+    },
+    {
+      "s0": 2,
+      "s1": 4
+    },
+    {
+      "s0": 5,
+      "s1": 7
+    },
+    {
+      "s0": 8,
+      "s1": 8
+    },
+    {
+      "s0": 9,
+      "s1": 46
+    },
+    {
+      "s0": 47,
+      "s1": 47
+    },
+    {
+      "s0": 48,
+      "s1": 48
+    },
+    {
+      "s0": 49,
+      "s1": 49
+    }
+  ],
+  "merged_step_zones": [
+    {
+      "s0": 0,
+      "s1": 1
+    },
+    {
+      "s0": 2,
+      "s1": 4
+    },
+    {
+      "s0": 5,
+      "s1": 7
+    },
+    {
+      "s0": 8,
+      "s1": 46
+    },
+    {
+      "s0": 47,
+      "s1": 49
+    }
+  ],
+  "shared_zones_ddim": [
+    {
+      "id": 0,
+      "t_start": 49,
+      "t_end": 48,
+      "length": 2
+    },
+    {
+      "id": 1,
+      "t_start": 47,
+      "t_end": 45,
+      "length": 3
+    },
+    {
+      "id": 2,
+      "t_start": 44,
+      "t_end": 42,
+      "length": 3
+    },
+    {
+      "id": 3,
+      "t_start": 41,
+      "t_end": 3,
+      "length": 39
+    },
+    {
+      "id": 4,
+      "t_start": 2,
+      "t_end": 0,
+      "length": 3
+    }
+  ],
+  "candidate_k_per_zone": [
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      2,
+      3
+    ],
+    [
+      1,
+      2,
+      3
+    ],
+    [
+      1,
+      2,
+      3
+    ],
+    [
+      1,
+      2,
+      3
+    ]
+  ],
+  "cost_tables_per_zone": [
+    {
+      "zone_id": 0,
+      "length": 2,
+      "candidate_k": [
+        1,
+        2
+      ],
+      "per_block": [
+        {
+          "block_id": 0,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.0,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 2
+            },
+            "2": {
+              "J": 0.5,
+              "reuse_risk_term_would_be_unweighted": 0.025656153240965474,
+              "fid_w_on_reuse_term": 0.0,
+              "compute_penalty_lambda_f_over_L": 0.5,
+              "n_R": 1,
+              "n_F": 1
+            }
+          },
+          "selected_k": 2,
+          "selected_J": 0.5,
+          "scheduler_local_block_id": 0,
+          "runtime_name": "block_0",
+          "canonical_runtime_block_id": 0
+        },
+        {
+          "block_id": 1,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.1824173629283905,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 2
+            },
+            "2": {
+              "J": 0.5046088972025249,
+              "reuse_risk_term_would_be_unweighted": 0.025265671691209315,
+              "fid_w_on_reuse_term": 0.1824173629283905,
+              "compute_penalty_lambda_f_over_L": 0.5,
+              "n_R": 1,
+              "n_F": 1
+            }
+          },
+          "selected_k": 2,
+          "selected_J": 0.5046088972025249,
+          "scheduler_local_block_id": 1,
+          "runtime_name": "block_1",
+          "canonical_runtime_block_id": 1
+        },
+        {
+          "block_id": 2,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 1.0,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 2
+            },
+            "2": {
+              "J": 0.5229033419426843,
+              "reuse_risk_term_would_be_unweighted": 0.022903341942684265,
+              "fid_w_on_reuse_term": 1.0,
+              "compute_penalty_lambda_f_over_L": 0.5,
+              "n_R": 1,
+              "n_F": 1
+            }
+          },
+          "selected_k": 2,
+          "selected_J": 0.5229033419426843,
+          "scheduler_local_block_id": 2,
+          "runtime_name": "block_2",
+          "canonical_runtime_block_id": 2
+        },
+        {
+          "block_id": 3,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 1.0,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 2
+            },
+            "2": {
+              "J": 0.5456769519572037,
+              "reuse_risk_term_would_be_unweighted": 0.04567695195720363,
+              "fid_w_on_reuse_term": 1.0,
+              "compute_penalty_lambda_f_over_L": 0.5,
+              "n_R": 1,
+              "n_F": 1
+            }
+          },
+          "selected_k": 2,
+          "selected_J": 0.5456769519572037,
+          "scheduler_local_block_id": 3,
+          "runtime_name": "block_3",
+          "canonical_runtime_block_id": 3
+        },
+        {
+          "block_id": 4,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.1526651829481125,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 2
+            },
+            "2": {
+              "J": 0.5118539844469208,
+              "reuse_risk_term_would_be_unweighted": 0.07764694095935232,
+              "fid_w_on_reuse_term": 0.1526651829481125,
+              "compute_penalty_lambda_f_over_L": 0.5,
+              "n_R": 1,
+              "n_F": 1
+            }
+          },
+          "selected_k": 2,
+          "selected_J": 0.5118539844469208,
+          "scheduler_local_block_id": 4,
+          "runtime_name": "block_4",
+          "canonical_runtime_block_id": 4
+        },
+        {
+          "block_id": 5,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.3069806694984436,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 2
+            },
+            "2": {
+              "J": 0.5222411622761058,
+              "reuse_risk_term_would_be_unweighted": 0.07245134461542573,
+              "fid_w_on_reuse_term": 0.3069806694984436,
+              "compute_penalty_lambda_f_over_L": 0.5,
+              "n_R": 1,
+              "n_F": 1
+            }
+          },
+          "selected_k": 2,
+          "selected_J": 0.5222411622761058,
+          "scheduler_local_block_id": 5,
+          "runtime_name": "block_5",
+          "canonical_runtime_block_id": 5
+        },
+        {
+          "block_id": 6,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.8554931282997131,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 2
+            },
+            "2": {
+              "J": 0.5738345891998958,
+              "reuse_risk_term_would_be_unweighted": 0.08630646671194375,
+              "fid_w_on_reuse_term": 0.8554931282997131,
+              "compute_penalty_lambda_f_over_L": 0.5,
+              "n_R": 1,
+              "n_F": 1
+            }
+          },
+          "selected_k": 2,
+          "selected_J": 0.5738345891998958,
+          "scheduler_local_block_id": 6,
+          "runtime_name": "block_6",
+          "canonical_runtime_block_id": 6
+        },
+        {
+          "block_id": 7,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.10897208005189896,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 2
+            },
+            "2": {
+              "J": 0.5090649953535212,
+              "reuse_risk_term_would_be_unweighted": 0.08318640287680966,
+              "fid_w_on_reuse_term": 0.10897208005189896,
+              "compute_penalty_lambda_f_over_L": 0.5,
+              "n_R": 1,
+              "n_F": 1
+            }
+          },
+          "selected_k": 2,
+          "selected_J": 0.5090649953535212,
+          "scheduler_local_block_id": 7,
+          "runtime_name": "block_7",
+          "canonical_runtime_block_id": 7
+        },
+        {
+          "block_id": 8,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.24355047941207886,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 2
+            },
+            "2": {
+              "J": 0.5186270693555017,
+              "reuse_risk_term_would_be_unweighted": 0.07648134957675616,
+              "fid_w_on_reuse_term": 0.24355047941207886,
+              "compute_penalty_lambda_f_over_L": 0.5,
+              "n_R": 1,
+              "n_F": 1
+            }
+          },
+          "selected_k": 2,
+          "selected_J": 0.5186270693555017,
+          "scheduler_local_block_id": 8,
+          "runtime_name": "block_8",
+          "canonical_runtime_block_id": 8
+        },
+        {
+          "block_id": 9,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.28313347697257996,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 2
+            },
+            "2": {
+              "J": 0.5220905464672388,
+              "reuse_risk_term_would_be_unweighted": 0.0780216691556335,
+              "fid_w_on_reuse_term": 0.28313347697257996,
+              "compute_penalty_lambda_f_over_L": 0.5,
+              "n_R": 1,
+              "n_F": 1
+            }
+          },
+          "selected_k": 2,
+          "selected_J": 0.5220905464672388,
+          "scheduler_local_block_id": 9,
+          "runtime_name": "block_9",
+          "canonical_runtime_block_id": 9
+        },
+        {
+          "block_id": 10,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.05780790001153946,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 2
+            },
+            "2": {
+              "J": 0.5044540758484176,
+              "reuse_risk_term_would_be_unweighted": 0.0770496047690459,
+              "fid_w_on_reuse_term": 0.05780790001153946,
+              "compute_penalty_lambda_f_over_L": 0.5,
+              "n_R": 1,
+              "n_F": 1
+            }
+          },
+          "selected_k": 2,
+          "selected_J": 0.5044540758484176,
+          "scheduler_local_block_id": 10,
+          "runtime_name": "block_10",
+          "canonical_runtime_block_id": 10
+        },
+        {
+          "block_id": 11,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.21436811983585358,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 2
+            },
+            "2": {
+              "J": 0.5168756485225021,
+              "reuse_risk_term_would_be_unweighted": 0.07872275287679967,
+              "fid_w_on_reuse_term": 0.21436811983585358,
+              "compute_penalty_lambda_f_over_L": 0.5,
+              "n_R": 1,
+              "n_F": 1
+            }
+          },
+          "selected_k": 2,
+          "selected_J": 0.5168756485225021,
+          "scheduler_local_block_id": 11,
+          "runtime_name": "block_11",
+          "canonical_runtime_block_id": 11
+        },
+        {
+          "block_id": 12,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.24105843901634216,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 2
+            },
+            "2": {
+              "J": 0.5189012263754975,
+              "reuse_risk_term_would_be_unweighted": 0.07840931208476024,
+              "fid_w_on_reuse_term": 0.24105843901634216,
+              "compute_penalty_lambda_f_over_L": 0.5,
+              "n_R": 1,
+              "n_F": 1
+            }
+          },
+          "selected_k": 2,
+          "selected_J": 0.5189012263754975,
+          "scheduler_local_block_id": 12,
+          "runtime_name": "block_12",
+          "canonical_runtime_block_id": 12
+        },
+        {
+          "block_id": 13,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.44162821769714355,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 2
+            },
+            "2": {
+              "J": 0.5342139134836487,
+              "reuse_risk_term_would_be_unweighted": 0.07747220877790824,
+              "fid_w_on_reuse_term": 0.44162821769714355,
+              "compute_penalty_lambda_f_over_L": 0.5,
+              "n_R": 1,
+              "n_F": 1
+            }
+          },
+          "selected_k": 2,
+          "selected_J": 0.5342139134836487,
+          "scheduler_local_block_id": 13,
+          "runtime_name": "block_13",
+          "canonical_runtime_block_id": 13
+        },
+        {
+          "block_id": 14,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.20175571739673615,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 2
+            },
+            "2": {
+              "J": 0.512809744463462,
+              "reuse_risk_term_would_be_unweighted": 0.06349135790919212,
+              "fid_w_on_reuse_term": 0.20175571739673615,
+              "compute_penalty_lambda_f_over_L": 0.5,
+              "n_R": 1,
+              "n_F": 1
+            }
+          },
+          "selected_k": 2,
+          "selected_J": 0.512809744463462,
+          "scheduler_local_block_id": 14,
+          "runtime_name": "block_14",
+          "canonical_runtime_block_id": 14
+        },
+        {
+          "block_id": 15,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.01353956013917923,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 2
+            },
+            "2": {
+              "J": 0.5007322351823721,
+              "reuse_risk_term_would_be_unweighted": 0.054081164738373544,
+              "fid_w_on_reuse_term": 0.01353956013917923,
+              "compute_penalty_lambda_f_over_L": 0.5,
+              "n_R": 1,
+              "n_F": 1
+            }
+          },
+          "selected_k": 2,
+          "selected_J": 0.5007322351823721,
+          "scheduler_local_block_id": 15,
+          "runtime_name": "block_15",
+          "canonical_runtime_block_id": 15
+        },
+        {
+          "block_id": 16,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.4265569746494293,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 2
+            },
+            "2": {
+              "J": 0.5296427565383087,
+              "reuse_risk_term_would_be_unweighted": 0.06949307665797987,
+              "fid_w_on_reuse_term": 0.4265569746494293,
+              "compute_penalty_lambda_f_over_L": 0.5,
+              "n_R": 1,
+              "n_F": 1
+            }
+          },
+          "selected_k": 2,
+          "selected_J": 0.5296427565383087,
+          "scheduler_local_block_id": 16,
+          "runtime_name": "block_16",
+          "canonical_runtime_block_id": 16
+        },
+        {
+          "block_id": 17,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.06509486585855484,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 2
+            },
+            "2": {
+              "J": 0.5045541667687049,
+              "reuse_risk_term_would_be_unweighted": 0.06996199636697485,
+              "fid_w_on_reuse_term": 0.06509486585855484,
+              "compute_penalty_lambda_f_over_L": 0.5,
+              "n_R": 1,
+              "n_F": 1
+            }
+          },
+          "selected_k": 2,
+          "selected_J": 0.5045541667687049,
+          "scheduler_local_block_id": 17,
+          "runtime_name": "block_17",
+          "canonical_runtime_block_id": 17
+        },
+        {
+          "block_id": 18,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.17019163072109222,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 2
+            },
+            "2": {
+              "J": 0.508951076546822,
+              "reuse_risk_term_would_be_unweighted": 0.052594105297051406,
+              "fid_w_on_reuse_term": 0.17019163072109222,
+              "compute_penalty_lambda_f_over_L": 0.5,
+              "n_R": 1,
+              "n_F": 1
+            }
+          },
+          "selected_k": 2,
+          "selected_J": 0.508951076546822,
+          "scheduler_local_block_id": 18,
+          "runtime_name": "block_18",
+          "canonical_runtime_block_id": 18
+        },
+        {
+          "block_id": 19,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.4776797592639923,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 2
+            },
+            "2": {
+              "J": 0.539766406776127,
+              "reuse_risk_term_would_be_unweighted": 0.08324909315269907,
+              "fid_w_on_reuse_term": 0.4776797592639923,
+              "compute_penalty_lambda_f_over_L": 0.5,
+              "n_R": 1,
+              "n_F": 1
+            }
+          },
+          "selected_k": 2,
+          "selected_J": 0.539766406776127,
+          "scheduler_local_block_id": 19,
+          "runtime_name": "block_19",
+          "canonical_runtime_block_id": 19
+        },
+        {
+          "block_id": 20,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.08047357946634293,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 2
+            },
+            "2": {
+              "J": 0.5064718004176569,
+              "reuse_risk_term_would_be_unweighted": 0.08042143099107003,
+              "fid_w_on_reuse_term": 0.08047357946634293,
+              "compute_penalty_lambda_f_over_L": 0.5,
+              "n_R": 1,
+              "n_F": 1
+            }
+          },
+          "selected_k": 2,
+          "selected_J": 0.5064718004176569,
+          "scheduler_local_block_id": 20,
+          "runtime_name": "block_20",
+          "canonical_runtime_block_id": 20
+        },
+        {
+          "block_id": 21,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.12419766932725906,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 2
+            },
+            "2": {
+              "J": 0.5087418169321862,
+              "reuse_risk_term_would_be_unweighted": 0.07038632028715155,
+              "fid_w_on_reuse_term": 0.12419766932725906,
+              "compute_penalty_lambda_f_over_L": 0.5,
+              "n_R": 1,
+              "n_F": 1
+            }
+          },
+          "selected_k": 2,
+          "selected_J": 0.5087418169321862,
+          "scheduler_local_block_id": 21,
+          "runtime_name": "block_21",
+          "canonical_runtime_block_id": 21
+        },
+        {
+          "block_id": 22,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.022434452548623085,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 2
+            },
+            "2": {
+              "J": 0.5012341642026931,
+              "reuse_risk_term_would_be_unweighted": 0.055012004416787226,
+              "fid_w_on_reuse_term": 0.022434452548623085,
+              "compute_penalty_lambda_f_over_L": 0.5,
+              "n_R": 1,
+              "n_F": 1
+            }
+          },
+          "selected_k": 2,
+          "selected_J": 0.5012341642026931,
+          "scheduler_local_block_id": 22,
+          "runtime_name": "block_22",
+          "canonical_runtime_block_id": 22
+        },
+        {
+          "block_id": 23,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.6613852977752686,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 2
+            },
+            "2": {
+              "J": 0.5336704590637301,
+              "reuse_risk_term_would_be_unweighted": 0.05090899234831644,
+              "fid_w_on_reuse_term": 0.6613852977752686,
+              "compute_penalty_lambda_f_over_L": 0.5,
+              "n_R": 1,
+              "n_F": 1
+            }
+          },
+          "selected_k": 2,
+          "selected_J": 0.5336704590637301,
+          "scheduler_local_block_id": 23,
+          "runtime_name": "block_23",
+          "canonical_runtime_block_id": 23
+        },
+        {
+          "block_id": 24,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.5204234719276428,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 2
+            },
+            "2": {
+              "J": 0.5355985761587682,
+              "reuse_risk_term_would_be_unweighted": 0.06840309493903382,
+              "fid_w_on_reuse_term": 0.5204234719276428,
+              "compute_penalty_lambda_f_over_L": 0.5,
+              "n_R": 1,
+              "n_F": 1
+            }
+          },
+          "selected_k": 2,
+          "selected_J": 0.5355985761587682,
+          "scheduler_local_block_id": 24,
+          "runtime_name": "block_24",
+          "canonical_runtime_block_id": 24
+        },
+        {
+          "block_id": 25,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.4307708740234375,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 2
+            },
+            "2": {
+              "J": 0.5208661468114681,
+              "reuse_risk_term_would_be_unweighted": 0.048439084603321844,
+              "fid_w_on_reuse_term": 0.4307708740234375,
+              "compute_penalty_lambda_f_over_L": 0.5,
+              "n_R": 1,
+              "n_F": 1
+            }
+          },
+          "selected_k": 2,
+          "selected_J": 0.5208661468114681,
+          "scheduler_local_block_id": 25,
+          "runtime_name": "block_25",
+          "canonical_runtime_block_id": 25
+        },
+        {
+          "block_id": 26,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.9516225457191467,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 2
+            },
+            "2": {
+              "J": 0.5556123204634872,
+              "reuse_risk_term_would_be_unweighted": 0.05843947341691092,
+              "fid_w_on_reuse_term": 0.9516225457191467,
+              "compute_penalty_lambda_f_over_L": 0.5,
+              "n_R": 1,
+              "n_F": 1
+            }
+          },
+          "selected_k": 2,
+          "selected_J": 0.5556123204634872,
+          "scheduler_local_block_id": 26,
+          "runtime_name": "block_26",
+          "canonical_runtime_block_id": 26
+        },
+        {
+          "block_id": 27,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.836944580078125,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 2
+            },
+            "2": {
+              "J": 0.522805238503801,
+              "reuse_risk_term_would_be_unweighted": 0.0272482062093911,
+              "fid_w_on_reuse_term": 0.836944580078125,
+              "compute_penalty_lambda_f_over_L": 0.5,
+              "n_R": 1,
+              "n_F": 1
+            }
+          },
+          "selected_k": 2,
+          "selected_J": 0.522805238503801,
+          "scheduler_local_block_id": 27,
+          "runtime_name": "block_27",
+          "canonical_runtime_block_id": 27
+        }
+      ]
+    },
+    {
+      "zone_id": 1,
+      "length": 3,
+      "candidate_k": [
+        1,
+        2,
+        3
+      ],
+      "per_block": [
+        {
+          "block_id": 0,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.0,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 3
+            },
+            "2": {
+              "J": 0.6666666666666666,
+              "reuse_risk_term_would_be_unweighted": 0.022158263476946424,
+              "fid_w_on_reuse_term": 0.0,
+              "compute_penalty_lambda_f_over_L": 0.6666666666666666,
+              "n_R": 1,
+              "n_F": 2
+            },
+            "3": {
+              "J": 0.3333333333333333,
+              "reuse_risk_term_would_be_unweighted": 0.04425695517985433,
+              "fid_w_on_reuse_term": 0.0,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 2,
+              "n_F": 1
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.3333333333333333,
+          "scheduler_local_block_id": 0,
+          "runtime_name": "block_0",
+          "canonical_runtime_block_id": 0
+        },
+        {
+          "block_id": 1,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.1824173629283905,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 3
+            },
+            "2": {
+              "J": 0.6688914137954899,
+              "reuse_risk_term_would_be_unweighted": 0.012195917609534701,
+              "fid_w_on_reuse_term": 0.1824173629283905,
+              "compute_penalty_lambda_f_over_L": 0.6666666666666666,
+              "n_R": 1,
+              "n_F": 2
+            },
+            "3": {
+              "J": 0.3379826428433322,
+              "reuse_risk_term_would_be_unweighted": 0.02548720930596944,
+              "fid_w_on_reuse_term": 0.1824173629283905,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 2,
+              "n_F": 1
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.3379826428433322,
+          "scheduler_local_block_id": 1,
+          "runtime_name": "block_1",
+          "canonical_runtime_block_id": 1
+        },
+        {
+          "block_id": 2,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 1.0,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 3
+            },
+            "2": {
+              "J": 0.6820092026536628,
+              "reuse_risk_term_would_be_unweighted": 0.015342535986996223,
+              "fid_w_on_reuse_term": 1.0,
+              "compute_penalty_lambda_f_over_L": 0.6666666666666666,
+              "n_R": 1,
+              "n_F": 2
+            },
+            "3": {
+              "J": 0.36753550145952396,
+              "reuse_risk_term_would_be_unweighted": 0.034202168126190646,
+              "fid_w_on_reuse_term": 1.0,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 2,
+              "n_F": 1
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.36753550145952396,
+          "scheduler_local_block_id": 2,
+          "runtime_name": "block_2",
+          "canonical_runtime_block_id": 2
+        },
+        {
+          "block_id": 3,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 1.0,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 3
+            },
+            "2": {
+              "J": 0.6908921119707412,
+              "reuse_risk_term_would_be_unweighted": 0.024225445304074566,
+              "fid_w_on_reuse_term": 1.0,
+              "compute_penalty_lambda_f_over_L": 0.6666666666666666,
+              "n_R": 1,
+              "n_F": 2
+            },
+            "3": {
+              "J": 0.3831971840335798,
+              "reuse_risk_term_would_be_unweighted": 0.04986385070024644,
+              "fid_w_on_reuse_term": 1.0,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 2,
+              "n_F": 1
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.3831971840335798,
+          "scheduler_local_block_id": 3,
+          "runtime_name": "block_3",
+          "canonical_runtime_block_id": 3
+        },
+        {
+          "block_id": 4,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.1526651829481125,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 3
+            },
+            "2": {
+              "J": 0.6751244151257416,
+              "reuse_risk_term_would_be_unweighted": 0.0554006374980047,
+              "fid_w_on_reuse_term": 0.1526651829481125,
+              "compute_penalty_lambda_f_over_L": 0.6666666666666666,
+              "n_R": 1,
+              "n_F": 2
+            },
+            "3": {
+              "J": 0.3497244587224579,
+              "reuse_risk_term_would_be_unweighted": 0.10736649360775051,
+              "fid_w_on_reuse_term": 0.1526651829481125,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 2,
+              "n_F": 1
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.3497244587224579,
+          "scheduler_local_block_id": 4,
+          "runtime_name": "block_4",
+          "canonical_runtime_block_id": 4
+        },
+        {
+          "block_id": 5,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.3069806694984436,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 3
+            },
+            "2": {
+              "J": 0.6824168850653478,
+              "reuse_risk_term_would_be_unweighted": 0.05130687357094657,
+              "fid_w_on_reuse_term": 0.3069806694984436,
+              "compute_penalty_lambda_f_over_L": 0.6666666666666666,
+              "n_R": 1,
+              "n_F": 2
+            },
+            "3": {
+              "J": 0.3650591589552604,
+              "reuse_risk_term_would_be_unweighted": 0.10334795892445577,
+              "fid_w_on_reuse_term": 0.3069806694984436,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 2,
+              "n_F": 1
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.3650591589552604,
+          "scheduler_local_block_id": 5,
+          "runtime_name": "block_5",
+          "canonical_runtime_block_id": 5
+        },
+        {
+          "block_id": 6,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.8554931282997131,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 3
+            },
+            "2": {
+              "J": 0.7219168322588002,
+              "reuse_risk_term_would_be_unweighted": 0.0645828280373718,
+              "fid_w_on_reuse_term": 0.8554931282997131,
+              "compute_penalty_lambda_f_over_L": 0.6666666666666666,
+              "n_R": 1,
+              "n_F": 2
+            },
+            "3": {
+              "J": 0.4471529620819497,
+              "reuse_risk_term_would_be_unweighted": 0.1330456376368939,
+              "fid_w_on_reuse_term": 0.8554931282997131,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 2,
+              "n_F": 1
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.4471529620819497,
+          "scheduler_local_block_id": 6,
+          "runtime_name": "block_6",
+          "canonical_runtime_block_id": 6
+        },
+        {
+          "block_id": 7,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.10897208005189896,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 3
+            },
+            "2": {
+              "J": 0.6728379305386927,
+              "reuse_risk_term_would_be_unweighted": 0.05663160572035445,
+              "fid_w_on_reuse_term": 0.10897208005189896,
+              "compute_penalty_lambda_f_over_L": 0.6666666666666666,
+              "n_R": 1,
+              "n_F": 2
+            },
+            "3": {
+              "J": 0.34595434547692877,
+              "reuse_risk_term_would_be_unweighted": 0.1158187687854041,
+              "fid_w_on_reuse_term": 0.10897208005189896,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 2,
+              "n_F": 1
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.34595434547692877,
+          "scheduler_local_block_id": 7,
+          "runtime_name": "block_7",
+          "canonical_runtime_block_id": 7
+        },
+        {
+          "block_id": 8,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.24355047941207886,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 3
+            },
+            "2": {
+              "J": 0.6801942493995501,
+              "reuse_risk_term_would_be_unweighted": 0.05554324001142824,
+              "fid_w_on_reuse_term": 0.24355047941207886,
+              "compute_penalty_lambda_f_over_L": 0.6666666666666666,
+              "n_R": 1,
+              "n_F": 2
+            },
+            "3": {
+              "J": 0.36148832427599675,
+              "reuse_risk_term_would_be_unweighted": 0.11560228093423779,
+              "fid_w_on_reuse_term": 0.24355047941207886,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 2,
+              "n_F": 1
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.36148832427599675,
+          "scheduler_local_block_id": 8,
+          "runtime_name": "block_8",
+          "canonical_runtime_block_id": 8
+        },
+        {
+          "block_id": 9,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.28313347697257996,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 3
+            },
+            "2": {
+              "J": 0.6817643339324326,
+              "reuse_risk_term_would_be_unweighted": 0.05332349755033782,
+              "fid_w_on_reuse_term": 0.28313347697257996,
+              "compute_penalty_lambda_f_over_L": 0.6666666666666666,
+              "n_R": 1,
+              "n_F": 2
+            },
+            "3": {
+              "J": 0.3646706816517793,
+              "reuse_risk_term_would_be_unweighted": 0.11068047711461852,
+              "fid_w_on_reuse_term": 0.28313347697257996,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 2,
+              "n_F": 1
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.3646706816517793,
+          "scheduler_local_block_id": 9,
+          "runtime_name": "block_9",
+          "canonical_runtime_block_id": 9
+        },
+        {
+          "block_id": 10,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.05780790001153946,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 3
+            },
+            "2": {
+              "J": 0.6699021263700382,
+              "reuse_risk_term_would_be_unweighted": 0.05596916170152664,
+              "fid_w_on_reuse_term": 0.05780790001153946,
+              "compute_penalty_lambda_f_over_L": 0.6666666666666666,
+              "n_R": 1,
+              "n_F": 2
+            },
+            "3": {
+              "J": 0.339937360959058,
+              "reuse_risk_term_would_be_unweighted": 0.11424091905096755,
+              "fid_w_on_reuse_term": 0.05780790001153946,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 2,
+              "n_F": 1
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.339937360959058,
+          "scheduler_local_block_id": 10,
+          "runtime_name": "block_10",
+          "canonical_runtime_block_id": 10
+        },
+        {
+          "block_id": 11,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.21436811983585358,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 3
+            },
+            "2": {
+              "J": 0.678660093919822,
+              "reuse_risk_term_would_be_unweighted": 0.05594781193369137,
+              "fid_w_on_reuse_term": 0.21436811983585358,
+              "compute_penalty_lambda_f_over_L": 0.6666666666666666,
+              "n_R": 1,
+              "n_F": 2
+            },
+            "3": {
+              "J": 0.35770215445307285,
+              "reuse_risk_term_would_be_unweighted": 0.1136774495125455,
+              "fid_w_on_reuse_term": 0.21436811983585358,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 2,
+              "n_F": 1
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.35770215445307285,
+          "scheduler_local_block_id": 11,
+          "runtime_name": "block_11",
+          "canonical_runtime_block_id": 11
+        },
+        {
+          "block_id": 12,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.24105843901634216,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 3
+            },
+            "2": {
+              "J": 0.6792077184710958,
+              "reuse_risk_term_would_be_unweighted": 0.05202494405756523,
+              "fid_w_on_reuse_term": 0.24105843901634216,
+              "compute_penalty_lambda_f_over_L": 0.6666666666666666,
+              "n_R": 1,
+              "n_F": 2
+            },
+            "3": {
+              "J": 0.35891509303404245,
+              "reuse_risk_term_would_be_unweighted": 0.10612264729290338,
+              "fid_w_on_reuse_term": 0.24105843901634216,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 2,
+              "n_F": 1
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.35891509303404245,
+          "scheduler_local_block_id": 12,
+          "runtime_name": "block_12",
+          "canonical_runtime_block_id": 12
+        },
+        {
+          "block_id": 13,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.44162821769714355,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 3
+            },
+            "2": {
+              "J": 0.6898789361715437,
+              "reuse_risk_term_would_be_unweighted": 0.05256065752753919,
+              "fid_w_on_reuse_term": 0.44162821769714355,
+              "compute_penalty_lambda_f_over_L": 0.6666666666666666,
+              "n_R": 1,
+              "n_F": 2
+            },
+            "3": {
+              "J": 0.3811121695787934,
+              "reuse_risk_term_would_be_unweighted": 0.10818791537959542,
+              "fid_w_on_reuse_term": 0.44162821769714355,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 2,
+              "n_F": 1
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.3811121695787934,
+          "scheduler_local_block_id": 13,
+          "runtime_name": "block_13",
+          "canonical_runtime_block_id": 13
+        },
+        {
+          "block_id": 14,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.20175571739673615,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 3
+            },
+            "2": {
+              "J": 0.6766872266053333,
+              "reuse_risk_term_would_be_unweighted": 0.04966679540962946,
+              "fid_w_on_reuse_term": 0.20175571739673615,
+              "compute_penalty_lambda_f_over_L": 0.6666666666666666,
+              "n_R": 1,
+              "n_F": 2
+            },
+            "3": {
+              "J": 0.3535064412474907,
+              "reuse_risk_term_would_be_unweighted": 0.09998778807585713,
+              "fid_w_on_reuse_term": 0.20175571739673615,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 2,
+              "n_F": 1
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.3535064412474907,
+          "scheduler_local_block_id": 14,
+          "runtime_name": "block_14",
+          "canonical_runtime_block_id": 14
+        },
+        {
+          "block_id": 15,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.01353956013917923,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 3
+            },
+            "2": {
+              "J": 0.6672192622228491,
+              "reuse_risk_term_would_be_unweighted": 0.04081340534714939,
+              "fid_w_on_reuse_term": 0.01353956013917923,
+              "compute_penalty_lambda_f_over_L": 0.6666666666666666,
+              "n_R": 1,
+              "n_F": 2
+            },
+            "3": {
+              "J": 0.33444455300627884,
+              "reuse_risk_term_would_be_unweighted": 0.08207206596985257,
+              "fid_w_on_reuse_term": 0.01353956013917923,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 2,
+              "n_F": 1
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.33444455300627884,
+          "scheduler_local_block_id": 15,
+          "runtime_name": "block_15",
+          "canonical_runtime_block_id": 15
+        },
+        {
+          "block_id": 16,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.4265569746494293,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 3
+            },
+            "2": {
+              "J": 0.688075060451748,
+              "reuse_risk_term_would_be_unweighted": 0.05018882601245963,
+              "fid_w_on_reuse_term": 0.4265569746494293,
+              "compute_penalty_lambda_f_over_L": 0.6666666666666666,
+              "n_R": 1,
+              "n_F": 2
+            },
+            "3": {
+              "J": 0.3780734956005787,
+              "reuse_risk_term_would_be_unweighted": 0.10488672071067547,
+              "fid_w_on_reuse_term": 0.4265569746494293,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 2,
+              "n_F": 1
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.3780734956005787,
+          "scheduler_local_block_id": 16,
+          "runtime_name": "block_16",
+          "canonical_runtime_block_id": 16
+        },
+        {
+          "block_id": 17,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.06509486585855484,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 3
+            },
+            "2": {
+              "J": 0.6699396254497284,
+              "reuse_risk_term_would_be_unweighted": 0.050279829905075187,
+              "fid_w_on_reuse_term": 0.06509486585855484,
+              "compute_penalty_lambda_f_over_L": 0.6666666666666666,
+              "n_R": 1,
+              "n_F": 2
+            },
+            "3": {
+              "J": 0.34020073936296724,
+              "reuse_risk_term_would_be_unweighted": 0.10549842816415346,
+              "fid_w_on_reuse_term": 0.06509486585855484,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 2,
+              "n_F": 1
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.34020073936296724,
+          "scheduler_local_block_id": 17,
+          "runtime_name": "block_17",
+          "canonical_runtime_block_id": 17
+        },
+        {
+          "block_id": 18,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.17019163072109222,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 3
+            },
+            "2": {
+              "J": 0.6733321076965144,
+              "reuse_risk_term_would_be_unweighted": 0.03916432906604583,
+              "fid_w_on_reuse_term": 0.17019163072109222,
+              "compute_penalty_lambda_f_over_L": 0.6666666666666666,
+              "n_R": 1,
+              "n_F": 2
+            },
+            "3": {
+              "J": 0.3474704041536017,
+              "reuse_risk_term_would_be_unweighted": 0.0830656052848806,
+              "fid_w_on_reuse_term": 0.17019163072109222,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 2,
+              "n_F": 1
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.3474704041536017,
+          "scheduler_local_block_id": 18,
+          "runtime_name": "block_18",
+          "canonical_runtime_block_id": 18
+        },
+        {
+          "block_id": 19,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.4776797592639923,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 3
+            },
+            "2": {
+              "J": 0.6932388698189496,
+              "reuse_risk_term_would_be_unweighted": 0.05562765144837883,
+              "fid_w_on_reuse_term": 0.4776797592639923,
+              "compute_penalty_lambda_f_over_L": 0.6666666666666666,
+              "n_R": 1,
+              "n_F": 2
+            },
+            "3": {
+              "J": 0.3885539362243594,
+              "reuse_risk_term_would_be_unweighted": 0.11560172232566401,
+              "fid_w_on_reuse_term": 0.4776797592639923,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 2,
+              "n_F": 1
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.3885539362243594,
+          "scheduler_local_block_id": 19,
+          "runtime_name": "block_19",
+          "canonical_runtime_block_id": 19
+        },
+        {
+          "block_id": 20,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.08047357946634293,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 3
+            },
+            "2": {
+              "J": 0.6706679332698702,
+              "reuse_risk_term_would_be_unweighted": 0.04972149405727611,
+              "fid_w_on_reuse_term": 0.08047357946634293,
+              "compute_penalty_lambda_f_over_L": 0.6666666666666666,
+              "n_R": 1,
+              "n_F": 2
+            },
+            "3": {
+              "J": 0.3415626289887899,
+              "reuse_risk_term_would_be_unweighted": 0.10226083778090671,
+              "fid_w_on_reuse_term": 0.08047357946634293,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 2,
+              "n_F": 1
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.3415626289887899,
+          "scheduler_local_block_id": 20,
+          "runtime_name": "block_20",
+          "canonical_runtime_block_id": 20
+        },
+        {
+          "block_id": 21,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.12419766932725906,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 3
+            },
+            "2": {
+              "J": 0.6733193046441692,
+              "reuse_risk_term_would_be_unweighted": 0.053564918033791604,
+              "fid_w_on_reuse_term": 0.12419766932725906,
+              "compute_penalty_lambda_f_over_L": 0.6666666666666666,
+              "n_R": 1,
+              "n_F": 2
+            },
+            "3": {
+              "J": 0.34661274475954185,
+              "reuse_risk_term_would_be_unweighted": 0.10692158313548943,
+              "fid_w_on_reuse_term": 0.12419766932725906,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 2,
+              "n_F": 1
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.34661274475954185,
+          "scheduler_local_block_id": 21,
+          "runtime_name": "block_21",
+          "canonical_runtime_block_id": 21
+        },
+        {
+          "block_id": 22,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.022434452548623085,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 3
+            },
+            "2": {
+              "J": 0.6676876609053266,
+              "reuse_risk_term_would_be_unweighted": 0.04551010266228264,
+              "fid_w_on_reuse_term": 0.022434452548623085,
+              "compute_penalty_lambda_f_over_L": 0.6666666666666666,
+              "n_R": 1,
+              "n_F": 2
+            },
+            "3": {
+              "J": 0.3353745713416909,
+              "reuse_risk_term_would_be_unweighted": 0.09098675369651,
+              "fid_w_on_reuse_term": 0.022434452548623085,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 2,
+              "n_F": 1
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.3353745713416909,
+          "scheduler_local_block_id": 22,
+          "runtime_name": "block_22",
+          "canonical_runtime_block_id": 22
+        },
+        {
+          "block_id": 23,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.6613852977752686,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 3
+            },
+            "2": {
+              "J": 0.6950250617217484,
+              "reuse_risk_term_would_be_unweighted": 0.04287726859135243,
+              "fid_w_on_reuse_term": 0.6613852977752686,
+              "compute_penalty_lambda_f_over_L": 0.6666666666666666,
+              "n_R": 1,
+              "n_F": 2
+            },
+            "3": {
+              "J": 0.3912229450557515,
+              "reuse_risk_term_would_be_unweighted": 0.08752781762331896,
+              "fid_w_on_reuse_term": 0.6613852977752686,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 2,
+              "n_F": 1
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.3912229450557515,
+          "scheduler_local_block_id": 23,
+          "runtime_name": "block_23",
+          "canonical_runtime_block_id": 23
+        },
+        {
+          "block_id": 24,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.5204234719276428,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 3
+            },
+            "2": {
+              "J": 0.6926254964893137,
+              "reuse_risk_term_would_be_unweighted": 0.04988020568422077,
+              "fid_w_on_reuse_term": 0.5204234719276428,
+              "compute_penalty_lambda_f_over_L": 0.6666666666666666,
+              "n_R": 1,
+              "n_F": 2
+            },
+            "3": {
+              "J": 0.3843884963588222,
+              "reuse_risk_term_would_be_unweighted": 0.09810311367467943,
+              "fid_w_on_reuse_term": 0.5204234719276428,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 2,
+              "n_F": 1
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.3843884963588222,
+          "scheduler_local_block_id": 24,
+          "runtime_name": "block_24",
+          "canonical_runtime_block_id": 24
+        },
+        {
+          "block_id": 25,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.4307708740234375,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 3
+            },
+            "2": {
+              "J": 0.684138607003089,
+              "reuse_risk_term_would_be_unweighted": 0.04055970677226368,
+              "fid_w_on_reuse_term": 0.4307708740234375,
+              "compute_penalty_lambda_f_over_L": 0.6666666666666666,
+              "n_R": 1,
+              "n_F": 2
+            },
+            "3": {
+              "J": 0.3688730594590019,
+              "reuse_risk_term_would_be_unweighted": 0.08250262092635105,
+              "fid_w_on_reuse_term": 0.4307708740234375,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 2,
+              "n_F": 1
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.3688730594590019,
+          "scheduler_local_block_id": 25,
+          "runtime_name": "block_25",
+          "canonical_runtime_block_id": 25
+        },
+        {
+          "block_id": 26,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.9516225457191467,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 3
+            },
+            "2": {
+              "J": 0.7064261399648158,
+              "reuse_risk_term_would_be_unweighted": 0.04178071807672731,
+              "fid_w_on_reuse_term": 0.9516225457191467,
+              "compute_penalty_lambda_f_over_L": 0.6666666666666666,
+              "n_R": 1,
+              "n_F": 2
+            },
+            "3": {
+              "J": 0.41174894331439904,
+              "reuse_risk_term_would_be_unweighted": 0.08240200942465756,
+              "fid_w_on_reuse_term": 0.9516225457191467,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 2,
+              "n_F": 1
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.41174894331439904,
+          "scheduler_local_block_id": 26,
+          "runtime_name": "block_26",
+          "canonical_runtime_block_id": 26
+        },
+        {
+          "block_id": 27,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.836944580078125,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 3
+            },
+            "2": {
+              "J": 0.6865711396808591,
+              "reuse_risk_term_would_be_unweighted": 0.02378230708218999,
+              "fid_w_on_reuse_term": 0.836944580078125,
+              "compute_penalty_lambda_f_over_L": 0.6666666666666666,
+              "n_R": 1,
+              "n_F": 2
+            },
+            "3": {
+              "J": 0.37048316480672333,
+              "reuse_risk_term_would_be_unweighted": 0.044387444948770956,
+              "fid_w_on_reuse_term": 0.836944580078125,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 2,
+              "n_F": 1
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.37048316480672333,
+          "scheduler_local_block_id": 27,
+          "runtime_name": "block_27",
+          "canonical_runtime_block_id": 27
+        }
+      ]
+    },
+    {
+      "zone_id": 2,
+      "length": 3,
+      "candidate_k": [
+        1,
+        2,
+        3
+      ],
+      "per_block": [
+        {
+          "block_id": 0,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.0,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 3
+            },
+            "2": {
+              "J": 0.6666666666666666,
+              "reuse_risk_term_would_be_unweighted": 0.016940596313317523,
+              "fid_w_on_reuse_term": 0.0,
+              "compute_penalty_lambda_f_over_L": 0.6666666666666666,
+              "n_R": 1,
+              "n_F": 2
+            },
+            "3": {
+              "J": 0.3333333333333333,
+              "reuse_risk_term_would_be_unweighted": 0.04136314924437641,
+              "fid_w_on_reuse_term": 0.0,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 2,
+              "n_F": 1
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.3333333333333333,
+          "scheduler_local_block_id": 0,
+          "runtime_name": "block_0",
+          "canonical_runtime_block_id": 0
+        },
+        {
+          "block_id": 1,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.1824173629283905,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 3
+            },
+            "2": {
+              "J": 0.6697891819080543,
+              "reuse_risk_term_would_be_unweighted": 0.01711742342538653,
+              "fid_w_on_reuse_term": 0.1824173629283905,
+              "compute_penalty_lambda_f_over_L": 0.6666666666666666,
+              "n_R": 1,
+              "n_F": 2
+            },
+            "3": {
+              "J": 0.3385414095183252,
+              "reuse_risk_term_would_be_unweighted": 0.02855033151113107,
+              "fid_w_on_reuse_term": 0.1824173629283905,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 2,
+              "n_F": 1
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.3385414095183252,
+          "scheduler_local_block_id": 1,
+          "runtime_name": "block_1",
+          "canonical_runtime_block_id": 1
+        },
+        {
+          "block_id": 2,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 1.0,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 3
+            },
+            "2": {
+              "J": 0.6868215248697432,
+              "reuse_risk_term_would_be_unweighted": 0.020154858203076637,
+              "fid_w_on_reuse_term": 1.0,
+              "compute_penalty_lambda_f_over_L": 0.6666666666666666,
+              "n_R": 1,
+              "n_F": 2
+            },
+            "3": {
+              "J": 0.36843577212337686,
+              "reuse_risk_term_would_be_unweighted": 0.035102438790043516,
+              "fid_w_on_reuse_term": 1.0,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 2,
+              "n_F": 1
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.36843577212337686,
+          "scheduler_local_block_id": 2,
+          "runtime_name": "block_2",
+          "canonical_runtime_block_id": 2
+        },
+        {
+          "block_id": 3,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 1.0,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 3
+            },
+            "2": {
+              "J": 0.6957445433100305,
+              "reuse_risk_term_would_be_unweighted": 0.029077876643363938,
+              "fid_w_on_reuse_term": 1.0,
+              "compute_penalty_lambda_f_over_L": 0.6666666666666666,
+              "n_R": 1,
+              "n_F": 2
+            },
+            "3": {
+              "J": 0.3971758482731982,
+              "reuse_risk_term_would_be_unweighted": 0.06384251493986488,
+              "fid_w_on_reuse_term": 1.0,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 2,
+              "n_F": 1
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.3971758482731982,
+          "scheduler_local_block_id": 3,
+          "runtime_name": "block_3",
+          "canonical_runtime_block_id": 3
+        },
+        {
+          "block_id": 4,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.1526651829481125,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 3
+            },
+            "2": {
+              "J": 0.6753214821916433,
+              "reuse_risk_term_would_be_unweighted": 0.05669148235271374,
+              "fid_w_on_reuse_term": 0.1526651829481125,
+              "compute_penalty_lambda_f_over_L": 0.6666666666666666,
+              "n_R": 1,
+              "n_F": 2
+            },
+            "3": {
+              "J": 0.35066277602335466,
+              "reuse_risk_term_would_be_unweighted": 0.11351273653476879,
+              "fid_w_on_reuse_term": 0.1526651829481125,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 2,
+              "n_F": 1
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.35066277602335466,
+          "scheduler_local_block_id": 4,
+          "runtime_name": "block_4",
+          "canonical_runtime_block_id": 4
+        },
+        {
+          "block_id": 5,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.3069806694984436,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 3
+            },
+            "2": {
+              "J": 0.6845008782096943,
+              "reuse_risk_term_would_be_unweighted": 0.05809555231007161,
+              "fid_w_on_reuse_term": 0.3069806694984436,
+              "compute_penalty_lambda_f_over_L": 0.6666666666666666,
+              "n_R": 1,
+              "n_F": 2
+            },
+            "3": {
+              "J": 0.36726386163383784,
+              "reuse_risk_term_would_be_unweighted": 0.11052985308795339,
+              "fid_w_on_reuse_term": 0.3069806694984436,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 2,
+              "n_F": 1
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.36726386163383784,
+          "scheduler_local_block_id": 5,
+          "runtime_name": "block_5",
+          "canonical_runtime_block_id": 5
+        },
+        {
+          "block_id": 6,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.8554931282997131,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 3
+            },
+            "2": {
+              "J": 0.7339867179553061,
+              "reuse_risk_term_would_be_unweighted": 0.07869151611122543,
+              "fid_w_on_reuse_term": 0.8554931282997131,
+              "compute_penalty_lambda_f_over_L": 0.6666666666666666,
+              "n_R": 1,
+              "n_F": 2
+            },
+            "3": {
+              "J": 0.47239653346347077,
+              "reuse_risk_term_would_be_unweighted": 0.16255326376089618,
+              "fid_w_on_reuse_term": 0.8554931282997131,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 2,
+              "n_F": 1
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.47239653346347077,
+          "scheduler_local_block_id": 6,
+          "runtime_name": "block_6",
+          "canonical_runtime_block_id": 6
+        },
+        {
+          "block_id": 7,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.10897208005189896,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 3
+            },
+            "2": {
+              "J": 0.6732189365945658,
+              "reuse_risk_term_would_be_unweighted": 0.060127969703602575,
+              "fid_w_on_reuse_term": 0.10897208005189896,
+              "compute_penalty_lambda_f_over_L": 0.6666666666666666,
+              "n_R": 1,
+              "n_F": 2
+            },
+            "3": {
+              "J": 0.34647426061747516,
+              "reuse_risk_term_would_be_unweighted": 0.12058985455617033,
+              "fid_w_on_reuse_term": 0.10897208005189896,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 2,
+              "n_F": 1
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.34647426061747516,
+          "scheduler_local_block_id": 7,
+          "runtime_name": "block_7",
+          "canonical_runtime_block_id": 7
+        },
+        {
+          "block_id": 8,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.24355047941207886,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 3
+            },
+            "2": {
+              "J": 0.6813115785635864,
+              "reuse_risk_term_would_be_unweighted": 0.060130909749272245,
+              "fid_w_on_reuse_term": 0.24355047941207886,
+              "compute_penalty_lambda_f_over_L": 0.6666666666666666,
+              "n_R": 1,
+              "n_F": 2
+            },
+            "3": {
+              "J": 0.3625066865887651,
+              "reuse_risk_term_would_be_unweighted": 0.11978360020417582,
+              "fid_w_on_reuse_term": 0.24355047941207886,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 2,
+              "n_F": 1
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.3625066865887651,
+          "scheduler_local_block_id": 8,
+          "runtime_name": "block_8",
+          "canonical_runtime_block_id": 8
+        },
+        {
+          "block_id": 9,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.28313347697257996,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 3
+            },
+            "2": {
+              "J": 0.6845701309524422,
+              "reuse_risk_term_would_be_unweighted": 0.06323330069340213,
+              "fid_w_on_reuse_term": 0.28313347697257996,
+              "compute_penalty_lambda_f_over_L": 0.6666666666666666,
+              "n_R": 1,
+              "n_F": 2
+            },
+            "3": {
+              "J": 0.3693669200105286,
+              "reuse_risk_term_would_be_unweighted": 0.12726713584873964,
+              "fid_w_on_reuse_term": 0.28313347697257996,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 2,
+              "n_F": 1
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.3693669200105286,
+          "scheduler_local_block_id": 9,
+          "runtime_name": "block_9",
+          "canonical_runtime_block_id": 9
+        },
+        {
+          "block_id": 10,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.05780790001153946,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 3
+            },
+            "2": {
+              "J": 0.6702406079289414,
+              "reuse_risk_term_would_be_unweighted": 0.06182444374490944,
+              "fid_w_on_reuse_term": 0.05780790001153946,
+              "compute_penalty_lambda_f_over_L": 0.6666666666666666,
+              "n_R": 1,
+              "n_F": 2
+            },
+            "3": {
+              "J": 0.3405217272065553,
+              "reuse_risk_term_would_be_unweighted": 0.12434968009194429,
+              "fid_w_on_reuse_term": 0.05780790001153946,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 2,
+              "n_F": 1
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.3405217272065553,
+          "scheduler_local_block_id": 10,
+          "runtime_name": "block_10",
+          "canonical_runtime_block_id": 10
+        },
+        {
+          "block_id": 11,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.21436811983585358,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 3
+            },
+            "2": {
+              "J": 0.6786517793348988,
+              "reuse_risk_term_would_be_unweighted": 0.0559090254530828,
+              "fid_w_on_reuse_term": 0.21436811983585358,
+              "compute_penalty_lambda_f_over_L": 0.6666666666666666,
+              "n_R": 1,
+              "n_F": 2
+            },
+            "3": {
+              "J": 0.35648747227101696,
+              "reuse_risk_term_would_be_unweighted": 0.10801111170547772,
+              "fid_w_on_reuse_term": 0.21436811983585358,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 2,
+              "n_F": 1
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.35648747227101696,
+          "scheduler_local_block_id": 11,
+          "runtime_name": "block_11",
+          "canonical_runtime_block_id": 11
+        },
+        {
+          "block_id": 12,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.24105843901634216,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 3
+            },
+            "2": {
+              "J": 0.6790747949994703,
+              "reuse_risk_term_would_be_unweighted": 0.05147352809317118,
+              "fid_w_on_reuse_term": 0.24105843901634216,
+              "compute_penalty_lambda_f_over_L": 0.6666666666666666,
+              "n_R": 1,
+              "n_F": 2
+            },
+            "3": {
+              "J": 0.3586088559988118,
+              "reuse_risk_term_would_be_unweighted": 0.10485226225066947,
+              "fid_w_on_reuse_term": 0.24105843901634216,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 2,
+              "n_F": 1
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.3586088559988118,
+          "scheduler_local_block_id": 12,
+          "runtime_name": "block_12",
+          "canonical_runtime_block_id": 12
+        },
+        {
+          "block_id": 13,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.44162821769714355,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 3
+            },
+            "2": {
+              "J": 0.690553233180013,
+              "reuse_risk_term_would_be_unweighted": 0.05408750065360909,
+              "fid_w_on_reuse_term": 0.44162821769714355,
+              "compute_penalty_lambda_f_over_L": 0.6666666666666666,
+              "n_R": 1,
+              "n_F": 2
+            },
+            "3": {
+              "J": 0.38143624714838686,
+              "reuse_risk_term_would_be_unweighted": 0.10892173979707338,
+              "fid_w_on_reuse_term": 0.44162821769714355,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 2,
+              "n_F": 1
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.38143624714838686,
+          "scheduler_local_block_id": 13,
+          "runtime_name": "block_13",
+          "canonical_runtime_block_id": 13
+        },
+        {
+          "block_id": 14,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.20175571739673615,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 3
+            },
+            "2": {
+              "J": 0.6772095845745484,
+              "reuse_risk_term_would_be_unweighted": 0.052255856953733776,
+              "fid_w_on_reuse_term": 0.20175571739673615,
+              "compute_penalty_lambda_f_over_L": 0.6666666666666666,
+              "n_R": 1,
+              "n_F": 2
+            },
+            "3": {
+              "J": 0.35424537458558214,
+              "reuse_risk_term_would_be_unweighted": 0.10365030305994744,
+              "fid_w_on_reuse_term": 0.20175571739673615,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 2,
+              "n_F": 1
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.35424537458558214,
+          "scheduler_local_block_id": 14,
+          "runtime_name": "block_14",
+          "canonical_runtime_block_id": 14
+        },
+        {
+          "block_id": 15,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.01353956013917923,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 3
+            },
+            "2": {
+              "J": 0.6672704471611279,
+              "reuse_risk_term_would_be_unweighted": 0.04459380424878973,
+              "fid_w_on_reuse_term": 0.01353956013917923,
+              "compute_penalty_lambda_f_over_L": 0.6666666666666666,
+              "n_R": 1,
+              "n_F": 2
+            },
+            "3": {
+              "J": 0.3345277377568521,
+              "reuse_risk_term_would_be_unweighted": 0.0882158955860413,
+              "fid_w_on_reuse_term": 0.01353956013917923,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 2,
+              "n_F": 1
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.3345277377568521,
+          "scheduler_local_block_id": 15,
+          "runtime_name": "block_15",
+          "canonical_runtime_block_id": 15
+        },
+        {
+          "block_id": 16,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.4265569746494293,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 3
+            },
+            "2": {
+              "J": 0.690752626632043,
+              "reuse_risk_term_would_be_unweighted": 0.0564659855466474,
+              "fid_w_on_reuse_term": 0.4265569746494293,
+              "compute_penalty_lambda_f_over_L": 0.6666666666666666,
+              "n_R": 1,
+              "n_F": 2
+            },
+            "3": {
+              "J": 0.382795378871118,
+              "reuse_risk_term_would_be_unweighted": 0.11595648055792684,
+              "fid_w_on_reuse_term": 0.4265569746494293,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 2,
+              "n_F": 1
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.382795378871118,
+          "scheduler_local_block_id": 16,
+          "runtime_name": "block_16",
+          "canonical_runtime_block_id": 16
+        },
+        {
+          "block_id": 17,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.06509486585855484,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 3
+            },
+            "2": {
+              "J": 0.6704265053975504,
+              "reuse_risk_term_would_be_unweighted": 0.05775937443443885,
+              "fid_w_on_reuse_term": 0.06509486585855484,
+              "compute_penalty_lambda_f_over_L": 0.6666666666666666,
+              "n_R": 1,
+              "n_F": 2
+            },
+            "3": {
+              "J": 0.34093249120113167,
+              "reuse_risk_term_would_be_unweighted": 0.11673974233713968,
+              "fid_w_on_reuse_term": 0.06509486585855484,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 2,
+              "n_F": 1
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.34093249120113167,
+          "scheduler_local_block_id": 17,
+          "runtime_name": "block_17",
+          "canonical_runtime_block_id": 17
+        },
+        {
+          "block_id": 18,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.17019163072109222,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 3
+            },
+            "2": {
+              "J": 0.6751166342873784,
+              "reuse_risk_term_would_be_unweighted": 0.04964972475385434,
+              "fid_w_on_reuse_term": 0.17019163072109222,
+              "compute_penalty_lambda_f_over_L": 0.6666666666666666,
+              "n_R": 1,
+              "n_F": 2
+            },
+            "3": {
+              "J": 0.3500790427710248,
+              "reuse_risk_term_would_be_unweighted": 0.09839326038972003,
+              "fid_w_on_reuse_term": 0.17019163072109222,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 2,
+              "n_F": 1
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.3500790427710248,
+          "scheduler_local_block_id": 18,
+          "runtime_name": "block_18",
+          "canonical_runtime_block_id": 18
+        },
+        {
+          "block_id": 19,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.4776797592639923,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 3
+            },
+            "2": {
+              "J": 0.6965270212747001,
+              "reuse_risk_term_would_be_unweighted": 0.06251124111694042,
+              "fid_w_on_reuse_term": 0.4776797592639923,
+              "compute_penalty_lambda_f_over_L": 0.6666666666666666,
+              "n_R": 1,
+              "n_F": 2
+            },
+            "3": {
+              "J": 0.3935140131770374,
+              "reuse_risk_term_would_be_unweighted": 0.12598540900378594,
+              "fid_w_on_reuse_term": 0.4776797592639923,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 2,
+              "n_F": 1
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.3935140131770374,
+          "scheduler_local_block_id": 19,
+          "runtime_name": "block_19",
+          "canonical_runtime_block_id": 19
+        },
+        {
+          "block_id": 20,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.08047357946634293,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 3
+            },
+            "2": {
+              "J": 0.670932937077934,
+              "reuse_risk_term_would_be_unweighted": 0.05301454762617747,
+              "fid_w_on_reuse_term": 0.08047357946634293,
+              "compute_penalty_lambda_f_over_L": 0.6666666666666666,
+              "n_R": 1,
+              "n_F": 2
+            },
+            "3": {
+              "J": 0.3422714900510284,
+              "reuse_risk_term_would_be_unweighted": 0.11106945629818021,
+              "fid_w_on_reuse_term": 0.08047357946634293,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 2,
+              "n_F": 1
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.3422714900510284,
+          "scheduler_local_block_id": 20,
+          "runtime_name": "block_20",
+          "canonical_runtime_block_id": 20
+        },
+        {
+          "block_id": 21,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.12419766932725906,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 3
+            },
+            "2": {
+              "J": 0.6732694755810237,
+              "reuse_risk_term_would_be_unweighted": 0.05316371031857906,
+              "fid_w_on_reuse_term": 0.12419766932725906,
+              "compute_penalty_lambda_f_over_L": 0.6666666666666666,
+              "n_R": 1,
+              "n_F": 2
+            },
+            "3": {
+              "J": 0.345826526819931,
+              "reuse_risk_term_would_be_unweighted": 0.10059120718021101,
+              "fid_w_on_reuse_term": 0.12419766932725906,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 2,
+              "n_F": 1
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.345826526819931,
+          "scheduler_local_block_id": 21,
+          "runtime_name": "block_21",
+          "canonical_runtime_block_id": 21
+        },
+        {
+          "block_id": 22,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.022434452548623085,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 3
+            },
+            "2": {
+              "J": 0.6678136193132488,
+              "reuse_risk_term_would_be_unweighted": 0.05112461042213168,
+              "fid_w_on_reuse_term": 0.022434452548623085,
+              "compute_penalty_lambda_f_over_L": 0.6666666666666666,
+              "n_R": 1,
+              "n_F": 2
+            },
+            "3": {
+              "J": 0.33562133162374996,
+              "reuse_risk_term_would_be_unweighted": 0.10198592033648984,
+              "fid_w_on_reuse_term": 0.022434452548623085,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 2,
+              "n_F": 1
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.33562133162374996,
+          "scheduler_local_block_id": 22,
+          "runtime_name": "block_22",
+          "canonical_runtime_block_id": 22
+        },
+        {
+          "block_id": 23,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.6613852977752686,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 3
+            },
+            "2": {
+              "J": 0.7037162690281142,
+              "reuse_risk_term_would_be_unweighted": 0.05601818257235681,
+              "fid_w_on_reuse_term": 0.6613852977752686,
+              "compute_penalty_lambda_f_over_L": 0.6666666666666666,
+              "n_R": 1,
+              "n_F": 2
+            },
+            "3": {
+              "J": 0.40934396261501593,
+              "reuse_risk_term_would_be_unweighted": 0.11492639696915392,
+              "fid_w_on_reuse_term": 0.6613852977752686,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 2,
+              "n_F": 1
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.40934396261501593,
+          "scheduler_local_block_id": 23,
+          "runtime_name": "block_23",
+          "canonical_runtime_block_id": 23
+        },
+        {
+          "block_id": 24,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.5204234719276428,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 3
+            },
+            "2": {
+              "J": 0.6962376991989244,
+              "reuse_risk_term_would_be_unweighted": 0.05682109690926693,
+              "fid_w_on_reuse_term": 0.5204234719276428,
+              "compute_penalty_lambda_f_over_L": 0.6666666666666666,
+              "n_R": 1,
+              "n_F": 2
+            },
+            "3": {
+              "J": 0.3955810285095292,
+              "reuse_risk_term_would_be_unweighted": 0.11960969966560327,
+              "fid_w_on_reuse_term": 0.5204234719276428,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 2,
+              "n_F": 1
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.3955810285095292,
+          "scheduler_local_block_id": 24,
+          "runtime_name": "block_24",
+          "canonical_runtime_block_id": 24
+        },
+        {
+          "block_id": 25,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.4307708740234375,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 3
+            },
+            "2": {
+              "J": 0.6879468089493324,
+              "reuse_risk_term_would_be_unweighted": 0.049400141852459424,
+              "fid_w_on_reuse_term": 0.4307708740234375,
+              "compute_penalty_lambda_f_over_L": 0.6666666666666666,
+              "n_R": 1,
+              "n_F": 2
+            },
+            "3": {
+              "J": 0.37825236582615673,
+              "reuse_risk_term_would_be_unweighted": 0.10427592764867262,
+              "fid_w_on_reuse_term": 0.4307708740234375,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 2,
+              "n_F": 1
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.37825236582615673,
+          "scheduler_local_block_id": 25,
+          "runtime_name": "block_25",
+          "canonical_runtime_block_id": 25
+        },
+        {
+          "block_id": 26,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.9516225457191467,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 3
+            },
+            "2": {
+              "J": 0.7097448693691805,
+              "reuse_risk_term_would_be_unweighted": 0.04526816109632988,
+              "fid_w_on_reuse_term": 0.9516225457191467,
+              "compute_penalty_lambda_f_over_L": 0.6666666666666666,
+              "n_R": 1,
+              "n_F": 2
+            },
+            "3": {
+              "J": 0.42287213150666286,
+              "reuse_risk_term_would_be_unweighted": 0.09409066501851798,
+              "fid_w_on_reuse_term": 0.9516225457191467,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 2,
+              "n_F": 1
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.42287213150666286,
+          "scheduler_local_block_id": 26,
+          "runtime_name": "block_26",
+          "canonical_runtime_block_id": 26
+        },
+        {
+          "block_id": 27,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.836944580078125,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 3
+            },
+            "2": {
+              "J": 0.693081612636772,
+              "reuse_risk_term_would_be_unweighted": 0.03156116497897596,
+              "fid_w_on_reuse_term": 0.836944580078125,
+              "compute_penalty_lambda_f_over_L": 0.6666666666666666,
+              "n_R": 1,
+              "n_F": 2
+            },
+            "3": {
+              "J": 0.3803932437744656,
+              "reuse_risk_term_would_be_unweighted": 0.056228227724157614,
+              "fid_w_on_reuse_term": 0.836944580078125,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 2,
+              "n_F": 1
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.3803932437744656,
+          "scheduler_local_block_id": 27,
+          "runtime_name": "block_27",
+          "canonical_runtime_block_id": 27
+        }
+      ]
+    },
+    {
+      "zone_id": 3,
+      "length": 39,
+      "candidate_k": [
+        1,
+        2,
+        3
+      ],
+      "per_block": [
+        {
+          "block_id": 0,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.0,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 39
+            },
+            "2": {
+              "J": 0.5128205128205128,
+              "reuse_risk_term_would_be_unweighted": 0.032014781168388004,
+              "fid_w_on_reuse_term": 0.0,
+              "compute_penalty_lambda_f_over_L": 0.5128205128205128,
+              "n_R": 19,
+              "n_F": 20
+            },
+            "3": {
+              "J": 0.3333333333333333,
+              "reuse_risk_term_would_be_unweighted": 0.04443368960195264,
+              "fid_w_on_reuse_term": 0.0,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 26,
+              "n_F": 13
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.3333333333333333,
+          "scheduler_local_block_id": 0,
+          "runtime_name": "block_0",
+          "canonical_runtime_block_id": 0
+        },
+        {
+          "block_id": 1,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.1824173629283905,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 39
+            },
+            "2": {
+              "J": 0.5152159847071274,
+              "reuse_risk_term_would_be_unweighted": 0.013131819516297648,
+              "fid_w_on_reuse_term": 0.1824173629283905,
+              "compute_penalty_lambda_f_over_L": 0.5128205128205128,
+              "n_R": 19,
+              "n_F": 20
+            },
+            "3": {
+              "J": 0.3364610943028902,
+              "reuse_risk_term_would_be_unweighted": 0.017146180162601474,
+              "fid_w_on_reuse_term": 0.1824173629283905,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 26,
+              "n_F": 13
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.3364610943028902,
+          "scheduler_local_block_id": 1,
+          "runtime_name": "block_1",
+          "canonical_runtime_block_id": 1
+        },
+        {
+          "block_id": 2,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 1.0,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 39
+            },
+            "2": {
+              "J": 0.5513889721398818,
+              "reuse_risk_term_would_be_unweighted": 0.038568459319369,
+              "fid_w_on_reuse_term": 1.0,
+              "compute_penalty_lambda_f_over_L": 0.5128205128205128,
+              "n_R": 19,
+              "n_F": 20
+            },
+            "3": {
+              "J": 0.38722316172955307,
+              "reuse_risk_term_would_be_unweighted": 0.05388982839621974,
+              "fid_w_on_reuse_term": 1.0,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 26,
+              "n_F": 13
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.38722316172955307,
+          "scheduler_local_block_id": 2,
+          "runtime_name": "block_2",
+          "canonical_runtime_block_id": 2
+        },
+        {
+          "block_id": 3,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 1.0,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 39
+            },
+            "2": {
+              "J": 0.569582001785824,
+              "reuse_risk_term_would_be_unweighted": 0.05676148896531118,
+              "fid_w_on_reuse_term": 1.0,
+              "compute_penalty_lambda_f_over_L": 0.5128205128205128,
+              "n_R": 19,
+              "n_F": 20
+            },
+            "3": {
+              "J": 0.4107187651512193,
+              "reuse_risk_term_would_be_unweighted": 0.07738543181788599,
+              "fid_w_on_reuse_term": 1.0,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 26,
+              "n_F": 13
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.4107187651512193,
+          "scheduler_local_block_id": 3,
+          "runtime_name": "block_3",
+          "canonical_runtime_block_id": 3
+        },
+        {
+          "block_id": 4,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.1526651829481125,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 39
+            },
+            "2": {
+              "J": 0.5276494480685905,
+              "reuse_risk_term_would_be_unweighted": 0.09713370764516613,
+              "fid_w_on_reuse_term": 0.1526651829481125,
+              "compute_penalty_lambda_f_over_L": 0.5128205128205128,
+              "n_R": 19,
+              "n_F": 20
+            },
+            "3": {
+              "J": 0.35378590777628866,
+              "reuse_risk_term_would_be_unweighted": 0.13397013024185542,
+              "fid_w_on_reuse_term": 0.1526651829481125,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 26,
+              "n_F": 13
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.35378590777628866,
+          "scheduler_local_block_id": 4,
+          "runtime_name": "block_4",
+          "canonical_runtime_block_id": 4
+        },
+        {
+          "block_id": 5,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.3069806694984436,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 39
+            },
+            "2": {
+              "J": 0.5415506366598507,
+              "reuse_risk_term_would_be_unweighted": 0.09358935820381888,
+              "fid_w_on_reuse_term": 0.3069806694984436,
+              "compute_penalty_lambda_f_over_L": 0.5128205128205128,
+              "n_R": 19,
+              "n_F": 20
+            },
+            "3": {
+              "J": 0.3729129909374676,
+              "reuse_risk_term_would_be_unweighted": 0.12893208444948998,
+              "fid_w_on_reuse_term": 0.3069806694984436,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 26,
+              "n_F": 13
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.3729129909374676,
+          "scheduler_local_block_id": 5,
+          "runtime_name": "block_5",
+          "canonical_runtime_block_id": 5
+        },
+        {
+          "block_id": 6,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.8554931282997131,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 39
+            },
+            "2": {
+              "J": 0.6098175757371622,
+              "reuse_risk_term_would_be_unweighted": 0.11338146351850949,
+              "fid_w_on_reuse_term": 0.8554931282997131,
+              "compute_penalty_lambda_f_over_L": 0.5128205128205128,
+              "n_R": 19,
+              "n_F": 20
+            },
+            "3": {
+              "J": 0.4667769400055418,
+              "reuse_risk_term_would_be_unweighted": 0.15598442846341354,
+              "fid_w_on_reuse_term": 0.8554931282997131,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 26,
+              "n_F": 13
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.4667769400055418,
+          "scheduler_local_block_id": 6,
+          "runtime_name": "block_6",
+          "canonical_runtime_block_id": 6
+        },
+        {
+          "block_id": 7,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.10897208005189896,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 39
+            },
+            "2": {
+              "J": 0.5251557386452201,
+              "reuse_risk_term_would_be_unweighted": 0.11319620419131787,
+              "fid_w_on_reuse_term": 0.10897208005189896,
+              "compute_penalty_lambda_f_over_L": 0.5128205128205128,
+              "n_R": 19,
+              "n_F": 20
+            },
+            "3": {
+              "J": 0.35031345022236704,
+              "reuse_risk_term_would_be_unweighted": 0.15582080181406818,
+              "fid_w_on_reuse_term": 0.10897208005189896,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 26,
+              "n_F": 13
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.35031345022236704,
+          "scheduler_local_block_id": 7,
+          "runtime_name": "block_7",
+          "canonical_runtime_block_id": 7
+        },
+        {
+          "block_id": 8,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.24355047941207886,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 39
+            },
+            "2": {
+              "J": 0.5401731188534663,
+              "reuse_risk_term_would_be_unweighted": 0.11230774868101921,
+              "fid_w_on_reuse_term": 0.24355047941207886,
+              "compute_penalty_lambda_f_over_L": 0.5128205128205128,
+              "n_R": 19,
+              "n_F": 20
+            },
+            "3": {
+              "J": 0.3710687298044859,
+              "reuse_risk_term_would_be_unweighted": 0.15493870741804458,
+              "fid_w_on_reuse_term": 0.24355047941207886,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 26,
+              "n_F": 13
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.3710687298044859,
+          "scheduler_local_block_id": 8,
+          "runtime_name": "block_8",
+          "canonical_runtime_block_id": 8
+        },
+        {
+          "block_id": 9,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.28313347697257996,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 39
+            },
+            "2": {
+              "J": 0.5454891803445028,
+              "reuse_risk_term_would_be_unweighted": 0.11538256752010213,
+              "fid_w_on_reuse_term": 0.28313347697257996,
+              "compute_penalty_lambda_f_over_L": 0.5128205128205128,
+              "n_R": 19,
+              "n_F": 20
+            },
+            "3": {
+              "J": 0.37844127946390527,
+              "reuse_risk_term_would_be_unweighted": 0.15931689397132082,
+              "fid_w_on_reuse_term": 0.28313347697257996,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 26,
+              "n_F": 13
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.37844127946390527,
+          "scheduler_local_block_id": 9,
+          "runtime_name": "block_9",
+          "canonical_runtime_block_id": 9
+        },
+        {
+          "block_id": 10,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.05780790001153946,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 39
+            },
+            "2": {
+              "J": 0.51896053370348,
+              "reuse_risk_term_would_be_unweighted": 0.10621421781005047,
+              "fid_w_on_reuse_term": 0.05780790001153946,
+              "compute_penalty_lambda_f_over_L": 0.5128205128205128,
+              "n_R": 19,
+              "n_F": 20
+            },
+            "3": {
+              "J": 0.34167957635405927,
+              "reuse_risk_term_would_be_unweighted": 0.14437893469681287,
+              "fid_w_on_reuse_term": 0.05780790001153946,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 26,
+              "n_F": 13
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.34167957635405927,
+          "scheduler_local_block_id": 10,
+          "runtime_name": "block_10",
+          "canonical_runtime_block_id": 10
+        },
+        {
+          "block_id": 11,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.21436811983585358,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 39
+            },
+            "2": {
+              "J": 0.5354230089406449,
+              "reuse_risk_term_would_be_unweighted": 0.1054377681599264,
+              "fid_w_on_reuse_term": 0.21436811983585358,
+              "compute_penalty_lambda_f_over_L": 0.5128205128205128,
+              "n_R": 19,
+              "n_F": 20
+            },
+            "3": {
+              "J": 0.36434549778245173,
+              "reuse_risk_term_would_be_unweighted": 0.14466780075724464,
+              "fid_w_on_reuse_term": 0.21436811983585358,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 26,
+              "n_F": 13
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.36434549778245173,
+          "scheduler_local_block_id": 11,
+          "runtime_name": "block_11",
+          "canonical_runtime_block_id": 11
+        },
+        {
+          "block_id": 12,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.24105843901634216,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 39
+            },
+            "2": {
+              "J": 0.5378677427913611,
+              "reuse_risk_term_would_be_unweighted": 0.10390521930306792,
+              "fid_w_on_reuse_term": 0.24105843901634216,
+              "compute_penalty_lambda_f_over_L": 0.5128205128205128,
+              "n_R": 19,
+              "n_F": 20
+            },
+            "3": {
+              "J": 0.3676563650774557,
+              "reuse_risk_term_would_be_unweighted": 0.14238469262549022,
+              "fid_w_on_reuse_term": 0.24105843901634216,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 26,
+              "n_F": 13
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.3676563650774557,
+          "scheduler_local_block_id": 12,
+          "runtime_name": "block_12",
+          "canonical_runtime_block_id": 12
+        },
+        {
+          "block_id": 13,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.44162821769714355,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 39
+            },
+            "2": {
+              "J": 0.5623390729355855,
+              "reuse_risk_term_would_be_unweighted": 0.11212725575663089,
+              "fid_w_on_reuse_term": 0.44162821769714355,
+              "compute_penalty_lambda_f_over_L": 0.5128205128205128,
+              "n_R": 19,
+              "n_F": 20
+            },
+            "3": {
+              "J": 0.40198119900205503,
+              "reuse_risk_term_would_be_unweighted": 0.15544266176351648,
+              "fid_w_on_reuse_term": 0.44162821769714355,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 26,
+              "n_F": 13
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.40198119900205503,
+          "scheduler_local_block_id": 13,
+          "runtime_name": "block_13",
+          "canonical_runtime_block_id": 13
+        },
+        {
+          "block_id": 14,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.20175571739673615,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 39
+            },
+            "2": {
+              "J": 0.5344881099017521,
+              "reuse_risk_term_would_be_unweighted": 0.10739520723782903,
+              "fid_w_on_reuse_term": 0.20175571739673615,
+              "compute_penalty_lambda_f_over_L": 0.5128205128205128,
+              "n_R": 19,
+              "n_F": 20
+            },
+            "3": {
+              "J": 0.36314480909533287,
+              "reuse_risk_term_would_be_unweighted": 0.14776025257999356,
+              "fid_w_on_reuse_term": 0.20175571739673615,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 26,
+              "n_F": 13
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.36314480909533287,
+          "scheduler_local_block_id": 14,
+          "runtime_name": "block_14",
+          "canonical_runtime_block_id": 14
+        },
+        {
+          "block_id": 15,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.01353956013917923,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 39
+            },
+            "2": {
+              "J": 0.5141549241478011,
+              "reuse_risk_term_would_be_unweighted": 0.09855647551111313,
+              "fid_w_on_reuse_term": 0.01353956013917923,
+              "compute_penalty_lambda_f_over_L": 0.5128205128205128,
+              "n_R": 19,
+              "n_F": 20
+            },
+            "3": {
+              "J": 0.3351517711896125,
+              "reuse_risk_term_would_be_unweighted": 0.1343055341227212,
+              "fid_w_on_reuse_term": 0.01353956013917923,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 26,
+              "n_F": 13
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.3351517711896125,
+          "scheduler_local_block_id": 15,
+          "runtime_name": "block_15",
+          "canonical_runtime_block_id": 15
+        },
+        {
+          "block_id": 16,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.4265569746494293,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 39
+            },
+            "2": {
+              "J": 0.5625621851872933,
+              "reuse_risk_term_would_be_unweighted": 0.11661202447260714,
+              "fid_w_on_reuse_term": 0.4265569746494293,
+              "compute_penalty_lambda_f_over_L": 0.5128205128205128,
+              "n_R": 19,
+              "n_F": 20
+            },
+            "3": {
+              "J": 0.4015264743044366,
+              "reuse_risk_term_would_be_unweighted": 0.15986877492074442,
+              "fid_w_on_reuse_term": 0.4265569746494293,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 26,
+              "n_F": 13
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.4015264743044366,
+          "scheduler_local_block_id": 16,
+          "runtime_name": "block_16",
+          "canonical_runtime_block_id": 16
+        },
+        {
+          "block_id": 17,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.06509486585855484,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 39
+            },
+            "2": {
+              "J": 0.5206543524977036,
+              "reuse_risk_term_would_be_unweighted": 0.12034496997371634,
+              "fid_w_on_reuse_term": 0.06509486585855484,
+              "compute_penalty_lambda_f_over_L": 0.5128205128205128,
+              "n_R": 19,
+              "n_F": 20
+            },
+            "3": {
+              "J": 0.3440818332520795,
+              "reuse_risk_term_would_be_unweighted": 0.16512054794154893,
+              "fid_w_on_reuse_term": 0.06509486585855484,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 26,
+              "n_F": 13
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.3440818332520795,
+          "scheduler_local_block_id": 17,
+          "runtime_name": "block_17",
+          "canonical_runtime_block_id": 17
+        },
+        {
+          "block_id": 18,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.17019163072109222,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 39
+            },
+            "2": {
+              "J": 0.5319237193570377,
+              "reuse_risk_term_would_be_unweighted": 0.11224527584338773,
+              "fid_w_on_reuse_term": 0.17019163072109222,
+              "compute_penalty_lambda_f_over_L": 0.5128205128205128,
+              "n_R": 19,
+              "n_F": 20
+            },
+            "3": {
+              "J": 0.35967859734339197,
+              "reuse_risk_term_would_be_unweighted": 0.15479764720765216,
+              "fid_w_on_reuse_term": 0.17019163072109222,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 26,
+              "n_F": 13
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.35967859734339197,
+          "scheduler_local_block_id": 18,
+          "runtime_name": "block_18",
+          "canonical_runtime_block_id": 18
+        },
+        {
+          "block_id": 19,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.4776797592639923,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 39
+            },
+            "2": {
+              "J": 0.5734934032401062,
+              "reuse_risk_term_would_be_unweighted": 0.1270158285816383,
+              "fid_w_on_reuse_term": 0.4776797592639923,
+              "compute_penalty_lambda_f_over_L": 0.5128205128205128,
+              "n_R": 19,
+              "n_F": 20
+            },
+            "3": {
+              "J": 0.41645150714277906,
+              "reuse_risk_term_would_be_unweighted": 0.1740039685531453,
+              "fid_w_on_reuse_term": 0.4776797592639923,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 26,
+              "n_F": 13
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.41645150714277906,
+          "scheduler_local_block_id": 19,
+          "runtime_name": "block_19",
+          "canonical_runtime_block_id": 19
+        },
+        {
+          "block_id": 20,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.08047357946634293,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 39
+            },
+            "2": {
+              "J": 0.5220600165533683,
+              "reuse_risk_term_would_be_unweighted": 0.11481412650123132,
+              "fid_w_on_reuse_term": 0.08047357946634293,
+              "compute_penalty_lambda_f_over_L": 0.5128205128205128,
+              "n_R": 19,
+              "n_F": 20
+            },
+            "3": {
+              "J": 0.34603719460517274,
+              "reuse_risk_term_would_be_unweighted": 0.1578637529992395,
+              "fid_w_on_reuse_term": 0.08047357946634293,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 26,
+              "n_F": 13
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.34603719460517274,
+          "scheduler_local_block_id": 20,
+          "runtime_name": "block_20",
+          "canonical_runtime_block_id": 20
+        },
+        {
+          "block_id": 21,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.12419766932725906,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 39
+            },
+            "2": {
+              "J": 0.5264040320731334,
+              "reuse_risk_term_would_be_unweighted": 0.10937016230818493,
+              "fid_w_on_reuse_term": 0.12419766932725906,
+              "compute_penalty_lambda_f_over_L": 0.5128205128205128,
+              "n_R": 19,
+              "n_F": 20
+            },
+            "3": {
+              "J": 0.3520555012100422,
+              "reuse_risk_term_would_be_unweighted": 0.15074492120601904,
+              "fid_w_on_reuse_term": 0.12419766932725906,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 26,
+              "n_F": 13
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.3520555012100422,
+          "scheduler_local_block_id": 21,
+          "runtime_name": "block_21",
+          "canonical_runtime_block_id": 21
+        },
+        {
+          "block_id": 22,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.022434452548623085,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 39
+            },
+            "2": {
+              "J": 0.5153518513568357,
+              "reuse_risk_term_would_be_unweighted": 0.11283264126176903,
+              "fid_w_on_reuse_term": 0.022434452548623085,
+              "compute_penalty_lambda_f_over_L": 0.5128205128205128,
+              "n_R": 19,
+              "n_F": 20
+            },
+            "3": {
+              "J": 0.33681871346662,
+              "reuse_risk_term_would_be_unweighted": 0.1553583768417212,
+              "fid_w_on_reuse_term": 0.022434452548623085,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 26,
+              "n_F": 13
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.33681871346662,
+          "scheduler_local_block_id": 22,
+          "runtime_name": "block_22",
+          "canonical_runtime_block_id": 22
+        },
+        {
+          "block_id": 23,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.6613852977752686,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 39
+            },
+            "2": {
+              "J": 0.6029030982232094,
+              "reuse_risk_term_would_be_unweighted": 0.13620288462067645,
+              "fid_w_on_reuse_term": 0.6613852977752686,
+              "compute_penalty_lambda_f_over_L": 0.5128205128205128,
+              "n_R": 19,
+              "n_F": 20
+            },
+            "3": {
+              "J": 0.4578715244313073,
+              "reuse_risk_term_would_be_unweighted": 0.18829900137920919,
+              "fid_w_on_reuse_term": 0.6613852977752686,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 26,
+              "n_F": 13
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.4578715244313073,
+          "scheduler_local_block_id": 23,
+          "runtime_name": "block_23",
+          "canonical_runtime_block_id": 23
+        },
+        {
+          "block_id": 24,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.5204234719276428,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 39
+            },
+            "2": {
+              "J": 0.5806800589057197,
+              "reuse_risk_term_would_be_unweighted": 0.13039293910756156,
+              "fid_w_on_reuse_term": 0.5204234719276428,
+              "compute_penalty_lambda_f_over_L": 0.5128205128205128,
+              "n_R": 19,
+              "n_F": 20
+            },
+            "3": {
+              "J": 0.42681236431570696,
+              "reuse_risk_term_would_be_unweighted": 0.17962108941037638,
+              "fid_w_on_reuse_term": 0.5204234719276428,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 26,
+              "n_F": 13
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.42681236431570696,
+          "scheduler_local_block_id": 24,
+          "runtime_name": "block_24",
+          "canonical_runtime_block_id": 24
+        },
+        {
+          "block_id": 25,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.4307708740234375,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 39
+            },
+            "2": {
+              "J": 0.5613260435071652,
+              "reuse_risk_term_would_be_unweighted": 0.1126016952669211,
+              "fid_w_on_reuse_term": 0.4307708740234375,
+              "compute_penalty_lambda_f_over_L": 0.5128205128205128,
+              "n_R": 19,
+              "n_F": 20
+            },
+            "3": {
+              "J": 0.40102224054692626,
+              "reuse_risk_term_would_be_unweighted": 0.15713436375438447,
+              "fid_w_on_reuse_term": 0.4307708740234375,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 26,
+              "n_F": 13
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.40102224054692626,
+          "scheduler_local_block_id": 25,
+          "runtime_name": "block_25",
+          "canonical_runtime_block_id": 25
+        },
+        {
+          "block_id": 26,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.9516225457191467,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 39
+            },
+            "2": {
+              "J": 0.6309275752232708,
+              "reuse_risk_term_would_be_unweighted": 0.1241112486605746,
+              "fid_w_on_reuse_term": 0.9516225457191467,
+              "compute_penalty_lambda_f_over_L": 0.5128205128205128,
+              "n_R": 19,
+              "n_F": 20
+            },
+            "3": {
+              "J": 0.4964588970548072,
+              "reuse_risk_term_would_be_unweighted": 0.171418346964656,
+              "fid_w_on_reuse_term": 0.9516225457191467,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 26,
+              "n_F": 13
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.4964588970548072,
+          "scheduler_local_block_id": 26,
+          "runtime_name": "block_26",
+          "canonical_runtime_block_id": 26
+        },
+        {
+          "block_id": 27,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.836944580078125,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 39
+            },
+            "2": {
+              "J": 0.5659079675095534,
+              "reuse_risk_term_would_be_unweighted": 0.06343007165908778,
+              "fid_w_on_reuse_term": 0.836944580078125,
+              "compute_penalty_lambda_f_over_L": 0.5128205128205128,
+              "n_R": 19,
+              "n_F": 20
+            },
+            "3": {
+              "J": 0.4057516368680037,
+              "reuse_risk_term_would_be_unweighted": 0.0865269998258552,
+              "fid_w_on_reuse_term": 0.836944580078125,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 26,
+              "n_F": 13
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.4057516368680037,
+          "scheduler_local_block_id": 27,
+          "runtime_name": "block_27",
+          "canonical_runtime_block_id": 27
+        }
+      ]
+    },
+    {
+      "zone_id": 4,
+      "length": 3,
+      "candidate_k": [
+        1,
+        2,
+        3
+      ],
+      "per_block": [
+        {
+          "block_id": 0,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.0,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 3
+            },
+            "2": {
+              "J": 0.6666666666666666,
+              "reuse_risk_term_would_be_unweighted": 0.017821147597741973,
+              "fid_w_on_reuse_term": 0.0,
+              "compute_penalty_lambda_f_over_L": 0.6666666666666666,
+              "n_R": 1,
+              "n_F": 2
+            },
+            "3": {
+              "J": 0.3333333333333333,
+              "reuse_risk_term_would_be_unweighted": 0.05261159336514538,
+              "fid_w_on_reuse_term": 0.0,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 2,
+              "n_F": 1
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.3333333333333333,
+          "scheduler_local_block_id": 0,
+          "runtime_name": "block_0",
+          "canonical_runtime_block_id": 0
+        },
+        {
+          "block_id": 1,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.1824173629283905,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 3
+            },
+            "2": {
+              "J": 0.6713089422024681,
+              "reuse_risk_term_would_be_unweighted": 0.02544864952150318,
+              "fid_w_on_reuse_term": 0.1824173629283905,
+              "compute_penalty_lambda_f_over_L": 0.6666666666666666,
+              "n_R": 1,
+              "n_F": 2
+            },
+            "3": {
+              "J": 0.3463537228363669,
+              "reuse_risk_term_would_be_unweighted": 0.07137691990506868,
+              "fid_w_on_reuse_term": 0.1824173629283905,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 2,
+              "n_F": 1
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.3463537228363669,
+          "scheduler_local_block_id": 1,
+          "runtime_name": "block_1",
+          "canonical_runtime_block_id": 1
+        },
+        {
+          "block_id": 2,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 1.0,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 3
+            },
+            "2": {
+              "J": 0.7013057589410218,
+              "reuse_risk_term_would_be_unweighted": 0.03463909227435511,
+              "fid_w_on_reuse_term": 1.0,
+              "compute_penalty_lambda_f_over_L": 0.6666666666666666,
+              "n_R": 1,
+              "n_F": 2
+            },
+            "3": {
+              "J": 0.4313464527759977,
+              "reuse_risk_term_would_be_unweighted": 0.09801311944266437,
+              "fid_w_on_reuse_term": 1.0,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 2,
+              "n_F": 1
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.4313464527759977,
+          "scheduler_local_block_id": 2,
+          "runtime_name": "block_2",
+          "canonical_runtime_block_id": 2
+        },
+        {
+          "block_id": 3,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 1.0,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 3
+            },
+            "2": {
+              "J": 0.7175331690115854,
+              "reuse_risk_term_would_be_unweighted": 0.05086650234491875,
+              "fid_w_on_reuse_term": 1.0,
+              "compute_penalty_lambda_f_over_L": 0.6666666666666666,
+              "n_R": 1,
+              "n_F": 2
+            },
+            "3": {
+              "J": 0.4654628834299122,
+              "reuse_risk_term_would_be_unweighted": 0.1321295500965789,
+              "fid_w_on_reuse_term": 1.0,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 2,
+              "n_F": 1
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.4654628834299122,
+          "scheduler_local_block_id": 3,
+          "runtime_name": "block_3",
+          "canonical_runtime_block_id": 3
+        },
+        {
+          "block_id": 4,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.1526651829481125,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 3
+            },
+            "2": {
+              "J": 0.6775849527322212,
+              "reuse_risk_term_would_be_unweighted": 0.07151785269379617,
+              "fid_w_on_reuse_term": 0.1526651829481125,
+              "compute_penalty_lambda_f_over_L": 0.6666666666666666,
+              "n_R": 1,
+              "n_F": 2
+            },
+            "3": {
+              "J": 0.3583344197914856,
+              "reuse_risk_term_would_be_unweighted": 0.16376416662500964,
+              "fid_w_on_reuse_term": 0.1526651829481125,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 2,
+              "n_F": 1
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.3583344197914856,
+          "scheduler_local_block_id": 4,
+          "runtime_name": "block_4",
+          "canonical_runtime_block_id": 4
+        },
+        {
+          "block_id": 5,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.3069806694984436,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 3
+            },
+            "2": {
+              "J": 0.6917972475807607,
+              "reuse_risk_term_would_be_unweighted": 0.08186372436790003,
+              "fid_w_on_reuse_term": 0.3069806694984436,
+              "compute_penalty_lambda_f_over_L": 0.6666666666666666,
+              "n_R": 1,
+              "n_F": 2
+            },
+            "3": {
+              "J": 0.390584101283753,
+              "reuse_risk_term_would_be_unweighted": 0.1864963290488554,
+              "fid_w_on_reuse_term": 0.3069806694984436,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 2,
+              "n_F": 1
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.390584101283753,
+          "scheduler_local_block_id": 5,
+          "runtime_name": "block_5",
+          "canonical_runtime_block_id": 5
+        },
+        {
+          "block_id": 6,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.8554931282997131,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 3
+            },
+            "2": {
+              "J": 0.7358922592340058,
+              "reuse_risk_term_would_be_unweighted": 0.08091893467914175,
+              "fid_w_on_reuse_term": 0.8554931282997131,
+              "compute_penalty_lambda_f_over_L": 0.6666666666666666,
+              "n_R": 1,
+              "n_F": 2
+            },
+            "3": {
+              "J": 0.48578346666613514,
+              "reuse_risk_term_would_be_unweighted": 0.17820147034470682,
+              "fid_w_on_reuse_term": 0.8554931282997131,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 2,
+              "n_F": 1
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.48578346666613514,
+          "scheduler_local_block_id": 6,
+          "runtime_name": "block_6",
+          "canonical_runtime_block_id": 6
+        },
+        {
+          "block_id": 7,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.10897208005189896,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 3
+            },
+            "2": {
+              "J": 0.6772558848663894,
+              "reuse_risk_term_would_be_unweighted": 0.09717368150336875,
+              "fid_w_on_reuse_term": 0.10897208005189896,
+              "compute_penalty_lambda_f_over_L": 0.6666666666666666,
+              "n_R": 1,
+              "n_F": 2
+            },
+            "3": {
+              "J": 0.35727648097706227,
+              "reuse_risk_term_would_be_unweighted": 0.21971818499129125,
+              "fid_w_on_reuse_term": 0.10897208005189896,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 2,
+              "n_F": 1
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.35727648097706227,
+          "scheduler_local_block_id": 7,
+          "runtime_name": "block_7",
+          "canonical_runtime_block_id": 7
+        },
+        {
+          "block_id": 8,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.24355047941207886,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 3
+            },
+            "2": {
+              "J": 0.6896673871016435,
+              "reuse_risk_term_would_be_unweighted": 0.09443923284610112,
+              "fid_w_on_reuse_term": 0.24355047941207886,
+              "compute_penalty_lambda_f_over_L": 0.6666666666666666,
+              "n_R": 1,
+              "n_F": 2
+            },
+            "3": {
+              "J": 0.38770451894639635,
+              "reuse_risk_term_would_be_unweighted": 0.22324400980163503,
+              "fid_w_on_reuse_term": 0.24355047941207886,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 2,
+              "n_F": 1
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.38770451894639635,
+          "scheduler_local_block_id": 8,
+          "runtime_name": "block_8",
+          "canonical_runtime_block_id": 8
+        },
+        {
+          "block_id": 9,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.28313347697257996,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 3
+            },
+            "2": {
+              "J": 0.6928877638014219,
+              "reuse_risk_term_would_be_unweighted": 0.09261037378951355,
+              "fid_w_on_reuse_term": 0.28313347697257996,
+              "compute_penalty_lambda_f_over_L": 0.6666666666666666,
+              "n_R": 1,
+              "n_F": 2
+            },
+            "3": {
+              "J": 0.395845397436704,
+              "reuse_risk_term_would_be_unweighted": 0.22078655188282328,
+              "fid_w_on_reuse_term": 0.28313347697257996,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 2,
+              "n_F": 1
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.395845397436704,
+          "scheduler_local_block_id": 9,
+          "runtime_name": "block_9",
+          "canonical_runtime_block_id": 9
+        },
+        {
+          "block_id": 10,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.05780790001153946,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 3
+            },
+            "2": {
+              "J": 0.6713758921079388,
+              "reuse_risk_term_would_be_unweighted": 0.08146335432236945,
+              "fid_w_on_reuse_term": 0.05780790001153946,
+              "compute_penalty_lambda_f_over_L": 0.6666666666666666,
+              "n_R": 1,
+              "n_F": 2
+            },
+            "3": {
+              "J": 0.34485382143405674,
+              "reuse_risk_term_would_be_unweighted": 0.19928916460248058,
+              "fid_w_on_reuse_term": 0.05780790001153946,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 2,
+              "n_F": 1
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.34485382143405674,
+          "scheduler_local_block_id": 10,
+          "runtime_name": "block_10",
+          "canonical_runtime_block_id": 10
+        },
+        {
+          "block_id": 11,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.21436811983585358,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 3
+            },
+            "2": {
+              "J": 0.6838220509330043,
+              "reuse_risk_term_would_be_unweighted": 0.08002768452451738,
+              "fid_w_on_reuse_term": 0.21436811983585358,
+              "compute_penalty_lambda_f_over_L": 0.6666666666666666,
+              "n_R": 1,
+              "n_F": 2
+            },
+            "3": {
+              "J": 0.37556905803152507,
+              "reuse_risk_term_would_be_unweighted": 0.19702428108495143,
+              "fid_w_on_reuse_term": 0.21436811983585358,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 2,
+              "n_F": 1
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.37556905803152507,
+          "scheduler_local_block_id": 11,
+          "runtime_name": "block_11",
+          "canonical_runtime_block_id": 11
+        },
+        {
+          "block_id": 12,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.24105843901634216,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 3
+            },
+            "2": {
+              "J": 0.6861790116161726,
+              "reuse_risk_term_would_be_unweighted": 0.08094445906613988,
+              "fid_w_on_reuse_term": 0.24105843901634216,
+              "compute_penalty_lambda_f_over_L": 0.6666666666666666,
+              "n_R": 1,
+              "n_F": 2
+            },
+            "3": {
+              "J": 0.3809207483345207,
+              "reuse_risk_term_would_be_unweighted": 0.19741028439150088,
+              "fid_w_on_reuse_term": 0.24105843901634216,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 2,
+              "n_F": 1
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.3809207483345207,
+          "scheduler_local_block_id": 12,
+          "runtime_name": "block_12",
+          "canonical_runtime_block_id": 12
+        },
+        {
+          "block_id": 13,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.44162821769714355,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 3
+            },
+            "2": {
+              "J": 0.7091023371476152,
+              "reuse_risk_term_would_be_unweighted": 0.0960891283220715,
+              "fid_w_on_reuse_term": 0.44162821769714355,
+              "compute_penalty_lambda_f_over_L": 0.6666666666666666,
+              "n_R": 1,
+              "n_F": 2
+            },
+            "3": {
+              "J": 0.4362866566938897,
+              "reuse_risk_term_would_be_unweighted": 0.233122158492053,
+              "fid_w_on_reuse_term": 0.44162821769714355,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 2,
+              "n_F": 1
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.4362866566938897,
+          "scheduler_local_block_id": 13,
+          "runtime_name": "block_13",
+          "canonical_runtime_block_id": 13
+        },
+        {
+          "block_id": 14,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.20175571739673615,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 3
+            },
+            "2": {
+              "J": 0.683370534474967,
+              "reuse_risk_term_would_be_unweighted": 0.0827925375490277,
+              "fid_w_on_reuse_term": 0.20175571739673615,
+              "compute_penalty_lambda_f_over_L": 0.6666666666666666,
+              "n_R": 1,
+              "n_F": 2
+            },
+            "3": {
+              "J": 0.3735551551512847,
+              "reuse_risk_term_would_be_unweighted": 0.19935901860396066,
+              "fid_w_on_reuse_term": 0.20175571739673615,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 2,
+              "n_F": 1
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.3735551551512847,
+          "scheduler_local_block_id": 14,
+          "runtime_name": "block_14",
+          "canonical_runtime_block_id": 14
+        },
+        {
+          "block_id": 15,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.01353956013917923,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 3
+            },
+            "2": {
+              "J": 0.6677560692305715,
+              "reuse_risk_term_would_be_unweighted": 0.08046070571764614,
+              "fid_w_on_reuse_term": 0.01353956013917923,
+              "compute_penalty_lambda_f_over_L": 0.6666666666666666,
+              "n_R": 1,
+              "n_F": 2
+            },
+            "3": {
+              "J": 0.3359074123895412,
+              "reuse_risk_term_would_be_unweighted": 0.1901154121513375,
+              "fid_w_on_reuse_term": 0.01353956013917923,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 2,
+              "n_F": 1
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.3359074123895412,
+          "scheduler_local_block_id": 15,
+          "runtime_name": "block_15",
+          "canonical_runtime_block_id": 15
+        },
+        {
+          "block_id": 16,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.4265569746494293,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 3
+            },
+            "2": {
+              "J": 0.7065913463311334,
+              "reuse_risk_term_would_be_unweighted": 0.09359753101512237,
+              "fid_w_on_reuse_term": 0.4265569746494293,
+              "compute_penalty_lambda_f_over_L": 0.6666666666666666,
+              "n_R": 1,
+              "n_F": 2
+            },
+            "3": {
+              "J": 0.42871449302457426,
+              "reuse_risk_term_would_be_unweighted": 0.22360708031941345,
+              "fid_w_on_reuse_term": 0.4265569746494293,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 2,
+              "n_F": 1
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.42871449302457426,
+          "scheduler_local_block_id": 16,
+          "runtime_name": "block_16",
+          "canonical_runtime_block_id": 16
+        },
+        {
+          "block_id": 17,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.06509486585855484,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 3
+            },
+            "2": {
+              "J": 0.6730514935720703,
+              "reuse_risk_term_would_be_unweighted": 0.09808495372395824,
+              "fid_w_on_reuse_term": 0.06509486585855484,
+              "compute_penalty_lambda_f_over_L": 0.6666666666666666,
+              "n_R": 1,
+              "n_F": 2
+            },
+            "3": {
+              "J": 0.3482704769910186,
+              "reuse_risk_term_would_be_unweighted": 0.22946730837639837,
+              "fid_w_on_reuse_term": 0.06509486585855484,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 2,
+              "n_F": 1
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.3482704769910186,
+          "scheduler_local_block_id": 17,
+          "runtime_name": "block_17",
+          "canonical_runtime_block_id": 17
+        },
+        {
+          "block_id": 18,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.17019163072109222,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 3
+            },
+            "2": {
+              "J": 0.6837854529520978,
+              "reuse_risk_term_would_be_unweighted": 0.10058535906201643,
+              "fid_w_on_reuse_term": 0.17019163072109222,
+              "compute_penalty_lambda_f_over_L": 0.6666666666666666,
+              "n_R": 1,
+              "n_F": 2
+            },
+            "3": {
+              "J": 0.37212792406651235,
+              "reuse_risk_term_would_be_unweighted": 0.2279465245665051,
+              "fid_w_on_reuse_term": 0.17019163072109222,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 2,
+              "n_F": 1
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.37212792406651235,
+          "scheduler_local_block_id": 18,
+          "runtime_name": "block_18",
+          "canonical_runtime_block_id": 18
+        },
+        {
+          "block_id": 19,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.4776797592639923,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 3
+            },
+            "2": {
+              "J": 0.7161438681013022,
+              "reuse_risk_term_would_be_unweighted": 0.1035781828203687,
+              "fid_w_on_reuse_term": 0.4776797592639923,
+              "compute_penalty_lambda_f_over_L": 0.6666666666666666,
+              "n_R": 1,
+              "n_F": 2
+            },
+            "3": {
+              "J": 0.4470475013498688,
+              "reuse_risk_term_would_be_unweighted": 0.23805523640303697,
+              "fid_w_on_reuse_term": 0.4776797592639923,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 2,
+              "n_F": 1
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.4470475013498688,
+          "scheduler_local_block_id": 19,
+          "runtime_name": "block_19",
+          "canonical_runtime_block_id": 19
+        },
+        {
+          "block_id": 20,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.08047357946634293,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 3
+            },
+            "2": {
+              "J": 0.6750840258646589,
+              "reuse_risk_term_would_be_unweighted": 0.10459779785877026,
+              "fid_w_on_reuse_term": 0.08047357946634293,
+              "compute_penalty_lambda_f_over_L": 0.6666666666666666,
+              "n_R": 1,
+              "n_F": 2
+            },
+            "3": {
+              "J": 0.35275961869957706,
+              "reuse_risk_term_would_be_unweighted": 0.2413995437393034,
+              "fid_w_on_reuse_term": 0.08047357946634293,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 2,
+              "n_F": 1
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.35275961869957706,
+          "scheduler_local_block_id": 20,
+          "runtime_name": "block_20",
+          "canonical_runtime_block_id": 20
+        },
+        {
+          "block_id": 21,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.12419766932725906,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 3
+            },
+            "2": {
+              "J": 0.6805778533200235,
+              "reuse_risk_term_would_be_unweighted": 0.1120084356551093,
+              "fid_w_on_reuse_term": 0.12419766932725906,
+              "compute_penalty_lambda_f_over_L": 0.6666666666666666,
+              "n_R": 1,
+              "n_F": 2
+            },
+            "3": {
+              "J": 0.36469094822268683,
+              "reuse_risk_term_would_be_unweighted": 0.25248150838263056,
+              "fid_w_on_reuse_term": 0.12419766932725906,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 2,
+              "n_F": 1
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.36469094822268683,
+          "scheduler_local_block_id": 21,
+          "runtime_name": "block_21",
+          "canonical_runtime_block_id": 21
+        },
+        {
+          "block_id": 22,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.022434452548623085,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 3
+            },
+            "2": {
+              "J": 0.6691254870814903,
+              "reuse_risk_term_would_be_unweighted": 0.10960019681757936,
+              "fid_w_on_reuse_term": 0.022434452548623085,
+              "compute_penalty_lambda_f_over_L": 0.6666666666666666,
+              "n_R": 1,
+              "n_F": 2
+            },
+            "3": {
+              "J": 0.33893186675775777,
+              "reuse_risk_term_would_be_unweighted": 0.24955070386899428,
+              "fid_w_on_reuse_term": 0.022434452548623085,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 2,
+              "n_F": 1
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.33893186675775777,
+          "scheduler_local_block_id": 22,
+          "runtime_name": "block_22",
+          "canonical_runtime_block_id": 22
+        },
+        {
+          "block_id": 23,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.6613852977752686,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 3
+            },
+            "2": {
+              "J": 0.7473437254140399,
+              "reuse_risk_term_would_be_unweighted": 0.12198193552041496,
+              "fid_w_on_reuse_term": 0.6613852977752686,
+              "compute_penalty_lambda_f_over_L": 0.6666666666666666,
+              "n_R": 1,
+              "n_F": 2
+            },
+            "3": {
+              "J": 0.5170263573485431,
+              "reuse_risk_term_would_be_unweighted": 0.277739805576426,
+              "fid_w_on_reuse_term": 0.6613852977752686,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 2,
+              "n_F": 1
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.5170263573485431,
+          "scheduler_local_block_id": 23,
+          "runtime_name": "block_23",
+          "canonical_runtime_block_id": 23
+        },
+        {
+          "block_id": 24,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.5204234719276428,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 3
+            },
+            "2": {
+              "J": 0.7307576268782571,
+              "reuse_risk_term_would_be_unweighted": 0.123151555740171,
+              "fid_w_on_reuse_term": 0.5204234719276428,
+              "compute_penalty_lambda_f_over_L": 0.6666666666666666,
+              "n_R": 1,
+              "n_F": 2
+            },
+            "3": {
+              "J": 0.5027006877544977,
+              "reuse_risk_term_would_be_unweighted": 0.3254414213752305,
+              "fid_w_on_reuse_term": 0.5204234719276428,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 2,
+              "n_F": 1
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.5027006877544977,
+          "scheduler_local_block_id": 24,
+          "runtime_name": "block_24",
+          "canonical_runtime_block_id": 24
+        },
+        {
+          "block_id": 25,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.4307708740234375,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 3
+            },
+            "2": {
+              "J": 0.7154774933360967,
+              "reuse_risk_term_would_be_unweighted": 0.11331041538053088,
+              "fid_w_on_reuse_term": 0.4307708740234375,
+              "compute_penalty_lambda_f_over_L": 0.6666666666666666,
+              "n_R": 1,
+              "n_F": 2
+            },
+            "3": {
+              "J": 0.5248421224870282,
+              "reuse_risk_term_would_be_unweighted": 0.4445722789124206,
+              "fid_w_on_reuse_term": 0.4307708740234375,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 2,
+              "n_F": 1
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.5248421224870282,
+          "scheduler_local_block_id": 25,
+          "runtime_name": "block_25",
+          "canonical_runtime_block_id": 25
+        },
+        {
+          "block_id": 26,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.9516225457191467,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 3
+            },
+            "2": {
+              "J": 0.7771545136623502,
+              "reuse_risk_term_would_be_unweighted": 0.11610469664964411,
+              "fid_w_on_reuse_term": 0.9516225457191467,
+              "compute_penalty_lambda_f_over_L": 0.6666666666666666,
+              "n_R": 1,
+              "n_F": 2
+            },
+            "3": {
+              "J": 0.7345531816499721,
+              "reuse_risk_term_would_be_unweighted": 0.4216165854009213,
+              "fid_w_on_reuse_term": 0.9516225457191467,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 2,
+              "n_F": 1
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.7345531816499721,
+          "scheduler_local_block_id": 26,
+          "runtime_name": "block_26",
+          "canonical_runtime_block_id": 26
+        },
+        {
+          "block_id": 27,
+          "candidates": {
+            "1": {
+              "J": 1.0,
+              "reuse_risk_term_would_be_unweighted": 0.0,
+              "fid_w_on_reuse_term": 0.836944580078125,
+              "compute_penalty_lambda_f_over_L": 1.0,
+              "n_R": 0,
+              "n_F": 3
+            },
+            "2": {
+              "J": 0.7312749172404235,
+              "reuse_risk_term_would_be_unweighted": 0.07719537483321294,
+              "fid_w_on_reuse_term": 0.836944580078125,
+              "compute_penalty_lambda_f_over_L": 0.6666666666666666,
+              "n_R": 1,
+              "n_F": 2
+            },
+            "3": {
+              "J": 0.5825865913734054,
+              "reuse_risk_term_would_be_unweighted": 0.29781333671675786,
+              "fid_w_on_reuse_term": 0.836944580078125,
+              "compute_penalty_lambda_f_over_L": 0.3333333333333333,
+              "n_R": 2,
+              "n_F": 1
+            }
+          },
+          "selected_k": 3,
+          "selected_J": 0.5825865913734054,
+          "scheduler_local_block_id": 27,
+          "runtime_name": "block_27",
+          "canonical_runtime_block_id": 27
+        }
+      ]
+    }
+  ],
+  "baseline_lambda": 1.0,
+  "lambda_sweep": [
+    0.25,
+    0.5,
+    1.0,
+    2.0
+  ],
+  "lambda_sweep_selected_k": {
+    "0.25": {
+      "per_block_k": [
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          2
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          2
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          2
+        ],
+        [
+          2,
+          3,
+          3,
+          2,
+          1
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          2
+        ]
+      ]
+    },
+    "0.5": {
+      "per_block_k": [
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          2
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          2
+        ]
+      ]
+    },
+    "1.0": {
+      "per_block_k": [
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ]
+      ]
+    },
+    "2.0": {
+      "per_block_k": [
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          3,
+          3,
+          3
+        ]
+      ]
+    }
+  }
+}
