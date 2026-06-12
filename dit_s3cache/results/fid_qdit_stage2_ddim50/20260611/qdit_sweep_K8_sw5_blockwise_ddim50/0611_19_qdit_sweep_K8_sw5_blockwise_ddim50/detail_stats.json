@@ -1,0 +1,378 @@
+{
+  "run_id": "20260611T191059__qdit_sweep_K8_sw5_blockwise_ddim50",
+  "scheduler_name": "qdit_sweep_K8_sw5_blockwise_ddim50",
+  "sampler": "ddim",
+  "num_sampling_steps": 50,
+  "per_block_recompute_count": {
+    "block_0": 18,
+    "block_1": 18,
+    "block_2": 18,
+    "block_3": 18,
+    "block_4": 18,
+    "block_5": 18,
+    "block_6": 18,
+    "block_7": 18,
+    "block_8": 18,
+    "block_9": 18,
+    "block_10": 18,
+    "block_11": 18,
+    "block_12": 18,
+    "block_13": 18,
+    "block_14": 18,
+    "block_15": 18,
+    "block_16": 18,
+    "block_17": 18,
+    "block_18": 18,
+    "block_19": 18,
+    "block_20": 18,
+    "block_21": 18,
+    "block_22": 18,
+    "block_23": 18,
+    "block_24": 18,
+    "block_25": 18,
+    "block_26": 18,
+    "block_27": 18
+  },
+  "per_block_reuse_count": {
+    "block_0": 32,
+    "block_1": 32,
+    "block_2": 32,
+    "block_3": 32,
+    "block_4": 32,
+    "block_5": 32,
+    "block_6": 32,
+    "block_7": 32,
+    "block_8": 32,
+    "block_9": 32,
+    "block_10": 32,
+    "block_11": 32,
+    "block_12": 32,
+    "block_13": 32,
+    "block_14": 32,
+    "block_15": 32,
+    "block_16": 32,
+    "block_17": 32,
+    "block_18": 32,
+    "block_19": 32,
+    "block_20": 32,
+    "block_21": 32,
+    "block_22": 32,
+    "block_23": 32,
+    "block_24": 32,
+    "block_25": 32,
+    "block_26": 32,
+    "block_27": 32
+  },
+  "per_zone_recompute_stats": {
+    "0": {
+      "full_count": 28,
+      "reuse_count": 28,
+      "num_timesteps_in_zone": 2
+    },
+    "1": {
+      "full_count": 28,
+      "reuse_count": 56,
+      "num_timesteps_in_zone": 3
+    },
+    "2": {
+      "full_count": 28,
+      "reuse_count": 56,
+      "num_timesteps_in_zone": 3
+    },
+    "3": {
+      "full_count": 364,
+      "reuse_count": 728,
+      "num_timesteps_in_zone": 39
+    },
+    "4": {
+      "full_count": 56,
+      "reuse_count": 28,
+      "num_timesteps_in_zone": 3
+    }
+  },
+  "per_zone_adjustment_stats": {
+    "4": 28
+  },
+  "raw_estimation_stats": {
+    "full_compute_ratio": 0.36,
+    "total_full_compute_count": 504,
+    "total_cache_reuse_count": 896,
+    "full_compute_blocks_count": 0,
+    "T": 50,
+    "num_blocks": 28,
+    "per_block_recompute_ratio": {
+      "block_0": 0.36,
+      "block_1": 0.36,
+      "block_2": 0.36,
+      "block_3": 0.36,
+      "block_4": 0.36,
+      "block_5": 0.36,
+      "block_6": 0.36,
+      "block_7": 0.36,
+      "block_8": 0.36,
+      "block_9": 0.36,
+      "block_10": 0.36,
+      "block_11": 0.36,
+      "block_12": 0.36,
+      "block_13": 0.36,
+      "block_14": 0.36,
+      "block_15": 0.36,
+      "block_16": 0.36,
+      "block_17": 0.36,
+      "block_18": 0.36,
+      "block_19": 0.36,
+      "block_20": 0.36,
+      "block_21": 0.36,
+      "block_22": 0.36,
+      "block_23": 0.36,
+      "block_24": 0.36,
+      "block_25": 0.36,
+      "block_26": 0.36,
+      "block_27": 0.36
+    }
+  },
+  "fid_run_meta": {
+    "cache_stats": {
+      "cache_hits": 280448,
+      "recompute_hits": 157752,
+      "total_hook_calls": 438200,
+      "per_block": {
+        "block_0": {
+          "cache_hits": 10016,
+          "recompute_hits": 5634,
+          "total_hook_calls": 15650
+        },
+        "block_1": {
+          "cache_hits": 10016,
+          "recompute_hits": 5634,
+          "total_hook_calls": 15650
+        },
+        "block_2": {
+          "cache_hits": 10016,
+          "recompute_hits": 5634,
+          "total_hook_calls": 15650
+        },
+        "block_3": {
+          "cache_hits": 10016,
+          "recompute_hits": 5634,
+          "total_hook_calls": 15650
+        },
+        "block_4": {
+          "cache_hits": 10016,
+          "recompute_hits": 5634,
+          "total_hook_calls": 15650
+        },
+        "block_5": {
+          "cache_hits": 10016,
+          "recompute_hits": 5634,
+          "total_hook_calls": 15650
+        },
+        "block_6": {
+          "cache_hits": 10016,
+          "recompute_hits": 5634,
+          "total_hook_calls": 15650
+        },
+        "block_7": {
+          "cache_hits": 10016,
+          "recompute_hits": 5634,
+          "total_hook_calls": 15650
+        },
+        "block_8": {
+          "cache_hits": 10016,
+          "recompute_hits": 5634,
+          "total_hook_calls": 15650
+        },
+        "block_9": {
+          "cache_hits": 10016,
+          "recompute_hits": 5634,
+          "total_hook_calls": 15650
+        },
+        "block_10": {
+          "cache_hits": 10016,
+          "recompute_hits": 5634,
+          "total_hook_calls": 15650
+        },
+        "block_11": {
+          "cache_hits": 10016,
+          "recompute_hits": 5634,
+          "total_hook_calls": 15650
+        },
+        "block_12": {
+          "cache_hits": 10016,
+          "recompute_hits": 5634,
+          "total_hook_calls": 15650
+        },
+        "block_13": {
+          "cache_hits": 10016,
+          "recompute_hits": 5634,
+          "total_hook_calls": 15650
+        },
+        "block_14": {
+          "cache_hits": 10016,
+          "recompute_hits": 5634,
+          "total_hook_calls": 15650
+        },
+        "block_15": {
+          "cache_hits": 10016,
+          "recompute_hits": 5634,
+          "total_hook_calls": 15650
+        },
+        "block_16": {
+          "cache_hits": 10016,
+          "recompute_hits": 5634,
+          "total_hook_calls": 15650
+        },
+        "block_17": {
+          "cache_hits": 10016,
+          "recompute_hits": 5634,
+          "total_hook_calls": 15650
+        },
+        "block_18": {
+          "cache_hits": 10016,
+          "recompute_hits": 5634,
+          "total_hook_calls": 15650
+        },
+        "block_19": {
+          "cache_hits": 10016,
+          "recompute_hits": 5634,
+          "total_hook_calls": 15650
+        },
+        "block_20": {
+          "cache_hits": 10016,
+          "recompute_hits": 5634,
+          "total_hook_calls": 15650
+        },
+        "block_21": {
+          "cache_hits": 10016,
+          "recompute_hits": 5634,
+          "total_hook_calls": 15650
+        },
+        "block_22": {
+          "cache_hits": 10016,
+          "recompute_hits": 5634,
+          "total_hook_calls": 15650
+        },
+        "block_23": {
+          "cache_hits": 10016,
+          "recompute_hits": 5634,
+          "total_hook_calls": 15650
+        },
+        "block_24": {
+          "cache_hits": 10016,
+          "recompute_hits": 5634,
+          "total_hook_calls": 15650
+        },
+        "block_25": {
+          "cache_hits": 10016,
+          "recompute_hits": 5634,
+          "total_hook_calls": 15650
+        },
+        "block_26": {
+          "cache_hits": 10016,
+          "recompute_hits": 5634,
+          "total_hook_calls": 15650
+        },
+        "block_27": {
+          "cache_hits": 10016,
+          "recompute_hits": 5634,
+          "total_hook_calls": 15650
+        }
+      }
+    },
+    "adm_output": "warming up TensorFlow...\ncomputing reference batch activations...\ncomputing/reading reference batch statistics...\ncomputing sample batch activations...\ncomputing/reading sample batch statistics...\nComputing evaluations...\nInception Score: 214.18077087402344\nFID: 10.691947506011786\nsFID: 34.8979044108728\nPrecision: 0.7748\nRecall: 0.7362\n\nWARNING: All log messages before absl::InitializeLog() is called are written to STDERR\nI0000 00:00:1781177621.770156 3979376 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.\nI0000 00:00:1781177621.795575 3979376 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.\nTo enable the following instructions: AVX2 AVX512F AVX512_VNNI AVX512_BF16 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.\nWARNING: All log messages before absl::InitializeLog() is called are written to STDERR\nI0000 00:00:1781177623.878326 3979376 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.\nW0000 00:00:1781177625.135203 3979376 gpu_device.cc:2459] TensorFlow was not built with CUDA kernel binaries compatible with compute capability 12.0a. CUDA kernels will be jit-compiled from PTX, which could take 30 minutes or longer.\nI0000 00:00:1781177625.196775 3979376 gpu_device.cc:2043] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 22376 MB memory:  -> device: 0, name: NVIDIA GeForce RTX 5090, pci bus id: 0000:01:00.0, compute capability: 12.0a\nW0000 00:00:1781177625.207918 3979376 gpu_device.cc:2459] TensorFlow was not built with CUDA kernel binaries compatible with compute capability 12.0a. CUDA kernels will be jit-compiled from PTX, which could take 30 minutes or longer.\nW0000 00:00:1781177625.210130 3979376 gpu_device.cc:2459] TensorFlow was not built with CUDA kernel binaries compatible with compute capability 12.0a. CUDA kernels will be jit-compiled from PTX, which could take 30 minutes or longer.\nI0000 00:00:1781177625.211474 3979376 gpu_device.cc:2043] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 22376 MB memory:  -> device: 0, name: NVIDIA GeForce RTX 5090, pci bus id: 0000:01:00.0, compute capability: 12.0a\nW0000 00:00:1781177625.383740 3979376 op_def_util.cc:371] Op BatchNormWithGlobalNormalization is deprecated. It will cease to work in GraphDef version 9. Use tf.nn.batch_normalization().\n\n  0%|          | 0/1 [00:00<?, ?it/s]I0000 00:00:1781177625.711639 3979376 mlir_graph_optimization_pass.cc:437] MLIR V1 optimization pass is not enabled\nI0000 00:00:1781177626.297106 3979563 cuda_dnn.cc:461] Loaded cuDNN version 91900\nW0000 00:00:1781177626.435097 3979563 subprocess_compilation.cc:241] Falling back to the CUDA driver for PTX compilation; ptxas does not support CC 12.0\nW0000 00:00:1781177626.435118 3979563 subprocess_compilation.cc:244] Used ptxas at /usr/local/cuda/bin/ptxas\nW0000 00:00:1781177626.435191 3979563 gpu_kernel_to_blob_pass.cc:190] Failed to compile generated PTX with ptxas. Falling back to compilation by driver.\n\n100%|██████████| 1/1 [00:01<00:00,  1.12s/it]\n100%|██████████| 1/1 [00:01<00:00,  1.12s/it]\n\n  0%|          | 0/157 [00:00<?, ?it/s]\n  1%|          | 1/157 [00:00<01:22,  1.90it/s]\n  1%|▏         | 2/157 [00:00<00:43,  3.54it/s]\n  3%|▎         | 4/157 [00:00<00:22,  6.75it/s]\n  4%|▍         | 7/157 [00:00<00:13, 11.16it/s]\n  6%|▌         | 9/157 [00:01<00:12, 11.39it/s]\n  7%|▋         | 11/157 [00:01<00:12, 11.50it/s]\n  8%|▊         | 13/157 [00:01<00:11, 12.30it/s]\n 10%|▉         | 15/157 [00:01<00:10, 13.03it/s]\n 11%|█         | 17/157 [00:01<00:12, 11.36it/s]\n 12%|█▏        | 19/157 [00:01<00:11, 12.47it/s]\n 14%|█▍        | 22/157 [00:02<00:09, 14.85it/s]\n 15%|█▌        | 24/157 [00:02<00:09, 14.04it/s]\n 17%|█▋        | 26/157 [00:02<00:09, 13.46it/s]\n 18%|█▊        | 28/157 [00:02<00:09, 13.07it/s]\n 19%|█▉        | 30/157 [00:02<00:09, 13.00it/s]\n 20%|██        | 32/157 [00:02<00:08, 14.21it/s]\n 22%|██▏       | 34/157 [00:02<00:08, 14.53it/s]\n 23%|██▎       | 36/157 [00:03<00:07, 15.58it/s]\n 24%|██▍       | 38/157 [00:03<00:08, 14.59it/s]\n 25%|██▌       | 40/157 [00:03<00:08, 13.80it/s]\n 27%|██▋       | 42/157 [00:03<00:09, 11.55it/s]\n 28%|██▊       | 44/157 [00:03<00:09, 11.94it/s]\n 29%|██▉       | 46/157 [00:03<00:09, 12.32it/s]\n 31%|███       | 48/157 [00:04<00:08, 12.71it/s]\n 32%|███▏      | 50/157 [00:04<00:08, 12.76it/s]\n 33%|███▎      | 52/157 [00:04<00:07, 13.61it/s]\n 34%|███▍      | 54/157 [00:04<00:06, 14.99it/s]\n 36%|███▌      | 56/157 [00:04<00:07, 12.90it/s]\n 37%|███▋      | 58/157 [00:04<00:07, 12.49it/s]\n 38%|███▊      | 60/157 [00:04<00:07, 12.13it/s]\n 39%|███▉      | 62/157 [00:05<00:08, 11.86it/s]\n 41%|████      | 64/157 [00:05<00:07, 11.82it/s]\n 42%|████▏     | 66/157 [00:05<00:07, 11.65it/s]\n 43%|████▎     | 68/157 [00:05<00:07, 11.49it/s]\n 45%|████▍     | 70/157 [00:05<00:07, 11.52it/s]\n 46%|████▌     | 72/157 [00:05<00:07, 11.78it/s]\n 47%|████▋     | 74/157 [00:06<00:06, 11.99it/s]\n 48%|████▊     | 76/157 [00:06<00:06, 12.09it/s]\n 50%|████▉     | 78/157 [00:06<00:06, 12.51it/s]\n 51%|█████     | 80/157 [00:06<00:09,  7.91it/s]\n 52%|█████▏    | 82/157 [00:07<00:08,  8.99it/s]\n 54%|█████▎    | 84/157 [00:07<00:07,  9.90it/s]\n 55%|█████▍    | 86/157 [00:07<00:06, 10.37it/s]\n 56%|█████▌    | 88/157 [00:07<00:06, 10.75it/s]\n 57%|█████▋    | 90/157 [00:07<00:06, 10.90it/s]\n 59%|█████▊    | 92/157 [00:07<00:05, 11.35it/s]\n 60%|█████▉    | 94/157 [00:08<00:05, 12.22it/s]\n 61%|██████    | 96/157 [00:08<00:04, 13.63it/s]\n 62%|██████▏   | 98/157 [00:08<00:04, 13.67it/s]\n 64%|██████▎   | 100/157 [00:08<00:04, 13.68it/s]\n 65%|██████▍   | 102/157 [00:08<00:04, 13.59it/s]\n 66%|██████▌   | 104/157 [00:08<00:03, 13.84it/s]\n 68%|██████▊   | 106/157 [00:08<00:04, 11.95it/s]\n 69%|██████▉   | 108/157 [00:09<00:04, 12.03it/s]\n 70%|███████   | 110/157 [00:09<00:03, 12.23it/s]\n 71%|███████▏  | 112/157 [00:09<00:03, 12.16it/s]\n 73%|███████▎  | 114/157 [00:09<00:03, 11.15it/s]\n 74%|███████▍  | 116/157 [00:09<00:03, 11.53it/s]\n 75%|███████▌  | 118/157 [00:09<00:03, 12.12it/s]\n 76%|███████▋  | 120/157 [00:10<00:02, 12.54it/s]\n 78%|███████▊  | 122/157 [00:10<00:02, 12.70it/s]\n 79%|███████▉  | 124/157 [00:10<00:02, 12.94it/s]\n 80%|████████  | 126/157 [00:10<00:02, 13.18it/s]\n 82%|████████▏ | 128/157 [00:10<00:02, 13.39it/s]\n 83%|████████▎ | 130/157 [00:10<00:02, 13.07it/s]\n 84%|████████▍ | 132/157 [00:11<00:01, 13.24it/s]\n 85%|████████▌ | 134/157 [00:11<00:01, 12.82it/s]\n 87%|████████▋ | 136/157 [00:11<00:01, 13.13it/s]\n 88%|████████▊ | 138/157 [00:11<00:01, 13.27it/s]\n 89%|████████▉ | 140/157 [00:11<00:01, 13.43it/s]\n 90%|█████████ | 142/157 [00:11<00:01, 11.93it/s]\n 92%|█████████▏| 144/157 [00:12<00:01, 10.55it/s]\n 93%|█████████▎| 146/157 [00:12<00:01, 10.67it/s]\n 94%|█████████▍| 148/157 [00:12<00:00, 11.39it/s]\n 96%|█████████▌| 150/157 [00:12<00:00, 11.99it/s]\n 97%|█████████▋| 152/157 [00:12<00:00, 12.15it/s]\n 98%|█████████▊| 154/157 [00:12<00:00, 12.63it/s]\n 99%|█████████▉| 156/157 [00:13<00:00, 12.27it/s]\n100%|██████████| 157/157 [00:13<00:00, 11.84it/s]\n\n  0%|          | 0/79 [00:00<?, ?it/s]\n  4%|▍         | 3/79 [00:00<00:02, 26.86it/s]\n  8%|▊         | 6/79 [00:00<00:02, 27.30it/s]\n 11%|█▏        | 9/79 [00:00<00:02, 27.31it/s]\n 15%|█▌        | 12/79 [00:00<00:02, 27.41it/s]\n 19%|█▉        | 15/79 [00:00<00:02, 27.44it/s]\n 23%|██▎       | 18/79 [00:00<00:02, 27.53it/s]\n 27%|██▋       | 21/79 [00:00<00:02, 27.69it/s]\n 30%|███       | 24/79 [00:00<00:01, 27.64it/s]\n 34%|███▍      | 27/79 [00:00<00:01, 27.63it/s]\n 38%|███▊      | 30/79 [00:01<00:01, 27.66it/s]\n 42%|████▏     | 33/79 [00:01<00:01, 27.54it/s]\n 46%|████▌     | 36/79 [00:01<00:01, 27.52it/s]\n 49%|████▉     | 39/79 [00:01<00:01, 27.63it/s]\n 53%|█████▎    | 42/79 [00:01<00:01, 27.67it/s]\n 57%|█████▋    | 45/79 [00:01<00:01, 27.73it/s]\n 61%|██████    | 48/79 [00:01<00:01, 27.72it/s]\n 65%|██████▍   | 51/79 [00:01<00:01, 27.76it/s]\n 68%|██████▊   | 54/79 [00:01<00:00, 27.88it/s]\n 72%|███████▏  | 57/79 [00:02<00:00, 27.77it/s]\n 76%|███████▌  | 60/79 [00:02<00:00, 27.77it/s]\n 80%|███████▉  | 63/79 [00:02<00:00, 27.88it/s]\n 84%|████████▎ | 66/79 [00:02<00:00, 28.01it/s]\n 87%|████████▋ | 69/79 [00:02<00:00, 28.08it/s]\n 91%|█████████ | 72/79 [00:02<00:00, 28.08it/s]\n 95%|█████████▍| 75/79 [00:02<00:00, 28.02it/s]\n 99%|█████████▊| 78/79 [00:02<00:00, 27.93it/s]\n100%|██████████| 79/79 [00:02<00:00, 27.98it/s]\nE0000 00:00:1781177647.204683 3979376 util.cc:131] oneDNN supports DT_HALF only on platforms with AVX-512. Falling back to the default Eigen-based implementation if present.\nW0000 00:00:1781177647.247496 3979566 gpu_kernel_to_blob_pass.cc:190] Failed to compile generated PTX with ptxas. Falling back to compilation by driver.\nW0000 00:00:1781177647.248029 3979561 gpu_kernel_to_blob_pass.cc:190] Failed to compile generated PTX with ptxas. Falling back to compilation by driver.\nW0000 00:00:1781177647.373402 3979885 gpu_kernel_to_blob_pass.cc:190] Failed to compile generated PTX with ptxas. Falling back to compilation by driver.\nW0000 00:00:1781177647.373689 3979884 gpu_kernel_to_blob_pass.cc:190] Failed to compile generated PTX with ptxas. Falling back to compilation by driver.\nW0000 00:00:1781177647.374729 3979882 gpu_kernel_to_blob_pass.cc:190] Failed to compile generated PTX with ptxas. Falling back to compilation by driver.\nW0000 00:00:1781177647.375385 3979880 gpu_kernel_to_blob_pass.cc:190] Failed to compile generated PTX with ptxas. Falling back to compilation by driver.\nW0000 00:00:1781177647.376270 3979883 gpu_kernel_to_blob_pass.cc:190] Failed to compile generated PTX with ptxas. Falling back to compilation by driver.\nW0000 00:00:1781177647.377411 3979886 gpu_kernel_to_blob_pass.cc:190] Failed to compile generated PTX with ptxas. Falling back to compilation by driver.\nW0000 00:00:1781177647.378125 3979879 gpu_kernel_to_blob_pass.cc:190] Failed to compile generated PTX with ptxas. Falling back to compilation by driver.\nW0000 00:00:1781177647.379429 3979881 gpu_kernel_to_blob_pass.cc:190] Failed to compile generated PTX with ptxas. Falling back to compilation by driver.\n",
+    "ref_batch": "/home/jimmy/DiT/dit_s3cache/fid/VIRTUAL_imagenet256_labeled.npz"
+  },
+  "eta": 0.0,
+  "effective_scheduler_fr_grid": {
+    "meta": {
+      "source": "dit_cache_scheduler_raw_timesteps_after_stage2_conversion",
+      "columns_left_to_right": "denoising order: sampling_timesteps[0]=first_step",
+      "sampling_timesteps_left_to_right": [
+        999,
+        979,
+        958,
+        938,
+        917,
+        897,
+        877,
+        856,
+        836,
+        816,
+        795,
+        775,
+        754,
+        734,
+        714,
+        693,
+        673,
+        652,
+        632,
+        612,
+        591,
+        571,
+        550,
+        530,
+        510,
+        489,
+        469,
+        449,
+        428,
+        408,
+        387,
+        367,
+        347,
+        326,
+        306,
+        285,
+        265,
+        245,
+        224,
+        204,
+        183,
+        163,
+        143,
+        122,
+        102,
+        82,
+        61,
+        41,
+        20,
+        0
+      ],
+      "T": 50,
+      "num_blocks": 28,
+      "cell_token": "F=full_compute(recompute) R=cache_reuse"
+    },
+    "by_layer": {
+      "block_0": "F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F ",
+      "block_1": "F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F ",
+      "block_2": "F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F ",
+      "block_3": "F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F ",
+      "block_4": "F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F ",
+      "block_5": "F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F ",
+      "block_6": "F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F ",
+      "block_7": "F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F ",
+      "block_8": "F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F ",
+      "block_9": "F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F ",
+      "block_10": "F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F ",
+      "block_11": "F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F ",
+      "block_12": "F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F ",
+      "block_13": "F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F ",
+      "block_14": "F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F ",
+      "block_15": "F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F ",
+      "block_16": "F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F ",
+      "block_17": "F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F ",
+      "block_18": "F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F ",
+      "block_19": "F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F ",
+      "block_20": "F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F ",
+      "block_21": "F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F ",
+      "block_22": "F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F ",
+      "block_23": "F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F ",
+      "block_24": "F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F ",
+      "block_25": "F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F ",
+      "block_26": "F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F ",
+      "block_27": "F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F "
+    },
+    "aligned_text_block": "block_0  : F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F \nblock_1  : F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F \nblock_2  : F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F \nblock_3  : F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F \nblock_4  : F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F \nblock_5  : F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F \nblock_6  : F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F \nblock_7  : F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F \nblock_8  : F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F \nblock_9  : F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F \nblock_10 : F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F \nblock_11 : F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F \nblock_12 : F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F \nblock_13 : F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F \nblock_14 : F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F \nblock_15 : F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F \nblock_16 : F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F \nblock_17 : F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F \nblock_18 : F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F \nblock_19 : F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F \nblock_20 : F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F \nblock_21 : F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F \nblock_22 : F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F \nblock_23 : F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F \nblock_24 : F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F \nblock_25 : F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F \nblock_26 : F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F \nblock_27 : F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F "
+  }
+}
