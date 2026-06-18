@@ -338,7 +338,7 @@
         "kmax": 3
       },
       "fid_5k": 9.406546,
-      "fid_50k": null,
+      "fid_50k": 2.621619,
       "full_compute_ratio": 0.3975,
       "delta_fid_5k_abs": 0.289109,
       "delta_fid_5k_pct": 3.17,
@@ -349,6 +349,7 @@
       "role": "Q-DiT + S3-Cache (DDIM100 ablation)",
       "source_file": "/home/jimmy/DiT/dit_s3cache/results/fid_qdit_stage2_ddim100/20260611/qdit_baseline_p2_K20_sw3_blockwise_ddim100/0611_19_qdit_baseline_p2_K20_sw3_blockwise_ddim100/summary.json",
       "additional_metrics": null,
+      "source_file_fid_50k": "/home/jimmy/DiT/dit_s3cache/results/fid_qdit_stage2_ddim100_50k/20260618/qdit_baseline_p2_K20_sw3_blockwise_ddim100_50k/0618_16_qdit_baseline_p2_K20_sw3_blockwise_ddim100_50k/summary.json",
       "source_file_detail_stats": "/home/jimmy/DiT/dit_s3cache/results/fid_qdit_stage2_ddim100/20260611/qdit_baseline_p2_K20_sw3_blockwise_ddim100/0611_19_qdit_baseline_p2_K20_sw3_blockwise_ddim100/detail_stats.json",
       "qdit_checkpoint": "/home/jimmy/Q-DiT/results/003-qdit_w8a8/qdit_w8a8_state_dict.pt"
     },
