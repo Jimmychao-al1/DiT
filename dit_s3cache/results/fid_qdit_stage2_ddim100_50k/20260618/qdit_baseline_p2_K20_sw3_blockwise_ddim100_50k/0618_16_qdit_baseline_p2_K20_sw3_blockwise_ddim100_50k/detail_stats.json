@@ -1,0 +1,469 @@
+{
+  "run_id": "20260618T161409__qdit_baseline_p2_K20_sw3_blockwise_ddim100_50k",
+  "scheduler_name": "qdit_baseline_p2_K20_sw3_blockwise_ddim100_50k",
+  "sampler": "ddim",
+  "num_sampling_steps": 100,
+  "per_block_recompute_count": {
+    "block_0": 49,
+    "block_1": 40,
+    "block_2": 40,
+    "block_3": 40,
+    "block_4": 40,
+    "block_5": 40,
+    "block_6": 40,
+    "block_7": 40,
+    "block_8": 40,
+    "block_9": 39,
+    "block_10": 39,
+    "block_11": 39,
+    "block_12": 39,
+    "block_13": 39,
+    "block_14": 39,
+    "block_15": 39,
+    "block_16": 39,
+    "block_17": 39,
+    "block_18": 39,
+    "block_19": 39,
+    "block_20": 39,
+    "block_21": 39,
+    "block_22": 39,
+    "block_23": 39,
+    "block_24": 39,
+    "block_25": 40,
+    "block_26": 40,
+    "block_27": 40
+  },
+  "per_block_reuse_count": {
+    "block_0": 51,
+    "block_1": 60,
+    "block_2": 60,
+    "block_3": 60,
+    "block_4": 60,
+    "block_5": 60,
+    "block_6": 60,
+    "block_7": 60,
+    "block_8": 60,
+    "block_9": 61,
+    "block_10": 61,
+    "block_11": 61,
+    "block_12": 61,
+    "block_13": 61,
+    "block_14": 61,
+    "block_15": 61,
+    "block_16": 61,
+    "block_17": 61,
+    "block_18": 61,
+    "block_19": 61,
+    "block_20": 61,
+    "block_21": 61,
+    "block_22": 61,
+    "block_23": 61,
+    "block_24": 61,
+    "block_25": 60,
+    "block_26": 60,
+    "block_27": 60
+  },
+  "per_zone_recompute_stats": {
+    "0": {
+      "full_count": 28,
+      "reuse_count": 28,
+      "num_timesteps_in_zone": 2
+    },
+    "1": {
+      "full_count": 84,
+      "reuse_count": 140,
+      "num_timesteps_in_zone": 8
+    },
+    "2": {
+      "full_count": 28,
+      "reuse_count": 28,
+      "num_timesteps_in_zone": 2
+    },
+    "3": {
+      "full_count": 28,
+      "reuse_count": 56,
+      "num_timesteps_in_zone": 3
+    },
+    "4": {
+      "full_count": 28,
+      "reuse_count": 28,
+      "num_timesteps_in_zone": 2
+    },
+    "5": {
+      "full_count": 28,
+      "reuse_count": 56,
+      "num_timesteps_in_zone": 3
+    },
+    "6": {
+      "full_count": 56,
+      "reuse_count": 84,
+      "num_timesteps_in_zone": 5
+    },
+    "7": {
+      "full_count": 142,
+      "reuse_count": 222,
+      "num_timesteps_in_zone": 13
+    },
+    "8": {
+      "full_count": 58,
+      "reuse_count": 110,
+      "num_timesteps_in_zone": 6
+    },
+    "9": {
+      "full_count": 481,
+      "reuse_count": 891,
+      "num_timesteps_in_zone": 49
+    },
+    "10": {
+      "full_count": 28,
+      "reuse_count": 28,
+      "num_timesteps_in_zone": 2
+    },
+    "11": {
+      "full_count": 56,
+      "reuse_count": 0,
+      "num_timesteps_in_zone": 2
+    },
+    "12": {
+      "full_count": 68,
+      "reuse_count": 16,
+      "num_timesteps_in_zone": 3
+    }
+  },
+  "per_zone_adjustment_stats": {
+    "11": 28,
+    "12": 28
+  },
+  "raw_estimation_stats": {
+    "full_compute_ratio": 0.3975,
+    "total_full_compute_count": 1113,
+    "total_cache_reuse_count": 1687,
+    "full_compute_blocks_count": 0,
+    "T": 100,
+    "num_blocks": 28,
+    "per_block_recompute_ratio": {
+      "block_0": 0.49,
+      "block_1": 0.4,
+      "block_2": 0.4,
+      "block_3": 0.4,
+      "block_4": 0.4,
+      "block_5": 0.4,
+      "block_6": 0.4,
+      "block_7": 0.4,
+      "block_8": 0.4,
+      "block_9": 0.39,
+      "block_10": 0.39,
+      "block_11": 0.39,
+      "block_12": 0.39,
+      "block_13": 0.39,
+      "block_14": 0.39,
+      "block_15": 0.39,
+      "block_16": 0.39,
+      "block_17": 0.39,
+      "block_18": 0.39,
+      "block_19": 0.39,
+      "block_20": 0.39,
+      "block_21": 0.39,
+      "block_22": 0.39,
+      "block_23": 0.39,
+      "block_24": 0.39,
+      "block_25": 0.4,
+      "block_26": 0.4,
+      "block_27": 0.4
+    }
+  },
+  "fid_run_meta": {
+    "cache_stats": {
+      "cache_hits": 5271875,
+      "recompute_hits": 3478125,
+      "total_hook_calls": 8750000,
+      "per_block": {
+        "block_0": {
+          "cache_hits": 159375,
+          "recompute_hits": 153125,
+          "total_hook_calls": 312500
+        },
+        "block_1": {
+          "cache_hits": 187500,
+          "recompute_hits": 125000,
+          "total_hook_calls": 312500
+        },
+        "block_2": {
+          "cache_hits": 187500,
+          "recompute_hits": 125000,
+          "total_hook_calls": 312500
+        },
+        "block_3": {
+          "cache_hits": 187500,
+          "recompute_hits": 125000,
+          "total_hook_calls": 312500
+        },
+        "block_4": {
+          "cache_hits": 187500,
+          "recompute_hits": 125000,
+          "total_hook_calls": 312500
+        },
+        "block_5": {
+          "cache_hits": 187500,
+          "recompute_hits": 125000,
+          "total_hook_calls": 312500
+        },
+        "block_6": {
+          "cache_hits": 187500,
+          "recompute_hits": 125000,
+          "total_hook_calls": 312500
+        },
+        "block_7": {
+          "cache_hits": 187500,
+          "recompute_hits": 125000,
+          "total_hook_calls": 312500
+        },
+        "block_8": {
+          "cache_hits": 187500,
+          "recompute_hits": 125000,
+          "total_hook_calls": 312500
+        },
+        "block_9": {
+          "cache_hits": 190625,
+          "recompute_hits": 121875,
+          "total_hook_calls": 312500
+        },
+        "block_10": {
+          "cache_hits": 190625,
+          "recompute_hits": 121875,
+          "total_hook_calls": 312500
+        },
+        "block_11": {
+          "cache_hits": 190625,
+          "recompute_hits": 121875,
+          "total_hook_calls": 312500
+        },
+        "block_12": {
+          "cache_hits": 190625,
+          "recompute_hits": 121875,
+          "total_hook_calls": 312500
+        },
+        "block_13": {
+          "cache_hits": 190625,
+          "recompute_hits": 121875,
+          "total_hook_calls": 312500
+        },
+        "block_14": {
+          "cache_hits": 190625,
+          "recompute_hits": 121875,
+          "total_hook_calls": 312500
+        },
+        "block_15": {
+          "cache_hits": 190625,
+          "recompute_hits": 121875,
+          "total_hook_calls": 312500
+        },
+        "block_16": {
+          "cache_hits": 190625,
+          "recompute_hits": 121875,
+          "total_hook_calls": 312500
+        },
+        "block_17": {
+          "cache_hits": 190625,
+          "recompute_hits": 121875,
+          "total_hook_calls": 312500
+        },
+        "block_18": {
+          "cache_hits": 190625,
+          "recompute_hits": 121875,
+          "total_hook_calls": 312500
+        },
+        "block_19": {
+          "cache_hits": 190625,
+          "recompute_hits": 121875,
+          "total_hook_calls": 312500
+        },
+        "block_20": {
+          "cache_hits": 190625,
+          "recompute_hits": 121875,
+          "total_hook_calls": 312500
+        },
+        "block_21": {
+          "cache_hits": 190625,
+          "recompute_hits": 121875,
+          "total_hook_calls": 312500
+        },
+        "block_22": {
+          "cache_hits": 190625,
+          "recompute_hits": 121875,
+          "total_hook_calls": 312500
+        },
+        "block_23": {
+          "cache_hits": 190625,
+          "recompute_hits": 121875,
+          "total_hook_calls": 312500
+        },
+        "block_24": {
+          "cache_hits": 190625,
+          "recompute_hits": 121875,
+          "total_hook_calls": 312500
+        },
+        "block_25": {
+          "cache_hits": 187500,
+          "recompute_hits": 125000,
+          "total_hook_calls": 312500
+        },
+        "block_26": {
+          "cache_hits": 187500,
+          "recompute_hits": 125000,
+          "total_hook_calls": 312500
+        },
+        "block_27": {
+          "cache_hits": 187500,
+          "recompute_hits": 125000,
+          "total_hook_calls": 312500
+        }
+      }
+    },
+    "adm_output": "warming up TensorFlow...\ncomputing reference batch activations...\ncomputing/reading reference batch statistics...\ncomputing sample batch activations...\ncomputing/reading sample batch statistics...\nComputing evaluations...\nInception Score: 233.2476043701172\nFID: 2.6216185543376014\nsFID: 4.470315773358607\nPrecision: 0.79718\nRecall: 0.5859\n\nWARNING: All log messages before absl::InitializeLog() is called are written to STDERR\nI0000 00:00:1781802514.598954 2740781 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.\nI0000 00:00:1781802529.927671 2740781 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.\nTo enable the following instructions: AVX2 AVX512F AVX512_VNNI AVX512_BF16 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.\nWARNING: All log messages before absl::InitializeLog() is called are written to STDERR\nI0000 00:00:1781802534.117612 2740781 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.\nW0000 00:00:1781802540.409269 2740781 gpu_device.cc:2459] TensorFlow was not built with CUDA kernel binaries compatible with compute capability 12.0a. CUDA kernels will be jit-compiled from PTX, which could take 30 minutes or longer.\nI0000 00:00:1781802540.597595 2740781 gpu_device.cc:2043] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 24636 MB memory:  -> device: 0, name: NVIDIA GeForce RTX 5090, pci bus id: 0000:01:00.0, compute capability: 12.0a\nW0000 00:00:1781802540.622791 2740781 gpu_device.cc:2459] TensorFlow was not built with CUDA kernel binaries compatible with compute capability 12.0a. CUDA kernels will be jit-compiled from PTX, which could take 30 minutes or longer.\nW0000 00:00:1781802540.625155 2740781 gpu_device.cc:2459] TensorFlow was not built with CUDA kernel binaries compatible with compute capability 12.0a. CUDA kernels will be jit-compiled from PTX, which could take 30 minutes or longer.\nI0000 00:00:1781802540.626485 2740781 gpu_device.cc:2043] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 24636 MB memory:  -> device: 0, name: NVIDIA GeForce RTX 5090, pci bus id: 0000:01:00.0, compute capability: 12.0a\nW0000 00:00:1781802541.358710 2740781 op_def_util.cc:371] Op BatchNormWithGlobalNormalization is deprecated. It will cease to work in GraphDef version 9. Use tf.nn.batch_normalization().\n\n  0%|          | 0/1 [00:00<?, ?it/s]I0000 00:00:1781802541.911496 2740781 mlir_graph_optimization_pass.cc:437] MLIR V1 optimization pass is not enabled\nI0000 00:00:1781802543.058613 2742029 cuda_dnn.cc:461] Loaded cuDNN version 91900\nW0000 00:00:1781802546.025516 2742029 subprocess_compilation.cc:241] Falling back to the CUDA driver for PTX compilation; ptxas does not support CC 12.0\nW0000 00:00:1781802546.025537 2742029 subprocess_compilation.cc:244] Used ptxas at /usr/local/cuda/bin/ptxas\nW0000 00:00:1781802546.025580 2742029 gpu_kernel_to_blob_pass.cc:190] Failed to compile generated PTX with ptxas. Falling back to compilation by driver.\n\n100%|██████████| 1/1 [00:05<00:00,  5.61s/it]\n100%|██████████| 1/1 [00:05<00:00,  5.61s/it]\n\n  0%|          | 0/157 [00:00<?, ?it/s]\n  1%|          | 1/157 [00:00<01:44,  1.50it/s]\n  2%|▏         | 3/157 [00:00<00:37,  4.11it/s]\n  3%|▎         | 5/157 [00:01<00:24,  6.09it/s]\n  4%|▍         | 7/157 [00:01<00:19,  7.54it/s]\n  6%|▌         | 9/157 [00:01<00:17,  8.64it/s]\n  7%|▋         | 11/157 [00:01<00:15,  9.42it/s]\n  8%|▊         | 13/157 [00:01<00:14, 10.20it/s]\n 10%|▉         | 15/157 [00:01<00:13, 10.49it/s]\n 11%|█         | 17/157 [00:02<00:13, 10.71it/s]\n 12%|█▏        | 19/157 [00:02<00:12, 10.90it/s]\n 13%|█▎        | 21/157 [00:02<00:12, 10.98it/s]\n 15%|█▍        | 23/157 [00:02<00:11, 11.29it/s]\n 16%|█▌        | 25/157 [00:02<00:11, 11.40it/s]\n 17%|█▋        | 27/157 [00:02<00:11, 11.14it/s]\n 18%|█▊        | 29/157 [00:03<00:11, 11.43it/s]\n 20%|█▉        | 31/157 [00:03<00:11, 11.25it/s]\n 21%|██        | 33/157 [00:03<00:10, 11.54it/s]\n 22%|██▏       | 35/157 [00:03<00:10, 11.13it/s]\n 24%|██▎       | 37/157 [00:03<00:11, 10.69it/s]\n 25%|██▍       | 39/157 [00:04<00:10, 10.78it/s]\n 26%|██▌       | 41/157 [00:04<00:10, 10.78it/s]\n 27%|██▋       | 43/157 [00:04<00:10, 11.08it/s]\n 29%|██▊       | 45/157 [00:04<00:09, 11.25it/s]\n 30%|██▉       | 47/157 [00:04<00:09, 11.42it/s]\n 31%|███       | 49/157 [00:04<00:09, 11.49it/s]\n 32%|███▏      | 51/157 [00:05<00:09, 11.29it/s]\n 34%|███▍      | 53/157 [00:05<00:09, 11.31it/s]\n 35%|███▌      | 55/157 [00:05<00:09, 11.26it/s]\n 36%|███▋      | 57/157 [00:05<00:08, 11.27it/s]\n 38%|███▊      | 59/157 [00:05<00:08, 11.30it/s]\n 39%|███▉      | 61/157 [00:06<00:08, 11.21it/s]\n 40%|████      | 63/157 [00:06<00:08, 10.74it/s]\n 41%|████▏     | 65/157 [00:06<00:08, 10.81it/s]\n 43%|████▎     | 67/157 [00:06<00:09,  9.94it/s]\n 44%|████▍     | 69/157 [00:06<00:10,  8.59it/s]\n 45%|████▌     | 71/157 [00:07<00:09,  9.31it/s]\n 46%|████▋     | 73/157 [00:07<00:08,  9.84it/s]\n 48%|████▊     | 75/157 [00:07<00:08, 10.08it/s]\n 49%|████▉     | 77/157 [00:07<00:07, 10.74it/s]\n 50%|█████     | 79/157 [00:07<00:07, 11.06it/s]\n 52%|█████▏    | 81/157 [00:07<00:06, 11.19it/s]\n 53%|█████▎    | 83/157 [00:08<00:06, 11.46it/s]\n 54%|█████▍    | 85/157 [00:08<00:06, 11.66it/s]\n 55%|█████▌    | 87/157 [00:08<00:05, 11.73it/s]\n 57%|█████▋    | 89/157 [00:08<00:05, 11.79it/s]\n 58%|█████▊    | 91/157 [00:08<00:05, 11.68it/s]\n 59%|█████▉    | 93/157 [00:08<00:05, 11.84it/s]\n 61%|██████    | 95/157 [00:09<00:05, 11.77it/s]\n 62%|██████▏   | 97/157 [00:09<00:05, 11.72it/s]\n 63%|██████▎   | 99/157 [00:09<00:04, 11.80it/s]\n 64%|██████▍   | 101/157 [00:09<00:04, 11.53it/s]\n 66%|██████▌   | 103/157 [00:09<00:04, 11.34it/s]\n 67%|██████▋   | 105/157 [00:10<00:04, 11.58it/s]\n 68%|██████▊   | 107/157 [00:10<00:04, 11.85it/s]\n 69%|██████▉   | 109/157 [00:10<00:03, 12.08it/s]\n 71%|███████   | 111/157 [00:10<00:03, 12.05it/s]\n 72%|███████▏  | 113/157 [00:10<00:03, 12.15it/s]\n 73%|███████▎  | 115/157 [00:10<00:03, 12.19it/s]\n 75%|███████▍  | 117/157 [00:10<00:03, 12.00it/s]\n 76%|███████▌  | 119/157 [00:11<00:03, 11.82it/s]\n 77%|███████▋  | 121/157 [00:11<00:03, 11.90it/s]\n 78%|███████▊  | 123/157 [00:11<00:02, 11.82it/s]\n 80%|███████▉  | 125/157 [00:11<00:02, 11.23it/s]\n 81%|████████  | 127/157 [00:11<00:02, 11.49it/s]\n 82%|████████▏ | 129/157 [00:12<00:02, 11.51it/s]\n 83%|████████▎ | 131/157 [00:12<00:02, 11.63it/s]\n 85%|████████▍ | 133/157 [00:12<00:02, 11.78it/s]\n 86%|████████▌ | 135/157 [00:12<00:01, 11.81it/s]\n 87%|████████▋ | 137/157 [00:12<00:01, 11.86it/s]\n 89%|████████▊ | 139/157 [00:12<00:01, 11.84it/s]\n 90%|████████▉ | 141/157 [00:13<00:01, 11.81it/s]\n 91%|█████████ | 143/157 [00:13<00:01, 11.39it/s]\n 92%|█████████▏| 145/157 [00:13<00:01, 11.53it/s]\n 94%|█████████▎| 147/157 [00:13<00:00, 11.71it/s]\n 95%|█████████▍| 149/157 [00:13<00:00, 11.58it/s]\n 96%|█████████▌| 151/157 [00:13<00:00, 11.41it/s]\n 97%|█████████▋| 153/157 [00:14<00:00, 11.58it/s]\n 99%|█████████▊| 155/157 [00:14<00:00, 11.59it/s]\n100%|██████████| 157/157 [00:14<00:00,  8.17it/s]\n100%|██████████| 157/157 [00:14<00:00, 10.69it/s]\n\n  0%|          | 0/782 [00:00<?, ?it/s]\n  0%|          | 2/782 [00:00<00:40, 19.43it/s]\n  1%|          | 4/782 [00:00<00:39, 19.76it/s]\n  1%|          | 7/782 [00:00<00:38, 19.91it/s]\n  1%|▏         | 10/782 [00:00<00:37, 20.42it/s]\n  2%|▏         | 13/782 [00:00<00:38, 19.94it/s]\n  2%|▏         | 16/782 [00:00<00:37, 20.25it/s]\n  2%|▏         | 19/782 [00:00<00:37, 20.21it/s]\n  3%|▎         | 22/782 [00:01<00:37, 20.17it/s]\n  3%|▎         | 25/782 [00:01<00:37, 20.36it/s]\n  4%|▎         | 28/782 [00:01<00:37, 19.99it/s]\n  4%|▍         | 31/782 [00:01<00:36, 20.33it/s]\n  4%|▍         | 34/782 [00:01<00:37, 20.12it/s]\n  5%|▍         | 37/782 [00:01<00:36, 20.21it/s]\n  5%|▌         | 40/782 [00:01<00:35, 20.71it/s]\n  5%|▌         | 43/782 [00:02<00:35, 20.98it/s]\n  6%|▌         | 46/782 [00:02<00:35, 20.85it/s]\n  6%|▋         | 49/782 [00:02<00:36, 20.13it/s]\n  7%|▋         | 52/782 [00:02<00:36, 20.03it/s]\n  7%|▋         | 55/782 [00:02<00:35, 20.38it/s]\n  7%|▋         | 58/782 [00:02<00:35, 20.36it/s]\n  8%|▊         | 61/782 [00:03<00:35, 20.55it/s]\n  8%|▊         | 64/782 [00:03<00:33, 21.27it/s]\n  9%|▊         | 67/782 [00:03<00:32, 21.80it/s]\n  9%|▉         | 70/782 [00:03<00:33, 21.51it/s]\n  9%|▉         | 73/782 [00:03<00:34, 20.63it/s]\n 10%|▉         | 76/782 [00:03<00:34, 20.76it/s]\n 10%|█         | 79/782 [00:03<00:34, 20.37it/s]\n 10%|█         | 82/782 [00:04<00:34, 20.36it/s]\n 11%|█         | 85/782 [00:04<00:34, 20.20it/s]\n 11%|█▏        | 88/782 [00:04<00:34, 20.01it/s]\n 12%|█▏        | 91/782 [00:04<00:34, 20.31it/s]\n 12%|█▏        | 94/782 [00:04<00:34, 20.07it/s]\n 12%|█▏        | 97/782 [00:04<00:33, 20.17it/s]\n 13%|█▎        | 100/782 [00:04<00:33, 20.13it/s]\n 13%|█▎        | 103/782 [00:05<00:33, 20.17it/s]\n 14%|█▎        | 106/782 [00:05<00:33, 19.96it/s]\n 14%|█▍        | 109/782 [00:05<00:33, 20.22it/s]\n 14%|█▍        | 112/782 [00:05<00:32, 20.43it/s]\n 15%|█▍        | 115/782 [00:05<00:32, 20.68it/s]\n 15%|█▌        | 118/782 [00:05<00:31, 20.96it/s]\n 15%|█▌        | 121/782 [00:05<00:32, 20.52it/s]\n 16%|█▌        | 124/782 [00:06<00:32, 20.32it/s]\n 16%|█▌        | 127/782 [00:06<00:32, 20.09it/s]\n 17%|█▋        | 130/782 [00:06<00:32, 20.09it/s]\n 17%|█▋        | 133/782 [00:06<00:32, 19.93it/s]\n 17%|█▋        | 135/782 [00:06<00:32, 19.85it/s]\n 18%|█▊        | 137/782 [00:06<00:32, 19.75it/s]\n 18%|█▊        | 139/782 [00:06<00:32, 19.66it/s]\n 18%|█▊        | 142/782 [00:06<00:31, 20.01it/s]\n 19%|█▊        | 145/782 [00:07<00:31, 20.08it/s]\n 19%|█▉        | 148/782 [00:07<00:31, 20.21it/s]\n 19%|█▉        | 151/782 [00:07<00:30, 20.36it/s]\n 20%|█▉        | 154/782 [00:07<00:31, 20.13it/s]\n 20%|██        | 157/782 [00:07<00:30, 20.41it/s]\n 20%|██        | 160/782 [00:07<00:30, 20.08it/s]\n 21%|██        | 163/782 [00:08<00:30, 20.60it/s]\n 21%|██        | 166/782 [00:08<00:30, 20.31it/s]\n 22%|██▏       | 169/782 [00:08<00:30, 20.23it/s]\n 22%|██▏       | 172/782 [00:08<00:29, 20.54it/s]\n 22%|██▏       | 175/782 [00:08<00:29, 20.56it/s]\n 23%|██▎       | 178/782 [00:08<00:29, 20.23it/s]\n 23%|██▎       | 181/782 [00:08<00:30, 20.01it/s]\n 24%|██▎       | 184/782 [00:09<00:29, 20.23it/s]\n 24%|██▍       | 187/782 [00:09<00:29, 20.39it/s]\n 24%|██▍       | 190/782 [00:09<00:29, 20.34it/s]\n 25%|██▍       | 193/782 [00:09<00:29, 20.21it/s]\n 25%|██▌       | 196/782 [00:09<00:28, 20.52it/s]\n 25%|██▌       | 199/782 [00:09<00:28, 20.43it/s]\n 26%|██▌       | 202/782 [00:09<00:28, 20.33it/s]\n 26%|██▌       | 205/782 [00:10<00:28, 20.49it/s]\n 27%|██▋       | 208/782 [00:10<00:28, 20.27it/s]\n 27%|██▋       | 211/782 [00:10<00:27, 20.58it/s]\n 27%|██▋       | 214/782 [00:10<00:27, 20.36it/s]\n 28%|██▊       | 217/782 [00:10<00:27, 20.62it/s]\n 28%|██▊       | 220/782 [00:10<00:26, 20.83it/s]\n 29%|██▊       | 223/782 [00:10<00:27, 20.67it/s]\n 29%|██▉       | 226/782 [00:11<00:26, 21.00it/s]\n 29%|██▉       | 229/782 [00:11<00:26, 21.03it/s]\n 30%|██▉       | 232/782 [00:11<00:26, 20.67it/s]\n 30%|███       | 235/782 [00:11<00:26, 20.27it/s]\n 30%|███       | 238/782 [00:11<00:27, 19.99it/s]\n 31%|███       | 241/782 [00:11<00:27, 19.69it/s]\n 31%|███       | 244/782 [00:11<00:26, 20.08it/s]\n 32%|███▏      | 247/782 [00:12<00:26, 20.57it/s]\n 32%|███▏      | 250/782 [00:12<00:25, 20.48it/s]\n 32%|███▏      | 253/782 [00:12<00:25, 20.42it/s]\n 33%|███▎      | 256/782 [00:12<00:25, 20.45it/s]\n 33%|███▎      | 259/782 [00:12<00:25, 20.38it/s]\n 34%|███▎      | 262/782 [00:12<00:25, 20.76it/s]\n 34%|███▍      | 265/782 [00:13<00:25, 20.63it/s]\n 34%|███▍      | 268/782 [00:13<00:24, 20.90it/s]\n 35%|███▍      | 271/782 [00:13<00:24, 20.73it/s]\n 35%|███▌      | 274/782 [00:13<00:27, 18.42it/s]\n 35%|███▌      | 277/782 [00:13<00:26, 19.20it/s]\n 36%|███▌      | 279/782 [00:13<00:26, 19.33it/s]\n 36%|███▌      | 282/782 [00:13<00:24, 20.07it/s]\n 36%|███▋      | 285/782 [00:14<00:24, 20.10it/s]\n 37%|███▋      | 288/782 [00:14<00:23, 20.61it/s]\n 37%|███▋      | 291/782 [00:14<00:24, 20.27it/s]\n 38%|███▊      | 294/782 [00:14<00:24, 20.26it/s]\n 38%|███▊      | 297/782 [00:14<00:23, 20.23it/s]\n 38%|███▊      | 300/782 [00:14<00:24, 20.06it/s]\n 39%|███▊      | 303/782 [00:14<00:23, 20.28it/s]\n 39%|███▉      | 306/782 [00:15<00:23, 20.56it/s]\n 40%|███▉      | 309/782 [00:15<00:22, 20.85it/s]\n 40%|███▉      | 312/782 [00:15<00:22, 20.94it/s]\n 40%|████      | 315/782 [00:15<00:22, 20.78it/s]\n 41%|████      | 318/782 [00:15<00:22, 20.62it/s]\n 41%|████      | 321/782 [00:15<00:22, 20.50it/s]\n 41%|████▏     | 324/782 [00:15<00:22, 20.56it/s]\n 42%|████▏     | 327/782 [00:16<00:22, 20.56it/s]\n 42%|████▏     | 330/782 [00:16<00:22, 20.25it/s]\n 43%|████▎     | 333/782 [00:16<00:21, 20.55it/s]\n 43%|████▎     | 336/782 [00:16<00:21, 20.75it/s]\n 43%|████▎     | 339/782 [00:16<00:21, 21.05it/s]\n 44%|████▎     | 342/782 [00:16<00:21, 20.52it/s]\n 44%|████▍     | 345/782 [00:16<00:21, 20.80it/s]\n 45%|████▍     | 348/782 [00:17<00:20, 20.83it/s]\n 45%|████▍     | 351/782 [00:17<00:20, 20.67it/s]\n 45%|████▌     | 354/782 [00:17<00:20, 20.68it/s]\n 46%|████▌     | 357/782 [00:17<00:20, 20.65it/s]\n 46%|████▌     | 360/782 [00:17<00:20, 21.05it/s]\n 46%|████▋     | 363/782 [00:17<00:20, 20.27it/s]\n 47%|████▋     | 366/782 [00:17<00:20, 20.50it/s]\n 47%|████▋     | 369/782 [00:18<00:20, 20.12it/s]\n 48%|████▊     | 372/782 [00:18<00:20, 20.18it/s]\n 48%|████▊     | 375/782 [00:18<00:20, 20.15it/s]\n 48%|████▊     | 378/782 [00:18<00:20, 20.09it/s]\n 49%|████▊     | 381/782 [00:18<00:19, 20.45it/s]\n 49%|████▉     | 384/782 [00:18<00:19, 20.48it/s]\n 49%|████▉     | 387/782 [00:18<00:18, 21.12it/s]\n 50%|████▉     | 390/782 [00:19<00:18, 21.02it/s]\n 50%|█████     | 393/782 [00:19<00:18, 20.78it/s]\n 51%|█████     | 396/782 [00:19<00:18, 20.97it/s]\n 51%|█████     | 399/782 [00:19<00:18, 20.63it/s]\n 51%|█████▏    | 402/782 [00:19<00:18, 20.92it/s]\n 52%|█████▏    | 405/782 [00:19<00:18, 20.47it/s]\n 52%|█████▏    | 408/782 [00:20<00:18, 20.23it/s]\n 53%|█████▎    | 411/782 [00:20<00:18, 20.54it/s]\n 53%|█████▎    | 414/782 [00:20<00:18, 19.94it/s]\n 53%|█████▎    | 417/782 [00:20<00:18, 19.62it/s]\n 54%|█████▎    | 420/782 [00:20<00:18, 19.63it/s]\n 54%|█████▍    | 423/782 [00:20<00:17, 20.08it/s]\n 54%|█████▍    | 426/782 [00:20<00:17, 19.98it/s]\n 55%|█████▍    | 429/782 [00:21<00:17, 20.03it/s]\n 55%|█████▌    | 432/782 [00:21<00:17, 20.09it/s]\n 56%|█████▌    | 435/782 [00:21<00:17, 19.92it/s]\n 56%|█████▌    | 438/782 [00:21<00:16, 20.57it/s]\n 56%|█████▋    | 441/782 [00:21<00:16, 20.42it/s]\n 57%|█████▋    | 444/782 [00:21<00:16, 20.08it/s]\n 57%|█████▋    | 447/782 [00:21<00:16, 20.26it/s]\n 58%|█████▊    | 450/782 [00:22<00:16, 20.40it/s]\n 58%|█████▊    | 453/782 [00:22<00:16, 20.24it/s]\n 58%|█████▊    | 456/782 [00:22<00:16, 20.12it/s]\n 59%|█████▊    | 459/782 [00:22<00:16, 19.66it/s]\n 59%|█████▉    | 462/782 [00:22<00:15, 20.01it/s]\n 59%|█████▉    | 465/782 [00:22<00:15, 20.16it/s]\n 60%|█████▉    | 468/782 [00:22<00:15, 20.20it/s]\n 60%|██████    | 471/782 [00:23<00:15, 20.20it/s]\n 61%|██████    | 474/782 [00:23<00:15, 20.24it/s]\n 61%|██████    | 477/782 [00:23<00:14, 20.45it/s]\n 61%|██████▏   | 480/782 [00:23<00:14, 20.19it/s]\n 62%|██████▏   | 483/782 [00:23<00:14, 20.21it/s]\n 62%|██████▏   | 486/782 [00:23<00:14, 19.97it/s]\n 62%|██████▏   | 488/782 [00:23<00:14, 19.90it/s]\n 63%|██████▎   | 490/782 [00:24<00:14, 19.69it/s]\n 63%|██████▎   | 493/782 [00:24<00:14, 20.04it/s]\n 63%|██████▎   | 496/782 [00:24<00:14, 20.42it/s]\n 64%|██████▍   | 499/782 [00:24<00:14, 20.14it/s]\n 64%|██████▍   | 502/782 [00:24<00:14, 19.80it/s]\n 65%|██████▍   | 505/782 [00:24<00:13, 19.85it/s]\n 65%|██████▍   | 508/782 [00:24<00:13, 20.19it/s]\n 65%|██████▌   | 511/782 [00:25<00:13, 19.94it/s]\n 66%|██████▌   | 513/782 [00:25<00:13, 19.91it/s]\n 66%|██████▌   | 516/782 [00:25<00:13, 20.20it/s]\n 66%|██████▋   | 519/782 [00:25<00:13, 20.07it/s]\n 67%|██████▋   | 522/782 [00:25<00:13, 19.86it/s]\n 67%|██████▋   | 524/782 [00:25<00:13, 19.35it/s]\n 67%|██████▋   | 527/782 [00:25<00:12, 19.91it/s]\n 68%|██████▊   | 530/782 [00:26<00:12, 19.86it/s]\n 68%|██████▊   | 533/782 [00:26<00:12, 20.34it/s]\n 69%|██████▊   | 536/782 [00:26<00:12, 20.39it/s]\n 69%|██████▉   | 539/782 [00:26<00:11, 20.27it/s]\n 69%|██████▉   | 542/782 [00:26<00:11, 20.39it/s]\n 70%|██████▉   | 545/782 [00:26<00:13, 17.12it/s]\n 70%|███████   | 548/782 [00:27<00:13, 17.85it/s]\n 70%|███████   | 550/782 [00:27<00:12, 18.21it/s]\n 71%|███████   | 553/782 [00:27<00:11, 19.08it/s]\n 71%|███████   | 556/782 [00:27<00:11, 19.40it/s]\n 71%|███████▏  | 558/782 [00:27<00:11, 19.50it/s]\n 72%|███████▏  | 560/782 [00:27<00:11, 19.49it/s]\n 72%|███████▏  | 563/782 [00:27<00:11, 19.88it/s]\n 72%|███████▏  | 565/782 [00:27<00:10, 19.84it/s]\n 73%|███████▎  | 568/782 [00:28<00:10, 19.78it/s]\n 73%|███████▎  | 570/782 [00:28<00:10, 19.73it/s]\n 73%|███████▎  | 573/782 [00:28<00:10, 19.95it/s]\n 74%|███████▎  | 575/782 [00:28<00:10, 19.68it/s]\n 74%|███████▍  | 578/782 [00:28<00:10, 19.90it/s]\n 74%|███████▍  | 581/782 [00:28<00:10, 20.10it/s]\n 75%|███████▍  | 584/782 [00:28<00:09, 20.41it/s]\n 75%|███████▌  | 587/782 [00:29<00:09, 20.11it/s]\n 75%|███████▌  | 590/782 [00:29<00:09, 20.56it/s]\n 76%|███████▌  | 593/782 [00:29<00:09, 20.38it/s]\n 76%|███████▌  | 596/782 [00:29<00:09, 19.86it/s]\n 77%|███████▋  | 599/782 [00:29<00:09, 20.21it/s]\n 77%|███████▋  | 602/782 [00:29<00:09, 19.78it/s]\n 77%|███████▋  | 605/782 [00:29<00:08, 20.23it/s]\n 78%|███████▊  | 608/782 [00:30<00:08, 19.95it/s]\n 78%|███████▊  | 611/782 [00:30<00:08, 20.01it/s]\n 79%|███████▊  | 614/782 [00:30<00:08, 19.77it/s]\n 79%|███████▉  | 617/782 [00:30<00:08, 20.08it/s]\n 79%|███████▉  | 620/782 [00:30<00:07, 20.37it/s]\n 80%|███████▉  | 623/782 [00:30<00:07, 20.29it/s]\n 80%|████████  | 626/782 [00:30<00:07, 20.03it/s]\n 80%|████████  | 629/782 [00:31<00:07, 20.26it/s]\n 81%|████████  | 632/782 [00:31<00:07, 20.51it/s]\n 81%|████████  | 635/782 [00:31<00:07, 20.25it/s]\n 82%|████████▏ | 638/782 [00:31<00:07, 20.12it/s]\n 82%|████████▏ | 641/782 [00:31<00:07, 20.00it/s]\n 82%|████████▏ | 644/782 [00:31<00:07, 18.48it/s]\n 83%|████████▎ | 646/782 [00:31<00:07, 18.62it/s]\n 83%|████████▎ | 649/782 [00:32<00:06, 19.15it/s]\n 83%|████████▎ | 652/782 [00:32<00:06, 19.25it/s]\n 84%|████████▍ | 655/782 [00:32<00:06, 19.57it/s]\n 84%|████████▍ | 658/782 [00:32<00:06, 19.52it/s]\n 85%|████████▍ | 661/782 [00:32<00:06, 19.95it/s]\n 85%|████████▍ | 664/782 [00:32<00:05, 20.01it/s]\n 85%|████████▌ | 667/782 [00:33<00:05, 20.10it/s]\n 86%|████████▌ | 670/782 [00:33<00:05, 20.05it/s]\n 86%|████████▌ | 673/782 [00:33<00:05, 19.82it/s]\n 86%|████████▋ | 676/782 [00:33<00:05, 19.98it/s]\n 87%|████████▋ | 678/782 [00:33<00:05, 19.85it/s]\n 87%|████████▋ | 681/782 [00:33<00:05, 20.07it/s]\n 87%|████████▋ | 684/782 [00:33<00:04, 20.30it/s]\n 88%|████████▊ | 687/782 [00:34<00:04, 20.38it/s]\n 88%|████████▊ | 690/782 [00:34<00:04, 20.14it/s]\n 89%|████████▊ | 693/782 [00:34<00:04, 20.36it/s]\n 89%|████████▉ | 696/782 [00:34<00:04, 20.70it/s]\n 89%|████████▉ | 699/782 [00:34<00:03, 20.92it/s]\n 90%|████████▉ | 702/782 [00:34<00:03, 20.87it/s]\n 90%|█████████ | 705/782 [00:34<00:03, 20.47it/s]\n 91%|█████████ | 708/782 [00:35<00:03, 20.74it/s]\n 91%|█████████ | 711/782 [00:35<00:03, 20.63it/s]\n 91%|█████████▏| 714/782 [00:35<00:03, 20.31it/s]\n 92%|█████████▏| 717/782 [00:35<00:03, 20.38it/s]\n 92%|█████████▏| 720/782 [00:35<00:03, 20.47it/s]\n 92%|█████████▏| 723/782 [00:35<00:02, 20.48it/s]\n 93%|█████████▎| 726/782 [00:35<00:02, 20.13it/s]\n 93%|█████████▎| 729/782 [00:36<00:02, 19.99it/s]\n 94%|█████████▎| 732/782 [00:36<00:02, 20.02it/s]\n 94%|█████████▍| 735/782 [00:36<00:02, 20.32it/s]\n 94%|█████████▍| 738/782 [00:36<00:02, 20.22it/s]\n 95%|█████████▍| 741/782 [00:36<00:02, 20.00it/s]\n 95%|█████████▌| 744/782 [00:36<00:01, 20.16it/s]\n 96%|█████████▌| 747/782 [00:36<00:01, 20.14it/s]\n 96%|█████████▌| 750/782 [00:37<00:01, 19.89it/s]\n 96%|█████████▌| 752/782 [00:37<00:01, 19.83it/s]\n 96%|█████████▋| 754/782 [00:37<00:01, 19.25it/s]\n 97%|█████████▋| 756/782 [00:37<00:01, 19.42it/s]\n 97%|█████████▋| 759/782 [00:37<00:01, 19.69it/s]\n 97%|█████████▋| 761/782 [00:37<00:01, 19.49it/s]\n 98%|█████████▊| 764/782 [00:37<00:00, 19.98it/s]\n 98%|█████████▊| 766/782 [00:37<00:00, 19.40it/s]\n 98%|█████████▊| 769/782 [00:38<00:00, 19.51it/s]\n 99%|█████████▊| 772/782 [00:38<00:00, 19.92it/s]\n 99%|█████████▉| 775/782 [00:38<00:00, 19.89it/s]\n 99%|█████████▉| 778/782 [00:38<00:00, 20.08it/s]\n100%|█████████▉| 781/782 [00:38<00:00, 20.14it/s]\n100%|██████████| 782/782 [00:38<00:00, 20.20it/s]\nE0000 00:00:1781802651.154247 2740781 util.cc:131] oneDNN supports DT_HALF only on platforms with AVX-512. Falling back to the default Eigen-based implementation if present.\nW0000 00:00:1781802651.243592 2742022 gpu_kernel_to_blob_pass.cc:190] Failed to compile generated PTX with ptxas. Falling back to compilation by driver.\nW0000 00:00:1781802651.244561 2742023 gpu_kernel_to_blob_pass.cc:190] Failed to compile generated PTX with ptxas. Falling back to compilation by driver.\nW0000 00:00:1781802651.748595 2742752 gpu_kernel_to_blob_pass.cc:190] Failed to compile generated PTX with ptxas. Falling back to compilation by driver.\nW0000 00:00:1781802651.748681 2742753 gpu_kernel_to_blob_pass.cc:190] Failed to compile generated PTX with ptxas. Falling back to compilation by driver.\nW0000 00:00:1781802651.752588 2742751 gpu_kernel_to_blob_pass.cc:190] Failed to compile generated PTX with ptxas. Falling back to compilation by driver.\nW0000 00:00:1781802651.752808 2742750 gpu_kernel_to_blob_pass.cc:190] Failed to compile generated PTX with ptxas. Falling back to compilation by driver.\nW0000 00:00:1781802651.755410 2742754 gpu_kernel_to_blob_pass.cc:190] Failed to compile generated PTX with ptxas. Falling back to compilation by driver.\nW0000 00:00:1781802651.755524 2742749 gpu_kernel_to_blob_pass.cc:190] Failed to compile generated PTX with ptxas. Falling back to compilation by driver.\nW0000 00:00:1781802651.758499 2742757 gpu_kernel_to_blob_pass.cc:190] Failed to compile generated PTX with ptxas. Falling back to compilation by driver.\nW0000 00:00:1781802651.760380 2742755 gpu_kernel_to_blob_pass.cc:190] Failed to compile generated PTX with ptxas. Falling back to compilation by driver.\n",
+    "ref_batch": "/home/jimmy/DiT/dit_s3cache/fid/VIRTUAL_imagenet256_labeled.npz"
+  },
+  "eta": 0.0,
+  "effective_scheduler_fr_grid": {
+    "meta": {
+      "source": "dit_cache_scheduler_raw_timesteps_after_stage2_conversion",
+      "columns_left_to_right": "denoising order: sampling_timesteps[0]=first_step",
+      "sampling_timesteps_left_to_right": [
+        999,
+        989,
+        979,
+        969,
+        959,
+        949,
+        938,
+        928,
+        918,
+        908,
+        898,
+        888,
+        878,
+        868,
+        858,
+        848,
+        838,
+        827,
+        817,
+        807,
+        797,
+        787,
+        777,
+        767,
+        757,
+        747,
+        737,
+        727,
+        716,
+        706,
+        696,
+        686,
+        676,
+        666,
+        656,
+        646,
+        636,
+        626,
+        616,
+        605,
+        595,
+        585,
+        575,
+        565,
+        555,
+        545,
+        535,
+        525,
+        515,
+        505,
+        494,
+        484,
+        474,
+        464,
+        454,
+        444,
+        434,
+        424,
+        414,
+        404,
+        394,
+        383,
+        373,
+        363,
+        353,
+        343,
+        333,
+        323,
+        313,
+        303,
+        293,
+        283,
+        272,
+        262,
+        252,
+        242,
+        232,
+        222,
+        212,
+        202,
+        192,
+        182,
+        172,
+        161,
+        151,
+        141,
+        131,
+        121,
+        111,
+        101,
+        91,
+        81,
+        71,
+        61,
+        50,
+        40,
+        30,
+        20,
+        10,
+        0
+      ],
+      "T": 100,
+      "num_blocks": 28,
+      "cell_token": "F=full_compute(recompute) R=cache_reuse"
+    },
+    "by_layer": {
+      "block_0": "F  R  F  R  R  F  R  R  F  R  F  R  F  R  R  F  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  F  F  R  F  F  F  R  F  F  R  F  F  R  F  F  R  F  F  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F  F  R  F  F  F  R  F  F  F  F  F ",
+      "block_1": "F  R  F  R  R  F  R  R  F  R  F  R  F  R  R  F  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  F  F  F  F  F ",
+      "block_2": "F  R  F  R  R  F  R  R  F  R  F  R  F  R  R  F  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  F  F  F  F  F ",
+      "block_3": "F  R  F  R  R  F  R  R  F  R  F  R  F  R  R  F  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  F  F  F  F  F ",
+      "block_4": "F  R  F  R  R  F  R  R  F  R  F  R  F  R  R  F  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  F  F  F  F  F ",
+      "block_5": "F  R  F  R  R  F  R  R  F  R  F  R  F  R  R  F  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  F  F  F  F  F ",
+      "block_6": "F  R  F  R  R  F  R  R  F  R  F  R  F  R  R  F  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  F  F  F  F  F ",
+      "block_7": "F  R  F  R  R  F  R  R  F  R  F  R  F  R  R  F  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  F  F  F  F  F ",
+      "block_8": "F  R  F  R  R  F  R  R  F  R  F  R  F  R  R  F  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  F  F  F  F  F ",
+      "block_9": "F  R  F  R  R  F  R  R  F  R  F  R  F  R  R  F  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  F  F  F  R  F ",
+      "block_10": "F  R  F  R  R  F  R  R  F  R  F  R  F  R  R  F  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  F  F  F  R  F ",
+      "block_11": "F  R  F  R  R  F  R  R  F  R  F  R  F  R  R  F  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  F  F  F  R  F ",
+      "block_12": "F  R  F  R  R  F  R  R  F  R  F  R  F  R  R  F  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  F  F  F  R  F ",
+      "block_13": "F  R  F  R  R  F  R  R  F  R  F  R  F  R  R  F  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  F  F  F  R  F ",
+      "block_14": "F  R  F  R  R  F  R  R  F  R  F  R  F  R  R  F  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  F  F  F  R  F ",
+      "block_15": "F  R  F  R  R  F  R  R  F  R  F  R  F  R  R  F  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  F  F  F  R  F ",
+      "block_16": "F  R  F  R  R  F  R  R  F  R  F  R  F  R  R  F  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  F  F  F  R  F ",
+      "block_17": "F  R  F  R  R  F  R  R  F  R  F  R  F  R  R  F  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  F  F  F  R  F ",
+      "block_18": "F  R  F  R  R  F  R  R  F  R  F  R  F  R  R  F  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  F  F  F  R  F ",
+      "block_19": "F  R  F  R  R  F  R  R  F  R  F  R  F  R  R  F  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  F  F  F  R  F ",
+      "block_20": "F  R  F  R  R  F  R  R  F  R  F  R  F  R  R  F  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  F  F  F  R  F ",
+      "block_21": "F  R  F  R  R  F  R  R  F  R  F  R  F  R  R  F  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  F  F  F  R  F ",
+      "block_22": "F  R  F  R  R  F  R  R  F  R  F  R  F  R  R  F  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  F  F  F  R  F ",
+      "block_23": "F  R  F  R  R  F  R  R  F  R  F  R  F  R  R  F  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  F  F  F  R  F ",
+      "block_24": "F  R  F  R  R  F  R  R  F  R  F  R  F  R  R  F  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  F  F  F  R  F ",
+      "block_25": "F  R  F  R  R  F  R  R  F  R  F  R  F  R  R  F  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  F  F  F  F  F ",
+      "block_26": "F  R  F  R  R  F  R  R  F  R  F  R  F  R  R  F  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  F  F  F  F  F ",
+      "block_27": "F  R  F  R  R  F  R  R  F  R  F  R  F  R  R  F  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  F  F  F  F  F "
+    },
+    "aligned_text_block": "block_0  : F  R  F  R  R  F  R  R  F  R  F  R  F  R  R  F  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  F  F  R  F  F  F  R  F  F  R  F  F  R  F  F  R  F  F  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  F  F  R  F  F  F  R  F  F  F  F  F \nblock_1  : F  R  F  R  R  F  R  R  F  R  F  R  F  R  R  F  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  F  F  F  F  F \nblock_2  : F  R  F  R  R  F  R  R  F  R  F  R  F  R  R  F  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  F  F  F  F  F \nblock_3  : F  R  F  R  R  F  R  R  F  R  F  R  F  R  R  F  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  F  F  F  F  F \nblock_4  : F  R  F  R  R  F  R  R  F  R  F  R  F  R  R  F  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  F  F  F  F  F \nblock_5  : F  R  F  R  R  F  R  R  F  R  F  R  F  R  R  F  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  F  F  F  F  F \nblock_6  : F  R  F  R  R  F  R  R  F  R  F  R  F  R  R  F  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  F  F  F  F  F \nblock_7  : F  R  F  R  R  F  R  R  F  R  F  R  F  R  R  F  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  F  F  F  F  F \nblock_8  : F  R  F  R  R  F  R  R  F  R  F  R  F  R  R  F  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  F  F  F  F  F \nblock_9  : F  R  F  R  R  F  R  R  F  R  F  R  F  R  R  F  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  F  F  F  R  F \nblock_10 : F  R  F  R  R  F  R  R  F  R  F  R  F  R  R  F  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  F  F  F  R  F \nblock_11 : F  R  F  R  R  F  R  R  F  R  F  R  F  R  R  F  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  F  F  F  R  F \nblock_12 : F  R  F  R  R  F  R  R  F  R  F  R  F  R  R  F  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  F  F  F  R  F \nblock_13 : F  R  F  R  R  F  R  R  F  R  F  R  F  R  R  F  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  F  F  F  R  F \nblock_14 : F  R  F  R  R  F  R  R  F  R  F  R  F  R  R  F  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  F  F  F  R  F \nblock_15 : F  R  F  R  R  F  R  R  F  R  F  R  F  R  R  F  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  F  F  F  R  F \nblock_16 : F  R  F  R  R  F  R  R  F  R  F  R  F  R  R  F  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  F  F  F  R  F \nblock_17 : F  R  F  R  R  F  R  R  F  R  F  R  F  R  R  F  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  F  F  F  R  F \nblock_18 : F  R  F  R  R  F  R  R  F  R  F  R  F  R  R  F  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  F  F  F  R  F \nblock_19 : F  R  F  R  R  F  R  R  F  R  F  R  F  R  R  F  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  F  F  F  R  F \nblock_20 : F  R  F  R  R  F  R  R  F  R  F  R  F  R  R  F  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  F  F  F  R  F \nblock_21 : F  R  F  R  R  F  R  R  F  R  F  R  F  R  R  F  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  F  F  F  R  F \nblock_22 : F  R  F  R  R  F  R  R  F  R  F  R  F  R  R  F  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  F  F  F  R  F \nblock_23 : F  R  F  R  R  F  R  R  F  R  F  R  F  R  R  F  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  F  F  F  R  F \nblock_24 : F  R  F  R  R  F  R  R  F  R  F  R  F  R  R  F  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  F  F  F  R  F \nblock_25 : F  R  F  R  R  F  R  R  F  R  F  R  F  R  R  F  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  F  F  F  F  F \nblock_26 : F  R  F  R  R  F  R  R  F  R  F  R  F  R  R  F  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  F  F  F  F  F \nblock_27 : F  R  F  R  R  F  R  R  F  R  F  R  F  R  R  F  R  F  R  R  F  R  R  F  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  R  R  F  F  R  F  F  F  F  F "
+  }
+}
