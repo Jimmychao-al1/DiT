@@ -1,6 +1,7 @@
 {
   "metadata": {
     "created": "2026-06-18",
+    "last_updated": "2026-06-20",
     "description": "DiT / Q-DiT S3-Cache experiment matrix - verified results",
     "model": "DiT-XL/2",
     "dataset": "ImageNet 256x256",
@@ -11,8 +12,12 @@
     "notes": [
       "FID values taken from summary.json fid_5k field (also used when num_images=50000).",
       "FP-B-DDPM250 has no FID@50K baseline run on disk; FID@50K=3.221 belongs to FP-S3-DDPM250.",
-      "D1 baselines sourced from dit_s3cache/fid/d1_baseline_fid_qdit_ddim*.json; D3 from start_run summary.json."
-    ]
+      "D1 FID@5K from dit_s3cache/fid/d1_baseline_fid_qdit_ddim*_5k.json (fid_cache_sensitivity_qdit --baseline-only).",
+      "D1 FID@50K from sample_stage2_cache_scheduler_dit.py --baseline-only --qdit-ckpt (scheduler_name=dit_baseline_full_compute, rho=1.0). 0619_15 recovery run.",
+      "D3 from start_run summary.json. Job names qdit_baseline_p2_* are S3-Cache (stage1 config baseline_p2), NOT D1 full compute.",
+      "0618_16 (qdit_baseline_p2_K20_sw3_blockwise_ddim100_50k) is D3-DDIM100-K20sw3 FID@50K (rho=0.3975), not D1-DDIM100."
+    ],
+    "pending_experiments": []
   },
   "experiments": [
     {
@@ -232,7 +237,7 @@
       "steps": 100,
       "stage1_config": null,
       "fid_5k": 9.117437,
-      "fid_50k": null,
+      "fid_50k": 2.289759,
       "full_compute_ratio": 1.0,
       "delta_fid_5k_abs": null,
       "delta_fid_5k_pct": null,
@@ -240,8 +245,10 @@
       "delta_fid_50k_pct": null,
       "baseline_ref": null,
       "is_primary": true,
-      "role": "Q-DiT baseline (selected step count)",
+      "role": "Q-DiT baseline (selected step count); FID@50K from dit_baseline_full_compute",
       "source_file": "/home/jimmy/DiT/dit_s3cache/fid/d1_baseline_fid_qdit_ddim100_5k.json",
+      "source_file_fid_50k": "/home/jimmy/DiT/dit_s3cache/results/fid_qdit_stage2_ddim100_50k/20260619/dit_baseline_full_compute/0619_15_dit_baseline_full_compute/summary.json",
+      "recovery_note_fid_50k": "50K PNG generation completed; FID recovered offline after OOM during npz build",
       "additional_metrics": {
         "inception_score": 245.089,
         "sfid": 34.377,
@@ -342,15 +349,16 @@
       "full_compute_ratio": 0.3975,
       "delta_fid_5k_abs": 0.289109,
       "delta_fid_5k_pct": 3.17,
-      "delta_fid_50k_abs": null,
-      "delta_fid_50k_pct": null,
+      "delta_fid_50k_abs": 0.33186,
+      "delta_fid_50k_pct": 14.49,
       "baseline_ref": "D1-DDIM100",
       "is_primary": false,
-      "role": "Q-DiT + S3-Cache (DDIM100 ablation)",
+      "role": "Q-DiT + S3-Cache (DDIM100 K20/sw3); FID@50K from 0618_16 (S3-Cache, not D1)",
       "source_file": "/home/jimmy/DiT/dit_s3cache/results/fid_qdit_stage2_ddim100/20260611/qdit_baseline_p2_K20_sw3_blockwise_ddim100/0611_19_qdit_baseline_p2_K20_sw3_blockwise_ddim100/summary.json",
       "additional_metrics": null,
       "source_file_fid_50k": "/home/jimmy/DiT/dit_s3cache/results/fid_qdit_stage2_ddim100_50k/20260618/qdit_baseline_p2_K20_sw3_blockwise_ddim100_50k/0618_16_qdit_baseline_p2_K20_sw3_blockwise_ddim100_50k/summary.json",
       "source_file_detail_stats": "/home/jimmy/DiT/dit_s3cache/results/fid_qdit_stage2_ddim100/20260611/qdit_baseline_p2_K20_sw3_blockwise_ddim100/0611_19_qdit_baseline_p2_K20_sw3_blockwise_ddim100/detail_stats.json",
+      "source_file_detail_stats_fid_50k": "/home/jimmy/DiT/dit_s3cache/results/fid_qdit_stage2_ddim100_50k/20260618/qdit_baseline_p2_K20_sw3_blockwise_ddim100_50k/0618_16_qdit_baseline_p2_K20_sw3_blockwise_ddim100_50k/detail_stats.json",
       "qdit_checkpoint": "/home/jimmy/Q-DiT/results/003-qdit_w8a8/qdit_w8a8_state_dict.pt"
     },
     {
@@ -370,8 +378,8 @@
       "full_compute_ratio": 0.36,
       "delta_fid_5k_abs": 0.222,
       "delta_fid_5k_pct": 2.43,
-      "delta_fid_50k_abs": null,
-      "delta_fid_50k_pct": null,
+      "delta_fid_50k_abs": 0.335808,
+      "delta_fid_50k_pct": 14.67,
       "baseline_ref": "D1-DDIM100",
       "is_primary": true,
       "role": "Q-DiT + S3-Cache selected result",
