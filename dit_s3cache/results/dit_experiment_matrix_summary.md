@@ -1,10 +1,24 @@
 # DiT / Q-DiT S3-Cache 實驗矩陣摘要
 
 **建立日期：** 2026-06-18  
-**最後更新：** 2026-06-20  
+**最後更新：** 2026-06-27  
 **資料來源：** 遠端 `summary.json` / `d1_baseline_fid_qdit_*.json` 逐檔驗證  
 **機器設定：** DiT-XL/2, ImageNet 256×256, CFG=1.5, seed=0, ADM FID evaluator  
 **Q-DiT checkpoint：** `/home/jimmy/Q-DiT/results/003-qdit_w8a8/qdit_w8a8_state_dict.pt`
+
+---
+
+## 量化方法
+
+本矩陣中 **Q-DiT W8A8** 實驗採用下列論文的 post-training quantization（PTQ）方法；**FP DiT** 為全精度 baseline，未做量化。
+
+| 模型標籤 | 量化方法 | 論文 | 頂會 | 本實驗設定 |
+|----------|----------|------|------|------------|
+| Q-DiT W8A8 | **Q-DiT** | Chen et al., *Q-DiT: Accurate Post-Training Quantization for Diffusion Transformers* | **CVPR 2025** | W8A8；DiT-XL/2；checkpoint：`003-qdit_w8a8/qdit_w8a8_state_dict.pt` |
+
+**參考連結**
+
+- Q-DiT 論文：[arXiv:2406.17343](https://arxiv.org/abs/2406.17343) · [CVPR 2025 Open Access](https://openaccess.thecvf.com/content/CVPR2025/html/Chen_Q-DiT_Accurate_Post-Training_Quantization_for_Diffusion_Transformers_CVPR_2025_paper.html) · [Project Page](https://q-dit.github.io/) · [GitHub](https://github.com/Juanerx/Q-DiT)
 
 ---
 

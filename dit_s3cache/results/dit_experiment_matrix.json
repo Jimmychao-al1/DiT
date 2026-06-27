@@ -1,7 +1,7 @@
 {
   "metadata": {
     "created": "2026-06-18",
-    "last_updated": "2026-06-20",
+    "last_updated": "2026-06-27",
     "description": "DiT / Q-DiT S3-Cache experiment matrix - verified results",
     "model": "DiT-XL/2",
     "dataset": "ImageNet 256x256",
@@ -9,6 +9,21 @@
     "fid_evaluator": "ADM (TensorFlow Inception-v3 pool_3)",
     "cache_granularity": "block-level (28 blocks)",
     "seed": 0,
+    "qdit_checkpoint": "/home/jimmy/Q-DiT/results/003-qdit_w8a8/qdit_w8a8_state_dict.pt",
+    "quantization_methods": {
+      "Q-DiT W8A8": {
+        "method": "Q-DiT",
+        "paper_title": "Q-DiT: Accurate Post-Training Quantization for Diffusion Transformers",
+        "authors": "Chen et al.",
+        "venue": "CVPR 2025",
+        "bit_width": "W8A8",
+        "checkpoint": "/home/jimmy/Q-DiT/results/003-qdit_w8a8/qdit_w8a8_state_dict.pt",
+        "arxiv": "https://arxiv.org/abs/2406.17343",
+        "open_access": "https://openaccess.thecvf.com/content/CVPR2025/html/Chen_Q-DiT_Accurate_Post-Training_Quantization_for_Diffusion_Transformers_CVPR_2025_paper.html",
+        "project_page": "https://q-dit.github.io/",
+        "github": "https://github.com/Juanerx/Q-DiT"
+      }
+    },
     "notes": [
       "FID values taken from summary.json fid_5k field (also used when num_images=50000).",
       "FP-B-DDPM250 has no FID@50K baseline run on disk; FID@50K=3.221 belongs to FP-S3-DDPM250.",
