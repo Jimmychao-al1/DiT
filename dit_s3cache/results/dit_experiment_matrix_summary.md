@@ -1,7 +1,7 @@
 # DiT / Q-DiT S3-Cache 實驗矩陣摘要
 
 **建立日期：** 2026-06-18  
-**最後更新：** 2026-06-27  
+**最後更新：** 2026-06-28 — D1-DDIM150 baseline FID@50K = 2.232 已填入；D3-DDIM150-K15sw5 ΔFID@50K = +8.6%。全矩陣完成，無 pending 項目。  
 **資料來源：** 遠端 `summary.json` / `d1_baseline_fid_qdit_*.json` 逐檔驗證  
 **機器設定：** DiT-XL/2, ImageNet 256×256, CFG=1.5, seed=0, ADM FID evaluator  
 **Q-DiT checkpoint：** `/home/jimmy/Q-DiT/results/003-qdit_w8a8/qdit_w8a8_state_dict.pt`
@@ -30,6 +30,8 @@
 | FP-S3-DDPM250 | FP DiT | S3 | DDPM | 250 | 10.032 | 3.221 | 0.373 | +9.1% | — |
 | FP-B-DDIM150 | FP DiT | — | DDIM | 150 | 9.148 | 2.202 | 1.00 | — | — |
 | FP-S3-DDIM150 | FP DiT | S3 | DDIM | 150 | 9.319 | 2.381 | 0.386 | +1.9% | +8.1% |
+| D1-DDIM150 | Q-DiT W8A8 | — | DDIM | 150 | 9.044 | 2.232 | 1.00 | — | — |
+| D3-DDIM150-K15sw5 | Q-DiT W8A8 | S3 | DDIM | 150 | 9.224 | 2.423 | 0.353 | +2.0% | +8.6% |
 | D1-DDIM100 | Q-DiT W8A8 | — | DDIM | 100 | 9.117 | 2.290 | 1.00 | — | — |
 | D3-DDIM100-K8sw3 | Q-DiT W8A8 | S3 | DDIM | 100 | 9.339 | 2.626 | 0.360 | +2.4% | +14.7% |
 
@@ -65,7 +67,7 @@
 |----|-------|--------|---------|--------|
 | D1-DDIM50 | 50 | 9.172 | — | `dit_s3cache/fid/d1_baseline_fid_qdit_ddim50_5k.json` |
 | D1-DDIM100 | 100 | 9.117 | 2.290 | FID@5K: `.../d1_baseline_fid_qdit_ddim100_5k.json`；FID@50K: `.../0619_15_dit_baseline_full_compute/summary.json` |
-| D1-DDIM150 | 150 | 9.044 | — | `dit_s3cache/fid/d1_baseline_fid_qdit_ddim150_5k.json` |
+| D1-DDIM150 | 150 | 9.044 | 2.232 | `dit_s3cache/fid/d1_baseline_fid_qdit_ddim150_5k.json`（FID@5K）；`fid_qdit_stage2_ddim150_50k/.../0627_15_dit_baseline_full_compute/summary.json`（FID@50K） |
 
 FID@5K 來自 `fid_cache_sensitivity_qdit.py --baseline-only`。FID@50K 需 `sample_stage2_cache_scheduler_dit.py --baseline-only --qdit-ckpt`（與 FP `dit_baseline_full_compute` 同模式）。
 
@@ -78,7 +80,7 @@ FID@5K 來自 `fid_cache_sensitivity_qdit.py --baseline-only`。FID@50K 需 `sam
 | D3-DDIM100-K20sw3 | K20/sw3 | 100 | 9.407 | 2.622 | 0.398 | +3.2% | +14.5% | `0611_19_...` (5K) + `0618_16_...` (50K) |
 | D3-DDIM100-K8sw3 ★ | K8/sw3 | 100 | 9.339 | 2.626 | 0.360 | +2.4% | +14.7% | `0611_21_...` + `0612_19_...` (50K) |
 | D3-DDIM150-K20sw3 | K20/sw3 | 150 | 9.288 | — | 0.386 | +2.7% | — | `.../0611_22_...` |
-| D3-DDIM150-K15sw5 | K15/sw5 | 150 | 9.224 | — | 0.353 | +2.0% | — | `.../0612_01_qdit_sweep_K15_sw5_...` |
+| D3-DDIM150-K15sw5 | K15/sw5 | 150 | 9.224 | 2.423 | 0.353 | +2.0% | +8.6% | `.../0612_01_qdit_sweep_K15_sw5_...` (5K) + `.../0627_15_...` (50K) |
 
 ---
 
@@ -116,6 +118,13 @@ FID@5K 來自 `fid_cache_sensitivity_qdit.py --baseline-only`。FID@50K 需 `sam
 - **run：** `0619_15_dit_baseline_full_compute`（`dit_baseline_full_compute`，ρ=1.0）
 - **FID@50K：** 2.290（summary.json 精確值 2.289759）
 - **備註：** 50K 生成完成後 NPZ 打包 OOM；FID 由既有 PNG 離線 recovery
+
+### 7. D1-DDIM150 FID@50K（2026-06-28）
+
+- **run：** `0627_15_dit_baseline_full_compute`（`dit_baseline_full_compute`，ρ=1.0，DDIM 150 steps）
+- **FID@50K：** 2.232（summary.json 精確值 2.2322902675284695）
+- **ΔFID@50K（D3-DDIM150-K15sw5）：** +8.6%（2.423 vs 2.232）
+- **結論：** 較長取樣軌跡將退化從 DDIM 100 的 +14.7% 收窄至 +8.6%，仍超過 5% 門檻
 
 ---
 
